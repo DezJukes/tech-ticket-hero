@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://b8prqvjq48jae"]
+
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_28flt"]
+[ext_resource type="Script" uid="uid://dcmk7gco78cym" path="res://Scenes/main_menu.gd" id="1_48xlc"]
+[ext_resource type="Texture2D" uid="uid://csv0o8v5eocah" path="res://Assets/bg.jpg" id="2_1ehe0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
+bg_color = Color(0.7411765, 0.7411765, 0.7411765, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 20
+
+[node name="MainMenu" type="Node" unique_id=542096977]
+script = ExtResource("1_48xlc")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1510796755]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_1ehe0")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2105043466]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=504085592]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 200
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=1876143578]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Title" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer" unique_id=876656683]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 60
+text = "Tech Ticket
+Hero"
+horizontal_alignment = 1
+
+[node name="Subtitle" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer" unique_id=681937007]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 20
+text = "Learn how apps built 
+- 
+By fixing real problems"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=1558373027]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="MenuTitle" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1928572959]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_font_sizes/font_size = 50
+text = "Menu"
+
+[node name="StartGame" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=279018716]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+text = "Start Game"
+
+[node name="StudyGuide" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=933931720]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+text = "Study Guide"
+
+[node name="Character Profile" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=810294566]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_28flt")
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+text = "Character Profile"
+
+[connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer2/StartGame" to="." method="_on_start_game_pressed"]

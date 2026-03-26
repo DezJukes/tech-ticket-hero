@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://d3wvsawionq5m"]
+
+[ext_resource type="Script" uid="uid://bm5io4c7xxucr" path="res://Scenes/game_scene.gd" id="1_1ixah"]
+[ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="1_x87qo"]
+[ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="2_b6fju"]
+[ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="3_fiftr"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="4_1ixah"]
+
+[node name="game_scene" type="Node2D" unique_id=1648794748]
+script = ExtResource("1_1ixah")
+
+[node name="player" parent="." unique_id=482249979 instance=ExtResource("1_x87qo")]
+position = Vector2(454, 314)
+motion_mode = 1
+movement_speed = 150.0
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=108253755]
+anchor_mode = 0
+
+[node name="Button" type="Button" parent="." unique_id=65804150]
+offset_left = 1071.0
+offset_top = 17.0
+offset_right = 1137.0
+offset_bottom = 48.0
+theme_override_fonts/font = ExtResource("4_1ixah")
+theme_override_font_sizes/font_size = 20
+text = "Pause"
+
+[node name="Interact" type="Button" parent="." unique_id=1894442605]
+offset_left = 994.0
+offset_top = 473.0
+offset_right = 1058.0
+offset_bottom = 542.0
+theme_override_fonts/font = ExtResource("4_1ixah")
+theme_override_font_sizes/font_size = 60
+text = "E"
+
+[node name="Control" type="Control" parent="." unique_id=1153118733]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TouchControls" parent="Control" unique_id=1578848564 instance=ExtResource("2_b6fju")]
+
+[node name="Pause" type="Node" parent="." unique_id=757671672]
+script = ExtResource("3_fiftr")
+
+[node name="PausePanel" type="Panel" parent="Pause" unique_id=950285299]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause/PausePanel" unique_id=807240375]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="PAUSED" type="Label" parent="Pause/PausePanel/VBoxContainer" unique_id=1790785820]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_1ixah")
+theme_override_font_sizes/font_size = 60
+text = "PAUSED"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause/PausePanel/VBoxContainer" unique_id=1131012314]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Resume" type="Button" parent="Pause/PausePanel/VBoxContainer/VBoxContainer" unique_id=569775749]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Resume
+"
+
+[node name="ChangeMode" type="Button" parent="Pause/PausePanel/VBoxContainer/VBoxContainer" unique_id=1312332501]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Change Mode"
+
+[node name="MainMenu" type="Button" parent="Pause/PausePanel/VBoxContainer/VBoxContainer" unique_id=2054414245]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Main Menu"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Pause/PausePanel/VBoxContainer/VBoxContainer/Resume" to="Pause" method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause/PausePanel/VBoxContainer/VBoxContainer/ChangeMode" to="Pause" method="_on_change_mode_pressed"]
+[connection signal="pressed" from="Pause/PausePanel/VBoxContainer/VBoxContainer/MainMenu" to="Pause" method="_on_main_menu_pressed"]

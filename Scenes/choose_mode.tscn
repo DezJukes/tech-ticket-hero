@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://brsyhmwyn4y0q"]
+
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_4g32j"]
+[ext_resource type="Script" uid="uid://c1x6i0rcsv4e5" path="res://Scenes/choose_mode.gd" id="1_wflr0"]
+[ext_resource type="Texture2D" uid="uid://csv0o8v5eocah" path="res://Assets/bg.jpg" id="2_nefxe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
+bg_color = Color(0.7411765, 0.7411765, 0.7411765, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 20
+
+[node name="ModeSelect" type="Node" unique_id=1906819170]
+script = ExtResource("1_wflr0")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1345528091]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_nefxe")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=901645785]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=1177843758]
+layout_mode = 2
+theme_override_constants/separation = 200
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=257120681]
+layout_mode = 2
+
+[node name="GameMode" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer" unique_id=448104043]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_fonts/font = ExtResource("1_4g32j")
+theme_override_font_sizes/font_size = 60
+text = "Choose
+Game Mode"
+horizontal_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=308400295]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="StoryMode" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=648962166]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_4g32j")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+text = "Story Mode"
+
+[node name="QuickChallenge" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1024891443]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_4g32j")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+text = "Quick Challenge"
+
+[node name="ClientMode" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1439172419]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_4g32j")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+text = "Client Mode"
+
+[node name="Back" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1119637095]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_4g32j")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
+text = "Back"
+
+[connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer2/StoryMode" to="." method="_on_story_mode_pressed"]
+[connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer2/Back" to="." method="_on_back_pressed"]

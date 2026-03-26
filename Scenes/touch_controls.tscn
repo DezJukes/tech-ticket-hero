@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dj6bi3rs4lct7"]
+
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="1_poon4"]
+
+[node name="TouchControl" type="CanvasLayer" unique_id=26897351]
+
+[node name="Virtual Joystick" parent="." unique_id=1874519678 instance=ExtResource("1_poon4")]
+offset_left = 1.815
+offset_top = -306.845
+offset_right = 301.815
+offset_bottom = -6.845459

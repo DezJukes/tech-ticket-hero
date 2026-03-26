@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://cybk28env1uh8"]
+
+[ext_resource type="Script" uid="uid://cjfgnvsxgd0fr" path="res://Scenes/player_movement.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://b56jlw8mry0va" path="res://Assets/prototype_character.png" id="1_v0iea"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvnsp"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6t5aa"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vgqql"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkybt"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3wgy"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
+atlas = ExtResource("1_v0iea")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8erm5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvnsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6t5aa")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vgqql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkybt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3wgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3smsa")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_f1ek2"]
+radius = 6.0
+height = 14.0
+
+[node name="player" type="CharacterBody2D" unique_id=482249979]
+script = ExtResource("1_cvnsp")
+
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=707652145]
+unique_name_in_owner = true
+sprite_frames = SubResource("SpriteFrames_8erm5")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.6651007
+
+[node name="collision" type="CollisionShape2D" parent="." unique_id=1805376674]
+shape = SubResource("CapsuleShape2D_f1ek2")
