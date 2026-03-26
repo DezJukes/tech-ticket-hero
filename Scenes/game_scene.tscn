@@ -10,9 +10,9 @@
 script = ExtResource("1_1ixah")
 
 [node name="player" parent="." unique_id=482249979 instance=ExtResource("1_x87qo")]
-position = Vector2(454, 314)
+position = Vector2(578, 555)
+scale = Vector2(5, 5)
 motion_mode = 1
-movement_speed = 150.0
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=108253755]
 anchor_mode = 0
