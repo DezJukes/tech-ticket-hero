@@ -58,6 +58,7 @@ alignment = 1
 
 [node name="StoryMode" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=648962166]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_4g32j")
 theme_override_font_sizes/font_size = 20
@@ -66,6 +67,7 @@ text = "Story Mode"
 
 [node name="QuickChallenge" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1024891443]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_4g32j")
 theme_override_font_sizes/font_size = 20
@@ -74,6 +76,7 @@ text = "Quick Challenge"
 
 [node name="ClientMode" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1439172419]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_4g32j")
 theme_override_font_sizes/font_size = 20
@@ -82,6 +85,7 @@ text = "Client Mode"
 
 [node name="Back" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1119637095]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_4g32j")
 theme_override_font_sizes/font_size = 20

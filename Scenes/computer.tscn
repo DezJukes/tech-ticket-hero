@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://bqk4wwgbista1"]
+
+[ext_resource type="Texture2D" uid="uid://vgtamm6legq3" path="res://Assets/Misc/Computer_Alert.png" id="2_7h0tq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4xga7"]
+atlas = ExtResource("2_7h0tq")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2xe6"]
+atlas = ExtResource("2_7h0tq")
+region = Rect2(69, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1ujp"]
+atlas = ExtResource("2_7h0tq")
+region = Rect2(138, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h0tq"]
+atlas = ExtResource("2_7h0tq")
+region = Rect2(207, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3cxpa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4xga7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2xe6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m1ujp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h0tq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4xga7"]
+radius = 47.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j2xe6"]
+size = Vector2(64, 66)
+
+[node name="Computer" type="Node2D" unique_id=1632295490]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1101468900]
+sprite_frames = SubResource("SpriteFrames_3cxpa")
+autoplay = "default"
+
+[node name="ComputerInteractionZone" type="Area2D" parent="." unique_id=2028423542]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComputerInteractionZone" unique_id=848140458]
+position = Vector2(-0.5, -1)
+shape = SubResource("CircleShape2D_4xga7")
+
+[node name="ComputerBody" type="StaticBody2D" parent="." unique_id=321669352]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComputerBody" unique_id=1779337384]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_j2xe6")

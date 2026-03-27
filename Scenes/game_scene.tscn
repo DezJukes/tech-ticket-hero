@@ -5,35 +5,53 @@
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="2_b6fju"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="3_fiftr"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="4_1ixah"]
+[ext_resource type="PackedScene" uid="uid://bqk4wwgbista1" path="res://Scenes/computer.tscn" id="4_rgj8m"]
 
 [node name="game_scene" type="Node2D" unique_id=1648794748]
 script = ExtResource("1_1ixah")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1903386374]
+
+[node name="Interact" type="Button" parent="CanvasLayer" unique_id=1894442605]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -193.0
+offset_top = -199.0
+offset_right = -93.0
+offset_bottom = -99.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("4_1ixah")
+theme_override_font_sizes/font_size = 60
+text = "E"
+
+[node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=65804150]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 14.0
+offset_right = -14.0
+offset_bottom = 43.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("4_1ixah")
+theme_override_font_sizes/font_size = 20
+text = "Pause"
+
 [node name="player" parent="." unique_id=482249979 instance=ExtResource("1_x87qo")]
 position = Vector2(578, 555)
-scale = Vector2(5, 5)
+scale = Vector2(2, 2)
 motion_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=108253755]
 anchor_mode = 0
 
-[node name="Button" type="Button" parent="." unique_id=65804150]
-offset_left = 1071.0
-offset_top = 17.0
-offset_right = 1137.0
-offset_bottom = 48.0
-theme_override_fonts/font = ExtResource("4_1ixah")
-theme_override_font_sizes/font_size = 20
-text = "Pause"
-
-[node name="Interact" type="Button" parent="." unique_id=1894442605]
-offset_left = 994.0
-offset_top = 473.0
-offset_right = 1058.0
-offset_bottom = 542.0
-theme_override_fonts/font = ExtResource("4_1ixah")
-theme_override_font_sizes/font_size = 60
-text = "E"
+[node name="Computer" parent="." unique_id=29188790 instance=ExtResource("4_rgj8m")]
+position = Vector2(570, 144)
+scale = Vector2(3, 3)
 
 [node name="Control" type="Control" parent="." unique_id=1153118733]
 layout_mode = 3
@@ -100,7 +118,8 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Main Menu"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Pause/PausePanel/VBoxContainer/VBoxContainer/Resume" to="Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause/PausePanel/VBoxContainer/VBoxContainer/ChangeMode" to="Pause" method="_on_change_mode_pressed"]
 [connection signal="pressed" from="Pause/PausePanel/VBoxContainer/VBoxContainer/MainMenu" to="Pause" method="_on_main_menu_pressed"]

@@ -79,6 +79,7 @@ text = "Menu"
 
 [node name="StartGame" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=279018716]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_28flt")
 theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
@@ -86,6 +87,7 @@ text = "Start Game"
 
 [node name="StudyGuide" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=933931720]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_28flt")
 theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
@@ -93,6 +95,7 @@ text = "Study Guide"
 
 [node name="Character Profile" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=810294566]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_28flt")
 theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
