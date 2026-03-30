@@ -13,18 +13,17 @@ func _process(delta: float):
 		get_tree().paused = true
 		pause_panel.show()
 
-
+# Will Resume the Game
 func _on_resume_pressed():
 	pause_panel.hide()
 	get_tree().paused = false
-	
 
-
-func _on_change_mode_pressed():
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Scenes/choose_mode.tscn")
-
-
+# Button lead to Main Menu
 func _on_main_menu_pressed():
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Scenes/main_menu.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Menu/main_menu.tscn")
+
+# Button lead to Change Mode
+func _on_change_mode_pressed():
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://Scenes/Menu/choose_mode.tscn")

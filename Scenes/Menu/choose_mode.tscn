@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://brsyhmwyn4y0q"]
+
+[ext_resource type="Script" uid="uid://c1x6i0rcsv4e5" path="res://Scripts/Menu-Scripts/choose_mode.gd" id="1_5gl64"]
+[ext_resource type="Texture2D" uid="uid://clcpv2xavcwla" path="res://Assets/Menu/menu-bg.png" id="2_8i23b"]
+[ext_resource type="Texture2D" uid="uid://b4ne5a1fh2k7r" path="res://Assets/Menu/Buttons/Level Buttons/SelectLevel.png" id="3_hy5i0"]
+[ext_resource type="Texture2D" uid="uid://cqimxx23l3335" path="res://Assets/Menu/Buttons/Level Buttons/TheOffice-default.png" id="4_1q6kf"]
+[ext_resource type="Texture2D" uid="uid://cjqinxu64w0ki" path="res://Assets/Menu/Buttons/Level Buttons/TheOffice-pressed.png" id="5_8xtys"]
+[ext_resource type="Texture2D" uid="uid://dkwvf4thy6ldg" path="res://Assets/Menu/Buttons/Level Buttons/TheOffice-hovered.png" id="6_gejxw"]
+[ext_resource type="Texture2D" uid="uid://1owrl5f5nom3" path="res://Assets/Menu/Buttons/BackButton-default.png" id="7_xtxx2"]
+[ext_resource type="Texture2D" uid="uid://6qnbkfiku8lg" path="res://Assets/Menu/Buttons/BackButton-pressed.png" id="8_5p5ix"]
+[ext_resource type="Texture2D" uid="uid://bjs58fn0hg4c5" path="res://Assets/Menu/Buttons/BackButton-hovered.png" id="9_mk8q3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nefxe"]
+texture = ExtResource("2_8i23b")
+
+[node name="ModeSelect" type="Node" unique_id=1906819170]
+script = ExtResource("1_5gl64")
+
+[node name="Panel" type="Panel" parent="." unique_id=363985908]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_nefxe")
+
+[node name="FlowContainer" type="FlowContainer" parent="." unique_id=797164222]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -1.6099854
+offset_right = 142.0
+offset_bottom = 118.390015
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/v_separation = 30
+alignment = 1
+last_wrap_alignment = 2
+
+[node name="SelectLevel" type="Sprite2D" parent="FlowContainer" unique_id=306866806]
+position = Vector2(142, -74)
+texture = ExtResource("3_hy5i0")
+
+[node name="TheOffice" type="TextureButton" parent="FlowContainer" unique_id=1139630896]
+layout_mode = 2
+texture_normal = ExtResource("4_1q6kf")
+texture_pressed = ExtResource("5_8xtys")
+texture_hover = ExtResource("6_gejxw")
+
+[node name="Back" type="TextureButton" parent="FlowContainer" unique_id=1241719066]
+layout_mode = 2
+texture_normal = ExtResource("7_xtxx2")
+texture_pressed = ExtResource("8_5p5ix")
+texture_hover = ExtResource("9_mk8q3")
+
+[connection signal="pressed" from="FlowContainer/TheOffice" to="." method="_on_the_office_pressed"]
+[connection signal="pressed" from="FlowContainer/Back" to="." method="_on_back_pressed"]
