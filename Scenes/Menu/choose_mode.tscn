@@ -24,37 +24,30 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_nefxe")
 
-[node name="FlowContainer" type="FlowContainer" parent="." unique_id=797164222]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -142.0
-offset_top = -1.6099854
-offset_right = 142.0
-offset_bottom = 118.390015
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/v_separation = 30
-alignment = 1
-last_wrap_alignment = 2
-
-[node name="SelectLevel" type="Sprite2D" parent="FlowContainer" unique_id=306866806]
-position = Vector2(142, -74)
-texture = ExtResource("3_hy5i0")
-
-[node name="TheOffice" type="TextureButton" parent="FlowContainer" unique_id=1139630896]
-layout_mode = 2
+[node name="TheOffice" type="TextureButton" parent="." unique_id=1139630896]
+offset_left = 447.0
+offset_top = 337.0
+offset_right = 1583.0
+offset_bottom = 573.0
+scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("4_1q6kf")
 texture_pressed = ExtResource("5_8xtys")
 texture_hover = ExtResource("6_gejxw")
 
-[node name="Back" type="TextureButton" parent="FlowContainer" unique_id=1241719066]
-layout_mode = 2
+[node name="Back" type="TextureButton" parent="." unique_id=1241719066]
+offset_left = 506.00006
+offset_top = 404.0
+offset_right = 1070.0
+offset_bottom = 528.0
+scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("7_xtxx2")
 texture_pressed = ExtResource("8_5p5ix")
 texture_hover = ExtResource("9_mk8q3")
 
-[connection signal="pressed" from="FlowContainer/TheOffice" to="." method="_on_the_office_pressed"]
-[connection signal="pressed" from="FlowContainer/Back" to="." method="_on_back_pressed"]
+[node name="SelectLevel" type="Sprite2D" parent="." unique_id=493520477]
+position = Vector2(583, 207)
+scale = Vector2(0.31344086, 0.31344086)
+texture = ExtResource("3_hy5i0")
+
+[connection signal="pressed" from="TheOffice" to="." method="_on_the_office_pressed"]
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
