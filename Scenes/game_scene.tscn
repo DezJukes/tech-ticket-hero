@@ -2,13 +2,27 @@
 
 [ext_resource type="Script" uid="uid://bm5io4c7xxucr" path="res://Scenes/game_scene.gd" id="1_1ixah"]
 [ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="1_x87qo"]
+[ext_resource type="Texture2D" uid="uid://lvpiaw27h2l4" path="res://Assets/Misc/Level 1 - Beginner/Office-bg.png" id="2_2fmhe"]
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="2_b6fju"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="3_fiftr"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="4_1ixah"]
 [ext_resource type="PackedScene" uid="uid://bqk4wwgbista1" path="res://Scenes/computer.tscn" id="4_rgj8m"]
+[ext_resource type="Texture2D" uid="uid://dhtcdlp443358" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Board-Frame.png" id="8_4xiap"]
+[ext_resource type="Texture2D" uid="uid://bjo6d2500gtbq" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Filing-Cabinet1.png" id="9_wywco"]
+[ext_resource type="Texture2D" uid="uid://cuengilim3efd" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Filing-Cabinet2.png" id="10_ldntv"]
+[ext_resource type="Texture2D" uid="uid://ditcdudn2us7r" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Printer-Furniture.png" id="11_w8jfd"]
+[ext_resource type="Texture2D" uid="uid://dvm1g41c3vpv8" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Water-Dispenser.png" id="12_a7fet"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7iton"]
+texture = ExtResource("2_2fmhe")
 
 [node name="game_scene" type="Node2D" unique_id=1648794748]
 script = ExtResource("1_1ixah")
+
+[node name="OfficeBg" type="Sprite2D" parent="." unique_id=2100614819]
+position = Vector2(571.99994, 320.50006)
+scale = Vector2(1.2364017, 1.5659091)
+texture = ExtResource("2_2fmhe")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1903386374]
 
@@ -41,6 +55,15 @@ theme_override_fonts/font = ExtResource("4_1ixah")
 theme_override_font_sizes/font_size = 20
 text = "Pause"
 
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=230763741]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7iton")
+
 [node name="player" parent="." unique_id=482249979 instance=ExtResource("1_x87qo")]
 position = Vector2(578, 555)
 scale = Vector2(2, 2)
@@ -50,7 +73,7 @@ motion_mode = 1
 anchor_mode = 0
 
 [node name="Computer" parent="." unique_id=29188790 instance=ExtResource("4_rgj8m")]
-position = Vector2(570, 144)
+position = Vector2(570, 209)
 scale = Vector2(3, 3)
 
 [node name="Control" type="Control" parent="." unique_id=1153118733]
@@ -117,6 +140,26 @@ process_mode = 3
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Main Menu"
+
+[node name="BoardFrame" type="Sprite2D" parent="." unique_id=996214933]
+position = Vector2(252, 121)
+texture = ExtResource("8_4xiap")
+
+[node name="FilingCabinet1" type="Sprite2D" parent="." unique_id=1245314056]
+position = Vector2(378, 236)
+texture = ExtResource("9_wywco")
+
+[node name="FilingCabinet2" type="Sprite2D" parent="." unique_id=1373632091]
+position = Vector2(746, 234)
+texture = ExtResource("10_ldntv")
+
+[node name="PrinterFurniture" type="Sprite2D" parent="." unique_id=731864997]
+position = Vector2(963, 243)
+texture = ExtResource("11_w8jfd")
+
+[node name="WaterDispenser" type="Sprite2D" parent="." unique_id=282313008]
+position = Vector2(112, 247)
+texture = ExtResource("12_a7fet")
 
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_button_pressed"]

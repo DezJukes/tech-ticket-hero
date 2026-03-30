@@ -1,96 +1,60 @@
 [gd_scene format=3 uid="uid://brsyhmwyn4y0q"]
 
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_4g32j"]
 [ext_resource type="Script" uid="uid://c1x6i0rcsv4e5" path="res://Scenes/choose_mode.gd" id="1_wflr0"]
-[ext_resource type="Texture2D" uid="uid://csv0o8v5eocah" path="res://Assets/bg.jpg" id="2_nefxe"]
+[ext_resource type="Texture2D" uid="uid://clcpv2xavcwla" path="res://Assets/Menu/menu-bg.png" id="2_wflr0"]
+[ext_resource type="Texture2D" uid="uid://cqimxx23l3335" path="res://Assets/Menu/Buttons/Level Buttons/TheOffice-default.png" id="3_2eiee"]
+[ext_resource type="Texture2D" uid="uid://cjqinxu64w0ki" path="res://Assets/Menu/Buttons/Level Buttons/TheOffice-pressed.png" id="4_36hsg"]
+[ext_resource type="Texture2D" uid="uid://dkwvf4thy6ldg" path="res://Assets/Menu/Buttons/Level Buttons/TheOffice-hovered.png" id="5_tvksb"]
+[ext_resource type="Texture2D" uid="uid://b4ne5a1fh2k7r" path="res://Assets/Menu/Buttons/Level Buttons/SelectLevel.png" id="6_04oll"]
+[ext_resource type="Texture2D" uid="uid://1owrl5f5nom3" path="res://Assets/Menu/Buttons/BackButton-default.png" id="7_04oll"]
+[ext_resource type="Texture2D" uid="uid://6qnbkfiku8lg" path="res://Assets/Menu/Buttons/BackButton-pressed.png" id="8_xa7ad"]
+[ext_resource type="Texture2D" uid="uid://bjs58fn0hg4c5" path="res://Assets/Menu/Buttons/BackButton-hovered.png" id="9_o6oc4"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
-bg_color = Color(0.7411765, 0.7411765, 0.7411765, 0)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-corner_detail = 20
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nefxe"]
+texture = ExtResource("2_wflr0")
 
 [node name="ModeSelect" type="Node" unique_id=1906819170]
 script = ExtResource("1_wflr0")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1345528091]
+[node name="Panel" type="Panel" parent="." unique_id=363985908]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_nefxe")
+theme_override_styles/panel = SubResource("StyleBoxTexture_nefxe")
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=901645785]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="FlowContainer" type="FlowContainer" parent="." unique_id=797164222]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = -1.6099854
+offset_right = 142.0
+offset_bottom = 118.390015
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=1177843758]
-layout_mode = 2
-theme_override_constants/separation = 200
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=257120681]
-layout_mode = 2
-
-[node name="GameMode" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer" unique_id=448104043]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-theme_override_fonts/font = ExtResource("1_4g32j")
-theme_override_font_sizes/font_size = 60
-text = "Choose
-Game Mode"
-horizontal_alignment = 1
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=308400295]
-layout_mode = 2
-theme_override_constants/separation = 30
+theme_override_constants/v_separation = 30
 alignment = 1
+last_wrap_alignment = 2
 
-[node name="StoryMode" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=648962166]
+[node name="SelectLevel" type="Sprite2D" parent="FlowContainer" unique_id=306866806]
+position = Vector2(142, -74)
+texture = ExtResource("6_04oll")
+
+[node name="TheOffice" type="TextureButton" parent="FlowContainer" unique_id=1139630896]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_4g32j")
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
-text = "Story Mode"
+texture_normal = ExtResource("3_2eiee")
+texture_pressed = ExtResource("4_36hsg")
+texture_hover = ExtResource("5_tvksb")
 
-[node name="QuickChallenge" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1024891443]
+[node name="Back" type="TextureButton" parent="FlowContainer" unique_id=1241719066]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_4g32j")
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
-text = "Quick Challenge"
+texture_normal = ExtResource("7_04oll")
+texture_pressed = ExtResource("8_xa7ad")
+texture_hover = ExtResource("9_o6oc4")
 
-[node name="ClientMode" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1439172419]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_4g32j")
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
-text = "Client Mode"
-
-[node name="Back" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1119637095]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_4g32j")
-theme_override_font_sizes/font_size = 20
-theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
-text = "Back"
-
-[connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer2/StoryMode" to="." method="_on_story_mode_pressed"]
-[connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer2/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="FlowContainer/TheOffice" to="." method="_on_the_office_pressed"]
+[connection signal="pressed" from="FlowContainer/Back" to="." method="_on_back_pressed"]

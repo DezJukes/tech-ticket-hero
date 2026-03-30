@@ -1,104 +1,51 @@
 [gd_scene format=3 uid="uid://b8prqvjq48jae"]
 
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_28flt"]
 [ext_resource type="Script" uid="uid://dcmk7gco78cym" path="res://Scenes/main_menu.gd" id="1_48xlc"]
-[ext_resource type="Texture2D" uid="uid://csv0o8v5eocah" path="res://Assets/bg.jpg" id="2_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://clcpv2xavcwla" path="res://Assets/Menu/menu-bg.png" id="2_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://crjb2oatq3ei0" path="res://Assets/Menu/Buttons/StartGame-hovered.png" id="3_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://dredmhcvc22kw" path="res://Assets/Menu/Buttons/StartGame-default.png" id="3_n45e2"]
+[ext_resource type="Texture2D" uid="uid://bdb1jinqqk180" path="res://Assets/Menu/Title.png" id="5_n45e2"]
+[ext_resource type="Texture2D" uid="uid://c27wgjbbmhxmj" path="res://Assets/Menu/Buttons/StartGame-pressed.png" id="5_opfnp"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_28flt"]
-bg_color = Color(0.7411765, 0.7411765, 0.7411765, 0)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0, 0, 0, 1)
-corner_radius_top_left = 12
-corner_radius_top_right = 12
-corner_radius_bottom_right = 12
-corner_radius_bottom_left = 12
-corner_detail = 20
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opfnp"]
+texture = ExtResource("2_1ehe0")
 
 [node name="MainMenu" type="Node" unique_id=542096977]
 script = ExtResource("1_48xlc")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1510796755]
+[node name="Panel" type="Panel" parent="." unique_id=1568240030]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_1ehe0")
+theme_override_styles/panel = SubResource("StyleBoxTexture_opfnp")
 
-[node name="CenterContainer" type="CenterContainer" parent="." unique_id=2105043466]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="FlowContainer" type="FlowContainer" parent="." unique_id=1178127895]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -142.0
+offset_top = 51.109985
+offset_right = 142.0
+offset_bottom = 110.109985
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer" unique_id=504085592]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme_override_constants/separation = 200
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=1876143578]
-layout_mode = 2
-theme_override_constants/separation = 30
-
-[node name="Title" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer" unique_id=876656683]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 1, 1)
-theme_override_fonts/font = ExtResource("1_28flt")
-theme_override_font_sizes/font_size = 60
-text = "Tech Ticket
-Hero"
-horizontal_alignment = 1
-
-[node name="Subtitle" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer" unique_id=681937007]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_28flt")
-theme_override_font_sizes/font_size = 20
-text = "Learn how apps built 
-- 
-By fixing real problems"
-horizontal_alignment = 1
-
-[node name="VBoxContainer2" type="VBoxContainer" parent="CenterContainer/HBoxContainer" unique_id=1558373027]
-layout_mode = 2
-size_flags_horizontal = 4
-theme_override_constants/separation = 30
 alignment = 1
+last_wrap_alignment = 1
 
-[node name="MenuTitle" type="Label" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=1928572959]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_28flt")
-theme_override_font_sizes/font_size = 50
-text = "Menu"
+[node name="Title" type="Sprite2D" parent="FlowContainer" unique_id=542723994]
+position = Vector2(143, -111.235)
+scale = Vector2(1.3193548, 1.3193549)
+texture = ExtResource("5_n45e2")
 
-[node name="StartGame" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=279018716]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_28flt")
-theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
-text = "Start Game"
-
-[node name="StudyGuide" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=933931720]
+[node name="StartGame" type="TextureButton" parent="FlowContainer" unique_id=427137716]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_28flt")
-theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
-text = "Study Guide"
+texture_normal = ExtResource("3_n45e2")
+texture_pressed = ExtResource("5_opfnp")
+texture_hover = ExtResource("3_ce3w2")
 
-[node name="Character Profile" type="Button" parent="CenterContainer/HBoxContainer/VBoxContainer2" unique_id=810294566]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("1_28flt")
-theme_override_styles/normal = SubResource("StyleBoxFlat_28flt")
-text = "Character Profile"
-
-[connection signal="pressed" from="CenterContainer/HBoxContainer/VBoxContainer2/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="FlowContainer/StartGame" to="." method="_on_start_game_pressed"]
