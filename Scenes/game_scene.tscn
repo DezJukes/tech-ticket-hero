@@ -7,14 +7,17 @@
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="3_fiftr"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="4_1ixah"]
 [ext_resource type="PackedScene" uid="uid://bqk4wwgbista1" path="res://Scenes/computer.tscn" id="4_rgj8m"]
-[ext_resource type="Texture2D" uid="uid://dhtcdlp443358" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Board-Frame.png" id="8_4xiap"]
-[ext_resource type="Texture2D" uid="uid://bjo6d2500gtbq" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Filing-Cabinet1.png" id="9_wywco"]
-[ext_resource type="Texture2D" uid="uid://cuengilim3efd" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Filing-Cabinet2.png" id="10_ldntv"]
-[ext_resource type="Texture2D" uid="uid://ditcdudn2us7r" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Printer-Furniture.png" id="11_w8jfd"]
-[ext_resource type="Texture2D" uid="uid://dvm1g41c3vpv8" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Water-Dispenser.png" id="12_a7fet"]
+[ext_resource type="PackedScene" uid="uid://dbrw636buueuk" path="res://Scenes/board_frame.tscn" id="8_4xiap"]
+[ext_resource type="PackedScene" uid="uid://csntnedlflvm2" path="res://Scenes/filing_cabinet_1.tscn" id="9_4xiap"]
+[ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="10_4xiap"]
+[ext_resource type="PackedScene" uid="uid://c1ddoutc25g2q" path="res://Scenes/printer_furniture.tscn" id="11_4xiap"]
+[ext_resource type="PackedScene" uid="uid://bw0kxc2vm7tw5" path="res://Scenes/water_dispenser.tscn" id="12_wywco"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7iton"]
 texture = ExtResource("2_2fmhe")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xiap"]
+size = Vector2(3962, 17)
 
 [node name="game_scene" type="Node2D" unique_id=1648794748]
 script = ExtResource("1_1ixah")
@@ -141,25 +144,38 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Main Menu"
 
-[node name="BoardFrame" type="Sprite2D" parent="." unique_id=996214933]
+[node name="BoardFrame" parent="." unique_id=2050009075 instance=ExtResource("8_4xiap")]
 position = Vector2(252, 121)
-texture = ExtResource("8_4xiap")
+scale = Vector2(10, 10)
 
-[node name="FilingCabinet1" type="Sprite2D" parent="." unique_id=1245314056]
+[node name="FilingCabinet1" parent="." unique_id=980622233 instance=ExtResource("9_4xiap")]
 position = Vector2(378, 236)
-texture = ExtResource("9_wywco")
+scale = Vector2(5, 5)
 
-[node name="FilingCabinet2" type="Sprite2D" parent="." unique_id=1373632091]
+[node name="FilingCabinet2" parent="." unique_id=1667632422 instance=ExtResource("10_4xiap")]
 position = Vector2(746, 234)
-texture = ExtResource("10_ldntv")
+scale = Vector2(5, 5)
 
-[node name="PrinterFurniture" type="Sprite2D" parent="." unique_id=731864997]
+[node name="PrinterFurniture2" parent="." unique_id=1844465560 instance=ExtResource("11_4xiap")]
 position = Vector2(963, 243)
-texture = ExtResource("11_w8jfd")
+scale = Vector2(5, 5)
 
-[node name="WaterDispenser" type="Sprite2D" parent="." unique_id=282313008]
+[node name="WaterDispenser2" parent="." unique_id=370066415 instance=ExtResource("12_wywco")]
 position = Vector2(112, 247)
-texture = ExtResource("12_a7fet")
+scale = Vector2(5, 5)
+
+[node name="CollisionWall" type="StaticBody2D" parent="." unique_id=81227015]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall" unique_id=1799078276]
+position = Vector2(872, 198)
+shape = SubResource("RectangleShape2D_4xiap")
+
+[node name="CollisionWall2" type="StaticBody2D" parent="." unique_id=1645758888]
+position = Vector2(0, 497)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall2" unique_id=262771173]
+position = Vector2(865, 168)
+shape = SubResource("RectangleShape2D_4xiap")
 
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_button_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhtcdlp443358"
-path="res://.godot/imported/Board-Frame.png-0e66b427db111ea8779e7cc19d1ab12b.ctex"
+uid="uid://b2ym5rpeu5m0p"
+path="res://.godot/imported/Filing-Cabinet-Wide.png-68e1acdd3dd00ccfe41f7004654949c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Misc/Level 1 - Beginner/Furnitures/Board-Frame.png"
-dest_files=["res://.godot/imported/Board-Frame.png-0e66b427db111ea8779e7cc19d1ab12b.ctex"]
+source_file="res://Assets/Misc/Level 1 - Beginner/Furnitures/Filing-Cabinet-Wide.png"
+dest_files=["res://.godot/imported/Filing-Cabinet-Wide.png-68e1acdd3dd00ccfe41f7004654949c6.ctex"]
 
 [params]
 

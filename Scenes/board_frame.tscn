@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dbrw636buueuk"]
+
+[ext_resource type="Texture2D" uid="uid://bogpcpt6sw7h3" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Board.png" id="1_a3yj8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l110o"]
+size = Vector2(15, 11)
+
+[node name="BoardFrame" type="Node2D" unique_id=1631846516]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=367099825]
+texture = ExtResource("1_a3yj8")
+
+[node name="BoardFrameBody" type="StaticBody2D" parent="." unique_id=382742271]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BoardFrameBody" unique_id=1298259116]
+position = Vector2(-0.5, 0.5)
+shape = SubResource("RectangleShape2D_l110o")

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bw0kxc2vm7tw5"]
+
+[ext_resource type="Texture2D" uid="uid://dvm1g41c3vpv8" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Water-Dispenser.png" id="1_836o7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_836o7"]
+size = Vector2(12, 29)
+
+[node name="WaterDispenser" type="Node2D" unique_id=370066415]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1306959099]
+texture = ExtResource("1_836o7")
+
+[node name="WaterDispenserBody" type="StaticBody2D" parent="." unique_id=133089813]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WaterDispenserBody" unique_id=1080644354]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_836o7")

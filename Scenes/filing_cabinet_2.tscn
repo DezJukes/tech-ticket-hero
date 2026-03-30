@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dongnad5rxfxy"]
+
+[ext_resource type="Texture2D" uid="uid://b2ym5rpeu5m0p" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Filing-Cabinet-Wide.png" id="1_plhxs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_plhxs"]
+size = Vector2(18, 25)
+
+[node name="FilingCabinet2" type="Node2D" unique_id=1180023425]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=14612203]
+texture = ExtResource("1_plhxs")
+
+[node name="FilingCabinetWideBody" type="StaticBody2D" parent="." unique_id=494462741]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FilingCabinetWideBody" unique_id=395738787]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_plhxs")

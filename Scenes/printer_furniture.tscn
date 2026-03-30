@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c1ddoutc25g2q"]
+
+[ext_resource type="Texture2D" uid="uid://ditcdudn2us7r" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Printer-Furniture.png" id="1_ta5yi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ta5yi"]
+size = Vector2(25, 29)
+
+[node name="PrinterFurniture" type="Node2D" unique_id=1844465560]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1857784500]
+texture = ExtResource("1_ta5yi")
+
+[node name="PrinterBody" type="StaticBody2D" parent="." unique_id=1707145495]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PrinterBody" unique_id=1005926670]
+position = Vector2(-0.5, 1.5)
+shape = SubResource("RectangleShape2D_ta5yi")
