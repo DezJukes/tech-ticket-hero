@@ -2,7 +2,23 @@ extends Node
 
 ## Handles the initial landing page logic and entry animations.
 func _ready() -> void:
+	# Start floating animations for both elements
+	animate_float($Title, 15.0, 2.5)
+	# Subtitle floats slightly less and at a different speed for a parallax effect
+	animate_float($Subtitle, 8.0, 2.5) 
+	
 	await play_intro_sequence()
+
+## Reusable function to create an infinite bobbing effect.
+func animate_float(node: CanvasItem, distance: float, duration: float) -> void:
+	var original_y = node.position.y
+	
+	var tween = create_tween().set_loops().set_trans(Tween.TRANS_SINE)
+	
+	# Move Up
+	tween.tween_property(node, "position:y", original_y - distance, duration / 2)
+	# Move Down
+	tween.tween_property(node, "position:y", original_y + distance, duration / 2)
 
 ## Sequentially fades in the title, subtitle, and start button.
 func play_intro_sequence() -> void:
