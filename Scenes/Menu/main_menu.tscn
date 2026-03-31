@@ -28,10 +28,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -113.00003
-offset_top = 85.00003
+offset_left = -113.00006
+offset_top = 50.0
 offset_right = 1023.0
-offset_bottom = 321.0
+offset_bottom = 286.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.2, 0.2)
@@ -41,13 +41,13 @@ texture_pressed = ExtResource("5_opfnp")
 texture_hover = ExtResource("3_ce3w2")
 
 [node name="Subtitle" type="Sprite2D" parent="." unique_id=216699925]
-position = Vector2(578.99994, 353.99997)
+position = Vector2(578.99994, 318.99997)
 scale = Vector2(0.254717, 0.254717)
 texture = ExtResource("7_pn3xf")
 
 [node name="Title" type="Sprite2D" parent="." unique_id=542723994]
-position = Vector2(584, 223)
-scale = Vector2(0.35, 0.35)
+position = Vector2(579.0696, 217.35002)
+scale = Vector2(0.2588509, 0.25885093)
 texture = ExtResource("5_n45e2")
 
 [connection signal="pressed" from="StartGame" to="." method="_on_start_game_pressed"]
