@@ -13,18 +13,21 @@
 [ext_resource type="PackedScene" uid="uid://c1ddoutc25g2q" path="res://Scenes/printer_furniture.tscn" id="11_4xiap"]
 [ext_resource type="PackedScene" uid="uid://bw0kxc2vm7tw5" path="res://Scenes/water_dispenser.tscn" id="12_wywco"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7iton"]
-texture = ExtResource("2_2fmhe")
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xiap"]
 size = Vector2(3962, 17)
 
 [node name="game_scene" type="Node2D" unique_id=1648794748]
 script = ExtResource("1_1ixah")
 
-[node name="OfficeBg" type="Sprite2D" parent="." unique_id=2100614819]
-position = Vector2(571.99994, 320.50006)
-scale = Vector2(1.2364017, 1.5659091)
+[node name="Office Background Layer" type="CanvasLayer" parent="." unique_id=221152451]
+layer = -1
+
+[node name="Background Office" type="TextureRect" parent="Office Background Layer" unique_id=276491980]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_2fmhe")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1903386374]
@@ -57,15 +60,6 @@ grow_horizontal = 0
 theme_override_fonts/font = ExtResource("4_1ixah")
 theme_override_font_sizes/font_size = 20
 text = "Pause"
-
-[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=230763741]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_7iton")
 
 [node name="player" parent="." unique_id=482249979 instance=ExtResource("1_x87qo")]
 position = Vector2(578, 555)
