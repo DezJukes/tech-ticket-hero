@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://dtmu6ugsyyu7j"]
+
+[ext_resource type="Texture2D" uid="uid://rkmo2gvbwviv" path="res://Scenes/System Components/Global Components/Application Server/img_application_server.png" id="1_a7gl6"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_y41ex"]
+[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_gshss"]
+[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_2ydtx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehknd"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssops"]
+bg_color = Color(0.972549, 0.98039216, 0.9882353, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8862745, 0.9098039, 0.9411765, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="ComponentCard" type="PanelContainer" unique_id=462797310]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -10.0
+offset_right = -802.0
+offset_bottom = -542.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ehknd")
+
+[node name="CardPadding" type="MarginContainer" parent="." unique_id=714115166]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 16
+
+[node name="MainRow" type="HBoxContainer" parent="CardPadding" unique_id=1254062406]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="DragHandle" type="Label" parent="CardPadding/MainRow" unique_id=34677277]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.79607844, 0.8352941, 0.88235295, 1)
+text = "⋮⋮"
+
+[node name="IconFrame" type="PanelContainer" parent="CardPadding/MainRow" unique_id=1972796957]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_ssops")
+
+[node name="IconPadding" type="MarginContainer" parent="CardPadding/MainRow/IconFrame" unique_id=791504993]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="IconImage" type="TextureRect" parent="CardPadding/MainRow/IconFrame/IconPadding" unique_id=65608909]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+texture = ExtResource("1_a7gl6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextColumn" type="VBoxContainer" parent="CardPadding/MainRow" unique_id=1059364039]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CardPadding/MainRow/TextColumn" unique_id=1389291809]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="Title" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=1352558632]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
+theme_override_fonts/font = ExtResource("2_y41ex")
+text = "Application Server"
+
+[node name="Subtitle" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=614709425]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+theme_override_fonts/font = ExtResource("3_gshss")
+theme_override_font_sizes/font_size = 11
+text = "Server Application "
+
+[node name="Description" type="Label" parent="CardPadding/MainRow/TextColumn" unique_id=555238219]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
+theme_override_fonts/font = ExtResource("4_2ydtx")
+theme_override_font_sizes/font_size = 12
+text = "Receives the validated request and coordinates the storage of the content."
+autowrap_mode = 2
