@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://c0wu12ridnit8"]
+
+[ext_resource type="Texture2D" uid="uid://8fwvbhevky5v" path="res://Scenes/System Components/CMS/Content Creator/img_content_creator.png" id="1_bv2lc"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_tnxv4"]
+
+[node name="DroppedBadge" type="VBoxContainer" unique_id=2080545683]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1079.0
+offset_bottom = -595.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="Icon" type="TextureRect" parent="." unique_id=2087670836]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_bv2lc")
+expand_mode = 1
+
+[node name="NameLabel" type="Label" parent="." unique_id=1241469442]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
+theme_override_fonts/font = ExtResource("2_tnxv4")
+theme_override_font_sizes/font_size = 12
+text = "Content 
+Creator"
+horizontal_alignment = 1
