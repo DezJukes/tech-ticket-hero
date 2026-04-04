@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cfs3mcjift23r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjvn5"]
+bg_color = Color(0.22052518, 0.6650747, 0.9999998, 0.09803922)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.23137255, 0.50980395, 0.9647059, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="Dropzone" type="PanelContainer" unique_id=1502597236]
+custom_minimum_size = Vector2(80, 70)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_vjvn5")

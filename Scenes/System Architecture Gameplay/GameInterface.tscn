@@ -8,10 +8,16 @@
 [ext_resource type="Texture2D" uid="uid://88w238ppgoux" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_pressed.png" id="5_vvtdt"]
 [ext_resource type="Texture2D" uid="uid://lkh0k2su5n1y" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_hovered.png" id="6_bubmk"]
 [ext_resource type="Texture2D" uid="uid://dhb5cchugfrxn" path="res://Assets/Misc/System Gameplay/background-board.png" id="7_okh1a"]
-[ext_resource type="Texture2D" uid="uid://gnxh0w2iwcr" path="res://Assets/Misc/Arrow.png" id="10_bubmk"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="10_eoklo"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Application Server/application_server_comp.tscn" id="11_vvtdt"]
+[ext_resource type="PackedScene" uid="uid://cfs3mcjift23r" path="res://Scenes/System Components/dropzone.tscn" id="9_bubmk"]
+[ext_resource type="PackedScene" uid="uid://cv47ljppldtki" path="res://Scenes/System Components/CMS/Content Creator/content_creator_dropped.tscn" id="9_okh1a"]
+[ext_resource type="PackedScene" uid="uid://bvh3r7ufgd2fo" path="res://Scenes/System Components/CMS/Content Delivery/content_delivery_dropped.tscn" id="11_6hfb2"]
+[ext_resource type="PackedScene" uid="uid://bf17ecqvu3vmw" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_dropped.tscn" id="11_nc1fv"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_comp.tscn" id="12_vo8ic"]
+[ext_resource type="PackedScene" uid="uid://iaov3cd3s1xh" path="res://Scenes/System Components/Global Components/Application Server/application_server_dropped.tscn" id="13_ce666"]
+[ext_resource type="PackedScene" uid="uid://1ppqaf50aejo" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="13_nprbw"]
+[ext_resource type="PackedScene" uid="uid://gyw68370srqq" path="res://Scenes/System Components/CMS/Relational Database/relational_database_dropped.tscn" id="14_nc1fv"]
+[ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="16_nprbw"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="18_nprbw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo8ic"]
 bg_color = Color(1, 1, 1, 1)
@@ -125,22 +131,221 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_e5ebq")
 
 [node name="TextureRect" type="TextureRect" parent="Workspace/BoardArea" unique_id=1960661506]
 layout_mode = 2
+mouse_filter = 2
 texture = ExtResource("7_okh1a")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="CenterContainer" type="CenterContainer" parent="Workspace/BoardArea" unique_id=918728976]
-layout_mode = 2
+[node name="Content Creator" parent="Workspace/BoardArea/TextureRect" unique_id=1782913598 instance=ExtResource("9_okh1a")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 49.0
+offset_top = 96.0
+offset_right = 149.0
+offset_bottom = 166.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="ArchitectureFlow" type="HBoxContainer" parent="Workspace/BoardArea/CenterContainer" unique_id=930266797]
-layout_mode = 2
-theme_override_constants/separation = 16
+[node name="Content Creator2" parent="Workspace/BoardArea/TextureRect" unique_id=845336346 instance=ExtResource("9_okh1a")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 449.0
+offset_top = 447.0
+offset_right = 549.0
+offset_bottom = 517.0
+grow_horizontal = 1
+grow_vertical = 1
 
-[node name="Arrow1" type="TextureRect" parent="Workspace/BoardArea/CenterContainer/ArchitectureFlow" unique_id=1505836124]
-custom_minimum_size = Vector2(100, 60)
-layout_mode = 2
-size_flags_horizontal = 4
-texture = ExtResource("10_bubmk")
+[node name="API Gateway" parent="Workspace/BoardArea/TextureRect" unique_id=1014836096 instance=ExtResource("11_nc1fv")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 46.0
+offset_top = 287.0
+offset_right = 146.0
+offset_bottom = 357.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Dropzone" parent="Workspace/BoardArea/TextureRect" unique_id=1502597236 instance=ExtResource("9_bubmk")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 661.0
+offset_top = 221.0
+offset_right = 761.0
+offset_bottom = 291.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Application Server" parent="Workspace/BoardArea/TextureRect" unique_id=633311077 instance=ExtResource("13_ce666")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 252.0
+offset_top = 284.0
+offset_right = 352.0
+offset_bottom = 354.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Object Storage" parent="Workspace/BoardArea/TextureRect" unique_id=235426923 instance=ExtResource("13_nprbw")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 461.0
+offset_top = 140.0
+offset_right = 561.0
+offset_bottom = 210.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Relational Database" parent="Workspace/BoardArea/TextureRect" unique_id=757138952 instance=ExtResource("14_nc1fv")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 459.0
+offset_top = 290.0
+offset_right = 559.0
+offset_bottom = 360.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Dropzone2" parent="Workspace/BoardArea/TextureRect" unique_id=1534332276 instance=ExtResource("9_bubmk")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 253.0
+offset_top = 96.0
+offset_right = 353.0
+offset_bottom = 166.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Content Delivery" parent="Workspace/BoardArea/TextureRect" unique_id=875525278 instance=ExtResource("11_6hfb2")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 663.0
+offset_top = 447.0
+offset_right = 763.0
+offset_bottom = 517.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Arrow" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=385947068]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 63.0
+offset_top = 168.0
+offset_right = 123.0
+offset_bottom = 288.0
+texture = ExtResource("16_nprbw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow3" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=574719024]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 271.0
+offset_top = 166.0
+offset_right = 331.0
+offset_bottom = 286.0
+texture = ExtResource("16_nprbw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow8" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1677231637]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 671.0
+offset_top = 286.0
+offset_right = 758.0
+offset_bottom = 460.0
+texture = ExtResource("16_nprbw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow2" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=461042442]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 187.00002
+offset_top = 317.00003
+offset_right = 268.35608
+offset_bottom = 479.7122
+rotation = -2.443461
+texture = ExtResource("16_nprbw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow4" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1514114387]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 377.0
+offset_top = 308.0
+offset_right = 437.0
+offset_bottom = 428.0
+rotation = -2.1816616
+texture = ExtResource("16_nprbw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow5" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=814866794]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 348.0
+offset_top = 351.0
+offset_right = 408.0
+offset_bottom = 471.0
+rotation = -1.5707964
+texture = ExtResource("16_nprbw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow9" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1623910063]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 664.0
+offset_top = 451.0
+offset_right = 724.0
+offset_bottom = 571.0
+rotation = 1.5707964
+texture = ExtResource("16_nprbw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow6" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=460403451]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 547.0
+offset_top = 198.00003
+offset_right = 607.0
+offset_bottom = 318.00003
+rotation = -1.0576695
+texture = ExtResource("16_nprbw")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow7" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1206525686]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 574.00006
+offset_top = 363.00003
+offset_right = 634.00006
+offset_bottom = 483.00003
+rotation = -2.083923
+texture = ExtResource("16_nprbw")
 expand_mode = 1
 stretch_mode = 5
 
@@ -193,14 +398,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 12
 
-[node name="ComponentCard3" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("12_vo8ic")]
+[node name="Auth Service" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("12_vo8ic")]
 layout_mode = 2
 script = null
 
-[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=214491680 instance=ExtResource("10_eoklo")]
+[node name="Search Engine" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1657130036 instance=ExtResource("18_nprbw")]
 layout_mode = 2
-script = null
-
-[node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1667422591 instance=ExtResource("11_vvtdt")]
-layout_mode = 2
-script = null
