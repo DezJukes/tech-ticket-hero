@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dtmu6ugsyyu7j"]
+[gd_scene format=3]
 
 [ext_resource type="Script" uid="uid://drt010ljcsqoo" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_comp.gd" id="1_18nk2"]
 [ext_resource type="Texture2D" uid="uid://b12herorqimf6" path="res://Scenes/System Components/Global Components/Auth Service/img_auth_service.png" id="1_b8sgh"]

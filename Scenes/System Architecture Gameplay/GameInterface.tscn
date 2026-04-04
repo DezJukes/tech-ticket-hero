@@ -8,11 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://88w238ppgoux" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_pressed.png" id="5_vvtdt"]
 [ext_resource type="Texture2D" uid="uid://lkh0k2su5n1y" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_hovered.png" id="6_bubmk"]
 [ext_resource type="Texture2D" uid="uid://dhb5cchugfrxn" path="res://Assets/Misc/System Gameplay/background-board.png" id="7_okh1a"]
-[ext_resource type="PackedScene" uid="uid://dtmu6ugsyyu7j" path="res://Scenes/System Components/Global Components/Application Server/application_server_comp.tscn" id="9_pedpk"]
-[ext_resource type="PackedScene" uid="uid://c0wu12ridnit8" path="res://Scenes/System Components/CMS/Content Creator/content_creator_dropped.tscn" id="9_vvtdt"]
 [ext_resource type="Texture2D" uid="uid://gnxh0w2iwcr" path="res://Assets/Misc/Arrow.png" id="10_bubmk"]
-[ext_resource type="PackedScene" uid="uid://dtmu6ugsyyu7j" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="10_eoklo"]
-[ext_resource type="PackedScene" uid="uid://c0wu12ridnit8" path="res://Scenes/System Components/CMS/Content Delivery/content_delivery_dropped.tscn" id="11_okh1a"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="10_eoklo"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Application Server/application_server_comp.tscn" id="11_vvtdt"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_comp.tscn" id="12_vo8ic"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo8ic"]
 bg_color = Color(1, 1, 1, 1)
@@ -137,10 +136,6 @@ layout_mode = 2
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="DroppedBadge" parent="Workspace/BoardArea/CenterContainer/ArchitectureFlow" unique_id=1782913598 instance=ExtResource("9_vvtdt")]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
-
 [node name="Arrow1" type="TextureRect" parent="Workspace/BoardArea/CenterContainer/ArchitectureFlow" unique_id=1505836124]
 custom_minimum_size = Vector2(100, 60)
 layout_mode = 2
@@ -148,10 +143,6 @@ size_flags_horizontal = 4
 texture = ExtResource("10_bubmk")
 expand_mode = 1
 stretch_mode = 5
-
-[node name="DroppedBadge2" parent="Workspace/BoardArea/CenterContainer/ArchitectureFlow" unique_id=875525278 instance=ExtResource("11_okh1a")]
-custom_minimum_size = Vector2(80, 0)
-layout_mode = 2
 
 [node name="ToolkitSidebar" type="PanelContainer" parent="Workspace" unique_id=79764630]
 custom_minimum_size = Vector2(350, 0)
@@ -202,10 +193,14 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 12
 
-[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("10_eoklo")]
+[node name="ComponentCard3" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("12_vo8ic")]
 layout_mode = 2
 script = null
 
-[node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=630195618 instance=ExtResource("9_pedpk")]
+[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=214491680 instance=ExtResource("10_eoklo")]
+layout_mode = 2
+script = null
+
+[node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1667422591 instance=ExtResource("11_vvtdt")]
 layout_mode = 2
 script = null

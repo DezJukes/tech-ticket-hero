@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c0wu12ridnit8"]
+[gd_scene format=3 uid="uid://cv47ljppldtki"]
 
 [ext_resource type="Texture2D" uid="uid://8fwvbhevky5v" path="res://Scenes/System Components/CMS/Content Creator/img_content_creator.png" id="1_bv2lc"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_tnxv4"]
@@ -20,6 +20,7 @@ expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
 [node name="DroppedBadge" type="PanelContainer" unique_id=1782913598]
+custom_minimum_size = Vector2(80, 70)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

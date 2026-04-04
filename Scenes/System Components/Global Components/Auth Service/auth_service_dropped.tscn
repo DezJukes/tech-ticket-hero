@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c0wu12ridnit8"]
+[gd_scene format=3 uid="uid://cybb78cd41kg5"]
 
 [ext_resource type="Texture2D" uid="uid://b12herorqimf6" path="res://Scenes/System Components/Global Components/Auth Service/img_auth_service.png" id="1_u2g34"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_l18wb"]
@@ -20,6 +20,7 @@ expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
 [node name="DroppedBadge" type="PanelContainer" unique_id=492691361]
+custom_minimum_size = Vector2(80, 70)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -45,5 +46,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
 theme_override_fonts/font = ExtResource("2_l18wb")
 theme_override_font_sizes/font_size = 12
-text = "Auth Service"
+text = "Auth 
+Service"
 horizontal_alignment = 1

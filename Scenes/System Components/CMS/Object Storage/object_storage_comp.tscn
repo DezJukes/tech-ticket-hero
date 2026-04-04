@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dtmu6ugsyyu7j"]
+[gd_scene format=3]
 
 [ext_resource type="Texture2D" uid="uid://f8y3nmkqo5mc" path="res://Scenes/System Components/CMS/Object Storage/img_object_storage.png" id="1_iuiqi"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_tve6j"]

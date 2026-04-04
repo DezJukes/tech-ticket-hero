@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://dtmu6ugsyyu7j"]
+[gd_scene format=3]
 
 [ext_resource type="Texture2D" uid="uid://cr3tkwu7tx5bn" path="res://Scenes/System Components/Global Components/API Gateway/img_api_gateway.png" id="1_k8pjx"]
 [ext_resource type="Script" uid="uid://dtgnfufp88pvp" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.gd" id="1_xje42"]
