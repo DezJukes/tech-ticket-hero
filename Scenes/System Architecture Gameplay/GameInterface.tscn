@@ -1,29 +1,37 @@
 [gd_scene format=3 uid="uid://bgsciooeskgrc"]
 
 [ext_resource type="Texture2D" uid="uid://rd8vc5wqvp6u" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_default.png" id="1_2q4iy"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_3ekg3"]
 [ext_resource type="Texture2D" uid="uid://bh1oob36mat41" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_pressed.png" id="2_3ekg3"]
 [ext_resource type="Texture2D" uid="uid://coy624sn6j5qp" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_hovered.png" id="3_pedpk"]
 [ext_resource type="Texture2D" uid="uid://c5upd2bea2gn4" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_default.png" id="4_eoklo"]
 [ext_resource type="Texture2D" uid="uid://88w238ppgoux" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_pressed.png" id="5_vvtdt"]
 [ext_resource type="Texture2D" uid="uid://lkh0k2su5n1y" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_hovered.png" id="6_bubmk"]
 [ext_resource type="Texture2D" uid="uid://dhb5cchugfrxn" path="res://Assets/Misc/System Gameplay/background-board.png" id="7_okh1a"]
-[ext_resource type="PackedScene" uid="uid://dtmu6ugsyyu7j" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_comp.tscn" id="8_6hfb2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo8ic"]
 bg_color = Color(1, 1, 1, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
+border_width_bottom = 2
 border_color = Color(0.8862745, 0.9098039, 0.9411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pedpk"]
+bg_color = Color(0.99607843, 0.8862745, 0.8862745, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 8.0
+expand_margin_top = 4.0
+expand_margin_right = 8.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e5ebq"]
 bg_color = Color(0.9268064, 0.9268064, 0.92680633, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nprbw"]
 bg_color = Color(1, 1, 1, 1)
-border_width_left = 1
-border_color = Color(0.021992011, 0.24424526, 0.18669185, 1)
+border_width_left = 2
+border_color = Color(0.8862745, 0.9098039, 0.9411765, 1)
 
 [node name="GameInterface" type="VBoxContainer" unique_id=1067625552]
 anchors_preset = 15
@@ -37,27 +45,54 @@ theme_override_constants/separation = 0
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vo8ic")
 
-[node name="HBoxContainer" type="HBoxContainer" parent="TopBar" unique_id=971396921]
+[node name="MarginContainer" type="MarginContainer" parent="TopBar" unique_id=2116361422]
 layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 8
 
-[node name="TicketName" type="Label" parent="TopBar/HBoxContainer" unique_id=45591059]
+[node name="HBoxContainer" type="HBoxContainer" parent="TopBar/MarginContainer" unique_id=971396921]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+size_flags_vertical = 4
+
+[node name="Control2" type="Control" parent="TopBar/MarginContainer/HBoxContainer" unique_id=1677102037]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopBar/MarginContainer/HBoxContainer" unique_id=591662692]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TicketName" type="PanelContainer" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1131279465]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_pedpk")
+
+[node name="Label" type="Label" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer/TicketName" unique_id=1324872179]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9372549, 0.26666668, 0.26666668, 1)
+theme_override_fonts/font = ExtResource("1_3ekg3")
+theme_override_font_sizes/font_size = 11
 text = "PROD-891"
-horizontal_alignment = 1
 
-[node name="ArchitectureName" type="Label" parent="TopBar/HBoxContainer" unique_id=1356052259]
+[node name="ArchitectureName" type="Label" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1356052259]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "CMS Traffic Bottleneck"
 horizontal_alignment = 1
 
-[node name="Control" type="Control" parent="TopBar/HBoxContainer" unique_id=1761591784]
+[node name="Control" type="Control" parent="TopBar/MarginContainer/HBoxContainer" unique_id=1761591784]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="TicketDetails" type="TextureButton" parent="TopBar/HBoxContainer" unique_id=1573029760]
-custom_minimum_size = Vector2(160, 40)
+[node name="HBoxContainer2" type="HBoxContainer" parent="TopBar/MarginContainer/HBoxContainer" unique_id=64905159]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TicketDetails" type="TextureButton" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=1256216002]
+custom_minimum_size = Vector2(150, 50)
 layout_mode = 2
 texture_normal = ExtResource("1_2q4iy")
 texture_pressed = ExtResource("2_3ekg3")
@@ -65,8 +100,8 @@ texture_hover = ExtResource("3_pedpk")
 ignore_texture_size = true
 stretch_mode = 5
 
-[node name="DeployButton" type="TextureButton" parent="TopBar/HBoxContainer" unique_id=1591316994]
-custom_minimum_size = Vector2(150, 40)
+[node name="DeployButton" type="TextureButton" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=983669662]
+custom_minimum_size = Vector2(120, 50)
 layout_mode = 2
 texture_normal = ExtResource("4_eoklo")
 texture_pressed = ExtResource("5_vvtdt")
@@ -101,23 +136,50 @@ custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nprbw")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Workspace/ToolkitSidebar" unique_id=1748831817]
+[node name="MarginContainer" type="MarginContainer" parent="Workspace/ToolkitSidebar" unique_id=1696348147]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer" unique_id=1748831817]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer" unique_id=2098022592]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Workspace/ToolkitSidebar/VBoxContainer" unique_id=2098022592]
+[node name="Header" type="Label" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1871069543]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.39215687, 0.45490196, 0.54509807, 1)
+theme_override_font_sizes/font_size = 11
+text = "CLOUD COMPONENTS"
 
-[node name="Header" type="Label" parent="Workspace/ToolkitSidebar/VBoxContainer/HBoxContainer" unique_id=1871069543]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "COMPONENTS"
-
-[node name="ScrollContainer" type="ScrollContainer" parent="Workspace/ToolkitSidebar/VBoxContainer/HBoxContainer" unique_id=823259921]
+[node name="Control" type="Control" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/HBoxContainer" unique_id=261650118]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Workspace/ToolkitSidebar/VBoxContainer/HBoxContainer/ScrollContainer" unique_id=1465296553]
+[node name="Label" type="Label" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/HBoxContainer" unique_id=761371348]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5803922, 0.6392157, 0.72156864, 1)
+theme_override_font_sizes/font_size = 11
+text = "DRAG ⟶"
+
+[node name="HSeparator" type="HSeparator" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer" unique_id=837539525]
 layout_mode = 2
 
-[node name="ComponentCard" parent="Workspace/ToolkitSidebar/VBoxContainer/HBoxContainer/ScrollContainer" unique_id=462797310 instance=ExtResource("8_6hfb2")]
+[node name="ScrollContainer" type="ScrollContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer" unique_id=823259921]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer" unique_id=667776313]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+
+[node name="Control" type="Control" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1244222171]
+custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
