@@ -1,6 +1,8 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://050ivv4bbnw8"]
 
 [ext_resource type="Texture2D" uid="uid://cd7ogy8of7tvr" path="res://Scenes/System Components/CMS/Search Engine/img_search_engine.png" id="1_pjos2"]
+[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_qlhb2"]
+[ext_resource type="PackedScene" uid="uid://bhrcudkujg67o" path="res://Scenes/System Components/CMS/Search Engine/search_engine_dropped.tscn" id="2_i3b1y"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_y41ex"]
 [ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_gshss"]
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_2ydtx"]
@@ -38,6 +40,8 @@ offset_bottom = -542.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ehknd")
+script = ExtResource("1_qlhb2")
+dropped_badge_scene = ExtResource("2_i3b1y")
 
 [node name="CardPadding" type="MarginContainer" parent="." unique_id=714115166]
 layout_mode = 2

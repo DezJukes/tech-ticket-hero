@@ -28,6 +28,7 @@ offset_right = -1079.0
 offset_bottom = -595.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_nl00f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1344035497]
