@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dtmu6ugsyyu7j"]
 
-[ext_resource type="Texture2D" uid="uid://cr3tkwu7tx5bn" path="res://Scenes/System Components/API Gateway/img_api_gateway.png" id="1_k8pjx"]
+[ext_resource type="Texture2D" uid="uid://cr3tkwu7tx5bn" path="res://Scenes/System Components/Global Components/API Gateway/img_api_gateway.png" id="1_k8pjx"]
+[ext_resource type="Script" uid="uid://dtgnfufp88pvp" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.gd" id="1_xje42"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_y41ex"]
 [ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_gshss"]
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_2ydtx"]
@@ -38,6 +39,7 @@ offset_bottom = -542.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ehknd")
+script = ExtResource("1_xje42")
 
 [node name="CardPadding" type="MarginContainer" parent="." unique_id=714115166]
 layout_mode = 2
