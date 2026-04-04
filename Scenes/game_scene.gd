@@ -9,3 +9,7 @@ func _ready() -> void:
 func _on_button_pressed():
 	get_tree().paused = true
 	pause_panel.show()
+
+
+func _on_interact_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/System Architecture Gameplay/GameInterface.tscn")
