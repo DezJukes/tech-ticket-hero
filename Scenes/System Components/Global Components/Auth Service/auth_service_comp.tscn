@@ -1,7 +1,8 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://i34utumvpipe"]
 
-[ext_resource type="Script" uid="uid://drt010ljcsqoo" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_comp.gd" id="1_18nk2"]
+[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_18nk2"]
 [ext_resource type="Texture2D" uid="uid://b12herorqimf6" path="res://Scenes/System Components/Global Components/Auth Service/img_auth_service.png" id="1_b8sgh"]
+[ext_resource type="PackedScene" uid="uid://cybb78cd41kg5" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_dropped.tscn" id="2_8dwn1"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_y41ex"]
 [ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_gshss"]
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_2ydtx"]
@@ -40,6 +41,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ehknd")
 script = ExtResource("1_18nk2")
+dropped_badge_scene = ExtResource("2_8dwn1")
 
 [node name="CardPadding" type="MarginContainer" parent="." unique_id=714115166]
 layout_mode = 2

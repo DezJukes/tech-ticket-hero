@@ -1,7 +1,7 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://bjwusf60yermx"]
 
 [ext_resource type="Texture2D" uid="uid://cr3tkwu7tx5bn" path="res://Scenes/System Components/Global Components/API Gateway/img_api_gateway.png" id="1_k8pjx"]
-[ext_resource type="Script" uid="uid://dtgnfufp88pvp" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.gd" id="1_xje42"]
+[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_xje42"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_y41ex"]
 [ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_gshss"]
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_2ydtx"]

@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cfs3mcjift23r"]
 
+[ext_resource type="Script" uid="uid://bhrkq7rltp1to" path="res://Scripts/Architecture-Scripts/dropzone.gd" id="1_83sfm"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjvn5"]
 bg_color = Color(0.22052518, 0.6650747, 0.9999998, 0.09803922)
 border_width_left = 2
@@ -24,3 +26,4 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_vjvn5")
+script = ExtResource("1_83sfm")
