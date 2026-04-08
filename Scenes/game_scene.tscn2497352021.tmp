@@ -83,76 +83,6 @@ metadata/_edit_use_anchors_ = true
 
 [node name="TouchControls" parent="Control" unique_id=1578848564 instance=ExtResource("2_b6fju")]
 
-[node name="InformationModal" type="Node" parent="." unique_id=1175554281]
-script = ExtResource("13_wywco")
-
-[node name="InfoCanvasLayer" type="CanvasLayer" parent="InformationModal" unique_id=685094051]
-layer = 3
-
-[node name="InformationPanel" type="Panel" parent="InformationModal/InfoCanvasLayer" unique_id=1412587442]
-unique_name_in_owner = true
-visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -500.0
-offset_top = -300.0
-offset_right = 500.0
-offset_bottom = 300.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Label" type="Label" parent="InformationModal/InfoCanvasLayer/InformationPanel" unique_id=2846461]
-layout_mode = 0
-offset_right = 326.0
-offset_bottom = 49.0
-text = "Incident Report
-Ticket: PROD-891"
-
-[node name="CenterContainer" type="CenterContainer" parent="InformationModal/InfoCanvasLayer/InformationPanel" unique_id=1339367664]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -163.0
-offset_top = -20.0
-offset_right = 163.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="InformationModal/InfoCanvasLayer/InformationPanel/CenterContainer" unique_id=2070633946]
-layout_mode = 2
-theme_override_constants/separation = 353
-
-[node name="Label" type="Label" parent="InformationModal/InfoCanvasLayer/InformationPanel/CenterContainer/HBoxContainer" unique_id=1349265974]
-layout_mode = 2
-text = "THE PROBLEM"
-
-[node name="Label2" type="Label" parent="InformationModal/InfoCanvasLayer/InformationPanel/CenterContainer/HBoxContainer" unique_id=1369294315]
-layout_mode = 2
-text = "YOUR MISSION"
-
-[node name="AcceptMission" type="Button" parent="InformationModal/InfoCanvasLayer/InformationPanel" unique_id=449339775]
-process_mode = 3
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -165.0
-offset_top = -62.0
-offset_right = -15.0
-offset_bottom = -17.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Accept Mission"
-
 [node name="Pause" type="Node" parent="." unique_id=757671672]
 script = ExtResource("3_fiftr")
 
@@ -245,9 +175,79 @@ position = Vector2(0, 497)
 position = Vector2(865, 168)
 shape = SubResource("RectangleShape2D_4xiap")
 
+[node name="InformationModal" type="Node" parent="." unique_id=1175554281]
+script = ExtResource("13_wywco")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="InformationModal" unique_id=685094051]
+layer = 2
+
+[node name="InformationPanel" type="Panel" parent="InformationModal/CanvasLayer" unique_id=1412587442]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -300.0
+offset_right = 500.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="InformationModal/CanvasLayer/InformationPanel" unique_id=1339367664]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -163.0
+offset_top = -20.0
+offset_right = 163.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="InformationModal/CanvasLayer/InformationPanel/CenterContainer" unique_id=2070633946]
+layout_mode = 2
+theme_override_constants/separation = 353
+
+[node name="Label" type="Label" parent="InformationModal/CanvasLayer/InformationPanel/CenterContainer/HBoxContainer" unique_id=1349265974]
+layout_mode = 2
+text = "THE PROBLEM"
+
+[node name="Label2" type="Label" parent="InformationModal/CanvasLayer/InformationPanel/CenterContainer/HBoxContainer" unique_id=1369294315]
+layout_mode = 2
+text = "YOUR MISSION"
+
+[node name="AcceptMission" type="Button" parent="InformationModal/CanvasLayer/InformationPanel" unique_id=449339775]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -165.0
+offset_top = -62.0
+offset_right = -15.0
+offset_bottom = -17.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Accept Mission"
+
+[node name="Label" type="Label" parent="InformationModal/CanvasLayer/InformationPanel" unique_id=2846461]
+layout_mode = 0
+offset_right = 326.0
+offset_bottom = 49.0
+text = "Incident Report
+Ticket: PROD-891"
+
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="InformationModal/InfoCanvasLayer/InformationPanel/AcceptMission" to="InformationModal" method="_on_accept_mission_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/Resume" to="Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/ChangeMode" to="Pause" method="_on_change_mode_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/MainMenu" to="Pause" method="_on_main_menu_pressed"]
+[connection signal="pressed" from="InformationModal/CanvasLayer/InformationPanel/AcceptMission" to="." method="_on_accept_mission_pressed"]
+[connection signal="pressed" from="InformationModal/CanvasLayer/InformationPanel/AcceptMission" to="InformationModal" method="_on_accept_mission_pressed"]
