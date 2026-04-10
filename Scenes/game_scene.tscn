@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="10_4xiap"]
 [ext_resource type="PackedScene" uid="uid://c1ddoutc25g2q" path="res://Scenes/printer_furniture.tscn" id="11_4xiap"]
 [ext_resource type="PackedScene" uid="uid://bw0kxc2vm7tw5" path="res://Scenes/water_dispenser.tscn" id="12_wywco"]
-[ext_resource type="Script" uid="uid://bt5x1k707ugpe" path="res://Scenes/information_modal.gd" id="13_wywco"]
+[ext_resource type="Script" path="res://Scenes/information_modal.gd" id="13_wywco"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xiap"]
 size = Vector2(3962, 17)
@@ -68,7 +68,7 @@ scale = Vector2(2, 2)
 motion_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=108253755]
-anchor_mode = 0
+position = Vector2(575, 323)
 
 [node name="Computer" parent="." unique_id=29188790 instance=ExtResource("4_rgj8m")]
 position = Vector2(570, 209)

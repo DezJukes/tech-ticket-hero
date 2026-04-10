@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://rd8vc5wqvp6u" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_default.png" id="1_2q4iy"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_3ekg3"]
-[ext_resource type="Script" uid="uid://bx8qsurpw37f5" path="res://Scenes/System Architecture Gameplay/game_interface.gd" id="1_7faf7"]
+[ext_resource type="Script" path="res://Scenes/System Architecture Gameplay/game_interface.gd" id="1_7faf7"]
 [ext_resource type="Texture2D" uid="uid://bh1oob36mat41" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_pressed.png" id="2_3ekg3"]
 [ext_resource type="Texture2D" uid="uid://coy624sn6j5qp" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_hovered.png" id="3_pedpk"]
 [ext_resource type="Texture2D" uid="uid://c5upd2bea2gn4" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_default.png" id="4_eoklo"]
@@ -20,8 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://gyw68370srqq" path="res://Scenes/System Components/CMS/Relational Database/relational_database_dropped.tscn" id="14_nc1fv"]
 [ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="16_nprbw"]
 [ext_resource type="PackedScene" uid="uid://050ivv4bbnw8" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="18_nprbw"]
-[ext_resource type="Script" uid="uid://dscgsfydpaj0o" path="res://Scenes/System Architecture Gameplay/information.gd" id="21_smb87"]
-[ext_resource type="Script" uid="uid://cjs4iu2u26d4v" path="res://Scenes/System Architecture Gameplay/failed.gd" id="22_smb87"]
+[ext_resource type="Script" path="res://Scenes/System Architecture Gameplay/information.gd" id="21_smb87"]
+[ext_resource type="Script" path="res://Scenes/System Architecture Gameplay/failed.gd" id="22_smb87"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo8ic"]
 bg_color = Color(1, 1, 1, 1)
@@ -128,6 +128,7 @@ stretch_mode = 5
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 0
+alignment = 1
 
 [node name="BoardArea" type="PanelContainer" parent="Workspace" unique_id=489866145]
 layout_mode = 2
