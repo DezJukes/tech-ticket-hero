@@ -55,3 +55,7 @@ func _on_deploy_button_pressed() -> void:
 		# Pause the game and show defeat
 		get_tree().paused = true
 		failed_panel.show()
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/game_scene.tscn")

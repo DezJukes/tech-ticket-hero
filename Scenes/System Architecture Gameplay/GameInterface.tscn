@@ -143,7 +143,7 @@ size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_e5ebq")
 
 [node name="TextureRect" type="TextureRect" parent="Workspace/BoardArea" unique_id=1960661506]
-custom_minimum_size = Vector2(800, 600)
+custom_minimum_size = Vector2(800, 560)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -429,7 +429,6 @@ layout_mode = 2
 
 [node name="InformationModal" parent="." unique_id=1895424386 instance=ExtResource("21_7faf7")]
 unique_name_in_owner = true
-visible = false
 
 [node name="FailedModal" parent="." unique_id=1453858144 instance=ExtResource("22_d7rpw")]
 unique_name_in_owner = true
@@ -439,5 +438,6 @@ visible = false
 unique_name_in_owner = true
 visible = false
 
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/TicketDetails" to="." method="_on_ticket_details_pressed"]
 [connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/DeployButton" to="." method="_on_deploy_button_pressed"]
