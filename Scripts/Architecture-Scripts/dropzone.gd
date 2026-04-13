@@ -2,6 +2,7 @@ extends PanelContainer
 
 # Type the correct answer in the Inspector for each box
 @export var expected_component: String = ""
+var current_component: String = ""
 
 # Visual States (Opacity)
 var normal_color = Color(1, 1, 1, 0.4) # 40% visible (Empty)
@@ -46,3 +47,12 @@ func _drop_data(at_position: Vector2, data: Variant) -> void:
 		print("CORRECT! You placed the ", data["name"])
 	else:
 		print("WRONG! Expected: ", expected_component, " but got: ", data["name"])
+		# Lock in the state so it stays full quality
+	has_component = true
+	modulate = active_color
+	
+	# ADD THIS LINE: Remember the name of the piece currently sitting here!
+	current_component = data["name"]
+	
+	# You can delete your old print("CORRECT!") and print("WRONG!") lines here, 
+	# because the Deploy button will handle the checking now!

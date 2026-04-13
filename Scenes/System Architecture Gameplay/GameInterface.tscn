@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://rd8vc5wqvp6u" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_default.png" id="1_2q4iy"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_3ekg3"]
-[ext_resource type="Script" path="res://Scenes/System Architecture Gameplay/game_interface.gd" id="1_7faf7"]
+[ext_resource type="Script" uid="uid://bx8qsurpw37f5" path="res://Scenes/System Architecture Gameplay/game_interface.gd" id="1_7faf7"]
 [ext_resource type="Texture2D" uid="uid://bh1oob36mat41" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_pressed.png" id="2_3ekg3"]
 [ext_resource type="Texture2D" uid="uid://coy624sn6j5qp" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_hovered.png" id="3_pedpk"]
 [ext_resource type="Texture2D" uid="uid://c5upd2bea2gn4" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_default.png" id="4_eoklo"]
@@ -20,8 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://gyw68370srqq" path="res://Scenes/System Components/CMS/Relational Database/relational_database_dropped.tscn" id="14_nc1fv"]
 [ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="16_nprbw"]
 [ext_resource type="PackedScene" uid="uid://050ivv4bbnw8" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="18_nprbw"]
-[ext_resource type="Script" path="res://Scenes/System Architecture Gameplay/information.gd" id="21_smb87"]
-[ext_resource type="Script" path="res://Scenes/System Architecture Gameplay/failed.gd" id="22_smb87"]
+[ext_resource type="PackedScene" uid="uid://b4s76c7k43xvu" path="res://Scenes/Modals/information_modal.tscn" id="21_7faf7"]
+[ext_resource type="PackedScene" uid="uid://ciytdshnq3qxu" path="res://Scenes/Modals/failed_modal.tscn" id="22_d7rpw"]
+[ext_resource type="PackedScene" uid="uid://eg6ub8hn8rtc" path="res://Scenes/Modals/success_modal.tscn" id="23_epmnl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo8ic"]
 bg_color = Color(1, 1, 1, 1)
@@ -48,6 +49,7 @@ border_width_left = 2
 border_color = Color(0.8862745, 0.9098039, 0.9411765, 1)
 
 [node name="GameInterface" type="VBoxContainer" unique_id=1067625552]
+process_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -70,6 +72,11 @@ theme_override_constants/margin_bottom = 8
 [node name="HBoxContainer" type="HBoxContainer" parent="TopBar/MarginContainer" unique_id=971396921]
 layout_mode = 2
 size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="TopBar/MarginContainer/HBoxContainer" unique_id=854186089]
+layout_mode = 2
+theme_override_constants/h_separation = 4
+text = "Back to office"
 
 [node name="Control2" type="Control" parent="TopBar/MarginContainer/HBoxContainer" unique_id=1677102037]
 layout_mode = 2
@@ -136,7 +143,10 @@ size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_e5ebq")
 
 [node name="TextureRect" type="TextureRect" parent="Workspace/BoardArea" unique_id=1960661506]
+custom_minimum_size = Vector2(800, 600)
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 mouse_filter = 2
 texture = ExtResource("7_okh1a")
 expand_mode = 1
@@ -178,7 +188,7 @@ offset_bottom = 357.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Dropzone" parent="Workspace/BoardArea/TextureRect" unique_id=1502597236 instance=ExtResource("9_bubmk")]
+[node name="Dropzone" parent="Workspace/BoardArea/TextureRect" unique_id=1502597236 groups=["Dropzones"] instance=ExtResource("9_bubmk")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -227,7 +237,7 @@ offset_bottom = 360.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Dropzone2" parent="Workspace/BoardArea/TextureRect" unique_id=1534332276 instance=ExtResource("9_bubmk")]
+[node name="Dropzone2" parent="Workspace/BoardArea/TextureRect" unique_id=1534332276 groups=["Dropzones"] instance=ExtResource("9_bubmk")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
@@ -409,6 +419,7 @@ theme_override_constants/separation = 12
 
 [node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("10_eoklo")]
 layout_mode = 2
+dropped_badge_scene = ExtResource("11_nc1fv")
 
 [node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=224748546 instance=ExtResource("12_vo8ic")]
 layout_mode = 2
@@ -416,164 +427,17 @@ layout_mode = 2
 [node name="Search Engine" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1657130036 instance=ExtResource("18_nprbw")]
 layout_mode = 2
 
-[node name="InformationModal" type="Node" parent="." unique_id=16370126]
-script = ExtResource("21_smb87")
-
-[node name="InfoCanvasLayer" type="CanvasLayer" parent="InformationModal" unique_id=230541665]
-layer = 3
-
-[node name="InformationPanel" type="Panel" parent="InformationModal/InfoCanvasLayer" unique_id=1609237335]
+[node name="InformationModal" parent="." unique_id=1895424386 instance=ExtResource("21_7faf7")]
 unique_name_in_owner = true
 visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -500.0
-offset_top = -300.0
-offset_right = 500.0
-offset_bottom = 300.0
-grow_horizontal = 2
-grow_vertical = 2
 
-[node name="Label" type="Label" parent="InformationModal/InfoCanvasLayer/InformationPanel" unique_id=493427233]
-layout_mode = 0
-offset_right = 326.0
-offset_bottom = 49.0
-text = "Incident Report
-Ticket: PROD-891"
-
-[node name="CenterContainer" type="CenterContainer" parent="InformationModal/InfoCanvasLayer/InformationPanel" unique_id=1885957384]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -163.0
-offset_top = -20.0
-offset_right = 163.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="InformationModal/InfoCanvasLayer/InformationPanel/CenterContainer" unique_id=1341115364]
-layout_mode = 2
-theme_override_constants/separation = 353
-
-[node name="Label" type="Label" parent="InformationModal/InfoCanvasLayer/InformationPanel/CenterContainer/HBoxContainer" unique_id=362293738]
-layout_mode = 2
-text = "THE PROBLEM"
-
-[node name="Label2" type="Label" parent="InformationModal/InfoCanvasLayer/InformationPanel/CenterContainer/HBoxContainer" unique_id=1572289185]
-layout_mode = 2
-text = "YOUR MISSION"
-
-[node name="AcceptMission" type="Button" parent="InformationModal/InfoCanvasLayer/InformationPanel" unique_id=1403396066]
-process_mode = 3
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -165.0
-offset_top = -62.0
-offset_right = -15.0
-offset_bottom = -17.0
-grow_horizontal = 0
-grow_vertical = 0
-text = "Accept Mission"
-
-[node name="Failed" type="Node" parent="." unique_id=530242741]
-script = ExtResource("22_smb87")
-
-[node name="FailedCanvasLayer" type="CanvasLayer" parent="Failed" unique_id=259766610]
-layer = 3
-
-[node name="FailedPanel" type="Panel" parent="Failed/FailedCanvasLayer" unique_id=685074359]
+[node name="FailedModal" parent="." unique_id=1453858144 instance=ExtResource("22_d7rpw")]
 unique_name_in_owner = true
 visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -500.0
-offset_top = -300.0
-offset_right = 500.0
-offset_bottom = 300.0
-grow_horizontal = 2
-grow_vertical = 2
 
-[node name="Label" type="Label" parent="Failed/FailedCanvasLayer/FailedPanel" unique_id=106017675]
-layout_mode = 1
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -163.0
-offset_right = 163.0
-offset_bottom = 49.0
-grow_horizontal = 2
-text = "DEPLOYMENT FAILED"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CenterContainer" type="CenterContainer" parent="Failed/FailedCanvasLayer/FailedPanel" unique_id=2138181687]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -163.0
-offset_top = -20.0
-offset_right = 163.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Failed/FailedCanvasLayer/FailedPanel/CenterContainer" unique_id=1326570315]
-layout_mode = 2
-theme_override_constants/separation = 353
-
-[node name="Label" type="Label" parent="Failed/FailedCanvasLayer/FailedPanel/CenterContainer/HBoxContainer" unique_id=1004741527]
-layout_mode = 2
-text = "SEVER LAG"
-
-[node name="Label2" type="Label" parent="Failed/FailedCanvasLayer/FailedPanel/CenterContainer/HBoxContainer" unique_id=1628937482]
-layout_mode = 2
-text = "OVERLOADED"
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Failed/FailedCanvasLayer/FailedPanel" unique_id=1867888371]
-layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -229.87
-offset_top = -51.455017
-offset_right = -9.869995
-offset_bottom = -11.455017
-grow_horizontal = 0
-grow_vertical = 0
-theme_override_constants/separation = 20
-
-[node name="MainMenu" type="Button" parent="Failed/FailedCanvasLayer/FailedPanel/HBoxContainer" unique_id=1260537453]
-process_mode = 3
-layout_mode = 2
-text = "Main Menu"
-
-[node name="Restart" type="Button" parent="Failed/FailedCanvasLayer/FailedPanel/HBoxContainer" unique_id=1957957270]
-process_mode = 3
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Restart"
+[node name="SuccessModal" parent="." unique_id=172023029 instance=ExtResource("23_epmnl")]
+unique_name_in_owner = true
+visible = false
 
 [connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/TicketDetails" to="." method="_on_ticket_details_pressed"]
 [connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/DeployButton" to="." method="_on_deploy_button_pressed"]
-[connection signal="pressed" from="InformationModal/InfoCanvasLayer/InformationPanel/AcceptMission" to="InformationModal" method="_on_accept_mission_pressed"]
-[connection signal="pressed" from="Failed/FailedCanvasLayer/FailedPanel/HBoxContainer/MainMenu" to="Failed" method="_on_main_menu_pressed"]
-[connection signal="pressed" from="Failed/FailedCanvasLayer/FailedPanel/HBoxContainer/Restart" to="Failed" method="_on_restart_pressed"]

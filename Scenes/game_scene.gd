@@ -1,7 +1,6 @@
 extends Node
 
 @onready var pause_panel = %PausePanel
-@onready var info_panel = %InformationPanel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,6 +12,5 @@ func _on_button_pressed():
 	pause_panel.show()
 
 
-func _on_interact_pressed():
-	get_tree().paused = true
-	info_panel.show()
+func _on_interact_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/System Architecture Gameplay/GameInterface.tscn")

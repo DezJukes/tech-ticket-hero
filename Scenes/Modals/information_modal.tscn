@@ -1,0 +1,198 @@
+[gd_scene format=3 uid="uid://b4s76c7k43xvu"]
+
+[ext_resource type="Script" uid="uid://cucoml0px26q5" path="res://Scenes/Modals/information_modal.gd" id="1_8uh8j"]
+[ext_resource type="Texture2D" uid="uid://d2ewcrwblcyl5" path="res://Assets/icons/siren.png" id="1_cnjar"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_gv745"]
+[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="2_nf73a"]
+[ext_resource type="FontFile" uid="uid://cbfjc1kt4amaj" path="res://Assets/Font/Oxanium-Light.ttf" id="3_nf73a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xatp3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.078431375)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pab1a"]
+bg_color = Color(0.99607843, 0.9490196, 0.9490196, 1)
+border_width_left = 4
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9882353, 0.64705884, 0.64705884, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gv745"]
+bg_color = Color(0.9411765, 0.99215686, 0.95686275, 1)
+border_width_left = 4
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5254902, 0.9372549, 0.6745098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nf73a"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+bg_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="InformationModal" type="CanvasLayer" unique_id=1895424386]
+script = ExtResource("1_8uh8j")
+
+[node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=1495293648]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Center" type="CenterContainer" parent="BackgroundOverlay" unique_id=1639201821]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=938405954]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xatp3")
+
+[node name="Padding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox" unique_id=948403071]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 20
+
+[node name="VerticalFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding" unique_id=409711120]
+layout_mode = 2
+
+[node name="HeaderBox" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=350569043]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="SirenIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1671495161]
+layout_mode = 2
+texture = ExtResource("1_cnjar")
+expand_mode = 2
+
+[node name="HeaderText" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=620373153]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=507010788]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_gv745")
+text = "Ticket Report"
+
+[node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=1277292708]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9218303, 0, 0.11170312, 1)
+theme_override_fonts/font = ExtResource("2_nf73a")
+text = "TICKET - 123"
+
+[node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=454638980]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="SplitBody" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=18617182]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="ProblemCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=740122055]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_pab1a")
+
+[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard" unique_id=37595653]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding" unique_id=1118544485]
+layout_mode = 2
+
+[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=1919526814]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
+theme_override_fonts/font = ExtResource("1_gv745")
+text = "The Problem"
+
+[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=213581313]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("2_nf73a")
+text = "The website is fast, but it’s a mess! The site is completely vulnerable. Anyone can delete or edit articles because there is no way to check who has permission to make changes. "
+autowrap_mode = 3
+
+[node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=339691311]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_gv745")
+
+[node name="MissionPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd" unique_id=369437995]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="MissionTextFLow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding" unique_id=1877078060]
+layout_mode = 2
+
+[node name="Mission Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=911321259]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3598809, 0.6194927, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("1_gv745")
+text = "Your Mission"
+
+[node name="MissionBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=782490053]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_nf73a")
+text = "You must put the components that protect the site from unauthorized changes and the tools that allow users to discover stories."
+fit_content = true
+
+[node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=186862070]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Footer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=117565427]
+layout_mode = 2
+
+[node name="HintText" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1611558162]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_nf73a")
+text = "Tap any placed component..."
+
+[node name="AcceptButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1881701775]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_nf73a")
+text = "Accept Mission"
+
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/AcceptButton" to="." method="_on_accept_button_pressed"]
