@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c68cmi5ffx48i"]
 
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_d03gi"]
+[ext_resource type="Script" uid="uid://dkri0tlcffy7p" path="res://Scenes/Level 2 - Intermediate/Intermediate - Architecture/erp_architecture.gd" id="1_jxyor"]
 [ext_resource type="Texture2D" uid="uid://rd8vc5wqvp6u" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_default.png" id="2_vyu3x"]
 [ext_resource type="Texture2D" uid="uid://bh1oob36mat41" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_pressed.png" id="3_ftn7r"]
 [ext_resource type="Texture2D" uid="uid://coy624sn6j5qp" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_hovered.png" id="4_iujs3"]
@@ -26,7 +27,10 @@
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="23_jxyor"]
 [ext_resource type="PackedScene" uid="uid://050ivv4bbnw8" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="24_b1riw"]
 [ext_resource type="PackedScene" uid="uid://b2mdeck57e5cg" path="res://Scenes/System Components/ERP/Expense Management Server/expense_management_comp.tscn" id="25_v5ovn"]
+[ext_resource type="PackedScene" uid="uid://ea4t0x8ltvim" path="res://Scenes/Level 2 - Intermediate/Modals/ERP Modals/failed_modal_erp.tscn" id="28_jvwnp"]
+[ext_resource type="PackedScene" uid="uid://bg4qfrgji32f2" path="res://Scenes/Level 2 - Intermediate/Modals/ERP Modals/information_modal_erp.tscn" id="29_jxyor"]
 [ext_resource type="PackedScene" uid="uid://vq8bl13768x1" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_comp.tscn" id="29_naqba"]
+[ext_resource type="PackedScene" uid="uid://dilkc248vnpk1" path="res://Scenes/Level 2 - Intermediate/Modals/ERP Modals/success_modal_erp.tscn" id="30_v5ovn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ud6tn"]
 bg_color = Color(1, 1, 1, 1)
@@ -60,6 +64,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
+script = ExtResource("1_jxyor")
 
 [node name="TopBar" type="PanelContainer" parent="." unique_id=708593390]
 layout_mode = 2
@@ -166,7 +171,7 @@ offset_right = 434.0
 offset_bottom = 478.0
 grow_horizontal = 1
 grow_vertical = 1
-expected_component = "Self-service Kiosk"
+expected_component = "Notification Service"
 
 [node name="DroppedBadge2" parent="Workspace/BoardArea/TextureRect" unique_id=492691361 instance=ExtResource("12_naqba")]
 layout_mode = 1
@@ -186,7 +191,7 @@ offset_right = 651.0
 offset_bottom = 311.0
 grow_horizontal = 1
 grow_vertical = 1
-expected_component = "Relational Database"
+expected_component = "Expense Management Server"
 
 [node name="Arrow8" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1233365088]
 custom_minimum_size = Vector2(32, 32)
@@ -280,7 +285,7 @@ offset_right = 564.0
 offset_bottom = 150.0
 grow_horizontal = 1
 grow_vertical = 1
-expected_component = "Self-service Kiosk"
+expected_component = "API Gateway"
 
 [node name="DroppedBadge3" parent="Workspace/BoardArea/TextureRect" unique_id=1919567394 instance=ExtResource("16_iujs3")]
 layout_mode = 1
@@ -300,7 +305,7 @@ offset_right = 217.0
 offset_bottom = 304.0
 grow_horizontal = 1
 grow_vertical = 1
-expected_component = "Self-service Kiosk"
+expected_component = "General Ledger Service"
 
 [node name="Arrow6" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1286181851]
 custom_minimum_size = Vector2(32, 32)
@@ -411,3 +416,19 @@ layout_mode = 2
 [node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=846877336 instance=ExtResource("23_jxyor")]
 layout_mode = 2
 dropped_badge_scene = ExtResource("9_v5ovn")
+
+[node name="FailedModalErp" parent="." unique_id=1634307023 instance=ExtResource("28_jvwnp")]
+unique_name_in_owner = true
+visible = false
+
+[node name="InformationModalErp" parent="." unique_id=2102722637 instance=ExtResource("29_jxyor")]
+unique_name_in_owner = true
+visible = false
+
+[node name="SuccessModalErp" parent="." unique_id=977701527 instance=ExtResource("30_v5ovn")]
+unique_name_in_owner = true
+visible = false
+
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/TicketDetails" to="." method="_on_ticket_details_pressed"]
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/DeployButton" to="." method="_on_deploy_button_pressed"]

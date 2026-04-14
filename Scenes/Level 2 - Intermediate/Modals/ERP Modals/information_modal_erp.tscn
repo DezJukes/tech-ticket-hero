@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bg4qfrgji32f2"]
 
+[ext_resource type="Script" uid="uid://2mmiipvpeluq" path="res://Scenes/Level 2 - Intermediate/Modals/ERP Modals/information_modal_erp.gd" id="1_h7kxe"]
 [ext_resource type="Texture2D" uid="uid://d2ewcrwblcyl5" path="res://Assets/icons/siren.png" id="1_y43ci"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_h7kxe"]
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="3_4ocmw"]
@@ -50,6 +51,7 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [node name="InformationModalErp" type="CanvasLayer" unique_id=2102722637]
+script = ExtResource("1_h7kxe")
 
 [node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=779798184]
 anchors_preset = 15
@@ -142,7 +144,11 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_4ocmw")
-text = "The website is fast, but it’s a mess! The site is completely vulnerable. Anyone can delete or edit articles because there is no way to check who has permission to make changes. "
+text = "The company's financial portal has become a hollow shell. While employees can still reach the landing page, there is no Traffic Controller to direct their requests to the right department. 
+
+The system has lost its Core Business Engine, meaning it can no longer read receipt data or check if a claim follows company policy. 
+
+Furthermore, the connection to the Finance Books is broken, and there is no way for the system to Alert Managers when a new reimbursement is waiting for their approval.."
 autowrap_mode = 3
 
 [node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=318373979]
@@ -171,7 +177,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_4ocmw")
-text = "You must put the components that protect the site from unauthorized changes and the tools that allow users to discover stories."
+text = "You must rebuild the corporate pipeline to ensure employees get paid on time. You need to bring back the components that manage traffic flow, execute business rules, link to financial records, and handle automated messaging."
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1794232061]
@@ -192,3 +198,5 @@ text = "Tap any placed component..."
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_d4tmp")
 text = "Accept Mission"
+
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/AcceptButton" to="." method="_on_accept_button_pressed"]

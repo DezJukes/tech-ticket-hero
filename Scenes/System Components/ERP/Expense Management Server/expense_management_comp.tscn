@@ -90,8 +90,7 @@ theme_override_constants/separation = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
 theme_override_fonts/font = ExtResource("3_c5hb3")
-text = "Expense Management 
-Server"
+text = "Expense Management Server"
 
 [node name="Subtitle" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=614709425]
 layout_mode = 2
