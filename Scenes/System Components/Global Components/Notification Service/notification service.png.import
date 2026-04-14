@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wixwn4cfwsq6"
-path="res://.godot/imported/img_relational_database.png-ea33ce1e8d99fc744e5795903c20cd5d.ctex"
+uid="uid://c7bcpovms5p3y"
+path="res://.godot/imported/notification service.png-145ab043461d13a8dc4479fe1ff6603f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/System Components/CMS/Relational Database/img_relational_database.png"
-dest_files=["res://.godot/imported/img_relational_database.png-ea33ce1e8d99fc744e5795903c20cd5d.ctex"]
+source_file="res://Scenes/System Components/Global Components/Notification Service/notification service.png"
+dest_files=["res://.godot/imported/notification service.png-145ab043461d13a8dc4479fe1ff6603f.ctex"]
 
 [params]
 

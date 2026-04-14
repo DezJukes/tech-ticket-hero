@@ -1,9 +1,10 @@
-[gd_scene format=3 uid="uid://vq8bl13768x1"]
+[gd_scene format=3 uid="uid://bd1v2tooi3dx2"]
 
-[ext_resource type="Texture2D" uid="uid://c7bcpovms5p3y" path="res://Scenes/System Components/Library System/Notification system/notification service.png" id="1_45m87"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_y41ex"]
-[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_gshss"]
-[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_2ydtx"]
+[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_1j5r1"]
+[ext_resource type="Texture2D" uid="uid://c24lap0iqsf8r" path="res://Scenes/System Components/ERP/General Ledger Service/general ledger service.png" id="2_2e5w3"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_n441i"]
+[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_jr2fx"]
+[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="5_ea1sx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehknd"]
 bg_color = Color(1, 1, 1, 1)
@@ -38,6 +39,7 @@ offset_bottom = -542.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ehknd")
+script = ExtResource("1_1j5r1")
 
 [node name="CardPadding" type="MarginContainer" parent="." unique_id=714115166]
 layout_mode = 2
@@ -70,7 +72,7 @@ theme_override_constants/margin_bottom = 6
 [node name="IconImage" type="TextureRect" parent="CardPadding/MainRow/IconFrame/IconPadding" unique_id=65608909]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-texture = ExtResource("1_45m87")
+texture = ExtResource("2_2e5w3")
 expand_mode = 1
 stretch_mode = 5
 
@@ -87,21 +89,21 @@ theme_override_constants/separation = 2
 [node name="Title" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=1352558632]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
-theme_override_fonts/font = ExtResource("2_y41ex")
-text = "Notification Service"
+theme_override_fonts/font = ExtResource("3_n441i")
+text = "General Ledger Service"
 
 [node name="Subtitle" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=614709425]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
-theme_override_fonts/font = ExtResource("3_gshss")
+theme_override_fonts/font = ExtResource("4_jr2fx")
 theme_override_font_sizes/font_size = 11
-text = "SERVER RESPONSE"
+text = "FINANCE INTEGRATION "
 
 [node name="Description" type="Label" parent="CardPadding/MainRow/TextColumn" unique_id=555238219]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
-theme_override_fonts/font = ExtResource("4_2ydtx")
+theme_override_fonts/font = ExtResource("5_ea1sx")
 theme_override_font_sizes/font_size = 12
-text = "Triggers asynchronous alerts (Email, SMS, or Push) to keep users updated on system events."
+text = "Creates a “Pending” journal entry to earmark the budget for reimbursement."
 autowrap_mode = 2

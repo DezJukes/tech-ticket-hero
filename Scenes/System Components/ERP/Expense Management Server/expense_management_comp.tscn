@@ -1,9 +1,10 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://b2mdeck57e5cg"]
 
-[ext_resource type="Texture2D" uid="uid://wixwn4cfwsq6" path="res://Scenes/System Components/CMS/Relational Database/img_relational_database.png" id="1_ok2y3"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_y41ex"]
-[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_gshss"]
-[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_2ydtx"]
+[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_2b4he"]
+[ext_resource type="Texture2D" uid="uid://cer05biqeqb5c" path="res://Scenes/System Components/ERP/Expense Management Server/expense management server.png" id="2_vkxki"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_c5hb3"]
+[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_2qefk"]
+[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="5_sw55e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehknd"]
 bg_color = Color(1, 1, 1, 1)
@@ -38,6 +39,7 @@ offset_bottom = -542.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ehknd")
+script = ExtResource("1_2b4he")
 
 [node name="CardPadding" type="MarginContainer" parent="." unique_id=714115166]
 layout_mode = 2
@@ -70,7 +72,7 @@ theme_override_constants/margin_bottom = 6
 [node name="IconImage" type="TextureRect" parent="CardPadding/MainRow/IconFrame/IconPadding" unique_id=65608909]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-texture = ExtResource("1_ok2y3")
+texture = ExtResource("2_vkxki")
 expand_mode = 1
 stretch_mode = 5
 
@@ -87,21 +89,22 @@ theme_override_constants/separation = 2
 [node name="Title" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=1352558632]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
-theme_override_fonts/font = ExtResource("2_y41ex")
-text = "Relational Database"
+theme_override_fonts/font = ExtResource("3_c5hb3")
+text = "Expense Management 
+Server"
 
 [node name="Subtitle" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=614709425]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
-theme_override_fonts/font = ExtResource("3_gshss")
+theme_override_fonts/font = ExtResource("4_2qefk")
 theme_override_font_sizes/font_size = 11
-text = "DATABASE"
+text = "DATA PROCESSING "
 
 [node name="Description" type="Label" parent="CardPadding/MainRow/TextColumn" unique_id=555238219]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
-theme_override_fonts/font = ExtResource("4_2ydtx")
+theme_override_fonts/font = ExtResource("5_sw55e")
 theme_override_font_sizes/font_size = 12
-text = "Saves the article text, author ID, and the image URLs generated."
+text = "Processes the data, runs OCR on receipts, and checks if the claim follows company policy."
 autowrap_mode = 2

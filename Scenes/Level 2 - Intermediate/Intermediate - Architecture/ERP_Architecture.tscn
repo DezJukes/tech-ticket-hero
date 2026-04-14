@@ -8,22 +8,25 @@
 [ext_resource type="Texture2D" uid="uid://88w238ppgoux" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_pressed.png" id="6_mx7pg"]
 [ext_resource type="Texture2D" uid="uid://lkh0k2su5n1y" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_hovered.png" id="7_jvwnp"]
 [ext_resource type="Texture2D" uid="uid://dhb5cchugfrxn" path="res://Assets/Misc/System Gameplay/background-board.png" id="8_jxyor"]
-[ext_resource type="PackedScene" uid="uid://bf17ecqvu3vmw" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_dropped.tscn" id="9_v5ovn"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_dropped.tscn" id="9_v5ovn"]
 [ext_resource type="PackedScene" uid="uid://cfs3mcjift23r" path="res://Scenes/System Components/dropzone.tscn" id="10_16ama"]
-[ext_resource type="PackedScene" uid="uid://iaov3cd3s1xh" path="res://Scenes/System Components/Global Components/Application Server/application_server_dropped.tscn" id="11_j4iea"]
 [ext_resource type="PackedScene" uid="uid://cybb78cd41kg5" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_dropped.tscn" id="12_naqba"]
-[ext_resource type="PackedScene" uid="uid://sm120wj3sv8c" path="res://Scenes/System Components/Library System/Notification system/notification_service_dropped.tscn" id="13_m58n1"]
+[ext_resource type="PackedScene" uid="uid://b88u7v7di2n77" path="res://Scenes/System Components/Global Components/Message Broker/message_broker_dropped.tscn" id="13_d03gi"]
+[ext_resource type="PackedScene" uid="uid://sm120wj3sv8c" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_dropped.tscn" id="13_m58n1"]
 [ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="14_1gebq"]
+[ext_resource type="PackedScene" uid="uid://bva2cyyyv31gk" path="res://Scenes/System Components/Global Components/Load Balancer/load_balancer_dropped.tscn" id="15_ftn7r"]
+[ext_resource type="PackedScene" uid="uid://clcwqqssv5wj4" path="res://Scenes/System Components/ERP/Expense Management Server/expense_management_dropped.tscn" id="15_iujs3"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="15_k7y40"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="16_ft6pc"]
+[ext_resource type="PackedScene" uid="uid://tfvc2ieyc3ie" path="res://Scenes/System Components/ERP/Employee Portal/employee_portal_dropped.tscn" id="16_iujs3"]
 [ext_resource type="PackedScene" uid="uid://1ppqaf50aejo" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="17_6jc0e"]
-[ext_resource type="PackedScene" uid="uid://ces4mio3wkfxw" path="res://Scenes/System Components/Library System/Kiosk/self_service_kiosk_comp.tscn" id="18_q2cvh"]
-[ext_resource type="PackedScene" uid="uid://djpsccii60f68" path="res://Scenes/System Components/Library System/Kiosk/self_service_kiosk_dropped.tscn" id="19_dhv7d"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Content Creator/content_creator_comp.tscn" id="20_cd0hf"]
-[ext_resource type="PackedScene" uid="uid://cv47ljppldtki" path="res://Scenes/System Components/CMS/Content Creator/content_creator_dropped.tscn" id="21_4rtff"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Relational Database/relational_database_comp.tscn" id="22_kn7tv"]
-[ext_resource type="PackedScene" uid="uid://gyw68370srqq" path="res://Scenes/System Components/CMS/Relational Database/relational_database_dropped.tscn" id="23_doqf8"]
+[ext_resource type="PackedScene" uid="uid://bd1v2tooi3dx2" path="res://Scenes/System Components/ERP/General Ledger Service/general_ledger_comp.tscn" id="18_jvwnp"]
+[ext_resource type="PackedScene" uid="uid://bk4j3e5bdvoes" path="res://Scenes/System Components/ERP/General Ledger Service/general_ledger_dropped.tscn" id="19_jxyor"]
+[ext_resource type="PackedScene" uid="uid://gyw68370srqq" path="res://Scenes/System Components/Global Components/Relational Database/relational_database_dropped.tscn" id="23_doqf8"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="23_jxyor"]
 [ext_resource type="PackedScene" uid="uid://050ivv4bbnw8" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="24_b1riw"]
+[ext_resource type="PackedScene" uid="uid://b2mdeck57e5cg" path="res://Scenes/System Components/ERP/Expense Management Server/expense_management_comp.tscn" id="25_v5ovn"]
+[ext_resource type="PackedScene" uid="uid://vq8bl13768x1" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_comp.tscn" id="29_naqba"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ud6tn"]
 bg_color = Color(1, 1, 1, 1)
@@ -152,66 +155,35 @@ texture = ExtResource("8_jxyor")
 expand_mode = 1
 stretch_mode = 6
 
-[node name="API Gateway" parent="Workspace/BoardArea/TextureRect" unique_id=1014836096 instance=ExtResource("9_v5ovn")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 335.0
-offset_top = 122.0
-offset_right = 435.0
-offset_bottom = 192.0
-grow_horizontal = 1
-grow_vertical = 1
-
 [node name="Dropzone" parent="Workspace/BoardArea/TextureRect" unique_id=1502597236 groups=["Dropzones"] instance=ExtResource("10_16ama")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 109.0
-offset_top = 121.0
-offset_right = 209.0
-offset_bottom = 191.0
+offset_left = 334.0
+offset_top = 408.0
+offset_right = 434.0
+offset_bottom = 478.0
 grow_horizontal = 1
 grow_vertical = 1
 expected_component = "Self-service Kiosk"
 
-[node name="Application Server" parent="Workspace/BoardArea/TextureRect" unique_id=633311077 instance=ExtResource("11_j4iea")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 560.0
-offset_top = 293.0
-offset_right = 660.0
-offset_bottom = 363.0
-grow_horizontal = 1
-grow_vertical = 1
-
 [node name="DroppedBadge2" parent="Workspace/BoardArea/TextureRect" unique_id=492691361 instance=ExtResource("12_naqba")]
 layout_mode = 1
-offset_left = 560.0
-offset_top = 123.0
-offset_right = -140.0
-offset_bottom = -367.0
-
-[node name="DroppedBadge" parent="Workspace/BoardArea/TextureRect" unique_id=82935014 instance=ExtResource("13_m58n1")]
-layout_mode = 1
-offset_left = 126.0
-offset_top = 292.0
-offset_right = -574.0
-offset_bottom = -198.0
+offset_left = 684.0
+offset_top = 82.0
+offset_right = -16.0
+offset_bottom = -408.0
 
 [node name="Dropzone2" parent="Workspace/BoardArea/TextureRect" unique_id=1939987965 groups=["Dropzones"] instance=ExtResource("10_16ama")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 340.0
-offset_top = 291.0
-offset_right = 440.0
-offset_bottom = 361.0
+offset_left = 551.0
+offset_top = 241.0
+offset_right = 651.0
+offset_bottom = 311.0
 grow_horizontal = 1
 grow_vertical = 1
 expected_component = "Relational Database"
@@ -219,10 +191,11 @@ expected_component = "Relational Database"
 [node name="Arrow8" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1233365088]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 583.0
-offset_top = 195.0
-offset_right = 635.0
-offset_bottom = 299.0
+offset_left = 695.0
+offset_top = 142.99998
+offset_right = 747.0
+offset_bottom = 246.99998
+rotation = 0.62482786
 texture = ExtResource("14_1gebq")
 expand_mode = 1
 stretch_mode = 5
@@ -230,22 +203,43 @@ stretch_mode = 5
 [node name="Arrow5" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1143910909]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 215.0
-offset_top = 183.0
-offset_right = 275.0
-offset_bottom = 303.0
+offset_left = 125.0
+offset_top = 137.0
+offset_right = 185.0
+offset_bottom = 257.0
 rotation = -1.5707964
 texture = ExtResource("14_1gebq")
 expand_mode = 1
 stretch_mode = 5
 
+[node name="DroppedBadge4" parent="Workspace/BoardArea/TextureRect" unique_id=882862197 instance=ExtResource("15_ftn7r")]
+layout_mode = 1
+offset_left = 249.0
+offset_top = 76.0
+offset_right = -451.0
+offset_bottom = -414.0
+
+[node name="DroppedBadge" parent="Workspace/BoardArea/TextureRect" unique_id=1014836096 instance=ExtResource("13_d03gi")]
+layout_mode = 1
+offset_left = 121.0
+offset_top = 413.0
+offset_right = -579.0
+offset_bottom = -77.0
+
+[node name="DroppedBadge6" parent="Workspace/BoardArea/TextureRect" unique_id=757138952 instance=ExtResource("23_doqf8")]
+layout_mode = 1
+offset_left = 331.0
+offset_top = 238.0
+offset_right = -369.0
+offset_bottom = -252.0
+
 [node name="Arrow9" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=685345755]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 558.0
-offset_top = 295.0
-offset_right = 618.0
-offset_bottom = 415.0
+offset_left = 330.0
+offset_top = 240.0
+offset_right = 390.0
+offset_bottom = 360.0
 rotation = 1.5707964
 texture = ExtResource("14_1gebq")
 expand_mode = 1
@@ -254,10 +248,10 @@ stretch_mode = 5
 [node name="Arrow10" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1622921386]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 442.0
-offset_top = 186.0
-offset_right = 502.0
-offset_bottom = 306.0
+offset_left = 223.0
+offset_top = 475.0
+offset_right = 283.0
+offset_bottom = 595.0
 rotation = -1.5707964
 texture = ExtResource("14_1gebq")
 expand_mode = 1
@@ -266,11 +260,79 @@ stretch_mode = 5
 [node name="Arrow11" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1718823169]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 343.0
-offset_top = 298.0
-offset_right = 403.0
-offset_bottom = 418.0
+offset_left = 548.0
+offset_top = 245.0
+offset_right = 608.0
+offset_bottom = 365.0
 rotation = 1.5707964
+texture = ExtResource("14_1gebq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Dropzone4" parent="Workspace/BoardArea/TextureRect" unique_id=1116345307 groups=["Dropzones"] instance=ExtResource("10_16ama")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 468.0
+offset_top = 80.0
+offset_right = 564.0
+offset_bottom = 150.0
+grow_horizontal = 1
+grow_vertical = 1
+expected_component = "Self-service Kiosk"
+
+[node name="DroppedBadge3" parent="Workspace/BoardArea/TextureRect" unique_id=1919567394 instance=ExtResource("16_iujs3")]
+layout_mode = 1
+offset_left = 22.0
+offset_top = 73.0
+offset_right = -678.0
+offset_bottom = -417.0
+
+[node name="Dropzone3" parent="Workspace/BoardArea/TextureRect" unique_id=321268356 groups=["Dropzones"] instance=ExtResource("10_16ama")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 117.0
+offset_top = 234.0
+offset_right = 217.0
+offset_bottom = 304.0
+grow_horizontal = 1
+grow_vertical = 1
+expected_component = "Self-service Kiosk"
+
+[node name="Arrow6" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1286181851]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 353.0
+offset_top = 140.0
+offset_right = 413.0
+offset_bottom = 260.0
+rotation = -1.5707964
+texture = ExtResource("14_1gebq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow7" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=791534147]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 568.0
+offset_top = 143.0
+offset_right = 628.0
+offset_bottom = 263.0
+rotation = -1.5707964
+texture = ExtResource("14_1gebq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow12" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=684177899]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 142.0
+offset_top = 308.0
+offset_right = 194.0
+offset_bottom = 412.0
 texture = ExtResource("14_1gebq")
 expand_mode = 1
 stretch_mode = 5
@@ -325,25 +387,27 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 12
 
-[node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("15_k7y40")]
+[node name="ComponentCard4" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=511314995 instance=ExtResource("25_v5ovn")]
+layout_mode = 2
+dropped_badge_scene = ExtResource("15_iujs3")
+
+[node name="ComponentCard5" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("18_jvwnp")]
+layout_mode = 2
+dropped_badge_scene = ExtResource("19_jxyor")
+
+[node name="ComponentCard6" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=723994604 instance=ExtResource("29_naqba")]
+layout_mode = 2
+script = ExtResource("16_ft6pc")
+dropped_badge_scene = ExtResource("13_m58n1")
+
+[node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1258337722 instance=ExtResource("15_k7y40")]
 layout_mode = 2
 script = ExtResource("16_ft6pc")
 dropped_badge_scene = ExtResource("17_6jc0e")
 
-[node name="SelfServiceKioskComp" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1574387928 instance=ExtResource("18_q2cvh")]
-layout_mode = 2
-script = ExtResource("16_ft6pc")
-dropped_badge_scene = ExtResource("19_dhv7d")
-
-[node name="ComponentCard3" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1233092603 instance=ExtResource("20_cd0hf")]
-layout_mode = 2
-script = ExtResource("16_ft6pc")
-dropped_badge_scene = ExtResource("21_4rtff")
-
-[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1998475211 instance=ExtResource("22_kn7tv")]
-layout_mode = 2
-script = ExtResource("16_ft6pc")
-dropped_badge_scene = ExtResource("23_doqf8")
-
 [node name="Search Engine" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1080177329 instance=ExtResource("24_b1riw")]
 layout_mode = 2
+
+[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=846877336 instance=ExtResource("23_jxyor")]
+layout_mode = 2
+dropped_badge_scene = ExtResource("9_v5ovn")

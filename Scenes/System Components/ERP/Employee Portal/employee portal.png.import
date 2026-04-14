@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7bcpovms5p3y"
-path="res://.godot/imported/notification service.png-fcc19cec079801ff11dfb519c15901c2.ctex"
+uid="uid://djeepnwokjs43"
+path="res://.godot/imported/employee portal.png-4406658e924b05cbf92957c72a5b88f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/System Components/Library System/Notification system/notification service.png"
-dest_files=["res://.godot/imported/notification service.png-fcc19cec079801ff11dfb519c15901c2.ctex"]
+source_file="res://Scenes/System Components/ERP/Employee Portal/employee portal.png"
+dest_files=["res://.godot/imported/employee portal.png-4406658e924b05cbf92957c72a5b88f4.ctex"]
 
 [params]
 
