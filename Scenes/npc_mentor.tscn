@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://b358ho3xp71lw"]
+
+[ext_resource type="Texture2D" uid="uid://ddqqyjie0fvbb" path="res://Assets/Character/Mentor/IDLE_MENTOR_TICKETHERO.png" id="1_ablqw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_64hil"]
+atlas = ExtResource("1_ablqw")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_406o2"]
+atlas = ExtResource("1_ablqw")
+region = Rect2(138, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgc0y"]
+atlas = ExtResource("1_ablqw")
+region = Rect2(69, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oebdv"]
+atlas = ExtResource("1_ablqw")
+region = Rect2(207, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4wema"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_64hil")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_406o2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgc0y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oebdv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6yo7i"]
+radius = 47.5
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ja2dn"]
+radius = 22.0
+height = 62.0
+
+[node name="NpcMentor" type="Node2D" unique_id=1679080789]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=978884471]
+sprite_frames = SubResource("SpriteFrames_4wema")
+autoplay = "default"
+frame_progress = 0.9400317
+
+[node name="NPCMentorInteractionZone" type="Area2D" parent="." unique_id=888205647]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCMentorInteractionZone" unique_id=2096846226]
+position = Vector2(-0.5, -1)
+shape = SubResource("CircleShape2D_6yo7i")
+
+[node name="NPCMentorBody" type="StaticBody2D" parent="." unique_id=1205301485]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCMentorBody" unique_id=154302730]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_ja2dn")

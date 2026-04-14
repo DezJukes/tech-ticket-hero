@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cg4i3yjj18scm"]
+
+[ext_resource type="Texture2D" uid="uid://b4hrt62gptrd8" path="res://Assets/Misc/Level 1 - Beginner/Furnitures_Library/Big-Sofa.png" id="1_rnlbf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhf5t"]
+size = Vector2(27, 23)
+
+[node name="BigSofa" type="Node2D" unique_id=30323616]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2124268328]
+texture = ExtResource("1_rnlbf")
+
+[node name="BigSofaBody" type="StaticBody2D" parent="." unique_id=1655493847]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BigSofaBody" unique_id=208669328]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_nhf5t")

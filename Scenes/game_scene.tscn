@@ -8,10 +8,13 @@
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="4_1ixah"]
 [ext_resource type="PackedScene" uid="uid://bqk4wwgbista1" path="res://Scenes/computer.tscn" id="4_rgj8m"]
 [ext_resource type="PackedScene" uid="uid://dbrw636buueuk" path="res://Scenes/board_frame.tscn" id="8_4xiap"]
-[ext_resource type="PackedScene" uid="uid://csntnedlflvm2" path="res://Scenes/filing_cabinet_1.tscn" id="9_4xiap"]
+[ext_resource type="PackedScene" path="res://Scenes/filing_cabinet_1.tscn" id="9_4xiap"]
 [ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="10_4xiap"]
 [ext_resource type="PackedScene" uid="uid://c1ddoutc25g2q" path="res://Scenes/printer_furniture.tscn" id="11_4xiap"]
 [ext_resource type="PackedScene" uid="uid://bw0kxc2vm7tw5" path="res://Scenes/water_dispenser.tscn" id="12_wywco"]
+[ext_resource type="PackedScene" uid="uid://dha4p2cqxmenv" path="res://Scenes/wall_note.tscn" id="13_wywco"]
+[ext_resource type="PackedScene" uid="uid://b358ho3xp71lw" path="res://Scenes/npc_mentor.tscn" id="14_w8jfd"]
+[ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="15_a7fet"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xiap"]
 size = Vector2(3962, 17)
@@ -160,6 +163,18 @@ scale = Vector2(5, 5)
 [node name="WaterDispenser2" parent="." unique_id=370066415 instance=ExtResource("12_wywco")]
 position = Vector2(112, 247)
 scale = Vector2(5, 5)
+
+[node name="WallNote" parent="." unique_id=1910412529 instance=ExtResource("13_wywco")]
+position = Vector2(640, 132)
+scale = Vector2(2, 2)
+
+[node name="NpcMentor" parent="." unique_id=1679080789 instance=ExtResource("14_w8jfd")]
+position = Vector2(757, 422)
+scale = Vector2(2, 2)
+
+[node name="TalkAlert" parent="." unique_id=200142115 instance=ExtResource("15_a7fet")]
+position = Vector2(756, 310)
+scale = Vector2(2, 2)
 
 [node name="CollisionWall" type="StaticBody2D" parent="." unique_id=81227015]
 

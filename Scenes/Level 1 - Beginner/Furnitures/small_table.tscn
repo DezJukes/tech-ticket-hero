@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dtn8arm3kjo3x"]
+
+[ext_resource type="Texture2D" uid="uid://e7juaqqltos4" path="res://Assets/Misc/Level 1 - Beginner/Furnitures_Library/Small-Table.png" id="1_tjnog"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jqdim"]
+size = Vector2(14, 12)
+
+[node name="SmallTable" type="Node2D" unique_id=141381765]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1090612204]
+texture = ExtResource("1_tjnog")
+
+[node name="SmallTableBody" type="StaticBody2D" parent="." unique_id=1525481708]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SmallTableBody" unique_id=724788786]
+position = Vector2(0, 2)
+shape = SubResource("RectangleShape2D_jqdim")

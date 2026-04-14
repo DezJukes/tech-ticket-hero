@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://4n821ykno6xi"]
+
+[ext_resource type="Texture2D" uid="uid://cu5txbjqkvv1c" path="res://Assets/Misc/Level 1 - Beginner/Furnitures_Library/Tall-Bookshelf.png" id="1_ow2xg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muwn7"]
+size = Vector2(24, 29)
+
+[node name="TallBookshelf" type="Node2D" unique_id=771443171]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=641222024]
+texture = ExtResource("1_ow2xg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=23579844]
+position = Vector2(12, 0)
+texture = ExtResource("1_ow2xg")
+
+[node name="TallBookshelfBody" type="StaticBody2D" parent="." unique_id=1335195960]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TallBookshelfBody" unique_id=1139213656]
+position = Vector2(6, 1.5)
+shape = SubResource("RectangleShape2D_muwn7")

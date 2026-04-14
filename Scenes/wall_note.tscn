@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dha4p2cqxmenv"]
+
+[ext_resource type="Texture2D" uid="uid://duhi5jvdl5gcd" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Wall-Note.png" id="1_qfqpl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vb2mm"]
+size = Vector2(13, 14)
+
+[node name="WallNote" type="Node2D" unique_id=1910412529]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2076014314]
+texture = ExtResource("1_qfqpl")
+
+[node name="WallNoteBody" type="StaticBody2D" parent="." unique_id=1680177391]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallNoteBody" unique_id=1298894206]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_vb2mm")

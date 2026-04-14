@@ -4,9 +4,21 @@
 [ext_resource type="Texture2D" uid="uid://lvpiaw27h2l4" path="res://Assets/Misc/Level 1 - Beginner/Office-bg.png" id="1_luogq"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_836bq"]
 [ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="3_gpl8w"]
-[ext_resource type="PackedScene" uid="uid://bqk4wwgbista1" path="res://Scenes/computer.tscn" id="4_0ohx3"]
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="5_5g776"]
+[ext_resource type="PackedScene" uid="uid://gy3cgy47hv4o" path="res://Scenes/computer2.tscn" id="5_vp8qn"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="6_a6jig"]
+[ext_resource type="PackedScene" path="res://Scenes/filing_cabinet_1.tscn" id="8_ssvpx"]
+[ext_resource type="PackedScene" uid="uid://cejup6u07ah47" path="res://Scenes/Level 1 - Beginner/Furnitures/boss_chair.tscn" id="9_r28hj"]
+[ext_resource type="PackedScene" uid="uid://cm6ihly1ndvxt" path="res://Scenes/Level 1 - Beginner/Furnitures/boss_desk.tscn" id="10_jxa6k"]
+[ext_resource type="PackedScene" uid="uid://bloebju38v4mc" path="res://Scenes/Level 1 - Beginner/Furnitures/filing_cabinet_open.tscn" id="11_hdyxo"]
+[ext_resource type="PackedScene" uid="uid://b358ho3xp71lw" path="res://Scenes/npc_mentor.tscn" id="11_y7muq"]
+[ext_resource type="PackedScene" uid="uid://x7e4uug1ekxo" path="res://Scenes/Level 1 - Beginner/Furnitures/bin.tscn" id="12_dhmd1"]
+[ext_resource type="PackedScene" uid="uid://dglqqy3bdyop1" path="res://Scenes/Level 1 - Beginner/Furnitures/wall_clock.tscn" id="13_187e2"]
+[ext_resource type="PackedScene" uid="uid://4n821ykno6xi" path="res://Scenes/Level 1 - Beginner/Furnitures/tall_bookshelf.tscn" id="14_187e2"]
+[ext_resource type="PackedScene" uid="uid://cg4i3yjj18scm" path="res://Scenes/Level 1 - Beginner/Furnitures/big_sofa.tscn" id="15_ahbbh"]
+[ext_resource type="PackedScene" uid="uid://dtn8arm3kjo3x" path="res://Scenes/Level 1 - Beginner/Furnitures/small_table.tscn" id="16_y7muq"]
+[ext_resource type="PackedScene" uid="uid://diam8evntxlff" path="res://Scenes/Level 1 - Beginner/Furnitures/big_sofa_side.tscn" id="17_na666"]
+[ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="18_ahbbh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0b4w"]
 size = Vector2(3962, 17)
@@ -60,15 +72,15 @@ text = "Pause"
 metadata/_edit_use_anchors_ = true
 
 [node name="player" parent="." unique_id=482249979 instance=ExtResource("3_gpl8w")]
-position = Vector2(575, 355)
+position = Vector2(575, 556)
 scale = Vector2(2, 2)
 motion_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1580133326]
 position = Vector2(575, 323)
 
-[node name="Computer" parent="." unique_id=1632295490 instance=ExtResource("4_0ohx3")]
-position = Vector2(570, 209)
+[node name="Computer2" parent="." unique_id=175863425 instance=ExtResource("5_vp8qn")]
+position = Vector2(631, 250)
 scale = Vector2(3, 3)
 
 [node name="Control" type="Control" parent="." unique_id=117607346]
@@ -138,6 +150,54 @@ process_mode = 3
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Main Menu"
+
+[node name="FilingCabinet1" parent="." unique_id=1959681443 instance=ExtResource("8_ssvpx")]
+position = Vector2(92.00001, 228.99998)
+scale = Vector2(5.21, 5.21)
+
+[node name="BossChair" parent="." unique_id=1878046672 instance=ExtResource("9_r28hj")]
+position = Vector2(243, 234.00002)
+scale = Vector2(5, 5)
+
+[node name="FilingCabinetOpen" parent="." unique_id=2074099860 instance=ExtResource("11_hdyxo")]
+position = Vector2(398, 233)
+scale = Vector2(5, 5)
+
+[node name="NpcMentor" parent="." unique_id=1679080789 instance=ExtResource("11_y7muq")]
+position = Vector2(342, 278)
+scale = Vector2(2, 2)
+
+[node name="BossDesk" parent="." unique_id=587872394 instance=ExtResource("10_jxa6k")]
+position = Vector2(243, 336)
+scale = Vector2(6, 6)
+
+[node name="Bin" parent="." unique_id=447327939 instance=ExtResource("12_dhmd1")]
+position = Vector2(501, 288)
+scale = Vector2(4, 4)
+
+[node name="WallClock" parent="." unique_id=437971636 instance=ExtResource("13_187e2")]
+position = Vector2(244, 75)
+scale = Vector2(4, 4)
+
+[node name="TallBookshelf" parent="." unique_id=771443171 instance=ExtResource("14_187e2")]
+position = Vector2(800.00006, 215)
+scale = Vector2(7, 7)
+
+[node name="BigSofa" parent="." unique_id=30323616 instance=ExtResource("15_ahbbh")]
+position = Vector2(1037, 268)
+scale = Vector2(5, 5)
+
+[node name="SmallTable" parent="." unique_id=141381765 instance=ExtResource("16_y7muq")]
+position = Vector2(1039.0001, 360)
+scale = Vector2(5, 5)
+
+[node name="BigSofaSide" parent="." unique_id=1066693384 instance=ExtResource("17_na666")]
+position = Vector2(944, 362.00003)
+scale = Vector2(5, 5)
+
+[node name="FilingCabinet2" parent="." unique_id=1180023425 instance=ExtResource("18_ahbbh")]
+position = Vector2(9.000001, 232)
+scale = Vector2(5, 5)
 
 [node name="CollisionWall" type="StaticBody2D" parent="." unique_id=2047317507]
 

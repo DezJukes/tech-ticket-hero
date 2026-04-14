@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cm6ihly1ndvxt"]
+
+[ext_resource type="Texture2D" uid="uid://duu24rsstyom7" path="res://Assets/Misc/Level 1 - Beginner/Furnitures_Library/Boss-Desk.png" id="1_xrjss"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h7pkc"]
+size = Vector2(32, 20)
+
+[node name="BossDesk" type="Node2D" unique_id=587872394]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1788848457]
+texture = ExtResource("1_xrjss")
+
+[node name="BossDeskBody" type="StaticBody2D" parent="." unique_id=1385941580]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BossDeskBody" unique_id=1259606066]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_h7pkc")

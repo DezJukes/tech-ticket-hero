@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://cejup6u07ah47"]
 
-[ext_resource type="Texture2D" uid="uid://bexayqrxvjfga" path="res://Assets/Misc/Level 1 - Beginner/Furnitures_Library/Boss-Chair 1.png" id="1_kmf4v"]
+[ext_resource type="Texture2D" uid="uid://bmcyv1w50o27i" path="res://Assets/Misc/Level 1 - Beginner/Furnitures_Library/Boss-Chair.png" id="1_kmf4v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g88xv"]
 size = Vector2(10, 24)
 
-[node name="FilingCabinet1" type="Node2D" unique_id=1959681443]
+[node name="BossChair" type="Node2D" unique_id=1959681443]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1178684551]
 texture = ExtResource("1_kmf4v")
 
-[node name="FilingCabinetTallBody" type="StaticBody2D" parent="." unique_id=166235220]
+[node name="BossChairBody" type="StaticBody2D" parent="." unique_id=166235220]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FilingCabinetTallBody" unique_id=1021029561]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BossChairBody" unique_id=1021029561]
 position = Vector2(0, 4)
 shape = SubResource("RectangleShape2D_g88xv")

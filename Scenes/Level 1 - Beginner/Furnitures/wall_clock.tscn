@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dglqqy3bdyop1"]
+
+[ext_resource type="Texture2D" uid="uid://br5vaff4l27on" path="res://Assets/Misc/Level 1 - Beginner/Furnitures_Library/Wall-Clock.png" id="1_qj8ys"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ey6fe"]
+size = Vector2(16, 16)
+
+[node name="WallClock" type="Node2D" unique_id=437971636]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=79849182]
+texture = ExtResource("1_qj8ys")
+
+[node name="WallClockBody" type="StaticBody2D" parent="." unique_id=1656989165]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallClockBody" unique_id=665969029]
+shape = SubResource("RectangleShape2D_ey6fe")

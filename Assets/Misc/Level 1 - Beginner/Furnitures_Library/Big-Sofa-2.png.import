@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l3bdclj2sv3x"
-path="res://.godot/imported/Boss-Desk 1.png-3d9b919b2d414ee909059693ba355e88.ctex"
+uid="uid://b23lukmdl8vww"
+path="res://.godot/imported/Big-Sofa-2.png-ece3f6c19222bc4bbf7ae2e4d13b9a4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Misc/Level 1 - Beginner/Furnitures_Library/Boss-Desk 1.png"
-dest_files=["res://.godot/imported/Boss-Desk 1.png-3d9b919b2d414ee909059693ba355e88.ctex"]
+source_file="res://Assets/Misc/Level 1 - Beginner/Furnitures_Library/Big-Sofa-2.png"
+dest_files=["res://.godot/imported/Big-Sofa-2.png-ece3f6c19222bc4bbf7ae2e4d13b9a4a.ctex"]
 
 [params]
 

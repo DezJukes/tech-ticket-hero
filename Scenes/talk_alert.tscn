@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dct7hk3lm0o7x"]
+
+[ext_resource type="Texture2D" uid="uid://dlnydsnu44cco" path="res://Assets/Misc/Talk.png" id="1_u4jkb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ed2bb"]
+atlas = ExtResource("1_u4jkb")
+region = Rect2(69, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fccwx"]
+atlas = ExtResource("1_u4jkb")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7wx8q"]
+atlas = ExtResource("1_u4jkb")
+region = Rect2(138, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iyx5k"]
+atlas = ExtResource("1_u4jkb")
+region = Rect2(207, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1tltb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ed2bb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fccwx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7wx8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iyx5k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jt5qb"]
+size = Vector2(10, 33)
+
+[node name="TalkAlert" type="Node2D" unique_id=200142115]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1847451558]
+sprite_frames = SubResource("SpriteFrames_1tltb")
+autoplay = "default"
+frame = 3
+frame_progress = 0.55291414
+
+[node name="TalkAlertBody" type="StaticBody2D" parent="." unique_id=1510963651]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TalkAlertBody" unique_id=178650352]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_jt5qb")

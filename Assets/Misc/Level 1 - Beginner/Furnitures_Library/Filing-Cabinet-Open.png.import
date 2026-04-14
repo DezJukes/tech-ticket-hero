@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bexayqrxvjfga"
-path="res://.godot/imported/Boss-Chair 1.png-1df281ad435b28dcde94f013e59868a5.ctex"
+uid="uid://bawomjj0c8j5x"
+path="res://.godot/imported/Filing-Cabinet-Open.png-3a0ff10d3959352730af1fe3782c4a51.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Misc/Level 1 - Beginner/Furnitures_Library/Boss-Chair 1.png"
-dest_files=["res://.godot/imported/Boss-Chair 1.png-1df281ad435b28dcde94f013e59868a5.ctex"]
+source_file="res://Assets/Misc/Level 1 - Beginner/Furnitures_Library/Filing-Cabinet-Open.png"
+dest_files=["res://.godot/imported/Filing-Cabinet-Open.png-3a0ff10d3959352730af1fe3782c4a51.ctex"]
 
 [params]
 
