@@ -1,0 +1,369 @@
+[gd_scene format=3 uid="uid://d0jef4qcrs0ib"]
+
+[ext_resource type="Script" uid="uid://d0yfkf3b21vss" path="res://Scenes/Level 1 - Beginner/Beginner - Architecture/library_architecture.gd" id="1_5t0ea"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_633ga"]
+[ext_resource type="Texture2D" uid="uid://rd8vc5wqvp6u" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_default.png" id="2_png7o"]
+[ext_resource type="Texture2D" uid="uid://bh1oob36mat41" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_pressed.png" id="3_twgao"]
+[ext_resource type="Texture2D" uid="uid://coy624sn6j5qp" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_hovered.png" id="4_5t0ea"]
+[ext_resource type="Texture2D" uid="uid://c5upd2bea2gn4" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_default.png" id="5_8575m"]
+[ext_resource type="Texture2D" uid="uid://88w238ppgoux" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_pressed.png" id="6_86afp"]
+[ext_resource type="Texture2D" uid="uid://lkh0k2su5n1y" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_hovered.png" id="7_jhmks"]
+[ext_resource type="Texture2D" uid="uid://dhb5cchugfrxn" path="res://Assets/Misc/System Gameplay/background-board.png" id="8_g46ws"]
+[ext_resource type="PackedScene" uid="uid://cv47ljppldtki" path="res://Scenes/System Components/CMS/Content Creator/content_creator_dropped.tscn" id="9_lr13n"]
+[ext_resource type="PackedScene" uid="uid://bf17ecqvu3vmw" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_dropped.tscn" id="10_24f0s"]
+[ext_resource type="PackedScene" uid="uid://cfs3mcjift23r" path="res://Scenes/System Components/dropzone.tscn" id="11_eqtso"]
+[ext_resource type="PackedScene" uid="uid://cybb78cd41kg5" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_dropped.tscn" id="12_71qwp"]
+[ext_resource type="PackedScene" uid="uid://iaov3cd3s1xh" path="res://Scenes/System Components/Global Components/Application Server/application_server_dropped.tscn" id="12_nckfy"]
+[ext_resource type="PackedScene" uid="uid://1ppqaf50aejo" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="13_v2nck"]
+[ext_resource type="PackedScene" uid="uid://gyw68370srqq" path="res://Scenes/System Components/CMS/Relational Database/relational_database_dropped.tscn" id="14_wswd0"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="15_71qwp"]
+[ext_resource type="PackedScene" uid="uid://ces4mio3wkfxw" path="res://Scenes/System Components/Library System/Kiosk/self_service_kiosk_comp.tscn" id="16_btte7"]
+[ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="16_jm45a"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Content Creator/content_creator_comp.tscn" id="17_qk2oy"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Relational Database/relational_database_comp.tscn" id="18_633ga"]
+[ext_resource type="PackedScene" uid="uid://050ivv4bbnw8" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="19_hd575"]
+[ext_resource type="PackedScene" uid="uid://djpsccii60f68" path="res://Scenes/System Components/Library System/Kiosk/self_service_kiosk_dropped.tscn" id="19_twgao"]
+[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="21_xx62d"]
+[ext_resource type="PackedScene" uid="uid://sm120wj3sv8c" path="res://Scenes/System Components/Library System/Notification system/notification_service_dropped.tscn" id="22_k6oip"]
+[ext_resource type="PackedScene" uid="uid://b4s76c7k43xvu" path="res://Scenes/Modals/information_modal.tscn" id="26_jhmks"]
+[ext_resource type="PackedScene" uid="uid://ciytdshnq3qxu" path="res://Scenes/Modals/failed_modal.tscn" id="27_g46ws"]
+[ext_resource type="PackedScene" uid="uid://eg6ub8hn8rtc" path="res://Scenes/Modals/success_modal.tscn" id="28_lr13n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vkbc"]
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 2
+border_color = Color(0.8862745, 0.9098039, 0.9411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6awph"]
+bg_color = Color(0.99607843, 0.8862745, 0.8862745, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 8.0
+expand_margin_top = 4.0
+expand_margin_right = 8.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cmoeh"]
+bg_color = Color(0.9268064, 0.9268064, 0.92680633, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4wu1d"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_color = Color(0.8862745, 0.9098039, 0.9411765, 1)
+
+[node name="LibraryArchitecture" type="VBoxContainer" unique_id=2057379885]
+process_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_5t0ea")
+
+[node name="TopBar" type="PanelContainer" parent="." unique_id=245415794]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_0vkbc")
+
+[node name="MarginContainer" type="MarginContainer" parent="TopBar" unique_id=1207548047]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopBar/MarginContainer" unique_id=1675903191]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="TopBar/MarginContainer/HBoxContainer" unique_id=1609973452]
+layout_mode = 2
+theme_override_constants/h_separation = 4
+text = "Back to office"
+
+[node name="Control2" type="Control" parent="TopBar/MarginContainer/HBoxContainer" unique_id=190095811]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopBar/MarginContainer/HBoxContainer" unique_id=913300109]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TicketName" type="PanelContainer" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=629273885]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_6awph")
+
+[node name="Label" type="Label" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer/TicketName" unique_id=1478424377]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9372549, 0.26666668, 0.26666668, 1)
+theme_override_fonts/font = ExtResource("1_633ga")
+theme_override_font_sizes/font_size = 11
+text = "PROD-891"
+
+[node name="ArchitectureName" type="Label" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1683452656]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "CMS Traffic Bottleneck"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="TopBar/MarginContainer/HBoxContainer" unique_id=990295487]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TopBar/MarginContainer/HBoxContainer" unique_id=2002251640]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TicketDetails" type="TextureButton" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=1057256265]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+texture_normal = ExtResource("2_png7o")
+texture_pressed = ExtResource("3_twgao")
+texture_hover = ExtResource("4_5t0ea")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="DeployButton" type="TextureButton" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=527559372]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+texture_normal = ExtResource("5_8575m")
+texture_pressed = ExtResource("6_86afp")
+texture_hover = ExtResource("7_jhmks")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Workspace" type="HBoxContainer" parent="." unique_id=385432453]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="BoardArea" type="PanelContainer" parent="Workspace" unique_id=940638680]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_cmoeh")
+
+[node name="TextureRect" type="TextureRect" parent="Workspace/BoardArea" unique_id=865088732]
+custom_minimum_size = Vector2(800, 560)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("8_g46ws")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="API Gateway" parent="Workspace/BoardArea/TextureRect" unique_id=1014836096 instance=ExtResource("10_24f0s")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 335.0
+offset_top = 122.0
+offset_right = 435.0
+offset_bottom = 192.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="Dropzone" parent="Workspace/BoardArea/TextureRect" unique_id=1502597236 groups=["Dropzones"] instance=ExtResource("11_eqtso")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 109.0
+offset_top = 121.0
+offset_right = 209.0
+offset_bottom = 191.0
+grow_horizontal = 1
+grow_vertical = 1
+expected_component = "Self-service Kiosk"
+
+[node name="Application Server" parent="Workspace/BoardArea/TextureRect" unique_id=633311077 instance=ExtResource("12_nckfy")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 560.0
+offset_top = 293.0
+offset_right = 660.0
+offset_bottom = 363.0
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="DroppedBadge2" parent="Workspace/BoardArea/TextureRect" unique_id=492691361 instance=ExtResource("12_71qwp")]
+layout_mode = 1
+offset_left = 560.0
+offset_top = 123.0
+offset_right = -140.0
+offset_bottom = -367.0
+
+[node name="DroppedBadge" parent="Workspace/BoardArea/TextureRect" unique_id=1978321988 instance=ExtResource("22_k6oip")]
+layout_mode = 1
+offset_left = 126.0
+offset_top = 292.0
+offset_right = -574.0
+offset_bottom = -198.0
+
+[node name="Dropzone2" parent="Workspace/BoardArea/TextureRect" unique_id=769853484 groups=["Dropzones"] instance=ExtResource("11_eqtso")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 340.0
+offset_top = 291.0
+offset_right = 440.0
+offset_bottom = 361.0
+grow_horizontal = 1
+grow_vertical = 1
+expected_component = "Relational Database"
+
+[node name="Arrow8" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1936296860]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 583.0
+offset_top = 195.0
+offset_right = 635.0
+offset_bottom = 299.0
+texture = ExtResource("16_jm45a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow5" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=2062552860]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 215.0
+offset_top = 183.0
+offset_right = 275.0
+offset_bottom = 303.0
+rotation = -1.5707964
+texture = ExtResource("16_jm45a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow9" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1460951859]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 558.0
+offset_top = 295.0
+offset_right = 618.0
+offset_bottom = 415.0
+rotation = 1.5707964
+texture = ExtResource("16_jm45a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow10" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=2131437602]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 442.0
+offset_top = 186.0
+offset_right = 502.0
+offset_bottom = 306.0
+rotation = -1.5707964
+texture = ExtResource("16_jm45a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow11" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=322172838]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 343.0
+offset_top = 298.0
+offset_right = 403.0
+offset_bottom = 418.0
+rotation = 1.5707964
+texture = ExtResource("16_jm45a")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ToolkitSidebar" type="PanelContainer" parent="Workspace" unique_id=2046281580]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_4wu1d")
+
+[node name="MarginContainer" type="MarginContainer" parent="Workspace/ToolkitSidebar" unique_id=986471709]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer" unique_id=1968155192]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer" unique_id=1002932102]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1602900172]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.39215687, 0.45490196, 0.54509807, 1)
+theme_override_font_sizes/font_size = 11
+text = "CLOUD COMPONENTS"
+
+[node name="Control" type="Control" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1458032695]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1831706921]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5803922, 0.6392157, 0.72156864, 1)
+theme_override_font_sizes/font_size = 11
+text = "DRAG ⟶"
+
+[node name="HSeparator" type="HSeparator" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer" unique_id=536576133]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer" unique_id=1790891139]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+scroll_deadzone = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer" unique_id=394725738]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("15_71qwp")]
+layout_mode = 2
+script = ExtResource("21_xx62d")
+dropped_badge_scene = ExtResource("13_v2nck")
+
+[node name="SelfServiceKioskComp" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1574387928 instance=ExtResource("16_btte7")]
+layout_mode = 2
+script = ExtResource("21_xx62d")
+dropped_badge_scene = ExtResource("19_twgao")
+
+[node name="ComponentCard3" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=799010403 instance=ExtResource("17_qk2oy")]
+layout_mode = 2
+script = ExtResource("21_xx62d")
+dropped_badge_scene = ExtResource("9_lr13n")
+
+[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=538266026 instance=ExtResource("18_633ga")]
+layout_mode = 2
+script = ExtResource("21_xx62d")
+dropped_badge_scene = ExtResource("14_wswd0")
+
+[node name="Search Engine" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=583468896 instance=ExtResource("19_hd575")]
+layout_mode = 2
+
+[node name="InformationModal" parent="." unique_id=1895424386 instance=ExtResource("26_jhmks")]
+unique_name_in_owner = true
+visible = false
+
+[node name="FailedModal" parent="." unique_id=1048029405 instance=ExtResource("27_g46ws")]
+unique_name_in_owner = true
+visible = false
+
+[node name="SuccessModal" parent="." unique_id=172023029 instance=ExtResource("28_lr13n")]
+unique_name_in_owner = true
+visible = false
+
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/TicketDetails" to="." method="_on_ticket_details_pressed"]
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/DeployButton" to="." method="_on_deploy_button_pressed"]
