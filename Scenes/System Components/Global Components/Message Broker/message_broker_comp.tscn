@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://dnynimucjc6oa"]
+[gd_scene format=3 uid="uid://dlf2h7xkugp4m"]
 
-[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_ji5p7"]
-[ext_resource type="Texture2D" uid="uid://b0d0uw4ly7tut" path="res://Scenes/System Components/Global Components/Load Balancer/load balancer.png" id="2_ji5p7"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_dh80f"]
-[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_7mlfo"]
-[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="5_wme64"]
+[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_uo1nx"]
+[ext_resource type="Texture2D" uid="uid://cc2dbqbhhhu0t" path="res://Scenes/System Components/Global Components/Message Broker/message broker.png" id="2_uo1nx"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_3my82"]
+[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_4e73p"]
+[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="5_pipn6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehknd"]
 bg_color = Color(1, 1, 1, 1)
@@ -39,7 +39,7 @@ offset_bottom = -542.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ehknd")
-script = ExtResource("1_ji5p7")
+script = ExtResource("1_uo1nx")
 
 [node name="CardPadding" type="MarginContainer" parent="." unique_id=714115166]
 layout_mode = 2
@@ -72,7 +72,7 @@ theme_override_constants/margin_bottom = 6
 [node name="IconImage" type="TextureRect" parent="CardPadding/MainRow/IconFrame/IconPadding" unique_id=65608909]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-texture = ExtResource("2_ji5p7")
+texture = ExtResource("2_uo1nx")
 expand_mode = 1
 stretch_mode = 5
 
@@ -89,21 +89,21 @@ theme_override_constants/separation = 2
 [node name="Title" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=1352558632]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
-theme_override_fonts/font = ExtResource("3_dh80f")
-text = "Load Balancer"
+theme_override_fonts/font = ExtResource("3_3my82")
+text = "Message Broker"
 
 [node name="Subtitle" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=614709425]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
-theme_override_fonts/font = ExtResource("4_7mlfo")
+theme_override_fonts/font = ExtResource("4_4e73p")
 theme_override_font_sizes/font_size = 11
-text = "NETWORK ROUTING"
+text = "ASYNC QUEUING "
 
 [node name="Description" type="Label" parent="CardPadding/MainRow/TextColumn" unique_id=555238219]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
-theme_override_fonts/font = ExtResource("5_wme64")
+theme_override_fonts/font = ExtResource("5_pipn6")
 theme_override_font_sizes/font_size = 12
-text = "Distributes heavy corporate traffic to keep the system stable during high usage."
+text = "Pushes the request into a queue so it can be handled even if the user is offline. "
 autowrap_mode = 2

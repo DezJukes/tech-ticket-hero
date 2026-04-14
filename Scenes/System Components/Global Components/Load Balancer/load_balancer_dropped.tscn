@@ -1,6 +1,6 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://bva2cyyyv31gk"]
 
-[ext_resource type="Texture2D" uid="uid://cr3tkwu7tx5bn" path="res://Scenes/System Components/Global Components/API Gateway/img_api_gateway.png" id="1_a0j27"]
+[ext_resource type="Texture2D" uid="uid://b0d0uw4ly7tut" path="res://Scenes/System Components/Global Components/Load Balancer/load balancer.png" id="1_qttv2"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_l18wb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nl00f"]
@@ -39,7 +39,7 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("1_a0j27")
+texture = ExtResource("1_qttv2")
 expand_mode = 1
 
 [node name="NameLabel" type="Label" parent="VBoxContainer" unique_id=1241469442]
@@ -47,6 +47,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
 theme_override_fonts/font = ExtResource("2_l18wb")
 theme_override_font_sizes/font_size = 12
-text = "API 
-Gateway"
+text = "Load
+Balancer"
 horizontal_alignment = 1
