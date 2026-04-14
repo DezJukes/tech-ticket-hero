@@ -1,4 +1,4 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://yjiphbed3ggq"]
 
 [ext_resource type="Texture2D" uid="uid://8fwvbhevky5v" path="res://Scenes/System Components/CMS/Content Creator/img_content_creator.png" id="1_rvyot"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_e3dno"]
@@ -37,6 +37,7 @@ offset_right = -802.0
 offset_bottom = -542.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_ehknd")
 
 [node name="CardPadding" type="MarginContainer" parent="." unique_id=714115166]

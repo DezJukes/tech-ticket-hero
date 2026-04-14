@@ -16,11 +16,11 @@
 [ext_resource type="PackedScene" uid="uid://iaov3cd3s1xh" path="res://Scenes/System Components/Global Components/Application Server/application_server_dropped.tscn" id="12_nckfy"]
 [ext_resource type="PackedScene" uid="uid://1ppqaf50aejo" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="13_v2nck"]
 [ext_resource type="PackedScene" uid="uid://gyw68370srqq" path="res://Scenes/System Components/Global Components/Relational Database/relational_database_dropped.tscn" id="14_wswd0"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="15_71qwp"]
+[ext_resource type="PackedScene" uid="uid://bqatkw2dvetnd" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="15_71qwp"]
 [ext_resource type="PackedScene" uid="uid://ces4mio3wkfxw" path="res://Scenes/System Components/Library System/Kiosk/self_service_kiosk_comp.tscn" id="16_btte7"]
 [ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="16_jm45a"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Content Creator/content_creator_comp.tscn" id="17_qk2oy"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Relational Database/relational_database_comp.tscn" id="18_633ga"]
+[ext_resource type="PackedScene" uid="uid://yjiphbed3ggq" path="res://Scenes/System Components/CMS/Content Creator/content_creator_comp.tscn" id="17_qk2oy"]
+[ext_resource type="PackedScene" uid="uid://c8txl1ju6weqe" path="res://Scenes/System Components/Global Components/Relational Database/relational_database_comp.tscn" id="18_633ga"]
 [ext_resource type="PackedScene" uid="uid://050ivv4bbnw8" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="19_hd575"]
 [ext_resource type="PackedScene" uid="uid://djpsccii60f68" path="res://Scenes/System Components/Library System/Kiosk/self_service_kiosk_dropped.tscn" id="19_twgao"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="21_xx62d"]
@@ -323,7 +323,8 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 horizontal_scroll_mode = 3
-scroll_deadzone = 32
+vertical_scroll_mode = 3
+scroll_deadzone = 25
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer" unique_id=394725738]
 layout_mode = 2
