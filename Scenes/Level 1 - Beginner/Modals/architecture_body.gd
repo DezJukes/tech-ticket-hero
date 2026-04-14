@@ -12,4 +12,5 @@ func _process(delta: float) -> void:
 
 
 func _on_mission_complete_pressed() -> void:
+	get_tree().paused = false
 	get_tree().change_scene_to_file("res://Scenes/Level 1 - Beginner/Beginner - Game Scene/Library_game_scene.tscn")
