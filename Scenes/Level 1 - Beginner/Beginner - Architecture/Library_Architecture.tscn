@@ -25,9 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://djpsccii60f68" path="res://Scenes/System Components/Library System/Kiosk/self_service_kiosk_dropped.tscn" id="19_twgao"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="21_xx62d"]
 [ext_resource type="PackedScene" uid="uid://sm120wj3sv8c" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_dropped.tscn" id="22_k6oip"]
-[ext_resource type="PackedScene" uid="uid://b4s76c7k43xvu" path="res://Scenes/Modals/information_modal.tscn" id="26_jhmks"]
-[ext_resource type="PackedScene" uid="uid://ciytdshnq3qxu" path="res://Scenes/Modals/failed_modal.tscn" id="27_g46ws"]
-[ext_resource type="PackedScene" uid="uid://eg6ub8hn8rtc" path="res://Scenes/Modals/success_modal.tscn" id="28_lr13n"]
+[ext_resource type="PackedScene" uid="uid://bhojipa7ynxmt" path="res://Scenes/Level 1 - Beginner/Modals/success_modal_library.tscn" id="26_jhmks"]
+[ext_resource type="PackedScene" uid="uid://w147dd2o6brj" path="res://Scenes/Level 1 - Beginner/Modals/information_modal_library.tscn" id="27_g46ws"]
+[ext_resource type="PackedScene" uid="uid://d41pahbgfpgo" path="res://Scenes/Level 1 - Beginner/Modals/failed_modal_library.tscn" id="28_lr13n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0vkbc"]
 bg_color = Color(1, 1, 1, 1)
@@ -353,14 +353,14 @@ dropped_badge_scene = ExtResource("14_wswd0")
 [node name="Search Engine" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=583468896 instance=ExtResource("19_hd575")]
 layout_mode = 2
 
-[node name="InformationModal" parent="." unique_id=1895424386 instance=ExtResource("26_jhmks")]
-unique_name_in_owner = true
-
-[node name="FailedModal" parent="." unique_id=1048029405 instance=ExtResource("27_g46ws")]
+[node name="SuccessModalLibrary" parent="." unique_id=217140287 instance=ExtResource("26_jhmks")]
 unique_name_in_owner = true
 visible = false
 
-[node name="SuccessModal" parent="." unique_id=172023029 instance=ExtResource("28_lr13n")]
+[node name="InformationModalLibrary" parent="." unique_id=51135178 instance=ExtResource("27_g46ws")]
+unique_name_in_owner = true
+
+[node name="FailedModalLibrary" parent="." unique_id=937512206 instance=ExtResource("28_lr13n")]
 unique_name_in_owner = true
 visible = false
 

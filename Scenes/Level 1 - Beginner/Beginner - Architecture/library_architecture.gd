@@ -1,12 +1,12 @@
 extends VBoxContainer
 
 # Grab the modals from the scene tree
-@onready var info_modal = $InformationModal
-@onready var failed_panel = %FailedModal
+@onready var info_modal = $InformationModalLibrary
+@onready var failed_panel = %FailedModalLibrary
 
 # IMPORTANT: Make sure you have your success modal added to your scene tree
 # and set as a Unique Name (%) just like your failed_panel!
-@onready var success_panel = %SuccessModal
+@onready var success_panel = %SuccessModalLibrary
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
