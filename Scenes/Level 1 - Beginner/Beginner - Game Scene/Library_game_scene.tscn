@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b8ampbugw2yse"]
 
-[ext_resource type="Script" uid="uid://cqlm2bc1cvp76" path="res://Scenes/Level 1 - Beginner/Beginner - Architecture/library_game_scene.gd" id="1_836bq"]
+[ext_resource type="Script" uid="uid://cqlm2bc1cvp76" path="res://Scenes/Level 1 - Beginner/Beginner - Game Scene/library_game_scene.gd" id="1_836bq"]
 [ext_resource type="Texture2D" uid="uid://lvpiaw27h2l4" path="res://Assets/Misc/Level 1 - Beginner/Office-bg.png" id="1_luogq"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_836bq"]
 [ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="3_gpl8w"]
