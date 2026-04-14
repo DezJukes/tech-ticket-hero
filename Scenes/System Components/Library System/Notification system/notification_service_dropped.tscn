@@ -1,6 +1,6 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://sm120wj3sv8c"]
 
-[ext_resource type="Texture2D" uid="uid://rkmo2gvbwviv" path="res://Scenes/System Components/Global Components/Application Server/img_application_server.png" id="1_romf0"]
+[ext_resource type="Texture2D" uid="uid://c7bcpovms5p3y" path="res://Scenes/System Components/Library System/Notification system/notification service.png" id="1_yuri6"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_l18wb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_romf0"]
@@ -38,7 +38,7 @@ custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("1_romf0")
+texture = ExtResource("1_yuri6")
 expand_mode = 1
 
 [node name="NameLabel" type="Label" parent="VBoxContainer" unique_id=1241469442]
@@ -46,6 +46,6 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
 theme_override_fonts/font = ExtResource("2_l18wb")
 theme_override_font_sizes/font_size = 12
-text = "Application 
-Server"
+text = "Notification
+Service"
 horizontal_alignment = 1

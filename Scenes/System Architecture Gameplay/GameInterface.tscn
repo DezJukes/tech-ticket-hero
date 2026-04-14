@@ -21,8 +21,11 @@
 [ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="16_nprbw"]
 [ext_resource type="PackedScene" uid="uid://050ivv4bbnw8" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="18_nprbw"]
 [ext_resource type="PackedScene" uid="uid://b4s76c7k43xvu" path="res://Scenes/Modals/information_modal.tscn" id="21_7faf7"]
+[ext_resource type="PackedScene" uid="uid://vq8bl13768x1" path="res://Scenes/System Components/Library System/Notification system/notification_service_comp.tscn" id="21_epmnl"]
+[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="22_c54h5"]
 [ext_resource type="PackedScene" uid="uid://ciytdshnq3qxu" path="res://Scenes/Modals/failed_modal.tscn" id="22_d7rpw"]
 [ext_resource type="PackedScene" uid="uid://eg6ub8hn8rtc" path="res://Scenes/Modals/success_modal.tscn" id="23_epmnl"]
+[ext_resource type="PackedScene" uid="uid://sm120wj3sv8c" path="res://Scenes/System Components/Library System/Notification system/notification_service_dropped.tscn" id="23_kmyfs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo8ic"]
 bg_color = Color(1, 1, 1, 1)
@@ -248,7 +251,7 @@ offset_right = 353.0
 offset_bottom = 125.0
 grow_horizontal = 1
 grow_vertical = 1
-expected_component = "Auth Service"
+expected_component = "Notification Service"
 
 [node name="Content Delivery" parent="Workspace/BoardArea/TextureRect" unique_id=875525278 instance=ExtResource("11_6hfb2")]
 layout_mode = 0
@@ -417,18 +420,24 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 12
 
-[node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("10_eoklo")]
+[node name="API Services" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("10_eoklo")]
 layout_mode = 2
 dropped_badge_scene = ExtResource("11_nc1fv")
 
-[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=224748546 instance=ExtResource("12_vo8ic")]
+[node name="Auth Service" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=224748546 instance=ExtResource("12_vo8ic")]
 layout_mode = 2
 
 [node name="Search Engine" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1657130036 instance=ExtResource("18_nprbw")]
 layout_mode = 2
 
+[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1821095305 instance=ExtResource("21_epmnl")]
+layout_mode = 2
+script = ExtResource("22_c54h5")
+dropped_badge_scene = ExtResource("23_kmyfs")
+
 [node name="InformationModal" parent="." unique_id=1895424386 instance=ExtResource("21_7faf7")]
 unique_name_in_owner = true
+visible = false
 
 [node name="FailedModal" parent="." unique_id=1453858144 instance=ExtResource("22_d7rpw")]
 unique_name_in_owner = true
