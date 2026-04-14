@@ -1,6 +1,6 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://cejup6u07ah47"]
 
-[ext_resource type="Texture2D" uid="uid://cn7ked3p2t5ff" path="res://Assets/Misc/Level 1 - Beginner/Furnitures/Filing-Cabinet-Tall.png" id="1_g88xv"]
+[ext_resource type="Texture2D" uid="uid://bexayqrxvjfga" path="res://Assets/Misc/Level 1 - Beginner/Furnitures_Library/Boss-Chair 1.png" id="1_kmf4v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g88xv"]
 size = Vector2(10, 24)
@@ -8,7 +8,7 @@ size = Vector2(10, 24)
 [node name="FilingCabinet1" type="Node2D" unique_id=1959681443]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1178684551]
-texture = ExtResource("1_g88xv")
+texture = ExtResource("1_kmf4v")
 
 [node name="FilingCabinetTallBody" type="StaticBody2D" parent="." unique_id=166235220]
 

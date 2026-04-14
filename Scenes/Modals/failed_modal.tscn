@@ -27,24 +27,12 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uf2dt"]
-bg_color = Color(0.9411765, 0.99215686, 0.95686275, 1)
-border_width_left = 4
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
-border_color = Color(0.5254902, 0.9372549, 0.6745098, 1)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gd5gd"]
 content_margin_left = 24.0
 content_margin_top = 12.0
 content_margin_right = 24.0
 content_margin_bottom = 12.0
-bg_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+bg_color = Color(0.827451, 0, 0.101960786, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -85,14 +73,16 @@ theme_override_constants/margin_bottom = 20
 [node name="VerticalFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding" unique_id=61201783]
 layout_mode = 2
 
-[node name="HeaderBox" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1499362730]
+[node name="HeaderBox" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1087617571]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="SirenIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1813962017]
+[node name="CriticalIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1813962017]
+custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 texture = ExtResource("1_r2vil")
-expand_mode = 2
+expand_mode = 1
+stretch_mode = 5
 
 [node name="HeaderText" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1742387118]
 layout_mode = 2
@@ -102,12 +92,14 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_jr3xx")
 text = "Deployment Failed"
+horizontal_alignment = 1
 
 [node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=539848353]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9218303, 0, 0.11170312, 1)
 theme_override_fonts/font = ExtResource("3_ewqei")
-text = "TICKET - 123"
+text = "TICKET - CMS123"
+horizontal_alignment = 1
 
 [node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1081272571]
 layout_mode = 2
@@ -137,44 +129,56 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
 theme_override_fonts/font = ExtResource("2_jr3xx")
-text = "The Problem"
+text = "SECURITY BREACH"
+horizontal_alignment = 1
+
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=1939912037]
+layout_mode = 2
+theme_override_constants/margin_top = 5
 
 [node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=375373766]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_ewqei")
-text = "The website is fast, but it’s a mess! The site is completely vulnerable. Anyone can delete or edit articles because there is no way to check who has permission to make changes. "
+text = "Missing Auth Service allowed unauthorized bots to flood the server, bypassing editor permissions and crashing the app logic."
+horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=647927296]
+[node name="ProblemCard2" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=1262503139]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_uf2dt")
+theme_override_styles/panel = SubResource("StyleBoxFlat_ewqei")
 
-[node name="MissionPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd" unique_id=1893367535]
+[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2" unique_id=1512099301]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="MissionTextFLow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding" unique_id=1368801144]
+[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding" unique_id=1617000145]
 layout_mode = 2
 
-[node name="Mission Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=1564212973]
+[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=23833868]
 layout_mode = 2
-theme_override_colors/font_color = Color(0.3598809, 0.6194927, 3.85046e-07, 1)
+theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
 theme_override_fonts/font = ExtResource("2_jr3xx")
-text = "Your Mission"
+text = "DATABASE DEADLOCK"
+horizontal_alignment = 1
 
-[node name="MissionBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=844878013]
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=1778932258]
 layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = 5
-theme_override_fonts/normal_font = ExtResource("3_ewqei")
-text = "You must put the components that protect the site from unauthorized changes and the tools that allow users to discover stories."
-fit_content = true
+theme_override_constants/margin_top = 5
+
+[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=427135694]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("3_ewqei")
+text = "Without the Search Engine, the Master DB collapsed under repetitive read queries while trying to index large article files."
+horizontal_alignment = 1
+autowrap_mode = 3
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=975646508]
 layout_mode = 2
@@ -188,7 +192,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_uf2dt")
-text = "Tap any placed component..."
+text = "You will receive a penalty."
 
 [node name="AcceptButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1236467997]
 layout_mode = 2

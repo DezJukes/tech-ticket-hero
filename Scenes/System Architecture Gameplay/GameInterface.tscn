@@ -251,7 +251,7 @@ offset_right = 353.0
 offset_bottom = 125.0
 grow_horizontal = 1
 grow_vertical = 1
-expected_component = "Notification Service"
+expected_component = "Auth Service"
 
 [node name="Content Delivery" parent="Workspace/BoardArea/TextureRect" unique_id=875525278 instance=ExtResource("11_6hfb2")]
 layout_mode = 0
@@ -437,7 +437,6 @@ dropped_badge_scene = ExtResource("23_kmyfs")
 
 [node name="InformationModal" parent="." unique_id=1895424386 instance=ExtResource("21_7faf7")]
 unique_name_in_owner = true
-visible = false
 
 [node name="FailedModal" parent="." unique_id=1453858144 instance=ExtResource("22_d7rpw")]
 unique_name_in_owner = true

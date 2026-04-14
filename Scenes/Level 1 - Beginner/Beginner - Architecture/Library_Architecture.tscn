@@ -355,7 +355,6 @@ layout_mode = 2
 
 [node name="InformationModal" parent="." unique_id=1895424386 instance=ExtResource("26_jhmks")]
 unique_name_in_owner = true
-visible = false
 
 [node name="FailedModal" parent="." unique_id=1048029405 instance=ExtResource("27_g46ws")]
 unique_name_in_owner = true
@@ -365,5 +364,6 @@ visible = false
 unique_name_in_owner = true
 visible = false
 
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/TicketDetails" to="." method="_on_ticket_details_pressed"]
 [connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/DeployButton" to="." method="_on_deploy_button_pressed"]

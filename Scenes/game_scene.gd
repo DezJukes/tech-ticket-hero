@@ -13,4 +13,4 @@ func _on_button_pressed():
 
 
 func _on_interact_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level 1 - Beginner/Beginner - Architecture/Library_Architecture.tscn")
+	get_tree().change_scene_to_file("res://Scenes/System Architecture Gameplay/GameInterface.tscn")
