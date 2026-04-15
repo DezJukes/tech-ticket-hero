@@ -1,17 +1,14 @@
 extends PanelContainer
 
-# Type the correct answer in the Inspector for each box
 @export var expected_component: String = ""
 var current_component: String = ""
-
-# ADDED: Remembers the exact UI card in the toolkit so we can put it back later
 var current_card_node: Control = null 
 
-# Visual States (Opacity)
-var normal_color = Color(1, 1, 1, 0.4) # 40% visible (Empty)
-var active_color = Color(1, 1, 1, 1.0) # 100% visible (Highlighted or Occupied)
+# ADDED: We need to remember what the picture is so we can drag it again!
+var current_badge_scene: PackedScene = null
 
-# Tracks if a piece is currently sitting in this zone
+var normal_color = Color(1, 1, 1, 0.4)
+var active_color = Color(1, 1, 1, 1.0) 
 var has_component: bool = false 
 
 func _ready() -> void:
@@ -30,57 +27,79 @@ func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	return typeof(data) == TYPE_DICTIONARY and data.has("badge_scene")
 
 func _drop_data(at_position: Vector2, data: Variant) -> void:
-	# --- EXPLICIT REPLACEMENT LOGIC ---
 	if has_component:
-		print("Replacing old piece with: ", data["name"])
-		
-		# 1. Safely delete the visual badge sitting in the box
 		for child in get_children():
 			child.queue_free() 
-			
-		# 2. ADDED: Un-hide the old card back in the toolkit!
 		if current_card_node != null:
 			current_card_node.show()
 
-	# 3. ADDED: Hide the NEW card from the toolkit so it looks like we picked it up
 	data["original_card"].hide()
 			
-	# Spawn the fresh, new component from the dragged data
 	var new_badge = data["badge_scene"].instantiate()
 	new_badge.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	add_child(new_badge)
 	
-	# Lock in the state so it stays full quality
 	has_component = true
 	modulate = active_color
-	
-	# Remember the name of the piece currently sitting here for the Deploy check!
 	current_component = data["name"]
-	
-	# ADDED: Remember the "return address" of this new card in case we replace it later
 	current_card_node = data["original_card"]
 	
-	# This built-in function listens for any mouse clicks on the Dropzone
-func _gui_input(event: InputEvent) -> void:
-	# Did the player just click the left mouse button?
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+	# ADDED: Save the scene in case the player drags it away later!
+	current_badge_scene = data["badge_scene"]
+
+# ---------------------------------------------------
+# NEW FEATURE: Dragging from Dropzone to Dropzone
+# ---------------------------------------------------
+func _get_drag_data(at_position: Vector2) -> Variant:
+	# Empty boxes can't be dragged!
+	if not has_component:
+		return null 
 		
-		# Is there actually a piece sitting in here to return?
+	# 1. Package the exact same invisible shipping label the toolkit uses
+	var drag_data = {
+		"name": current_component,
+		"badge_scene": current_badge_scene,
+		"original_card": current_card_node
+	}
+	
+	# 2. Create the floating ghost preview
+	var preview = current_badge_scene.instantiate()
+	preview.modulate = Color(1, 1, 1, 0.6)
+	var preview_container = Control.new()
+	preview_container.add_child(preview)
+	preview.position = Vector2(-30, -30) # Keeps the ghost roughly centered on mouse
+	set_drag_preview(preview_container)
+	
+	# 3. Instantly wipe THIS Dropzone clean. 
+	# (If the drop fails, the piece is already safely back in the toolkit!)
+	current_card_node.show()
+	for child in get_children():
+		child.queue_free()
+		
+	has_component = false
+	current_component = ""
+	current_card_node = null
+	current_badge_scene = null
+	modulate = normal_color
+	
+	return drag_data
+
+# ---------------------------------------------------
+# UPDATED: Click to Return (Tap to Remove)
+# ---------------------------------------------------
+func _gui_input(event: InputEvent) -> void:
+	# CHANGED: We now listen for 'is_released()' instead of 'pressed'.
+	# This stops a simple click from interfering with a click-and-drag!
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_released():
+		
 		if has_component:
-			print("Returning piece back to the toolkit!")
-			
-			# 1. Un-hide the original card back in the toolkit sidebar
 			if current_card_node != null:
 				current_card_node.show()
-				
-			# 2. Delete the visual badge sitting inside the Dropzone
 			for child in get_children():
 				child.queue_free()
 				
-			# 3. Wipe the Dropzone's memory clean so it knows it is empty again
 			has_component = false
 			current_component = ""
 			current_card_node = null
-			
-			# 4. Return the color to the faded "empty" state
+			current_badge_scene = null
 			modulate = normal_color
