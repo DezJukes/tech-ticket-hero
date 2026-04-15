@@ -17,14 +17,14 @@
 [ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="14_1gebq"]
 [ext_resource type="PackedScene" uid="uid://bva2cyyyv31gk" path="res://Scenes/System Components/Global Components/Load Balancer/load_balancer_dropped.tscn" id="15_ftn7r"]
 [ext_resource type="PackedScene" uid="uid://clcwqqssv5wj4" path="res://Scenes/System Components/ERP/Expense Management Server/expense_management_dropped.tscn" id="15_iujs3"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="15_k7y40"]
+[ext_resource type="PackedScene" uid="uid://bqatkw2dvetnd" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="15_k7y40"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="16_ft6pc"]
 [ext_resource type="PackedScene" uid="uid://tfvc2ieyc3ie" path="res://Scenes/System Components/ERP/Employee Portal/employee_portal_dropped.tscn" id="16_iujs3"]
 [ext_resource type="PackedScene" uid="uid://1ppqaf50aejo" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="17_6jc0e"]
 [ext_resource type="PackedScene" uid="uid://bd1v2tooi3dx2" path="res://Scenes/System Components/ERP/General Ledger Service/general_ledger_comp.tscn" id="18_jvwnp"]
 [ext_resource type="PackedScene" uid="uid://bk4j3e5bdvoes" path="res://Scenes/System Components/ERP/General Ledger Service/general_ledger_dropped.tscn" id="19_jxyor"]
 [ext_resource type="PackedScene" uid="uid://gyw68370srqq" path="res://Scenes/System Components/Global Components/Relational Database/relational_database_dropped.tscn" id="23_doqf8"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="23_jxyor"]
+[ext_resource type="PackedScene" uid="uid://c7ovts0hmikcu" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="23_jxyor"]
 [ext_resource type="PackedScene" uid="uid://050ivv4bbnw8" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="24_b1riw"]
 [ext_resource type="PackedScene" uid="uid://b2mdeck57e5cg" path="res://Scenes/System Components/ERP/Expense Management Server/expense_management_comp.tscn" id="25_v5ovn"]
 [ext_resource type="PackedScene" uid="uid://ea4t0x8ltvim" path="res://Scenes/Level 2 - Intermediate/Modals/ERP Modals/failed_modal_erp.tscn" id="28_jvwnp"]
@@ -165,19 +165,19 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 334.0
-offset_top = 408.0
-offset_right = 434.0
-offset_bottom = 478.0
+offset_left = 328.0
+offset_top = 407.0
+offset_right = 428.0
+offset_bottom = 477.0
 grow_horizontal = 1
 grow_vertical = 1
 expected_component = "Notification Service"
 
 [node name="DroppedBadge2" parent="Workspace/BoardArea/TextureRect" unique_id=492691361 instance=ExtResource("12_naqba")]
 layout_mode = 1
-offset_left = 684.0
+offset_left = 649.0
 offset_top = 82.0
-offset_right = -16.0
+offset_right = -51.0
 offset_bottom = -408.0
 
 [node name="Dropzone2" parent="Workspace/BoardArea/TextureRect" unique_id=1939987965 groups=["Dropzones"] instance=ExtResource("10_16ama")]
@@ -185,10 +185,10 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 551.0
-offset_top = 241.0
-offset_right = 651.0
-offset_bottom = 311.0
+offset_left = 545.0
+offset_top = 240.0
+offset_right = 645.0
+offset_bottom = 310.0
 grow_horizontal = 1
 grow_vertical = 1
 expected_component = "Expense Management Server"
@@ -196,9 +196,9 @@ expected_component = "Expense Management Server"
 [node name="Arrow8" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1233365088]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 695.0
+offset_left = 676.0
 offset_top = 142.99998
-offset_right = 747.0
+offset_right = 728.0
 offset_bottom = 246.99998
 rotation = 0.62482786
 texture = ExtResource("14_1gebq")
@@ -208,9 +208,9 @@ stretch_mode = 5
 [node name="Arrow5" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1143910909]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 125.0
+offset_left = 120.0
 offset_top = 137.0
-offset_right = 185.0
+offset_right = 180.0
 offset_bottom = 257.0
 rotation = -1.5707964
 texture = ExtResource("14_1gebq")
@@ -219,32 +219,32 @@ stretch_mode = 5
 
 [node name="DroppedBadge4" parent="Workspace/BoardArea/TextureRect" unique_id=882862197 instance=ExtResource("15_ftn7r")]
 layout_mode = 1
-offset_left = 249.0
+offset_left = 237.0
 offset_top = 76.0
-offset_right = -451.0
+offset_right = -463.0
 offset_bottom = -414.0
 
 [node name="DroppedBadge" parent="Workspace/BoardArea/TextureRect" unique_id=1014836096 instance=ExtResource("13_d03gi")]
 layout_mode = 1
-offset_left = 121.0
-offset_top = 413.0
-offset_right = -579.0
-offset_bottom = -77.0
+offset_left = 115.0
+offset_top = 412.0
+offset_right = -585.0
+offset_bottom = -78.0
 
 [node name="DroppedBadge6" parent="Workspace/BoardArea/TextureRect" unique_id=757138952 instance=ExtResource("23_doqf8")]
 layout_mode = 1
-offset_left = 331.0
-offset_top = 238.0
-offset_right = -369.0
-offset_bottom = -252.0
+offset_left = 325.0
+offset_top = 237.0
+offset_right = -375.0
+offset_bottom = -253.0
 
 [node name="Arrow9" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=685345755]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 330.0
-offset_top = 240.0
-offset_right = 390.0
-offset_bottom = 360.0
+offset_left = 324.0
+offset_top = 239.0
+offset_right = 384.0
+offset_bottom = 359.0
 rotation = 1.5707964
 texture = ExtResource("14_1gebq")
 expand_mode = 1
@@ -253,10 +253,10 @@ stretch_mode = 5
 [node name="Arrow10" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1622921386]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 223.0
-offset_top = 475.0
-offset_right = 283.0
-offset_bottom = 595.0
+offset_left = 217.0
+offset_top = 474.0
+offset_right = 277.0
+offset_bottom = 594.0
 rotation = -1.5707964
 texture = ExtResource("14_1gebq")
 expand_mode = 1
@@ -265,10 +265,10 @@ stretch_mode = 5
 [node name="Arrow11" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1718823169]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 548.0
-offset_top = 245.0
-offset_right = 608.0
-offset_bottom = 365.0
+offset_left = 542.0
+offset_top = 244.0
+offset_right = 602.0
+offset_bottom = 364.0
 rotation = 1.5707964
 texture = ExtResource("14_1gebq")
 expand_mode = 1
@@ -279,9 +279,9 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 468.0
+offset_left = 445.0
 offset_top = 80.0
-offset_right = 564.0
+offset_right = 541.0
 offset_bottom = 150.0
 grow_horizontal = 1
 grow_vertical = 1
@@ -289,20 +289,20 @@ expected_component = "API Gateway"
 
 [node name="DroppedBadge3" parent="Workspace/BoardArea/TextureRect" unique_id=1919567394 instance=ExtResource("16_iujs3")]
 layout_mode = 1
-offset_left = 22.0
-offset_top = 73.0
-offset_right = -678.0
-offset_bottom = -417.0
+offset_left = 19.0
+offset_top = 72.0
+offset_right = -681.0
+offset_bottom = -418.0
 
 [node name="Dropzone3" parent="Workspace/BoardArea/TextureRect" unique_id=321268356 groups=["Dropzones"] instance=ExtResource("10_16ama")]
 layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 117.0
-offset_top = 234.0
-offset_right = 217.0
-offset_bottom = 304.0
+offset_left = 111.0
+offset_top = 233.0
+offset_right = 211.0
+offset_bottom = 303.0
 grow_horizontal = 1
 grow_vertical = 1
 expected_component = "General Ledger Service"
@@ -310,9 +310,9 @@ expected_component = "General Ledger Service"
 [node name="Arrow6" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1286181851]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 353.0
+offset_left = 330.0
 offset_top = 140.0
-offset_right = 413.0
+offset_right = 390.0
 offset_bottom = 260.0
 rotation = -1.5707964
 texture = ExtResource("14_1gebq")
@@ -322,9 +322,9 @@ stretch_mode = 5
 [node name="Arrow7" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=791534147]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 568.0
+offset_left = 539.0
 offset_top = 143.0
-offset_right = 628.0
+offset_right = 599.0
 offset_bottom = 263.0
 rotation = -1.5707964
 texture = ExtResource("14_1gebq")
@@ -334,10 +334,10 @@ stretch_mode = 5
 [node name="Arrow12" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=684177899]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 142.0
-offset_top = 308.0
-offset_right = 194.0
-offset_bottom = 412.0
+offset_left = 136.0
+offset_top = 307.0
+offset_right = 188.0
+offset_bottom = 411.0
 texture = ExtResource("14_1gebq")
 expand_mode = 1
 stretch_mode = 5
@@ -385,6 +385,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
 scroll_deadzone = 32
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer" unique_id=2014638270]

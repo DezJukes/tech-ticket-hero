@@ -38,6 +38,7 @@ offset_right = -802.0
 offset_bottom = -542.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_ehknd")
 script = ExtResource("1_2b4he")
 
@@ -91,6 +92,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
 theme_override_fonts/font = ExtResource("3_c5hb3")
 text = "Expense Management Server"
+autowrap_mode = 3
 
 [node name="Subtitle" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=614709425]
 layout_mode = 2
@@ -106,4 +108,4 @@ theme_override_colors/font_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_fonts/font = ExtResource("5_sw55e")
 theme_override_font_sizes/font_size = 12
 text = "Processes the data, runs OCR on receipts, and checks if the claim follows company policy."
-autowrap_mode = 2
+autowrap_mode = 3

@@ -1,4 +1,4 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://c7ovts0hmikcu"]
 
 [ext_resource type="Texture2D" uid="uid://cr3tkwu7tx5bn" path="res://Scenes/System Components/Global Components/API Gateway/img_api_gateway.png" id="1_k8pjx"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_xje42"]
@@ -38,6 +38,7 @@ offset_right = -802.0
 offset_bottom = -542.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_ehknd")
 script = ExtResource("1_xje42")
 
