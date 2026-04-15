@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://c7ovts0hmikcu"]
+[gd_scene format=3]
 
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_xje42"]
 [ext_resource type="Texture2D" uid="uid://bctqqhukky6tm" path="res://Scenes/System Components/E Commerce/Inventory Reservation Service/inventory reservation service.png" id="2_8ox07"]

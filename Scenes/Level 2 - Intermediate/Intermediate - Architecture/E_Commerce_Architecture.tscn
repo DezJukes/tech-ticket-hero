@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c2pubgj4phw3m"]
 
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_fhg1f"]
+[ext_resource type="Script" uid="uid://b10t6ysbo0375" path="res://Scenes/Level 2 - Intermediate/Intermediate - Architecture/e_commerce_architecture.gd" id="1_tqhaw"]
 [ext_resource type="Texture2D" uid="uid://rd8vc5wqvp6u" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_default.png" id="2_en3iw"]
 [ext_resource type="Texture2D" uid="uid://bh1oob36mat41" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_pressed.png" id="3_045pn"]
 [ext_resource type="Texture2D" uid="uid://coy624sn6j5qp" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_hovered.png" id="4_wborn"]
@@ -15,15 +16,18 @@
 [ext_resource type="PackedScene" uid="uid://deluno8547qvi" path="res://Scenes/System Components/E Commerce/Order & Transaction Database/order_transaction_database_dropped.tscn" id="16_h6id0"]
 [ext_resource type="PackedScene" uid="uid://pqycllo8quww" path="res://Scenes/System Components/E Commerce/Redis Cache (State Management)/redis_cache_dropped.tscn" id="17_fhg1f"]
 [ext_resource type="PackedScene" uid="uid://bt2tkhk2oxcso" path="res://Scenes/System Components/E Commerce/Store Front/store_front_dropped.tscn" id="18_en3iw"]
-[ext_resource type="PackedScene" uid="uid://c7ovts0hmikcu" path="res://Scenes/System Components/E Commerce/Rate Limiter/rate_limiter_comp.tscn" id="21_fhg1f"]
+[ext_resource type="PackedScene" uid="uid://b1b5polpiodoj" path="res://Scenes/System Components/E Commerce/Rate Limiter/rate_limiter_comp.tscn" id="21_fhg1f"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="21_o323x"]
-[ext_resource type="PackedScene" uid="uid://c7ovts0hmikcu" path="res://Scenes/System Components/E Commerce/Payment Gateway/payment_gateway_comp.tscn" id="21_yrgdy"]
+[ext_resource type="PackedScene" uid="uid://jjx843jd2sav" path="res://Scenes/System Components/E Commerce/Payment Gateway/payment_gateway_comp.tscn" id="21_yrgdy"]
 [ext_resource type="PackedScene" uid="uid://i34utumvpipe" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_comp.tscn" id="22_045pn"]
 [ext_resource type="PackedScene" uid="uid://cgdnq1nagxn65" path="res://Scenes/System Components/E Commerce/Rate Limiter/rate_limiter_dropped.tscn" id="22_en3iw"]
 [ext_resource type="PackedScene" uid="uid://dnkg1anexleog" path="res://Scenes/System Components/E Commerce/Payment Gateway/payment_gateway_dropped.tscn" id="22_fhg1f"]
 [ext_resource type="PackedScene" uid="uid://bqatkw2dvetnd" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="23_cwowf"]
 [ext_resource type="PackedScene" uid="uid://1ppqaf50aejo" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="24_rlw70"]
+[ext_resource type="PackedScene" uid="uid://dpsyhsbuwihsw" path="res://Scenes/Level 2 - Intermediate/Modals/E-Commerce Modals/failed_modal_ecom.tscn" id="25_fhg1f"]
+[ext_resource type="PackedScene" uid="uid://gka514s5d5ue" path="res://Scenes/Level 2 - Intermediate/Modals/E-Commerce Modals/information_modal_ecom.tscn" id="26_en3iw"]
 [ext_resource type="PackedScene" uid="uid://dlf2h7xkugp4m" path="res://Scenes/System Components/Global Components/Message Broker/message_broker_comp.tscn" id="26_wborn"]
+[ext_resource type="PackedScene" uid="uid://bxnvimdj8mi1r" path="res://Scenes/Level 2 - Intermediate/Modals/E-Commerce Modals/success_modal_ecom.tscn" id="27_045pn"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_dropped.tscn" id="27_ieouf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgyv1"]
@@ -58,6 +62,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 0
+script = ExtResource("1_tqhaw")
 
 [node name="TopBar" type="PanelContainer" parent="." unique_id=1535880622]
 layout_mode = 2
@@ -386,22 +391,37 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 12
 
+[node name="ComponentCard3" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("21_fhg1f")]
+layout_mode = 2
+dropped_badge_scene = ExtResource("22_en3iw")
+
+[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1839300330 instance=ExtResource("21_yrgdy")]
+layout_mode = 2
+dropped_badge_scene = ExtResource("22_fhg1f")
+
 [node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1800537309 instance=ExtResource("23_cwowf")]
 layout_mode = 2
 script = ExtResource("21_o323x")
 dropped_badge_scene = ExtResource("24_rlw70")
 
-[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("21_fhg1f")]
-layout_mode = 2
-dropped_badge_scene = ExtResource("22_en3iw")
-
 [node name="ComponentCard4" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=2081116289 instance=ExtResource("26_wborn")]
 layout_mode = 2
 dropped_badge_scene = ExtResource("13_pac71")
 
-[node name="ComponentCard3" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1875955962 instance=ExtResource("21_yrgdy")]
-layout_mode = 2
-dropped_badge_scene = ExtResource("22_fhg1f")
-
 [node name="ComponentCard5" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=588316869 instance=ExtResource("22_045pn")]
 layout_mode = 2
+
+[node name="FailedModalEcom" parent="." unique_id=1094853614 instance=ExtResource("25_fhg1f")]
+unique_name_in_owner = true
+visible = false
+
+[node name="InformationModalEcom" parent="." unique_id=221360587 instance=ExtResource("26_en3iw")]
+unique_name_in_owner = true
+
+[node name="SuccessModalEcom" parent="." unique_id=1539659176 instance=ExtResource("27_045pn")]
+unique_name_in_owner = true
+visible = false
+
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/TicketDetails" to="." method="_on_ticket_details_pressed"]
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/DeployButton" to="." method="_on_deploy_button_pressed"]

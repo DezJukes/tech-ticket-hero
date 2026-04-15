@@ -1,4 +1,4 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://jjx843jd2sav"]
 
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_xje42"]
 [ext_resource type="Texture2D" uid="uid://bpdn3juwm01vc" path="res://Scenes/System Components/E Commerce/Payment Gateway/payment gateway reservation.png" id="2_v7d2g"]
@@ -92,13 +92,14 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
 theme_override_fonts/font = ExtResource("2_y41ex")
 text = "Payment Gateway"
+autowrap_mode = 3
 
 [node name="Subtitle" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=614709425]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
 theme_override_fonts/font = ExtResource("3_gshss")
 theme_override_font_sizes/font_size = 11
-text = "AUTHORIZATION "
+text = "AUTHORIZATION"
 
 [node name="Description" type="Label" parent="CardPadding/MainRow/TextColumn" unique_id=555238219]
 custom_minimum_size = Vector2(1, 1)

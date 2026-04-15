@@ -1,0 +1,258 @@
+[gd_scene format=3 uid="uid://bxnvimdj8mi1r"]
+
+[ext_resource type="Texture2D" uid="uid://b63figy5jp26q" path="res://Assets/icons/check_mark.png" id="1_uitfb"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_wx44g"]
+[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="3_ctvwi"]
+[ext_resource type="Script" uid="uid://b0e62tn8dfl7c" path="res://Scenes/Level 1 - Beginner/Modals/architecture_body.gd" id="4_1cmpt"]
+[ext_resource type="Texture2D" uid="uid://ku3ic237ti4m" path="res://Assets/icons/stars.png" id="5_cdh5g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ugm7t"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.078431375)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2gryc"]
+bg_color = Color(0.9999997, 0.9987288, 0.9355188, 1)
+border_width_left = 4
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.46230698, 0.84239644, 0.55254304, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0p1fo"]
+bg_color = Color(0.9372549, 0.9647059, 1, 1)
+border_width_left = 4
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uql5i"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+bg_color = Color(0.36078432, 0.61960787, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="SuccessModalEcom" type="CanvasLayer" unique_id=1539659176]
+
+[node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=1993004041]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Center" type="CenterContainer" parent="BackgroundOverlay" unique_id=259611512]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=1442109299]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ugm7t")
+
+[node name="Padding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox" unique_id=456502184]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 20
+
+[node name="VerticalFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding" unique_id=1960566695]
+layout_mode = 2
+
+[node name="HeaderBox" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=2027698929]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="SirenIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=411048571]
+layout_mode = 2
+texture = ExtResource("1_uitfb")
+expand_mode = 2
+
+[node name="HeaderText" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=148007659]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=514018544]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5372549, 0.5176471, 0, 1)
+theme_override_fonts/font = ExtResource("2_wx44g")
+text = "Deployment Successful"
+
+[node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=1928867317]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5379917, 0.51627606, 1.92523e-07, 1)
+theme_override_fonts/font = ExtResource("3_ctvwi")
+text = "SYSTEMS STABLE | INCIDENT RESOLVED"
+
+[node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1610742799]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="SplitBody" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1572886387]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="ImpactSummaryCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=1328603554]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_2gryc")
+
+[node name="ImpactPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard" unique_id=751013009]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ImpactTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding" unique_id=1929209761]
+layout_mode = 2
+
+[node name="ImpactTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1834241562]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.36078432, 0.61960787, 0, 1)
+theme_override_fonts/font = ExtResource("2_wx44g")
+text = "Impact Summary"
+
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=630629707]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+
+[node name="ImpactBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=918152652]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.4476347, 0.38707283, 1, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_wx44g")
+theme_override_font_sizes/normal_font_size = 20
+text = "100% Protected"
+fit_content = true
+
+[node name="ImpactBody2" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1039653633]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_ctvwi")
+text = "Anti-Bot Defense"
+fit_content = true
+
+[node name="ImpactBody3" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1131806655]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_wx44g")
+theme_override_font_sizes/normal_font_size = 20
+text = "100% Verified"
+fit_content = true
+
+[node name="ImpactBody4" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=159447749]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_ctvwi")
+text = "Secure Checkout"
+fit_content = true
+
+[node name="ImpactBody5" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=380409190]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_wx44g")
+theme_override_font_sizes/normal_font_size = 20
+text = "100% Verified"
+fit_content = true
+
+[node name="ImpactBody6" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1242508770]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_ctvwi")
+text = "Payment"
+fit_content = true
+
+[node name="ArchitectureCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=953700818]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_0p1fo")
+
+[node name="ArchitecturePadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard" unique_id=1917216991]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ArchitectureTextFLow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding" unique_id=80426354]
+layout_mode = 2
+
+[node name="ArchitectureTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=1560209157]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+theme_override_fonts/font = ExtResource("2_wx44g")
+text = "Architecture Review"
+
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=1392390600]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+
+[node name="ArchitectureBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=255055181]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_ctvwi")
+text = "E-Commerce"
+fit_content = true
+script = ExtResource("4_1cmpt")
+
+[node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=934705773]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Footer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=2082301711]
+layout_mode = 2
+
+[node name="PointsContainer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=837577618]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Star" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/PointsContainer" unique_id=1360324195]
+layout_mode = 2
+texture = ExtResource("5_cdh5g")
+expand_mode = 2
+
+[node name="HintText" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/PointsContainer" unique_id=283361351]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.5921569, 0.5568628, 0, 1)
+theme_override_fonts/font = ExtResource("2_wx44g")
+text = "+100 Score Awarded"
+
+[node name="MissionComplete" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=320607527]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_uql5i")
+text = "Complete Mission"
+
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/MissionComplete" to="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow/ArchitectureBody" method="_on_mission_complete_pressed"]
