@@ -1,0 +1,241 @@
+[gd_scene format=3 uid="uid://bjm3qdgpn5pyx"]
+
+[ext_resource type="Texture2D" uid="uid://b63figy5jp26q" path="res://Assets/icons/check_mark.png" id="1_l5k47"]
+[ext_resource type="Script" uid="uid://drdwwxdfmgf5f" path="res://Scenes/Level 3 - Advance/Modals/Banking System Modals/success_modal_banking.gd" id="1_ndnbi"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_ndnbi"]
+[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="3_u56ko"]
+[ext_resource type="Texture2D" uid="uid://ku3ic237ti4m" path="res://Assets/icons/stars.png" id="4_o31fn"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5k0k6"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.078431375)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gun6m"]
+bg_color = Color(0.9999997, 0.9987288, 0.9355188, 1)
+border_width_left = 4
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.46230698, 0.84239644, 0.55254304, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o2eu4"]
+bg_color = Color(0.9372549, 0.9647059, 1, 1)
+border_width_left = 4
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5f7e"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+bg_color = Color(0.36078432, 0.61960787, 0, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="SuccessModalBanking" type="CanvasLayer" unique_id=1807981407]
+script = ExtResource("1_ndnbi")
+
+[node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=155883770]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Center" type="CenterContainer" parent="BackgroundOverlay" unique_id=1223419432]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=270107759]
+custom_minimum_size = Vector2(900, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5k0k6")
+
+[node name="Padding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox" unique_id=1912044715]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 20
+
+[node name="VerticalFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding" unique_id=250039580]
+layout_mode = 2
+
+[node name="HeaderBox" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=526128555]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="SirenIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=87014931]
+layout_mode = 2
+texture = ExtResource("1_l5k47")
+expand_mode = 2
+
+[node name="HeaderText" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=918701426]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=1641961947]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5372549, 0.5176471, 0, 1)
+theme_override_fonts/font = ExtResource("2_ndnbi")
+text = "Deployment Successful"
+
+[node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=1432751510]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5379917, 0.51627606, 1.92523e-07, 1)
+theme_override_fonts/font = ExtResource("3_u56ko")
+text = "SYSTEMS STABLE | INCIDENT RESOLVED"
+
+[node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=524025832]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="SplitBody" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=465621658]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="ImpactSummaryCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=165489023]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_gun6m")
+
+[node name="ImpactPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard" unique_id=653679388]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ImpactTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding" unique_id=888493158]
+layout_mode = 2
+
+[node name="ImpactTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=225616696]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.36078432, 0.61960787, 0, 1)
+theme_override_fonts/font = ExtResource("2_ndnbi")
+text = "Impact Summary"
+
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=52390699]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+
+[node name="ImpactBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1803695270]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.4476347, 0.38707283, 1, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_ndnbi")
+theme_override_font_sizes/normal_font_size = 20
+text = "85% Faster"
+fit_content = true
+
+[node name="ImpactBody2" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1262014689]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_u56ko")
+text = "Load Times"
+fit_content = true
+
+[node name="ImpactBody3" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=302932316]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_ndnbi")
+theme_override_font_sizes/normal_font_size = 20
+text = "100% Faster"
+fit_content = true
+
+[node name="ImpactBody4" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=701937043]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_u56ko")
+text = "Server Uptime"
+fit_content = true
+
+[node name="ArchitectureCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=498888705]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_o2eu4")
+
+[node name="ArchitecturePadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard" unique_id=445294737]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ArchitectureTextFLow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding" unique_id=775477626]
+layout_mode = 2
+
+[node name="ArchitectureTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=1920194614]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+theme_override_fonts/font = ExtResource("2_ndnbi")
+text = "Architecture Review"
+
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=299819069]
+layout_mode = 2
+theme_override_constants/margin_top = 5
+
+[node name="ArchitectureBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=1837687560]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_u56ko")
+text = "CMS architecture govern front-end functionality (where content is presented), and back-end functionality (where content is created and edited)."
+fit_content = true
+
+[node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=395045255]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Footer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=2040545464]
+layout_mode = 2
+
+[node name="PointsContainer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1210730063]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Star" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/PointsContainer" unique_id=1881550555]
+layout_mode = 2
+texture = ExtResource("4_o31fn")
+expand_mode = 2
+
+[node name="HintText" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/PointsContainer" unique_id=174668950]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.5921569, 0.5568628, 0, 1)
+theme_override_fonts/font = ExtResource("2_ndnbi")
+text = "+100 Score Awarded"
+
+[node name="MissionComplete" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1649884100]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_r5f7e")
+text = "Complete Mission"
+
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/MissionComplete" to="." method="_on_mission_complete_pressed"]

@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="3_rke30"]
 [ext_resource type="FontFile" uid="uid://cbfjc1kt4amaj" path="res://Assets/Font/Oxanium-Light.ttf" id="4_qwrjg"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsk4w"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7k7q0"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
@@ -15,7 +15,7 @@ corner_radius_bottom_left = 12
 shadow_color = Color(0, 0, 0, 0.078431375)
 shadow_size = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3w8de"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rke30"]
 bg_color = Color(0.99607843, 0.9490196, 0.9490196, 1)
 border_width_left = 4
 border_width_top = 1
@@ -27,7 +27,32 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aog20"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwrjg"]
+bg_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jsk4w"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+bg_color = Color(0.972549, 0.98039216, 0.9882353, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8352941, 0.8784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3w8de"]
 content_margin_left = 24.0
 content_margin_top = 12.0
 content_margin_right = 24.0
@@ -41,7 +66,7 @@ corner_radius_bottom_left = 8
 [node name="FailedModalErp" type="CanvasLayer" unique_id=1634307023]
 script = ExtResource("1_7k7q0")
 
-[node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=2132541575]
+[node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=1678511847]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -50,7 +75,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="Center" type="CenterContainer" parent="BackgroundOverlay" unique_id=478539060]
+[node name="Center" type="CenterContainer" parent="BackgroundOverlay" unique_id=846222574]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,215 +83,171 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=760224894]
-custom_minimum_size = Vector2(900, 0)
+[node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=1146144631]
+custom_minimum_size = Vector2(750, 0)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_jsk4w")
+theme_override_styles/panel = SubResource("StyleBoxFlat_7k7q0")
 
-[node name="Padding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox" unique_id=518053260]
+[node name="Padding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox" unique_id=1917007711]
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 20
 
-[node name="VerticalFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding" unique_id=1066617527]
+[node name="VerticalFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding" unique_id=1448110724]
 layout_mode = 2
 
-[node name="HeaderBox" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=2132514734]
+[node name="HeaderBox" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1016035415]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="CriticalIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=998416101]
-custom_minimum_size = Vector2(100, 100)
+[node name="CriticalIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1159778032]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 texture = ExtResource("1_4bpfk")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="HeaderText" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=951973944]
+[node name="HeaderText" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1756162867]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=103614431]
+[node name="Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=201714290]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_7k7q0")
+theme_override_font_sizes/font_size = 30
 text = "Deployment Failed"
 horizontal_alignment = 1
 
-[node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=2084125273]
+[node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=607899]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9218303, 0, 0.11170312, 1)
 theme_override_fonts/font = ExtResource("3_rke30")
 text = "TICKET - CMS123"
 horizontal_alignment = 1
 
-[node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1562630541]
+[node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1295401921]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="SplitBody" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1221537347]
+[node name="SplitBody" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=249255008]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 16
 
-[node name="ProblemCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=1729174858]
+[node name="ProblemCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=334878753]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_3w8de")
+theme_override_styles/panel = SubResource("StyleBoxFlat_rke30")
 
-[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard" unique_id=1259967848]
+[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard" unique_id=2083117400]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding" unique_id=491153851]
+[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding" unique_id=1858426131]
 layout_mode = 2
 
-[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=433774133]
+[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=546202959]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
 theme_override_fonts/font = ExtResource("2_7k7q0")
-text = "SERVICE TIMEOUT"
+text = "TITLE"
 horizontal_alignment = 1
 
-[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=1853115649]
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=2074822275]
 layout_mode = 2
 theme_override_constants/margin_top = 5
 
-[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=744237572]
+[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=214883823]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_rke30")
-text = "Without the API Gateway, incoming expense requests were lost in the network, failing to reach the specific HR or Finance modules."
+text = "[description]"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="ProblemCard2" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=929690766]
+[node name="ProblemCard2" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=1925726175]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_3w8de")
+theme_override_styles/panel = SubResource("StyleBoxFlat_rke30")
 
-[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2" unique_id=939042220]
+[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2" unique_id=1379843142]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding" unique_id=1130680730]
+[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding" unique_id=1071776056]
 layout_mode = 2
 
-[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=92339474]
+[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=640159105]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
 theme_override_fonts/font = ExtResource("2_7k7q0")
-text = "LOGIC COLLAPSE "
+text = "TITLE"
 horizontal_alignment = 1
 
-[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=1349210592]
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=588068433]
 layout_mode = 2
 theme_override_constants/margin_top = 5
 
-[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=465942675]
+[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=23427751]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_rke30")
-text = "Removing the Expense Management Server disabled policy validation, allowing unverified receipts to crash the reimbursement flow."
+text = "[description]"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="ProblemCard3" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=1819349664]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=182214757]
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_3w8de")
+theme_override_constants/margin_top = 30
 
-[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard3" unique_id=1470361347]
+[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1976383315]
 layout_mode = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
-
-[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard3/ProblemPadding" unique_id=1381412003]
-layout_mode = 2
-
-[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard3/ProblemPadding/ProblemTextFlow" unique_id=951668014]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
-theme_override_fonts/font = ExtResource("2_7k7q0")
-text = "SYNC ERROR"
-horizontal_alignment = 1
-
-[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard3/ProblemPadding/ProblemTextFlow" unique_id=2024064891]
-layout_mode = 2
-theme_override_constants/margin_top = 5
-
-[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard3/ProblemPadding/ProblemTextFlow" unique_id=1634157091]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.4, 0.44313726, 0.5058824, 1)
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_rke30")
-text = "Without the General Ledger Service, journal entries couldn't be created, leaving the company budget out of sync and un-earmarked."
+theme_override_styles/normal = SubResource("StyleBoxFlat_qwrjg")
+text = "[description]"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="ProblemCard4" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=84566940]
+[node name="MarginContainer2" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1674579469]
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_3w8de")
+theme_override_constants/margin_top = 30
 
-[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard4" unique_id=1606806701]
-layout_mode = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
-
-[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard4/ProblemPadding" unique_id=149416376]
+[node name="Footer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1591461830]
 layout_mode = 2
 
-[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard4/ProblemPadding/ProblemTextFlow" unique_id=1334286719]
-layout_mode = 2
-theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
-theme_override_fonts/font = ExtResource("2_7k7q0")
-text = "SILENT FAILURE "
-horizontal_alignment = 1
-
-[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard4/ProblemPadding/ProblemTextFlow" unique_id=288003996]
-layout_mode = 2
-theme_override_constants/margin_top = 5
-
-[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard4/ProblemPadding/ProblemTextFlow" unique_id=915274758]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = 5
-theme_override_fonts/font = ExtResource("3_rke30")
-text = "Missing the Notification Service left managers unaware of pending tasks, causing the entire approval cycle to grind to a halt."
-horizontal_alignment = 1
-autowrap_mode = 3
-
-[node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1631186868]
-layout_mode = 2
-theme_override_constants/separation = 30
-
-[node name="Footer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1316256709]
-layout_mode = 2
-
-[node name="HintText" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=443044586]
+[node name="HintText" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1304771036]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_qwrjg")
-text = "You will receive a penalty."
+text = "Try again!"
 
-[node name="AcceptButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1801007729]
+[node name="HBoxContainer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=73225380]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_aog20")
+theme_override_constants/separation = 20
+
+[node name="Main Menu" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer" unique_id=1881323221]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.28235295, 0.33333334, 0.40784314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_jsk4w")
+text = "Main Menu"
+
+[node name="AcceptButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer" unique_id=2034677300]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_3w8de")
 text = "Restart"
 
-[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/AcceptButton" to="." method="_on_accept_button_pressed"]
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer/Main Menu" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer/AcceptButton" to="." method="_on_accept_button_pressed"]

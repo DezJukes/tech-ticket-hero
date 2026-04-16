@@ -424,6 +424,7 @@ visible = false
 
 [node name="InformationModalErp" parent="." unique_id=2102722637 instance=ExtResource("29_jxyor")]
 unique_name_in_owner = true
+visible = false
 
 [node name="SuccessModalErp" parent="." unique_id=977701527 instance=ExtResource("30_v5ovn")]
 unique_name_in_owner = true

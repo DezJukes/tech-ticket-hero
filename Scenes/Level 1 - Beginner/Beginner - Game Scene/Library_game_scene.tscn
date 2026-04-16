@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="5_5g776"]
 [ext_resource type="PackedScene" uid="uid://gy3cgy47hv4o" path="res://Scenes/computer2.tscn" id="5_vp8qn"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="6_a6jig"]
-[ext_resource type="PackedScene" path="res://Scenes/filing_cabinet_1.tscn" id="8_ssvpx"]
+[ext_resource type="PackedScene" uid="uid://csntnedlflvm2" path="res://Scenes/filing_cabinet_1.tscn" id="8_ssvpx"]
 [ext_resource type="PackedScene" uid="uid://cejup6u07ah47" path="res://Scenes/Level 1 - Beginner/Furnitures/boss_chair.tscn" id="9_r28hj"]
 [ext_resource type="PackedScene" uid="uid://cm6ihly1ndvxt" path="res://Scenes/Level 1 - Beginner/Furnitures/boss_desk.tscn" id="10_jxa6k"]
 [ext_resource type="PackedScene" uid="uid://bloebju38v4mc" path="res://Scenes/Level 1 - Beginner/Furnitures/filing_cabinet_open.tscn" id="11_hdyxo"]

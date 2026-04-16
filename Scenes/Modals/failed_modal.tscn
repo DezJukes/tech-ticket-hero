@@ -27,6 +27,31 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uf2dt"]
+bg_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t8g4v"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+bg_color = Color(0.972549, 0.98039216, 0.9882353, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8352941, 0.8784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gd5gd"]
 content_margin_left = 24.0
 content_margin_top = 12.0
@@ -59,7 +84,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=274284799]
-custom_minimum_size = Vector2(900, 0)
+custom_minimum_size = Vector2(750, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jr3xx")
 
@@ -78,7 +103,7 @@ layout_mode = 2
 theme_override_constants/separation = 15
 
 [node name="CriticalIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1813962017]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 texture = ExtResource("1_r2vil")
 expand_mode = 1
@@ -91,6 +116,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_jr3xx")
+theme_override_font_sizes/font_size = 30
 text = "Deployment Failed"
 horizontal_alignment = 1
 
@@ -129,7 +155,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
 theme_override_fonts/font = ExtResource("2_jr3xx")
-text = "SECURITY BREACH"
+text = "TITLE"
 horizontal_alignment = 1
 
 [node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=1939912037]
@@ -141,7 +167,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_ewqei")
-text = "Missing Auth Service allowed unauthorized bots to flood the server, bypassing editor permissions and crashing the app logic."
+text = "[description]"
 horizontal_alignment = 1
 autowrap_mode = 3
 
@@ -164,7 +190,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
 theme_override_fonts/font = ExtResource("2_jr3xx")
-text = "DATABASE DEADLOCK"
+text = "TITLE"
 horizontal_alignment = 1
 
 [node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=1778932258]
@@ -176,13 +202,27 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_ewqei")
-text = "Without the Search Engine, the Master DB collapsed under repetitive read queries while trying to index large article files."
+text = "[description]"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=975646508]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1945527136]
 layout_mode = 2
-theme_override_constants/separation = 30
+theme_override_constants/margin_top = 30
+
+[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1915080673]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.44313726, 0.5058824, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("3_ewqei")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uf2dt")
+text = "[description]"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=301962163]
+layout_mode = 2
+theme_override_constants/margin_top = 30
 
 [node name="Footer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=2054357485]
 layout_mode = 2
@@ -192,11 +232,22 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_uf2dt")
-text = "You will receive a penalty."
+text = "Try again!"
 
-[node name="AcceptButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1236467997]
+[node name="HBoxContainer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1148689522]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="MainMenuButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer" unique_id=302259099]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.28235295, 0.33333334, 0.40784314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_t8g4v")
+text = "Main Menu"
+
+[node name="AcceptButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer" unique_id=1236467997]
 layout_mode = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_gd5gd")
 text = "Restart"
 
-[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/AcceptButton" to="." method="_on_accept_button_pressed"]
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer/MainMenuButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer/AcceptButton" to="." method="_on_accept_button_pressed"]

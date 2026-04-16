@@ -1,0 +1,433 @@
+[gd_scene format=3 uid="uid://d4ko144xuv7nw"]
+
+[ext_resource type="Script" uid="uid://bip6i3e00khpn" path="res://Scenes/Level 3 - Advance/Advance - Architecture/Banking System/banking_architecture.gd" id="1_4siyh"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_811oc"]
+[ext_resource type="Texture2D" uid="uid://rd8vc5wqvp6u" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_default.png" id="2_4siyh"]
+[ext_resource type="Texture2D" uid="uid://bh1oob36mat41" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_pressed.png" id="3_jb3db"]
+[ext_resource type="Texture2D" uid="uid://coy624sn6j5qp" path="res://Assets/Misc/System Gameplay/Ticket Details Button/ticket_details_hovered.png" id="4_pw3v0"]
+[ext_resource type="Texture2D" uid="uid://c5upd2bea2gn4" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_default.png" id="5_b0im3"]
+[ext_resource type="Texture2D" uid="uid://88w238ppgoux" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_pressed.png" id="6_4vens"]
+[ext_resource type="Texture2D" uid="uid://lkh0k2su5n1y" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_hovered.png" id="7_00t8t"]
+[ext_resource type="Texture2D" uid="uid://dhb5cchugfrxn" path="res://Assets/Misc/System Gameplay/background-board.png" id="8_r8gqy"]
+[ext_resource type="PackedScene" uid="uid://cfs3mcjift23r" path="res://Scenes/System Components/dropzone.tscn" id="9_18g7f"]
+[ext_resource type="PackedScene" uid="uid://cybb78cd41kg5" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_dropped.tscn" id="10_qd6e5"]
+[ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="11_asev0"]
+[ext_resource type="PackedScene" uid="uid://bva2cyyyv31gk" path="res://Scenes/System Components/Global Components/Load Balancer/load_balancer_dropped.tscn" id="12_8otx8"]
+[ext_resource type="PackedScene" uid="uid://b88u7v7di2n77" path="res://Scenes/System Components/Global Components/Message Broker/message_broker_dropped.tscn" id="13_eaf5m"]
+[ext_resource type="PackedScene" uid="uid://gyw68370srqq" path="res://Scenes/System Components/Global Components/Relational Database/relational_database_dropped.tscn" id="14_63h1n"]
+[ext_resource type="PackedScene" uid="uid://tfvc2ieyc3ie" path="res://Scenes/System Components/ERP/Employee Portal/employee_portal_dropped.tscn" id="15_65qcv"]
+[ext_resource type="PackedScene" uid="uid://b2mdeck57e5cg" path="res://Scenes/System Components/ERP/Expense Management Server/expense_management_comp.tscn" id="16_0jmy5"]
+[ext_resource type="PackedScene" uid="uid://clcwqqssv5wj4" path="res://Scenes/System Components/ERP/Expense Management Server/expense_management_dropped.tscn" id="17_5ryyh"]
+[ext_resource type="PackedScene" uid="uid://bd1v2tooi3dx2" path="res://Scenes/System Components/ERP/General Ledger Service/general_ledger_comp.tscn" id="18_i1km6"]
+[ext_resource type="PackedScene" uid="uid://bk4j3e5bdvoes" path="res://Scenes/System Components/ERP/General Ledger Service/general_ledger_dropped.tscn" id="19_2thrm"]
+[ext_resource type="PackedScene" uid="uid://vq8bl13768x1" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_comp.tscn" id="20_t0vi1"]
+[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="21_sxltx"]
+[ext_resource type="PackedScene" uid="uid://sm120wj3sv8c" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_dropped.tscn" id="22_wqpa2"]
+[ext_resource type="PackedScene" uid="uid://bqatkw2dvetnd" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="23_tgs88"]
+[ext_resource type="PackedScene" uid="uid://1ppqaf50aejo" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="24_yasod"]
+[ext_resource type="PackedScene" uid="uid://050ivv4bbnw8" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="25_12ivk"]
+[ext_resource type="PackedScene" uid="uid://c7ovts0hmikcu" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="26_ukrlt"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_dropped.tscn" id="27_yo317"]
+[ext_resource type="PackedScene" uid="uid://xf7dh08w1yct" path="res://Scenes/Level 3 - Advance/Modals/Banking System Modals/failed_modal_banking.tscn" id="29_b0im3"]
+[ext_resource type="PackedScene" uid="uid://dtexg7w8kcaki" path="res://Scenes/Level 3 - Advance/Modals/Banking System Modals/information_modal_banking.tscn" id="30_4vens"]
+[ext_resource type="PackedScene" uid="uid://bjm3qdgpn5pyx" path="res://Scenes/Level 3 - Advance/Modals/Banking System Modals/success_modal_banking.tscn" id="31_00t8t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8n8db"]
+bg_color = Color(1, 1, 1, 1)
+border_width_bottom = 2
+border_color = Color(0.8862745, 0.9098039, 0.9411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h64sf"]
+bg_color = Color(0.99607843, 0.8862745, 0.8862745, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+expand_margin_left = 8.0
+expand_margin_top = 4.0
+expand_margin_right = 8.0
+expand_margin_bottom = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ak8ng"]
+bg_color = Color(0.9268064, 0.9268064, 0.92680633, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dmr8m"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_color = Color(0.8862745, 0.9098039, 0.9411765, 1)
+
+[node name="BankingArchitecture" type="VBoxContainer" unique_id=1008279269]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+script = ExtResource("1_4siyh")
+
+[node name="TopBar" type="PanelContainer" parent="." unique_id=1545864059]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8n8db")
+
+[node name="MarginContainer" type="MarginContainer" parent="TopBar" unique_id=1285742905]
+layout_mode = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopBar/MarginContainer" unique_id=500346999]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Button" type="Button" parent="TopBar/MarginContainer/HBoxContainer" unique_id=1981446995]
+layout_mode = 2
+theme_override_constants/h_separation = 4
+text = "Back to office"
+
+[node name="Control2" type="Control" parent="TopBar/MarginContainer/HBoxContainer" unique_id=799590686]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TopBar/MarginContainer/HBoxContainer" unique_id=907150731]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="TicketName" type="PanelContainer" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=1748919298]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_h64sf")
+
+[node name="Label" type="Label" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer/TicketName" unique_id=1855194003]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9372549, 0.26666668, 0.26666668, 1)
+theme_override_fonts/font = ExtResource("1_811oc")
+theme_override_font_sizes/font_size = 11
+text = "PROD-891"
+
+[node name="ArchitectureName" type="Label" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=508847153]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Banking Traffic Bottleneck"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="TopBar/MarginContainer/HBoxContainer" unique_id=1091215544]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="TopBar/MarginContainer/HBoxContainer" unique_id=811098974]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TicketDetails" type="TextureButton" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=1374731355]
+custom_minimum_size = Vector2(150, 50)
+layout_mode = 2
+texture_normal = ExtResource("2_4siyh")
+texture_pressed = ExtResource("3_jb3db")
+texture_hover = ExtResource("4_pw3v0")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="DeployButton" type="TextureButton" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=758649104]
+custom_minimum_size = Vector2(120, 50)
+layout_mode = 2
+texture_normal = ExtResource("5_b0im3")
+texture_pressed = ExtResource("6_4vens")
+texture_hover = ExtResource("7_00t8t")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Workspace" type="HBoxContainer" parent="." unique_id=1350429951]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+alignment = 1
+
+[node name="BoardArea" type="PanelContainer" parent="Workspace" unique_id=1370727970]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ak8ng")
+
+[node name="TextureRect" type="TextureRect" parent="Workspace/BoardArea" unique_id=915425559]
+custom_minimum_size = Vector2(800, 560)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("8_r8gqy")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Dropzone" parent="Workspace/BoardArea/TextureRect" unique_id=1502597236 groups=["Dropzones"] instance=ExtResource("9_18g7f")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 328.0
+offset_top = 407.0
+offset_right = 428.0
+offset_bottom = 477.0
+grow_horizontal = 1
+grow_vertical = 1
+expected_component = "Notification Service"
+
+[node name="DroppedBadge2" parent="Workspace/BoardArea/TextureRect" unique_id=492691361 instance=ExtResource("10_qd6e5")]
+layout_mode = 1
+offset_left = 649.0
+offset_top = 82.0
+offset_right = -51.0
+offset_bottom = -408.0
+
+[node name="Dropzone2" parent="Workspace/BoardArea/TextureRect" unique_id=899573544 groups=["Dropzones"] instance=ExtResource("9_18g7f")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 545.0
+offset_top = 240.0
+offset_right = 645.0
+offset_bottom = 310.0
+grow_horizontal = 1
+grow_vertical = 1
+expected_component = "Expense Management Server"
+
+[node name="Arrow8" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1573757498]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 676.0
+offset_top = 142.99998
+offset_right = 728.0
+offset_bottom = 246.99998
+rotation = 0.62482786
+texture = ExtResource("11_asev0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow5" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=52816250]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 120.0
+offset_top = 137.0
+offset_right = 180.0
+offset_bottom = 257.0
+rotation = -1.5707964
+texture = ExtResource("11_asev0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="DroppedBadge4" parent="Workspace/BoardArea/TextureRect" unique_id=1014836096 instance=ExtResource("12_8otx8")]
+layout_mode = 1
+offset_left = 237.0
+offset_top = 76.0
+offset_right = -463.0
+offset_bottom = -414.0
+
+[node name="DroppedBadge" parent="Workspace/BoardArea/TextureRect" unique_id=1503039327 instance=ExtResource("13_eaf5m")]
+layout_mode = 1
+offset_left = 115.0
+offset_top = 412.0
+offset_right = -585.0
+offset_bottom = -78.0
+
+[node name="DroppedBadge6" parent="Workspace/BoardArea/TextureRect" unique_id=757138952 instance=ExtResource("14_63h1n")]
+layout_mode = 1
+offset_left = 325.0
+offset_top = 237.0
+offset_right = -375.0
+offset_bottom = -253.0
+
+[node name="Arrow9" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1351796236]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 324.0
+offset_top = 239.0
+offset_right = 384.0
+offset_bottom = 359.0
+rotation = 1.5707964
+texture = ExtResource("11_asev0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow10" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=687755377]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 217.0
+offset_top = 474.0
+offset_right = 277.0
+offset_bottom = 594.0
+rotation = -1.5707964
+texture = ExtResource("11_asev0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow11" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1005398389]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 542.0
+offset_top = 244.0
+offset_right = 602.0
+offset_bottom = 364.0
+rotation = 1.5707964
+texture = ExtResource("11_asev0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Dropzone4" parent="Workspace/BoardArea/TextureRect" unique_id=1508255751 groups=["Dropzones"] instance=ExtResource("9_18g7f")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 445.0
+offset_top = 80.0
+offset_right = 541.0
+offset_bottom = 150.0
+grow_horizontal = 1
+grow_vertical = 1
+expected_component = "API Gateway"
+
+[node name="DroppedBadge3" parent="Workspace/BoardArea/TextureRect" unique_id=1836381034 instance=ExtResource("15_65qcv")]
+layout_mode = 1
+offset_left = 19.0
+offset_top = 72.0
+offset_right = -681.0
+offset_bottom = -418.0
+
+[node name="Dropzone3" parent="Workspace/BoardArea/TextureRect" unique_id=1225185556 groups=["Dropzones"] instance=ExtResource("9_18g7f")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 111.0
+offset_top = 233.0
+offset_right = 211.0
+offset_bottom = 303.0
+grow_horizontal = 1
+grow_vertical = 1
+expected_component = "General Ledger Service"
+
+[node name="Arrow6" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1387969423]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 330.0
+offset_top = 140.0
+offset_right = 390.0
+offset_bottom = 260.0
+rotation = -1.5707964
+texture = ExtResource("11_asev0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow7" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1896297668]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 539.0
+offset_top = 143.0
+offset_right = 599.0
+offset_bottom = 263.0
+rotation = -1.5707964
+texture = ExtResource("11_asev0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Arrow12" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=129486177]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 136.0
+offset_top = 307.0
+offset_right = 188.0
+offset_bottom = 411.0
+texture = ExtResource("11_asev0")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ToolkitSidebar" type="PanelContainer" parent="Workspace" unique_id=815552265]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_dmr8m")
+
+[node name="MarginContainer" type="MarginContainer" parent="Workspace/ToolkitSidebar" unique_id=545786519]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer" unique_id=902409720]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer" unique_id=1938060301]
+layout_mode = 2
+
+[node name="Header" type="Label" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2035791799]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.39215687, 0.45490196, 0.54509807, 1)
+theme_override_font_sizes/font_size = 11
+text = "CLOUD COMPONENTS"
+
+[node name="Control" type="Control" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1801488610]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1821783203]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5803922, 0.6392157, 0.72156864, 1)
+theme_override_font_sizes/font_size = 11
+text = "DRAG ⟶"
+
+[node name="HSeparator" type="HSeparator" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer" unique_id=1163032978]
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer" unique_id=102313060]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+vertical_scroll_mode = 3
+scroll_deadzone = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1563589620]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="ComponentCard4" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("16_0jmy5")]
+layout_mode = 2
+dropped_badge_scene = ExtResource("17_5ryyh")
+
+[node name="ComponentCard5" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1722372024 instance=ExtResource("18_i1km6")]
+layout_mode = 2
+dropped_badge_scene = ExtResource("19_2thrm")
+
+[node name="ComponentCard6" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=52094970 instance=ExtResource("20_t0vi1")]
+layout_mode = 2
+script = ExtResource("21_sxltx")
+dropped_badge_scene = ExtResource("22_wqpa2")
+
+[node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1698274523 instance=ExtResource("23_tgs88")]
+layout_mode = 2
+script = ExtResource("21_sxltx")
+dropped_badge_scene = ExtResource("24_yasod")
+
+[node name="Search Engine" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=527834933 instance=ExtResource("25_12ivk")]
+layout_mode = 2
+
+[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1890698724 instance=ExtResource("26_ukrlt")]
+layout_mode = 2
+dropped_badge_scene = ExtResource("27_yo317")
+
+[node name="FailedModalBanking" parent="." unique_id=1309422593 instance=ExtResource("29_b0im3")]
+unique_name_in_owner = true
+visible = false
+
+[node name="InformationModalBanking" parent="." unique_id=780280340 instance=ExtResource("30_4vens")]
+unique_name_in_owner = true
+
+[node name="SuccessModalBanking" parent="." unique_id=1807981407 instance=ExtResource("31_00t8t")]
+unique_name_in_owner = true
+visible = false
+
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/TicketDetails" to="." method="_on_ticket_details_pressed"]
+[connection signal="pressed" from="TopBar/MarginContainer/HBoxContainer/HBoxContainer2/DeployButton" to="." method="_on_deploy_button_pressed"]

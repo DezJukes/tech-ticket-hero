@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dhb5cchugfrxn" path="res://Assets/Misc/System Gameplay/background-board.png" id="7_okh1a"]
 [ext_resource type="PackedScene" uid="uid://cfs3mcjift23r" path="res://Scenes/System Components/dropzone.tscn" id="9_bubmk"]
 [ext_resource type="PackedScene" uid="uid://cv47ljppldtki" path="res://Scenes/System Components/CMS/Content Creator/content_creator_dropped.tscn" id="9_okh1a"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="10_eoklo"]
+[ext_resource type="PackedScene" uid="uid://c7ovts0hmikcu" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="10_eoklo"]
 [ext_resource type="PackedScene" uid="uid://bvh3r7ufgd2fo" path="res://Scenes/System Components/CMS/Content Delivery/content_delivery_dropped.tscn" id="11_6hfb2"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_dropped.tscn" id="11_nc1fv"]
 [ext_resource type="PackedScene" uid="uid://i34utumvpipe" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_comp.tscn" id="12_vo8ic"]

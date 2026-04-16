@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="3_l131m"]
 [ext_resource type="FontFile" uid="uid://cbfjc1kt4amaj" path="res://Assets/Font/Oxanium-Light.ttf" id="4_h2hgb"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqj60"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f1omb"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
@@ -15,7 +15,7 @@ corner_radius_bottom_left = 12
 shadow_color = Color(0, 0, 0, 0.078431375)
 shadow_size = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuq08"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l131m"]
 bg_color = Color(0.99607843, 0.9490196, 0.9490196, 1)
 border_width_left = 4
 border_width_top = 1
@@ -27,12 +27,37 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_htyha"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2hgb"]
+bg_color = Color(0.96862745, 0.96862745, 0.96862745, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_top = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqj60"]
 content_margin_left = 24.0
 content_margin_top = 12.0
 content_margin_right = 24.0
 content_margin_bottom = 12.0
-bg_color = Color(0.8288883, 0, 0.10391625, 1)
+bg_color = Color(0.972549, 0.98039216, 0.9882353, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.8, 0.8352941, 0.8784314, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tuq08"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+bg_color = Color(0.827451, 0, 0.101960786, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -41,7 +66,7 @@ corner_radius_bottom_left = 8
 [node name="FailedModalLibrary" type="CanvasLayer" unique_id=937512206]
 script = ExtResource("1_f1omb")
 
-[node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=318350432]
+[node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=994765001]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -50,7 +75,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="Center" type="CenterContainer" parent="BackgroundOverlay" unique_id=1335354375]
+[node name="Center" type="CenterContainer" parent="BackgroundOverlay" unique_id=1005307816]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -58,145 +83,170 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=1200713185]
-custom_minimum_size = Vector2(900, 0)
+[node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=456029125]
+custom_minimum_size = Vector2(750, 0)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_yqj60")
+theme_override_styles/panel = SubResource("StyleBoxFlat_f1omb")
 
-[node name="Padding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox" unique_id=2143762233]
+[node name="Padding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox" unique_id=594417480]
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 20
 
-[node name="VerticalFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding" unique_id=248228826]
+[node name="VerticalFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding" unique_id=668287523]
 layout_mode = 2
 
-[node name="HeaderBox" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1770972033]
+[node name="HeaderBox" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=421371361]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="CriticalIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1558149414]
-custom_minimum_size = Vector2(100, 100)
+[node name="CriticalIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=2016365406]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 texture = ExtResource("1_s4is3")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="HeaderText" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1366588449]
+[node name="HeaderText" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1121790320]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=1371075127]
+[node name="Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=33427595]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_f1omb")
+theme_override_font_sizes/font_size = 30
 text = "Deployment Failed"
 horizontal_alignment = 1
 
-[node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=1765872946]
+[node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=1513199407]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9218303, 0, 0.11170312, 1)
 theme_override_fonts/font = ExtResource("3_l131m")
-text = "TICKET - LIB123"
+text = "TICKET - CMS123"
 horizontal_alignment = 1
 
-[node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=954844172]
+[node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1066317942]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="SplitBody" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1017358400]
+[node name="SplitBody" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=563291905]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 16
 
-[node name="ProblemCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=258386193]
+[node name="ProblemCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=1888271001]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_tuq08")
+theme_override_styles/panel = SubResource("StyleBoxFlat_l131m")
 
-[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard" unique_id=596343578]
+[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard" unique_id=1766134616]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding" unique_id=1189940146]
+[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding" unique_id=1523303827]
 layout_mode = 2
 
-[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=1560641616]
+[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=216698337]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
 theme_override_fonts/font = ExtResource("2_f1omb")
-text = "HARDWARE FAILURE "
+text = "TITLE"
 horizontal_alignment = 1
 
-[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=1298677636]
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=2034861430]
 layout_mode = 2
 theme_override_constants/margin_top = 5
 
-[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=13913311]
+[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=1940788070]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_l131m")
-text = "Removing the Self-Service Kiosk left students with no physical interface to scan IDs, causing a total manual bottleneck."
+text = "[description]"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="ProblemCard2" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=983711910]
+[node name="ProblemCard2" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=1734153679]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_tuq08")
+theme_override_styles/panel = SubResource("StyleBoxFlat_l131m")
 
-[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2" unique_id=267380260]
+[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2" unique_id=242328073]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding" unique_id=1521743916]
+[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding" unique_id=1013272957]
 layout_mode = 2
 
-[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=1141411854]
+[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=922066136]
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
 theme_override_fonts/font = ExtResource("2_f1omb")
-text = "STALE DATA"
+text = "TITLE"
 horizontal_alignment = 1
 
-[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=123630413]
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=156165581]
 layout_mode = 2
 theme_override_constants/margin_top = 5
 
-[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=1850220411]
+[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard2/ProblemPadding/ProblemTextFlow" unique_id=660224279]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_l131m")
-text = "Without the Relational Database, loan records couldn't be committed, leading to \"Source of Truth\" errors and lost transaction logs."
+text = "[description]"
 horizontal_alignment = 1
 autowrap_mode = 3
 
-[node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1143124908]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1175559935]
 layout_mode = 2
-theme_override_constants/separation = 30
+theme_override_constants/margin_top = 30
 
-[node name="Footer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1032893590]
+[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=2070963025]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.4, 0.44313726, 0.5058824, 1)
+theme_override_constants/line_spacing = 5
+theme_override_fonts/font = ExtResource("3_l131m")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h2hgb")
+text = "[description]"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=129019721]
+layout_mode = 2
+theme_override_constants/margin_top = 30
+
+[node name="Footer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=514379695]
 layout_mode = 2
 
-[node name="HintText" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1156503353]
+[node name="HintText" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=631874861]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_h2hgb")
-text = "You will receive a penalty."
+text = "Try again!"
 
-[node name="AcceptButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=2000667443]
+[node name="HBoxContainer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1191351739]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_htyha")
+theme_override_constants/separation = 20
+
+[node name="Button" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer" unique_id=1672396702]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.28235295, 0.33333334, 0.40784314, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_yqj60")
+text = "Main Menu"
+
+[node name="AcceptButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer" unique_id=2032408716]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_tuq08")
 text = "Restart"
 
-[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/AcceptButton" to="." method="_on_accept_button_pressed"]
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer/Button" to="." method="_on_button_pressed"]
