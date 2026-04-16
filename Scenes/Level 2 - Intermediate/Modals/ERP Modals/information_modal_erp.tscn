@@ -158,8 +158,10 @@ theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
 text = "[ul]
-[b]No Security:[/b] Anyone can delete or edit articles because there’s no permission check.
-[b]Poor Discovery:[/b] Readers can’t find old posts because the content isn't indexed.
+[b]Bot Attacks:[/b] Automated scripts are overwhelming the site and slowing it down for real shoppers.
+[b]Auth Vulnerability:[/b] There is no way to verify customer sessions or authorize purchases.
+[b]Payment Block:[/b] Customers are stuck at their carts because the system can't communicate with external banks.
+[b]Fulfillment Gap:[/b] There is no way to dispatch events to the warehouse once an order is placed.
 [/ul]"
 fit_content = true
 
@@ -200,8 +202,10 @@ theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
 text = "[ul]
-[b]Secure the Site:[/b] Add components to block unauthorized changes.
-[b]Enable Search:[/b] Add tools to help users find stories instantly.
+[b]Defend the System:[/b] Restore the Rate Limiter to identify and block automated bot attacks.
+[b]Verify Users:[/b] Bring back the Auth Service to manage secure customer sessions and permissions.
+[b]Handle Money:[/b] Re-integrate the Payment Gateway to securely authorize bank transactions.
+[b]Coordinate Logistics:[/b] Activate the Message Broker to dispatch order events to downstream warehouse systems.
 [/ul]"
 fit_content = true
 
