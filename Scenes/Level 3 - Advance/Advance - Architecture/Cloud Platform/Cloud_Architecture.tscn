@@ -57,6 +57,7 @@ border_width_left = 2
 border_color = Color(0.8862745, 0.9098039, 0.9411765, 1)
 
 [node name="CloudArchitecture" type="VBoxContainer" unique_id=768453963]
+process_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -130,6 +131,7 @@ ignore_texture_size = true
 stretch_mode = 5
 
 [node name="DeployButton" type="TextureButton" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer2" unique_id=1998568006]
+process_mode = 3
 custom_minimum_size = Vector2(120, 50)
 layout_mode = 2
 texture_normal = ExtResource("5_rtlau")

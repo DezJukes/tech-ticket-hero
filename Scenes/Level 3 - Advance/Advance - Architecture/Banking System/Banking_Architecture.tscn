@@ -57,6 +57,7 @@ border_width_left = 2
 border_color = Color(0.8862745, 0.9098039, 0.9411765, 1)
 
 [node name="BankingArchitecture" type="VBoxContainer" unique_id=1008279269]
+process_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
