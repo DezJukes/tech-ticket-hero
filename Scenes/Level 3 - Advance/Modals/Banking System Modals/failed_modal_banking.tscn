@@ -253,8 +253,11 @@ theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_osiks")
 text = "Main Menu"
 
-[node name="AcceptButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer" unique_id=206017501]
+[node name="RestartButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer" unique_id=206017501]
 layout_mode = 2
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_a8ua5")
 text = "Restart"
+
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer/RestartButton" to="." method="_on_restart_button_pressed"]

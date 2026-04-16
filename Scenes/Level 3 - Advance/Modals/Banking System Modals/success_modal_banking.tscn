@@ -244,3 +244,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_5k0k6")
 text = "Complete Mission"
+
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/MissionComplete" to="." method="_on_mission_complete_pressed"]

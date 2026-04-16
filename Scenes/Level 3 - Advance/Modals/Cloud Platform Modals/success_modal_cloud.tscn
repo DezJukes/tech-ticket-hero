@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bjfl30wg24gry"]
 
 [ext_resource type="Texture2D" uid="uid://b63figy5jp26q" path="res://Assets/icons/check_mark.png" id="1_pl6ce"]
+[ext_resource type="Script" uid="uid://dxh4ueyhvq8rs" path="res://Scenes/Level 3 - Advance/Modals/Cloud Platform Modals/success_modal_cloud.gd" id="1_wl61r"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_wl61r"]
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="3_25q32"]
 [ext_resource type="Texture2D" uid="uid://ku3ic237ti4m" path="res://Assets/icons/stars.png" id="4_vxkur"]
@@ -50,6 +51,7 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [node name="SuccessModalCloud" type="CanvasLayer" unique_id=1844882871]
+script = ExtResource("1_wl61r")
 
 [node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=968792451]
 anchors_preset = 15
@@ -242,3 +244,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_vxkur")
 text = "Complete Mission"
+
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/MissionComplete" to="." method="_on_mission_complete_pressed"]

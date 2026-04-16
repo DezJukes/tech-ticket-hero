@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bxnvimdj8mi1r"]
 
 [ext_resource type="Texture2D" uid="uid://b63figy5jp26q" path="res://Assets/icons/check_mark.png" id="1_uitfb"]
+[ext_resource type="Script" uid="uid://b385xumgvihw8" path="res://Scenes/Level 2 - Intermediate/Modals/E-Commerce Modals/success_modal_ecom.gd" id="1_wx44g"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_wx44g"]
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="3_ctvwi"]
 [ext_resource type="Texture2D" uid="uid://ku3ic237ti4m" path="res://Assets/icons/stars.png" id="5_cdh5g"]
@@ -50,6 +51,7 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [node name="SuccessModalEcom" type="CanvasLayer" unique_id=1539659176]
+script = ExtResource("1_wx44g")
 
 [node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=721507764]
 anchors_preset = 15
@@ -242,3 +244,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_ctvwi")
 text = "Complete Mission"
+
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/MissionComplete" to="." method="_on_mission_complete_pressed"]
