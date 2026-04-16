@@ -58,4 +58,4 @@ func _on_deploy_button_pressed() -> void:
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/game_scene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Level 1 - Beginner/Beginner - Game Scene/Library_game_scene.tscn")

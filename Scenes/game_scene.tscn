@@ -8,7 +8,7 @@
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="4_1ixah"]
 [ext_resource type="PackedScene" uid="uid://bqk4wwgbista1" path="res://Scenes/computer.tscn" id="4_rgj8m"]
 [ext_resource type="PackedScene" uid="uid://dbrw636buueuk" path="res://Scenes/board_frame.tscn" id="8_4xiap"]
-[ext_resource type="PackedScene" path="res://Scenes/filing_cabinet_1.tscn" id="9_4xiap"]
+[ext_resource type="PackedScene" uid="uid://csntnedlflvm2" path="res://Scenes/filing_cabinet_1.tscn" id="9_4xiap"]
 [ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="10_4xiap"]
 [ext_resource type="PackedScene" uid="uid://c1ddoutc25g2q" path="res://Scenes/printer_furniture.tscn" id="11_4xiap"]
 [ext_resource type="PackedScene" uid="uid://bw0kxc2vm7tw5" path="res://Scenes/water_dispenser.tscn" id="12_wywco"]
