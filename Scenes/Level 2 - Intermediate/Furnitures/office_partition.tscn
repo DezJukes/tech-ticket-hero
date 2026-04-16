@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://2u5klo3pwfkr"]
+
+[ext_resource type="Texture2D" uid="uid://lnj4axt3amib" path="res://Assets/Misc/Level 2 - Intermediate/Furnitures/Office_Partition.png" id="1_ji3qf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_muwn7"]
+size = Vector2(42, 32)
+
+[node name="OfficePartition" type="Node2D" unique_id=771443171]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=641222024]
+texture = ExtResource("1_ji3qf")
+
+[node name="TallBookshelfBody" type="StaticBody2D" parent="." unique_id=1335195960]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TallBookshelfBody" unique_id=1139213656]
+shape = SubResource("RectangleShape2D_muwn7")

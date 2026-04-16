@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://c8baucdkdr66u"]
+
+[ext_resource type="Texture2D" uid="uid://dhqlxhnvfpq00" path="res://Assets/Character/Worker/WORKER_WALK_TICKETHERO.png" id="1_ge1rx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge1rx"]
+atlas = ExtResource("1_ge1rx")
+region = Rect2(12, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4nwi"]
+atlas = ExtResource("1_ge1rx")
+region = Rect2(81, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg4uj"]
+atlas = ExtResource("1_ge1rx")
+region = Rect2(150, 0, 48, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nqu7"]
+atlas = ExtResource("1_ge1rx")
+region = Rect2(219, 0, 48, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4wema"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge1rx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4nwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg4uj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nqu7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6yo7i"]
+radius = 47.5
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ja2dn"]
+radius = 22.0
+height = 62.0
+
+[node name="NpcMentor" type="Node2D" unique_id=1679080789]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=978884471]
+sprite_frames = SubResource("SpriteFrames_4wema")
+autoplay = "default"
+frame_progress = 0.44236675
+offset = Vector2(3.815, 0)
+
+[node name="NPCMentorInteractionZone" type="Area2D" parent="." unique_id=888205647]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCMentorInteractionZone" unique_id=2096846226]
+position = Vector2(-0.5, -1)
+shape = SubResource("CircleShape2D_6yo7i")
+
+[node name="NPCMentorBody" type="StaticBody2D" parent="." unique_id=1205301485]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCMentorBody" unique_id=154302730]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_ja2dn")
