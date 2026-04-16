@@ -225,3 +225,5 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_lk7p5")
 text = "Accept Mission"
+
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/AcceptButton" to="." method="_on_accept_button_pressed"]
