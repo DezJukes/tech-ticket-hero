@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dcaoya67wlaoo" path="res://Assets/icons/collision.png" id="1_r2vil"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_jr3xx"]
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="3_ewqei"]
+[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_ewqei"]
 [ext_resource type="FontFile" uid="uid://cbfjc1kt4amaj" path="res://Assets/Font/Oxanium-Light.ttf" id="4_uf2dt"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jr3xx"]
@@ -84,7 +85,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=274284799]
-custom_minimum_size = Vector2(750, 0)
+custom_minimum_size = Vector2(850, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_jr3xx")
 
@@ -123,7 +124,8 @@ horizontal_alignment = 1
 [node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=539848353]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9218303, 0, 0.11170312, 1)
-theme_override_fonts/font = ExtResource("3_ewqei")
+theme_override_fonts/font = ExtResource("4_ewqei")
+theme_override_font_sizes/font_size = 20
 text = "TICKET - CMS123"
 horizontal_alignment = 1
 
@@ -155,6 +157,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
 theme_override_fonts/font = ExtResource("2_jr3xx")
+theme_override_font_sizes/font_size = 24
 text = "TITLE"
 horizontal_alignment = 1
 
@@ -167,6 +170,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_ewqei")
+theme_override_font_sizes/font_size = 20
 text = "[description]"
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -190,6 +194,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
 theme_override_fonts/font = ExtResource("2_jr3xx")
+theme_override_font_sizes/font_size = 24
 text = "TITLE"
 horizontal_alignment = 1
 
@@ -202,6 +207,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_ewqei")
+theme_override_font_sizes/font_size = 20
 text = "[description]"
 horizontal_alignment = 1
 autowrap_mode = 3
@@ -215,6 +221,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.4, 0.44313726, 0.5058824, 1)
 theme_override_constants/line_spacing = 5
 theme_override_fonts/font = ExtResource("3_ewqei")
+theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_uf2dt")
 text = "[description]"
 horizontal_alignment = 1
@@ -232,6 +239,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("4_uf2dt")
+theme_override_font_sizes/font_size = 20
 text = "Try again!"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1148689522]
@@ -241,11 +249,13 @@ theme_override_constants/separation = 20
 [node name="MainMenuButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer" unique_id=302259099]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.28235295, 0.33333334, 0.40784314, 1)
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_t8g4v")
 text = "Main Menu"
 
 [node name="AcceptButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/HBoxContainer" unique_id=1236467997]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_gd5gd")
 text = "Restart"
 

@@ -5,9 +5,8 @@
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_pljxn"]
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="3_vx5f2"]
 [ext_resource type="Texture2D" uid="uid://ku3ic237ti4m" path="res://Assets/icons/stars.png" id="4_8s6lc"]
-[ext_resource type="Script" uid="uid://b0e62tn8dfl7c" path="res://Scenes/Level 1 - Beginner/Modals/architecture_body.gd" id="4_pljxn"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lwuu"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pljxn"]
 bg_color = Color(1, 1, 1, 1)
 corner_radius_top_left = 12
 corner_radius_top_right = 12
@@ -16,7 +15,7 @@ corner_radius_bottom_left = 12
 shadow_color = Color(0, 0, 0, 0.078431375)
 shadow_size = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i5iuk"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vx5f2"]
 bg_color = Color(0.9999997, 0.9987288, 0.9355188, 1)
 border_width_left = 4
 border_width_top = 1
@@ -28,7 +27,7 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wnp8r"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8s6lc"]
 bg_color = Color(0.9372549, 0.9647059, 1, 1)
 border_width_left = 4
 border_width_top = 1
@@ -40,7 +39,7 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5xcan"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lwuu"]
 content_margin_left = 24.0
 content_margin_top = 12.0
 content_margin_right = 24.0
@@ -54,7 +53,7 @@ corner_radius_bottom_left = 8
 [node name="SuccessModalLibrary" type="CanvasLayer" unique_id=217140287]
 script = ExtResource("1_vx5f2")
 
-[node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=1351324001]
+[node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=1105227075]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -63,7 +62,7 @@ grow_vertical = 2
 size_flags_horizontal = 4
 color = Color(0, 0, 0, 0.5882353)
 
-[node name="Center" type="CenterContainer" parent="BackgroundOverlay" unique_id=391231585]
+[node name="Center" type="CenterContainer" parent="BackgroundOverlay" unique_id=2118504988]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,173 +70,177 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=1642089755]
+[node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=379046761]
 custom_minimum_size = Vector2(900, 0)
 layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5lwuu")
+theme_override_styles/panel = SubResource("StyleBoxFlat_pljxn")
 
-[node name="Padding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox" unique_id=1617789215]
+[node name="Padding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox" unique_id=1070693430]
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 32
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 20
 
-[node name="VerticalFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding" unique_id=1239045276]
+[node name="VerticalFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding" unique_id=1684394060]
 layout_mode = 2
 
-[node name="HeaderBox" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=2108635589]
+[node name="HeaderBox" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=158459924]
 layout_mode = 2
 theme_override_constants/separation = 15
 
-[node name="SirenIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1816572297]
+[node name="SirenIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1706994007]
 layout_mode = 2
 texture = ExtResource("1_fshsa")
 expand_mode = 2
 
-[node name="HeaderText" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=45360795]
+[node name="HeaderText" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1837163747]
 layout_mode = 2
 
-[node name="Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=590068962]
+[node name="Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=1840401546]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5372549, 0.5176471, 0, 1)
 theme_override_fonts/font = ExtResource("2_pljxn")
+theme_override_font_sizes/font_size = 24
 text = "Deployment Successful"
 
-[node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=1093925005]
+[node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=798825627]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5379917, 0.51627606, 1.92523e-07, 1)
 theme_override_fonts/font = ExtResource("3_vx5f2")
+theme_override_font_sizes/font_size = 18
 text = "SYSTEMS STABLE | INCIDENT RESOLVED"
 
-[node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1143140358]
+[node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=2122765537]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="SplitBody" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=354275183]
+[node name="SplitBody" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1917685766]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 16
 
-[node name="ImpactSummaryCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=998231293]
+[node name="ImpactSummaryCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=1776710248]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_i5iuk")
+theme_override_styles/panel = SubResource("StyleBoxFlat_vx5f2")
 
-[node name="ImpactPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard" unique_id=355988622]
+[node name="ImpactPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard" unique_id=1854769554]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="ImpactTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding" unique_id=1502958698]
+[node name="ImpactTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding" unique_id=1095678761]
 layout_mode = 2
 
-[node name="ImpactTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=838079382]
+[node name="ImpactTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=87621807]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.36078432, 0.61960787, 0, 1)
 theme_override_fonts/font = ExtResource("2_pljxn")
+theme_override_font_sizes/font_size = 30
 text = "Impact Summary"
 
-[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1712956683]
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1436707441]
 layout_mode = 2
 theme_override_constants/margin_top = 5
 
-[node name="ImpactBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1419035389]
+[node name="ImpactBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=98303943]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.4476347, 0.38707283, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_pljxn")
 theme_override_font_sizes/normal_font_size = 20
-text = "100% Accessible"
+text = "85% Faster"
 fit_content = true
 
-[node name="ImpactBody2" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1408933487]
+[node name="ImpactBody2" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=498054281]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_vx5f2")
-text = "Accessible Hardware Uptime"
+text = "Load Times"
 fit_content = true
 
-[node name="ImpactBody3" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1543443776]
+[node name="ImpactBody3" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1702894318]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_pljxn")
 theme_override_font_sizes/normal_font_size = 20
-text = "100% Accurate"
+text = "100% Faster"
 fit_content = true
 
-[node name="ImpactBody4" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1994847567]
+[node name="ImpactBody4" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=232296550]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_vx5f2")
-text = "Accurate Loan Records"
+text = "Server Uptime"
 fit_content = true
 
-[node name="ArchitectureCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=890676990]
+[node name="ArchitectureCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=478226557]
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/panel = SubResource("StyleBoxFlat_wnp8r")
+theme_override_styles/panel = SubResource("StyleBoxFlat_8s6lc")
 
-[node name="ArchitecturePadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard" unique_id=361642522]
+[node name="ArchitecturePadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard" unique_id=923540058]
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="ArchitectureTextFLow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding" unique_id=1569252464]
+[node name="ArchitectureTextFLow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding" unique_id=1077354985]
 layout_mode = 2
 
-[node name="ArchitectureTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=2059836065]
+[node name="ArchitectureTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=954240637]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
 theme_override_fonts/font = ExtResource("2_pljxn")
+theme_override_font_sizes/font_size = 30
 text = "Architecture Review"
 
-[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=2051655716]
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=1595989871]
 layout_mode = 2
 theme_override_constants/margin_top = 5
 
-[node name="ArchitectureBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=650171755]
+[node name="ArchitectureBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=1916419789]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_vx5f2")
-text = "Library System is Chuchu and it is great!"
+theme_override_font_sizes/normal_font_size = 20
+text = "CMS architecture govern front-end functionality (where content is presented), and back-end functionality (where content is created and edited)."
 fit_content = true
-script = ExtResource("4_pljxn")
 
-[node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=821603564]
+[node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1927379255]
 layout_mode = 2
 theme_override_constants/separation = 30
 
-[node name="Footer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=570227980]
+[node name="Footer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1715906093]
 layout_mode = 2
 
-[node name="PointsContainer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=2081305828]
+[node name="PointsContainer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1637344397]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Star" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/PointsContainer" unique_id=371902105]
+[node name="Star" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/PointsContainer" unique_id=1933140291]
 layout_mode = 2
 texture = ExtResource("4_8s6lc")
 expand_mode = 2
 
-[node name="HintText" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/PointsContainer" unique_id=316844119]
+[node name="HintText" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/PointsContainer" unique_id=141224475]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.5921569, 0.5568628, 0, 1)
 theme_override_fonts/font = ExtResource("2_pljxn")
+theme_override_font_sizes/font_size = 20
 text = "+100 Score Awarded"
 
-[node name="MissionComplete" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1696898603]
+[node name="MissionComplete" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=90316575]
 layout_mode = 2
-theme_override_styles/normal = SubResource("StyleBoxFlat_5xcan")
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_5lwuu")
 text = "Complete Mission"
-
-[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/MissionComplete" to="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow/ArchitectureBody" method="_on_mission_complete_pressed"]

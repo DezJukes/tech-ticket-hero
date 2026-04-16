@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="1_gv745"]
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="2_nf73a"]
 [ext_resource type="FontFile" uid="uid://cbfjc1kt4amaj" path="res://Assets/Font/Oxanium-Light.ttf" id="3_nf73a"]
+[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_fap14"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xatp3"]
 bg_color = Color(1, 1, 1, 1)
@@ -71,7 +72,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=938405954]
-custom_minimum_size = Vector2(900, 0)
+custom_minimum_size = Vector2(1080, 0)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_xatp3")
 
@@ -101,12 +102,14 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("1_gv745")
+theme_override_font_sizes/font_size = 24
 text = "Ticket Report"
 
 [node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=1277292708]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.9218303, 0, 0.11170312, 1)
-theme_override_fonts/font = ExtResource("2_nf73a")
+theme_override_fonts/font = ExtResource("4_fap14")
+theme_override_font_sizes/font_size = 18
 text = "TICKET - 123"
 
 [node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=454638980]
@@ -137,15 +140,28 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
 theme_override_fonts/font = ExtResource("1_gv745")
+theme_override_font_sizes/font_size = 30
 text = "The Problem"
 
-[node name="ProblemBody" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=213581313]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=436192869]
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_constants/line_spacing = 5
-theme_override_fonts/font = ExtResource("2_nf73a")
-text = "The website is fast, but it’s a mess! The site is completely vulnerable. Anyone can delete or edit articles because there is no way to check who has permission to make changes. "
-autowrap_mode = 3
+theme_override_constants/margin_top = 10
+
+[node name="ProblemBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=643432671]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+theme_override_constants/line_separation = 0
+theme_override_constants/paragraph_separation = 10
+theme_override_fonts/normal_font = ExtResource("2_nf73a")
+theme_override_fonts/bold_font = ExtResource("1_gv745")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "[ul]
+[b]No Security:[/b] Anyone can delete or edit articles because there’s no permission check.
+[b]Poor Discovery:[/b] Readers can’t find old posts because the content isn't indexed.
+[/ul]"
+fit_content = true
 
 [node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=339691311]
 layout_mode = 2
@@ -166,14 +182,27 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.3598809, 0.6194927, 3.85046e-07, 1)
 theme_override_fonts/font = ExtResource("1_gv745")
+theme_override_font_sizes/font_size = 30
 text = "Your Mission"
 
-[node name="MissionBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=782490053]
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=1759578536]
 layout_mode = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_constants/line_separation = 5
+theme_override_constants/margin_top = 10
+
+[node name="ProblemBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=78458706]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+theme_override_constants/line_separation = 0
+theme_override_constants/paragraph_separation = 10
 theme_override_fonts/normal_font = ExtResource("2_nf73a")
-text = "You must put the components that protect the site from unauthorized changes and the tools that allow users to discover stories."
+theme_override_fonts/bold_font = ExtResource("1_gv745")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "[ul]
+[b]Secure the Site:[/b] Add components to block unauthorized changes.
+[b]Enable Search:[/b] Add tools to help users find stories instantly.
+[/ul]"
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=186862070]
@@ -188,10 +217,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_nf73a")
-text = "Tap any placed component..."
+theme_override_font_sizes/font_size = 18
+text = "Drag and Drop to use a component.."
 
 [node name="AcceptButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1881701775]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_nf73a")
 text = "Accept Mission"
 

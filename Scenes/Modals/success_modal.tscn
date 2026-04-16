@@ -102,12 +102,14 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5372549, 0.5176471, 0, 1)
 theme_override_fonts/font = ExtResource("2_jcebd")
+theme_override_font_sizes/font_size = 24
 text = "Deployment Successful"
 
 [node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=1427143278]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.5379917, 0.51627606, 1.92523e-07, 1)
 theme_override_fonts/font = ExtResource("3_ccg41")
+theme_override_font_sizes/font_size = 18
 text = "SYSTEMS STABLE | INCIDENT RESOLVED"
 
 [node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=971180311]
@@ -138,6 +140,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.36078432, 0.61960787, 0, 1)
 theme_override_fonts/font = ExtResource("2_jcebd")
+theme_override_font_sizes/font_size = 30
 text = "Impact Summary"
 
 [node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=635609716]
@@ -197,6 +200,7 @@ layout_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
 theme_override_fonts/font = ExtResource("2_jcebd")
+theme_override_font_sizes/font_size = 30
 text = "Architecture Review"
 
 [node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ArchitectureCard/ArchitecturePadding/ArchitectureTextFLow" unique_id=1089878521]
@@ -208,6 +212,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_ccg41")
+theme_override_font_sizes/normal_font_size = 20
 text = "CMS architecture govern front-end functionality (where content is presented), and back-end functionality (where content is created and edited)."
 fit_content = true
 
@@ -232,10 +237,12 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_colors/font_color = Color(0.5921569, 0.5568628, 0, 1)
 theme_override_fonts/font = ExtResource("2_jcebd")
+theme_override_font_sizes/font_size = 20
 text = "+100 Score Awarded"
 
 [node name="MissionComplete" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=183063949]
 layout_mode = 2
+theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_uuho4")
 text = "Complete Mission"
 
