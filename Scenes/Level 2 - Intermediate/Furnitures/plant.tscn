@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://1jcxvc1a8aey"]
+
+[ext_resource type="Texture2D" uid="uid://qreevrjhrohk" path="res://Assets/Misc/Level 2 - Intermediate/Furnitures/Big-Plant.png" id="1_5rdw7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxu12"]
+size = Vector2(18, 25)
+
+[node name="Bin" type="Node2D" unique_id=447327939]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=321061057]
+texture = ExtResource("1_5rdw7")
+
+[node name="BinBody" type="StaticBody2D" parent="." unique_id=9546260]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BinBody" unique_id=51382850]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_hxu12")

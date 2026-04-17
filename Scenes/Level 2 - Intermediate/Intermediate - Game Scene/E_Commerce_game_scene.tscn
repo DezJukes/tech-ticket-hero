@@ -1,22 +1,24 @@
-[gd_scene format=3 uid="uid://do7byv4xodlq8"]
+[gd_scene format=3 uid="uid://dx2mmxxgipymf"]
 
-[ext_resource type="Script" uid="uid://bbd8peavqofqi" path="res://Scenes/Level 2 - Intermediate/Intermediate - Game Scene/erp_game_scene.gd" id="1_pammw"]
-[ext_resource type="Texture2D" uid="uid://bybimwxt7rr3i" path="res://Assets/Misc/Level 2 - Intermediate/Background_Office3.png" id="2_3plb0"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_ealxg"]
-[ext_resource type="PackedScene" uid="uid://2u5klo3pwfkr" path="res://Scenes/Level 2 - Intermediate/Furnitures/office_partition.tscn" id="3_vig53"]
-[ext_resource type="PackedScene" uid="uid://1jcxvc1a8aey" path="res://Scenes/Level 2 - Intermediate/Furnitures/plant.tscn" id="3_w2wjm"]
-[ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="4_nqrrk"]
-[ext_resource type="PackedScene" uid="uid://gy3cgy47hv4o" path="res://Scenes/computer2.tscn" id="5_uqs1i"]
-[ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="6_60s8w"]
-[ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="7_aenwo"]
-[ext_resource type="PackedScene" uid="uid://c8baucdkdr66u" path="res://Scenes/npc_worker.tscn" id="9_w2wjm"]
-[ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="10_vig53"]
+[ext_resource type="Script" uid="uid://bbd8peavqofqi" path="res://Scenes/Level 2 - Intermediate/Intermediate - Game Scene/erp_game_scene.gd" id="1_8ckjg"]
+[ext_resource type="Texture2D" uid="uid://bybimwxt7rr3i" path="res://Assets/Misc/Level 2 - Intermediate/Background_Office3.png" id="2_dvj81"]
+[ext_resource type="PackedScene" path="res://Scenes/filing_cabinet_1.tscn" id="3_8aicv"]
+[ext_resource type="PackedScene" uid="uid://2u5klo3pwfkr" path="res://Scenes/Level 2 - Intermediate/Furnitures/office_partition.tscn" id="3_uiub8"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="4_8aicv"]
+[ext_resource type="PackedScene" uid="uid://1jcxvc1a8aey" path="res://Scenes/Level 2 - Intermediate/Furnitures/plant.tscn" id="4_xuab3"]
+[ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="5_xuab3"]
+[ext_resource type="PackedScene" uid="uid://gy3cgy47hv4o" path="res://Scenes/computer2.tscn" id="6_iqbku"]
+[ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="7_7k744"]
+[ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="8_iqbku"]
+[ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="8_wut4y"]
+[ext_resource type="PackedScene" uid="uid://c8baucdkdr66u" path="res://Scenes/npc_worker.tscn" id="9_rtqcc"]
+[ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="10_rmicw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0b4w"]
 size = Vector2(3962, 17)
 
 [node name="LibraryGameScene" type="Node2D" unique_id=1174430263]
-script = ExtResource("1_pammw")
+script = ExtResource("1_8ckjg")
 
 [node name="Office Background Layer" type="CanvasLayer" parent="." unique_id=362482962]
 layer = -1
@@ -27,20 +29,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_3plb0")
+texture = ExtResource("2_dvj81")
 metadata/_edit_use_anchors_ = true
 
-[node name="Bin" parent="." unique_id=447327939 instance=ExtResource("3_w2wjm")]
-position = Vector2(731, 259)
+[node name="FilingCabinet1" parent="." unique_id=1959681443 instance=ExtResource("3_8aicv")]
+position = Vector2(312, 254)
+scale = Vector2(5.21, 5.21)
+
+[node name="FilingCabinet2" parent="." unique_id=504620157 instance=ExtResource("3_8aicv")]
+position = Vector2(813, 254)
+scale = Vector2(5.21, 5.21)
+
+[node name="Bin" parent="." unique_id=447327939 instance=ExtResource("4_xuab3")]
+position = Vector2(49, 254.99998)
 scale = Vector2(5.040001, 5.040001)
 
-[node name="OfficePartition" parent="." unique_id=771443171 instance=ExtResource("3_vig53")]
-position = Vector2(253, 312)
-scale = Vector2(8, 8)
+[node name="Bin2" parent="." unique_id=638534978 instance=ExtResource("4_xuab3")]
+position = Vector2(1054, 254.99998)
+scale = Vector2(5.040001, 5.040001)
 
-[node name="OfficePartition2" parent="." unique_id=1450935907 instance=ExtResource("3_vig53")]
-position = Vector2(909, 312)
-scale = Vector2(8, 8)
+[node name="Bin3" parent="." unique_id=285636677 instance=ExtResource("4_xuab3")]
+position = Vector2(731.99994, 257)
+scale = Vector2(5.040001, 5.040001)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1120077270]
 
@@ -56,7 +66,7 @@ offset_right = -93.0
 offset_bottom = -99.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("3_ealxg")
+theme_override_fonts/font = ExtResource("4_8aicv")
 theme_override_font_sizes/font_size = 60
 text = "E"
 metadata/_edit_use_anchors_ = true
@@ -70,30 +80,29 @@ offset_top = 14.0
 offset_right = -14.0
 offset_bottom = 43.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("3_ealxg")
+theme_override_fonts/font = ExtResource("4_8aicv")
 theme_override_font_sizes/font_size = 20
 text = "Pause"
 metadata/_edit_use_anchors_ = true
 
-[node name="player" parent="." unique_id=482249979 instance=ExtResource("4_nqrrk")]
-position = Vector2(356, 512)
-scale = Vector2(2, 2)
-motion_mode = 1
-
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1580133326]
 position = Vector2(575, 323)
 
-[node name="Computer2" parent="." unique_id=175863425 instance=ExtResource("5_uqs1i")]
-position = Vector2(-47, 258)
+[node name="Computer4" parent="." unique_id=1610868164 instance=ExtResource("6_iqbku")]
+position = Vector2(590, 259)
 scale = Vector2(3, 3)
 
-[node name="Computer4" parent="." unique_id=1610868164 instance=ExtResource("5_uqs1i")]
-position = Vector2(584, 265)
-scale = Vector2(3, 3)
+[node name="Bin" parent="Computer4" unique_id=1288704116 instance=ExtResource("4_xuab3")]
+position = Vector2(731, 259)
+scale = Vector2(5.040001, 5.040001)
 
-[node name="Computer3" parent="." unique_id=2063720888 instance=ExtResource("5_uqs1i")]
-position = Vector2(1200, 254)
-scale = Vector2(3, 3)
+[node name="FilingCabinet2" parent="Computer4" unique_id=1180023425 instance=ExtResource("8_iqbku")]
+position = Vector2(-59.666676, -6.000002)
+scale = Vector2(1.9999995, 1.9999995)
+
+[node name="FilingCabinet1" parent="Computer4/FilingCabinet2" unique_id=129380013 instance=ExtResource("3_8aicv")]
+position = Vector2(92.00001, 228.99998)
+scale = Vector2(5.21, 5.21)
 
 [node name="Control" type="Control" parent="." unique_id=117607346]
 layout_mode = 3
@@ -102,10 +111,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
-[node name="TouchControls" parent="Control" unique_id=26897351 instance=ExtResource("6_60s8w")]
+[node name="TouchControls" parent="Control" unique_id=26897351 instance=ExtResource("7_7k744")]
 
 [node name="Pause" type="Node" parent="." unique_id=743239756]
-script = ExtResource("7_aenwo")
+script = ExtResource("8_wut4y")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Pause" unique_id=1817357555]
 layer = 2
@@ -136,7 +145,7 @@ theme_override_constants/separation = 30
 
 [node name="PAUSED" type="Label" parent="Pause/CanvasLayer/PausePanel/VBoxContainer" unique_id=1463826372]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("3_ealxg")
+theme_override_fonts/font = ExtResource("4_8aicv")
 theme_override_font_sizes/font_size = 60
 text = "PAUSED"
 
@@ -163,10 +172,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Main Menu"
 
-[node name="NpcMentor" parent="." unique_id=1679080789 instance=ExtResource("9_w2wjm")]
-position = Vector2(841, 485)
-scale = Vector2(1.8000001, 1.8000001)
-
 [node name="CollisionWall" type="StaticBody2D" parent="." unique_id=2047317507]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall" unique_id=1055150813]
@@ -180,8 +185,25 @@ position = Vector2(0, 497)
 position = Vector2(865, 168)
 shape = SubResource("RectangleShape2D_k0b4w")
 
-[node name="TalkAlert" parent="." unique_id=200142115 instance=ExtResource("10_vig53")]
-position = Vector2(877, 402)
+[node name="OfficePartition" parent="." unique_id=771443171 instance=ExtResource("3_uiub8")]
+position = Vector2(984, 367)
+scale = Vector2(8, 8)
+
+[node name="OfficePartition2" parent="." unique_id=1462618311 instance=ExtResource("3_uiub8")]
+position = Vector2(166, 367)
+scale = Vector2(8, 8)
+
+[node name="TalkAlert" parent="." unique_id=643699020 instance=ExtResource("10_rmicw")]
+position = Vector2(424, 367)
+
+[node name="player" parent="." unique_id=482249979 instance=ExtResource("5_xuab3")]
+position = Vector2(870, 567)
+scale = Vector2(2, 2)
+motion_mode = 1
+
+[node name="NpcMentor" parent="." unique_id=1679080789 instance=ExtResource("9_rtqcc")]
+position = Vector2(388, 440)
+scale = Vector2(1.8000001, 1.8000001)
 
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
