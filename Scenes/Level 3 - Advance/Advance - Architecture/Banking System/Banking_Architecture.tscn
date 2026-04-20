@@ -424,6 +424,7 @@ visible = false
 
 [node name="InformationModalBanking" parent="." unique_id=780280340 instance=ExtResource("30_4vens")]
 unique_name_in_owner = true
+visible = false
 
 [node name="SuccessModalBanking" parent="." unique_id=1807981407 instance=ExtResource("31_00t8t")]
 unique_name_in_owner = true

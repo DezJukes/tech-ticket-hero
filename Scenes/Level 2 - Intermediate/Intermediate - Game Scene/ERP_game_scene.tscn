@@ -44,7 +44,7 @@ scale = Vector2(8, 8)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1120077270]
 
-[node name="Interact" type="Button" parent="CanvasLayer" unique_id=1843345343]
+[node name="Interact" type="Button" parent="CanvasLayer" unique_id=21427991]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -183,7 +183,6 @@ shape = SubResource("RectangleShape2D_k0b4w")
 [node name="TalkAlert" parent="." unique_id=200142115 instance=ExtResource("10_vig53")]
 position = Vector2(877, 402)
 
-[connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/Resume" to="Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/ChangeMode" to="Pause" method="_on_change_mode_pressed"]

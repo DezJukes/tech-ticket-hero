@@ -49,12 +49,23 @@ texture_normal = ExtResource("4_1q6kf")
 texture_pressed = ExtResource("5_8xtys")
 texture_hover = ExtResource("6_gejxw")
 
+[node name="BigTechCompany" type="TextureButton" parent="CenterAnchor" unique_id=329119440]
+layout_mode = 0
+offset_left = -109.0
+offset_top = 92.0
+offset_right = 1027.0
+offset_bottom = 328.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("4_1q6kf")
+texture_pressed = ExtResource("5_8xtys")
+texture_hover = ExtResource("6_gejxw")
+
 [node name="Back" type="TextureButton" parent="CenterAnchor" unique_id=1241719066]
 layout_mode = 0
-offset_left = -49.99994
-offset_top = 100.0
-offset_right = 514.00006
-offset_bottom = 224.0
+offset_left = -51.0
+offset_top = 151.0
+offset_right = 513.0
+offset_bottom = 275.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("7_xtxx2")
 texture_pressed = ExtResource("8_5p5ix")
@@ -66,4 +77,5 @@ scale = Vector2(0.31344086, 0.31344086)
 texture = ExtResource("3_hy5i0")
 
 [connection signal="pressed" from="CenterAnchor/TheOffice" to="." method="_on_the_office_pressed"]
+[connection signal="pressed" from="CenterAnchor/BigTechCompany" to="." method="_on_big_tech_company_pressed"]
 [connection signal="pressed" from="CenterAnchor/Back" to="." method="_on_back_pressed"]
