@@ -1,7 +1,7 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://bcb618mqsdacx"]
 
-[ext_resource type="Texture2D" uid="uid://cr3tkwu7tx5bn" path="res://Scenes/System Components/Global Components/API Gateway/img_api_gateway.png" id="1_k8pjx"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_xje42"]
+[ext_resource type="Texture2D" uid="uid://djckhs48r3fnf" path="res://Scenes/System Components/Banking/Real Time Fraud Engine/Real-Time Fraud Engine.png" id="2_mctds"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_y41ex"]
 [ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_gshss"]
 [ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_2ydtx"]
@@ -73,7 +73,7 @@ theme_override_constants/margin_bottom = 6
 [node name="IconImage" type="TextureRect" parent="CardPadding/MainRow/IconFrame/IconPadding" unique_id=65608909]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-texture = ExtResource("1_k8pjx")
+texture = ExtResource("2_mctds")
 expand_mode = 1
 stretch_mode = 5
 
@@ -91,14 +91,14 @@ theme_override_constants/separation = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
 theme_override_fonts/font = ExtResource("2_y41ex")
-text = "API Gateway"
+text = "Real-Time Fraud Engine"
 
 [node name="Subtitle" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=614709425]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
 theme_override_fonts/font = ExtResource("3_gshss")
 theme_override_font_sizes/font_size = 11
-text = "API FLOW GATEWAY"
+text = "ANALYSIS"
 
 [node name="Description" type="Label" parent="CardPadding/MainRow/TextColumn" unique_id=555238219]
 custom_minimum_size = Vector2(1, 1)
@@ -106,5 +106,5 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_fonts/font = ExtResource("4_2ydtx")
 theme_override_font_sizes/font_size = 12
-text = "This is used for API flow for the system architecture."
+text = "Analyzes transaction patterns in real-time to assign a risk score and trigger MFA if needed."
 autowrap_mode = 2

@@ -1,10 +1,10 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://daa7nstgg0d76"]
 
-[ext_resource type="Texture2D" uid="uid://cr3tkwu7tx5bn" path="res://Scenes/System Components/Global Components/API Gateway/img_api_gateway.png" id="1_k8pjx"]
-[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_xje42"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_y41ex"]
-[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_gshss"]
-[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_2ydtx"]
+[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_6u2bv"]
+[ext_resource type="Texture2D" uid="uid://d0n2x4ks6a874" path="res://Scenes/System Components/Banking/Inter-Bank Clearing Gateway/Inter-Bank Clearing Gateway.png" id="2_n1whk"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_wgo1y"]
+[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_oqbny"]
+[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="5_2cpj6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehknd"]
 bg_color = Color(1, 1, 1, 1)
@@ -40,7 +40,7 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxFlat_ehknd")
-script = ExtResource("1_xje42")
+script = ExtResource("1_6u2bv")
 
 [node name="CardPadding" type="MarginContainer" parent="." unique_id=714115166]
 layout_mode = 2
@@ -73,7 +73,7 @@ theme_override_constants/margin_bottom = 6
 [node name="IconImage" type="TextureRect" parent="CardPadding/MainRow/IconFrame/IconPadding" unique_id=65608909]
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 2
-texture = ExtResource("1_k8pjx")
+texture = ExtResource("2_n1whk")
 expand_mode = 1
 stretch_mode = 5
 
@@ -90,21 +90,21 @@ theme_override_constants/separation = 2
 [node name="Title" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=1352558632]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.05882353, 0.09019608, 0.16470589, 1)
-theme_override_fonts/font = ExtResource("2_y41ex")
-text = "API Gateway"
+theme_override_fonts/font = ExtResource("3_wgo1y")
+text = "INTER-BANKING CLEARING GATEWAY"
 
 [node name="Subtitle" type="Label" parent="CardPadding/MainRow/TextColumn/VBoxContainer" unique_id=614709425]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
-theme_override_fonts/font = ExtResource("3_gshss")
+theme_override_fonts/font = ExtResource("4_oqbny")
 theme_override_font_sizes/font_size = 11
-text = "API FLOW GATEWAY"
+text = "ISO 20022 BRIDGE"
 
 [node name="Description" type="Label" parent="CardPadding/MainRow/TextColumn" unique_id=555238219]
 custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
-theme_override_fonts/font = ExtResource("4_2ydtx")
+theme_override_fonts/font = ExtResource("5_2cpj6")
 theme_override_font_sizes/font_size = 12
-text = "This is used for API flow for the system architecture."
+text = "Formats messages into global standards to communicate with external houses like Instapay or PesoNet."
 autowrap_mode = 2
