@@ -158,8 +158,7 @@ theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
 text = "[ul]
-[b]No Security:[/b] Anyone can delete or edit articles because there’s no permission check.
-[b]Poor Discovery:[/b] Readers can’t find old posts because the content isn't indexed.
+High-value transfers are dangerously insecure as the backend is exposed to injections, user permissions aren't being checked, and the bank is failing legal compliance because there is no fraud analysis or permanent audit trail. 
 [/ul]"
 fit_content = true
 
@@ -200,8 +199,7 @@ theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
 text = "[ul]
-[b]Secure the Site:[/b] Add components to block unauthorized changes.
-[b]Enable Search:[/b] Add tools to help users find stories instantly.
+You must shield the financial entry point and secure the transfer pipeline by bringing back the risk analysis engines, authorization checks, and immutable legal record-keeping modules. 
 [/ul]"
 fit_content = true
 

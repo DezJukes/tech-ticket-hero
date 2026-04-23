@@ -19,11 +19,15 @@
 [ext_resource type="PackedScene" uid="uid://x6n4nkme7ivl" path="res://Scenes/System Components/Banking/Immutable Audit Vault/immutable_audit_vault_comp.tscn" id="21_811oc"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="21_sxltx"]
 [ext_resource type="PackedScene" uid="uid://g1iq4svlsoul" path="res://Scenes/System Components/Banking/Transaction Orchestrator/transaction_orchestrator_comp.tscn" id="22_4siyh"]
+[ext_resource type="PackedScene" uid="uid://4g6alf805rdx" path="res://Scenes/System Components/Banking/Real Time Analytics/real_time_analytics_dropped.tscn" id="22_b0im3"]
 [ext_resource type="PackedScene" uid="uid://buy00tk16rl6u" path="res://Scenes/System Components/Banking/Message Broker/message_broker_comp.tscn" id="23_jb3db"]
 [ext_resource type="PackedScene" uid="uid://bqatkw2dvetnd" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="23_tgs88"]
+[ext_resource type="PackedScene" uid="uid://nf7ifbwq0yb2" path="res://Scenes/System Components/Banking/Immutable Audit Vault/immutable_audit_vault_dropped.tscn" id="24_4vens"]
 [ext_resource type="PackedScene" uid="uid://c3wg1khp60252" path="res://Scenes/System Components/Banking/Real Time Analytics/real_time_analytics_comp.tscn" id="24_pw3v0"]
 [ext_resource type="PackedScene" uid="uid://1ppqaf50aejo" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="24_yasod"]
+[ext_resource type="PackedScene" uid="uid://becqxwom334x2" path="res://Scenes/System Components/Banking/Transaction Orchestrator/transaction_orchestrator_dropped.tscn" id="26_00t8t"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_dropped.tscn" id="27_yo317"]
+[ext_resource type="PackedScene" uid="uid://d13d4mtyl1jcw" path="res://Scenes/System Components/Banking/Message Broker/message_broker_dropped.tscn" id="28_r8gqy"]
 [ext_resource type="PackedScene" uid="uid://xf7dh08w1yct" path="res://Scenes/Level 3 - Advance/Modals/Banking System Modals/failed_modal_banking.tscn" id="29_b0im3"]
 [ext_resource type="PackedScene" uid="uid://dtexg7w8kcaki" path="res://Scenes/Level 3 - Advance/Modals/Banking System Modals/information_modal_banking.tscn" id="30_4vens"]
 [ext_resource type="PackedScene" uid="uid://bjm3qdgpn5pyx" path="res://Scenes/Level 3 - Advance/Modals/Banking System Modals/success_modal_banking.tscn" id="31_00t8t"]
@@ -414,15 +418,19 @@ dropped_badge_scene = ExtResource("24_yasod")
 
 [node name="ComponentCard5" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=922560786 instance=ExtResource("24_pw3v0")]
 layout_mode = 2
+dropped_badge_scene = ExtResource("22_b0im3")
 
 [node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("21_811oc")]
 layout_mode = 2
+dropped_badge_scene = ExtResource("24_4vens")
 
 [node name="ComponentCard3" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=2034798442 instance=ExtResource("22_4siyh")]
 layout_mode = 2
+dropped_badge_scene = ExtResource("26_00t8t")
 
 [node name="ComponentCard4" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1295454566 instance=ExtResource("23_jb3db")]
 layout_mode = 2
+dropped_badge_scene = ExtResource("28_r8gqy")
 
 [node name="FailedModalBanking" parent="." unique_id=1309422593 instance=ExtResource("29_b0im3")]
 unique_name_in_owner = true
@@ -430,7 +438,6 @@ visible = false
 
 [node name="InformationModalBanking" parent="." unique_id=780280340 instance=ExtResource("30_4vens")]
 unique_name_in_owner = true
-visible = false
 
 [node name="SuccessModalBanking" parent="." unique_id=1807981407 instance=ExtResource("31_00t8t")]
 unique_name_in_owner = true
