@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://88w238ppgoux" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_pressed.png" id="6_86afp"]
 [ext_resource type="Texture2D" uid="uid://lkh0k2su5n1y" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_hovered.png" id="7_jhmks"]
 [ext_resource type="Texture2D" uid="uid://dhb5cchugfrxn" path="res://Assets/Misc/System Gameplay/background-board.png" id="8_g46ws"]
+[ext_resource type="Script" uid="uid://dbx6nth3xwbpk" path="res://Scenes/Level 1 - Beginner/Beginner - Architecture/board_area.gd" id="9_g46ws"]
 [ext_resource type="PackedScene" uid="uid://cv47ljppldtki" path="res://Scenes/System Components/CMS/Content Creator/content_creator_dropped.tscn" id="9_lr13n"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_dropped.tscn" id="10_24f0s"]
 [ext_resource type="PackedScene" uid="uid://cfs3mcjift23r" path="res://Scenes/System Components/dropzone.tscn" id="11_eqtso"]
@@ -143,9 +144,11 @@ theme_override_constants/separation = 0
 alignment = 1
 
 [node name="BoardArea" type="PanelContainer" parent="Workspace" unique_id=940638680]
+clip_contents = true
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxFlat_cmoeh")
+script = ExtResource("9_g46ws")
 
 [node name="TextureRect" type="TextureRect" parent="Workspace/BoardArea" unique_id=865088732]
 custom_minimum_size = Vector2(800, 560)
