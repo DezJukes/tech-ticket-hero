@@ -13,7 +13,7 @@ func _process(delta: float) -> void:
 
 
 func _on_interact_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level 2 - Intermediate/Intermediate - Architecture/ERP_Architecture.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Level 3 - Advance/Advance - Architecture/Banking System/Banking_Architecture.tscn")
 
 
 func _on_pause_button_pressed() -> void:

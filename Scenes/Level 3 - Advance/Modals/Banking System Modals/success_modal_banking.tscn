@@ -153,7 +153,7 @@ theme_override_colors/default_color = Color(0.4476347, 0.38707283, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_ndnbi")
 theme_override_font_sizes/normal_font_size = 20
-text = "98% Network"
+text = "98% Network Defense"
 fit_content = true
 
 [node name="ImpactBody2" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=1309095497]
@@ -161,7 +161,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_u56ko")
-text = "Defense"
+text = "Perimeter Security"
 fit_content = true
 
 [node name="ImpactBody5" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=740550658]
@@ -170,7 +170,7 @@ theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_ndnbi")
 theme_override_font_sizes/normal_font_size = 20
-text = "95% Data"
+text = "94% Data Consistency"
 fit_content = true
 
 [node name="ImpactBody6" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=337936094]
@@ -178,7 +178,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_u56ko")
-text = "Consistency"
+text = "Integrity & Rollbacks"
 fit_content = true
 
 [node name="ImpactBody7" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=1162045464]
@@ -187,7 +187,7 @@ theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_ndnbi")
 theme_override_font_sizes/normal_font_size = 20
-text = "92% Regulatory"
+text = "99% Regulatory Compliance"
 fit_content = true
 
 [node name="ImpactBody8" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=781462476]
@@ -195,7 +195,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_u56ko")
-text = "Compliance"
+text = "Audit Logs & Legal"
 fit_content = true
 
 [node name="ImpactBody9" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=1889346876]
@@ -204,7 +204,7 @@ theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_ndnbi")
 theme_override_font_sizes/normal_font_size = 20
-text = "100% Financial "
+text = "100% Financial Oversight"
 fit_content = true
 
 [node name="ImpactBody10" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=1042861838]
@@ -212,7 +212,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_u56ko")
-text = "Oversight"
+text = "Liquidity Visibility"
 fit_content = true
 
 [node name="ArchitectureCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=2006810834]
@@ -248,8 +248,8 @@ theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_u56ko")
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "[b]Secure, Event-Driven Pipeline[/b]
-This architecture is a [color=6F008A][b]Secure, Event-Driven Pipeline[/b][/color] that ensures every [color=21A600]₱5,000[/color] transfer is either completed with total integrity or safely rolled back. It utilizes [i]\"Defense in Depth\"[/i] and distributed orchestration to maintain high performance while meeting strict security and audit requirements."
+text = "[b]Secure, Managed Financial Pipeline[/b]
+[indent]This architecture focuses on the lifecycle of high-stakes [color=darkgreen]₱5,000[/color] transfers. It moves beyond basic security by implementing management layers to prevent data loss during failures, ensure legal auditability, and decouple heavy notification tasks to maintain peak system performance.[/indent]"
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=264498134]
