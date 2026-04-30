@@ -134,6 +134,7 @@ theme_override_constants/margin_bottom = 16
 
 [node name="ImpactTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding" unique_id=1213103661]
 layout_mode = 2
+theme_override_constants/separation = 8
 
 [node name="ImpactTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=328470060]
 layout_mode = 2
@@ -152,7 +153,7 @@ theme_override_colors/default_color = Color(0.4476347, 0.38707283, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_wx44g")
 theme_override_font_sizes/normal_font_size = 20
-text = "85% Faster"
+text = "95% Protected"
 fit_content = true
 
 [node name="ImpactBody2" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=682067401]
@@ -160,7 +161,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_ctvwi")
-text = "Load Times"
+text = "Anti-Bot Defense "
 fit_content = true
 
 [node name="ImpactBody3" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=301422144]
@@ -169,7 +170,7 @@ theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_wx44g")
 theme_override_font_sizes/normal_font_size = 20
-text = "100% Faster"
+text = "95% Verified "
 fit_content = true
 
 [node name="ImpactBody4" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=596694037]
@@ -177,7 +178,41 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_ctvwi")
-text = "Server Uptime"
+text = "Secure Checkout"
+fit_content = true
+
+[node name="ImpactBody5" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=556694968]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_wx44g")
+theme_override_font_sizes/normal_font_size = 20
+text = "91% Verified"
+fit_content = true
+
+[node name="ImpactBody6" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=2017084336]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_ctvwi")
+text = "Payment Success"
+fit_content = true
+
+[node name="ImpactBody7" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=2097727617]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_wx44g")
+theme_override_font_sizes/normal_font_size = 20
+text = "94% Efficient"
+fit_content = true
+
+[node name="ImpactBody8" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1181807575]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_ctvwi")
+text = "Downstream Sync "
 fit_content = true
 
 [node name="ArchitectureCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=9283647]
@@ -212,7 +247,9 @@ theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_ctvwi")
 theme_override_font_sizes/normal_font_size = 20
-text = "CMS architecture govern front-end functionality (where content is presented), and back-end functionality (where content is created and edited)."
+bbcode_enabled = true
+text = "[b]Global Marketplace Architecture[/b]
+This architecture transforms a simple catalog into a [color=darkviolet][b]Global Marketplace[/b][/color] capable of handling high-stakes transactions and preventing automated bot attacks. It restores the checkout process by integrating secure payment authorization and automated fulfillment to ensure real customers can complete purchases without interference."
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=412780571]

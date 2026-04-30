@@ -132,52 +132,87 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
-[node name="ImpactTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding" unique_id=1500009651]
+[node name="ImpactTextFlow2" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding" unique_id=187549786]
 layout_mode = 2
+theme_override_constants/separation = 8
 
-[node name="ImpactTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=61556858]
+[node name="ImpactTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=975481221]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.36078432, 0.61960787, 0, 1)
 theme_override_fonts/font = ExtResource("2_ndnbi")
 theme_override_font_sizes/font_size = 30
 text = "Impact Summary"
 
-[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1071461080]
+[node name="Control" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=2017777376]
 layout_mode = 2
 theme_override_constants/margin_top = 5
 
-[node name="ImpactBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=356770968]
+[node name="ImpactBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=87469978]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.4476347, 0.38707283, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_ndnbi")
 theme_override_font_sizes/normal_font_size = 20
-text = "85% Faster"
+text = "98% Network"
 fit_content = true
 
-[node name="ImpactBody2" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1084442042]
+[node name="ImpactBody2" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=1309095497]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_u56ko")
-text = "Load Times"
+text = "Defense"
 fit_content = true
 
-[node name="ImpactBody3" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=324825426]
+[node name="ImpactBody5" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=740550658]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_ndnbi")
 theme_override_font_sizes/normal_font_size = 20
-text = "100% Faster"
+text = "95% Data"
 fit_content = true
 
-[node name="ImpactBody4" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=964223521]
+[node name="ImpactBody6" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=337936094]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_u56ko")
-text = "Server Uptime"
+text = "Consistency"
+fit_content = true
+
+[node name="ImpactBody7" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=1162045464]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_ndnbi")
+theme_override_font_sizes/normal_font_size = 20
+text = "92% Regulatory"
+fit_content = true
+
+[node name="ImpactBody8" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=781462476]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_u56ko")
+text = "Compliance"
+fit_content = true
+
+[node name="ImpactBody9" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=1889346876]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("2_ndnbi")
+theme_override_font_sizes/normal_font_size = 20
+text = "100% Financial "
+fit_content = true
+
+[node name="ImpactBody10" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow2" unique_id=1042861838]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
+theme_override_constants/line_separation = 5
+theme_override_fonts/normal_font = ExtResource("3_u56ko")
+text = "Oversight"
 fit_content = true
 
 [node name="ArchitectureCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=2006810834]
@@ -212,7 +247,9 @@ theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_u56ko")
 theme_override_font_sizes/normal_font_size = 20
-text = "CMS architecture govern front-end functionality (where content is presented), and back-end functionality (where content is created and edited)."
+bbcode_enabled = true
+text = "[b]Secure, Event-Driven Pipeline[/b]
+This architecture is a [color=6F008A][b]Secure, Event-Driven Pipeline[/b][/color] that ensures every [color=21A600]₱5,000[/color] transfer is either completed with total integrity or safely rolled back. It utilizes [i]\"Defense in Depth\"[/i] and distributed orchestration to maintain high performance while meeting strict security and audit requirements."
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=264498134]

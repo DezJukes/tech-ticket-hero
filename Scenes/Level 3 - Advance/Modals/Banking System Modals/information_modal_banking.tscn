@@ -110,7 +110,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.9218303, 0, 0.11170312, 1)
 theme_override_fonts/font = ExtResource("4_wrwu4")
 theme_override_font_sizes/font_size = 18
-text = "TICKET - 123"
+text = "[CRITICAL ERROR] TICKET-BANK246"
 
 [node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=878196953]
 layout_mode = 2
@@ -135,6 +135,7 @@ theme_override_constants/margin_bottom = 16
 
 [node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding" unique_id=1964316945]
 layout_mode = 2
+theme_override_constants/separation = 8
 
 [node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=1293557385]
 layout_mode = 2
@@ -157,9 +158,12 @@ theme_override_fonts/bold_font = ExtResource("2_6pojx")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[ul]
-High-value transfers are dangerously insecure as the backend is exposed to injections, user permissions aren't being checked, and the bank is failing legal compliance because there is no fraud analysis or permanent audit trail. 
-[/ul]"
+text = "[indent]🛡️ [b]Insecure Entry:[/b] System is wide open to SQL injection and DDoS.
+🔑 [b]Unverified Access:[/b] Unauthorized users could trigger high-value transfers.
+💸 [b]Integrity Risk:[/b] Distributed transfers may fail midway (money vanishes).
+📋 [b]Compliance Gap:[/b] No permanent record for regulatory audits.
+🔔 [b]Notification Lag:[/b] System crashes waiting for slow SMS confirmations.
+📈 [b]Visibility Blackout:[/b] Executives cannot track cash flow in real-time.[/indent]"
 fit_content = true
 
 [node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=2012989174]
@@ -198,9 +202,12 @@ theme_override_fonts/bold_font = ExtResource("2_6pojx")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[ul]
-You must shield the financial entry point and secure the transfer pipeline by bringing back the risk analysis engines, authorization checks, and immutable legal record-keeping modules. 
-[/ul]"
+text = "[indent]→ [b]Install Security Shield:[/b] Deploy a WAF to block malicious packets.
+→ [b]Enforce Authorization:[/b] Verify session tokens and specific transfer rights.
+→ [b]Enforce Atomic Sync:[/b] Deploy a Manager to ensure all-or-nothing transfers.
+→ [b]Activate Immutable Ledger:[/b] Create a \"Write-Once\" record for compliance.
+→ [b]Decouple Alerts:[/b] Use an async queue to handle background notifications.
+→ [b]Enable Live Reporting:[/b] Stream transaction data into a real-time dashboard.[/indent]"
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1797669290]

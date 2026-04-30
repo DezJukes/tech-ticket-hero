@@ -110,7 +110,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.9218303, 0, 0.11170312, 1)
 theme_override_fonts/font = ExtResource("4_4ocmw")
 theme_override_font_sizes/font_size = 18
-text = "TICKET - 123"
+text = "[CRITICAL ERROR] TICKET-ERP123"
 
 [node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1185415296]
 layout_mode = 2
@@ -157,12 +157,10 @@ theme_override_fonts/bold_font = ExtResource("2_h7kxe")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[ul]
-[b]Routing Chaos:[/b] No Traffic Controller to direct requests to the right department.
-[b]Policy Failure:[/b] The Business Engine cannot read receipts or verify company rules.
-[b]Accounting Gap:[/b] The connection to the Finance Books (General Ledger) is broken.
-[b]Communication Silo:[/b] Managers aren't alerted when approvals are pending.
-[/ul]"
+text = "[indent]🛑 [b]Traffic Controller Offline:[/b] Requests are hitting a dead-end landing page.
+📉 [b]Business Logic Collapse:[/b] System cannot process receipts or validate claims.
+⛓️ [b]Finance Book Disconnect:[/b] Bridge to primary records is broken, stalling reimbursements.
+🔕 [b]Alert Failure:[/b] Approval workflows are unaware of pending claims.[/indent]"
 fit_content = true
 
 [node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=857859378]
@@ -179,6 +177,7 @@ theme_override_constants/margin_bottom = 16
 
 [node name="MissionTextFLow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding" unique_id=2121594257]
 layout_mode = 2
+theme_override_constants/separation = 8
 
 [node name="Mission Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=1524601393]
 layout_mode = 2
@@ -201,12 +200,10 @@ theme_override_fonts/bold_font = ExtResource("2_h7kxe")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[ul]
-[b]Restore Routing:[/b] Rebuild the API Gateway to manage traffic flow.
-[b]Enforce Rules:[/b] Bring back the Expense Server to execute business logic and OCR.
-[b]Sync Ledgers:[/b] Link the General Ledger Service to update financial records.
-[b]Enable Alerts:[/b] Activate Notification Services to handle automated messaging.
-[/ul]"
+text = "[indent][b]Rebuild Routing Gateway:[/b] Restore the API Gateway to manage traffic flow.
+[b]Reactivate Core Engine:[/b] Re-inject the Business Rule Engine for policy checks.
+[b]Sync Ledgers:[/b] Repair database links to ensure transactions are recorded.
+[b]Initialize Notification:[/b] Deploy automated messaging for stakeholders.[/indent]"
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1037196900]
