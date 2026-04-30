@@ -438,6 +438,7 @@ dropped_badge_scene = ExtResource("23_kmyfs")
 
 [node name="InformationModal" parent="." unique_id=1895424386 instance=ExtResource("21_7faf7")]
 unique_name_in_owner = true
+visible = false
 
 [node name="FailedModal" parent="." unique_id=1453858144 instance=ExtResource("22_d7rpw")]
 unique_name_in_owner = true
