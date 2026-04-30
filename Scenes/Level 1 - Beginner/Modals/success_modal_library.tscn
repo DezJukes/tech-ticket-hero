@@ -134,6 +134,7 @@ theme_override_constants/margin_bottom = 16
 
 [node name="ImpactTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding" unique_id=1095678761]
 layout_mode = 2
+theme_override_constants/separation = 14
 
 [node name="ImpactTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=87621807]
 layout_mode = 2
@@ -152,7 +153,7 @@ theme_override_colors/default_color = Color(0.4476347, 0.38707283, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_pljxn")
 theme_override_font_sizes/normal_font_size = 20
-text = "85% Faster"
+text = "95% Accessible "
 fit_content = true
 
 [node name="ImpactBody2" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=498054281]
@@ -160,7 +161,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_vx5f2")
-text = "Load Times"
+text = "Hardware Uptime"
 fit_content = true
 
 [node name="ImpactBody3" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1702894318]
@@ -169,7 +170,7 @@ theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_pljxn")
 theme_override_font_sizes/normal_font_size = 20
-text = "100% Faster"
+text = "92% Accurate"
 fit_content = true
 
 [node name="ImpactBody4" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=232296550]
@@ -177,7 +178,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_vx5f2")
-text = "Server Uptime"
+text = "Loan Records"
 fit_content = true
 
 [node name="ArchitectureCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=478226557]
@@ -211,8 +212,10 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_vx5f2")
-theme_override_font_sizes/normal_font_size = 20
-text = "CMS architecture govern front-end functionality (where content is presented), and back-end functionality (where content is created and edited)."
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "[b]Self-Service Borrowing Model[/b]
+This architecture centers on a [color=darkblue][b]Self-Service Borrowing[/b][/color] model designed to bridge the gap between physical assets and digital records. It focuses on integrating hardware touchpoints that allow students to interact directly with library resources while maintaining real-time inventory accuracy."
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1927379255]

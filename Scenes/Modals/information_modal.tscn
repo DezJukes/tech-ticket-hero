@@ -110,7 +110,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.9218303, 0, 0.11170312, 1)
 theme_override_fonts/font = ExtResource("4_fap14")
 theme_override_font_sizes/font_size = 18
-text = "TICKET - 123"
+text = "[CRITICAL ERROR] TICKET-CMS121"
 
 [node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=454638980]
 layout_mode = 2
@@ -157,10 +157,8 @@ theme_override_fonts/bold_font = ExtResource("1_gv745")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[ul]
-[b]No Security:[/b] Anyone can delete or edit articles because there’s no permission check.
-[b]Poor Discovery:[/b] Readers can’t find old posts because the content isn't indexed.
-[/ul]"
+text = "[indent]🛡️ [b]No Security:[/b] Unauthorized users are editing content.
+🔍 [b]Discovery Failure:[/b] Content is invisible to readers.[/indent]"
 fit_content = true
 
 [node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=339691311]
@@ -199,10 +197,8 @@ theme_override_fonts/bold_font = ExtResource("1_gv745")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[ul]
-[b]Secure the Site:[/b] Add components to block unauthorized changes.
-[b]Enable Search:[/b] Add tools to help users find stories instantly.
-[/ul]"
+text = "[indent]→ [b]Install Auth Layer:[/b] Block all non-admin requests.
+→ [b]Deploy Indexer:[/b] Enable instant search tools.[/indent]"
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=186862070]

@@ -135,6 +135,7 @@ theme_override_constants/margin_bottom = 16
 
 [node name="ImpactTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding" unique_id=125955831]
 layout_mode = 2
+theme_override_constants/separation = 12
 
 [node name="ImpactTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1523151707]
 layout_mode = 2
@@ -153,7 +154,7 @@ theme_override_colors/default_color = Color(0.4476347, 0.38707283, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_jcebd")
 theme_override_font_sizes/normal_font_size = 20
-text = "85% Faster"
+text = "93% Secure"
 fit_content = true
 
 [node name="ImpactBody2" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1530102622]
@@ -161,7 +162,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_ccg41")
-text = "Load Times"
+text = "Access Control"
 fit_content = true
 
 [node name="ImpactBody3" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=284030900]
@@ -170,7 +171,7 @@ theme_override_colors/default_color = Color(0.44705883, 0.3882353, 1, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("2_jcebd")
 theme_override_font_sizes/normal_font_size = 20
-text = "100% Faster"
+text = "90% Efficient"
 fit_content = true
 
 [node name="ImpactBody4" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ImpactSummaryCard/ImpactPadding/ImpactTextFlow" unique_id=1575505152]
@@ -178,7 +179,7 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_ccg41")
-text = "Server Uptime"
+text = "Content Discovery"
 fit_content = true
 
 [node name="ArchitectureCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=78094902]
@@ -212,8 +213,10 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_constants/line_separation = 5
 theme_override_fonts/normal_font = ExtResource("3_ccg41")
-theme_override_font_sizes/normal_font_size = 20
-text = "CMS architecture govern front-end functionality (where content is presented), and back-end functionality (where content is created and edited)."
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "[b]Secure Content Pipeline[/b]
+This architecture addresses a [color=#ff6666][b]Dangerously Exposed System[/b][/color] by re-integrating essential safeguards for public-facing content. It transitions the platform into a protected, high-performance pipeline that secures articles from unauthorized changes."
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=527214934]

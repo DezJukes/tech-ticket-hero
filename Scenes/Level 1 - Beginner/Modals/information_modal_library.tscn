@@ -110,7 +110,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.9218303, 0, 0.11170312, 1)
 theme_override_fonts/font = ExtResource("4_3ir1j")
 theme_override_font_sizes/font_size = 18
-text = "TICKET - 123"
+text = "[CRITICAL ERROR] TICKET-LSA12"
 
 [node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1843661723]
 layout_mode = 2
@@ -135,6 +135,7 @@ theme_override_constants/margin_bottom = 16
 
 [node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding" unique_id=1620821711]
 layout_mode = 2
+theme_override_constants/separation = 12
 
 [node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=1494128838]
 layout_mode = 2
@@ -157,10 +158,8 @@ theme_override_fonts/bold_font = ExtResource("2_lmxqs")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[ul]
-[b]Manual Bottleneck:[/b] No physical interface for students to scan IDs or books.
-[b]Data Loss:[/b] No \"Source of Truth\" to save timestamps or transaction records..
-[/ul]"
+text = "[indent]📵 [b]Touchpoint Severed:[/b] No interface for physical ID or barcode scanning.
+📉 [b]Transaction Volatility:[/b] Borrow logs are non-permanent.[/indent]"
 fit_content = true
 
 [node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=128836069]
@@ -199,10 +198,8 @@ theme_override_fonts/bold_font = ExtResource("2_lmxqs")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[ul]
-[b]Automate Access:[/b] Restore the hardware interface for self-service.
-[b]Ensure Accuracy:[/b] Fix the database to track every loan reliably.
-[/ul]"
+text = "[indent]→ [b]Hardware Integration:[/b] Bridge the cloud gap by deploying scanners and physical interaction components.
+→ [b]Immutable Record-Keeping:[/b] Implement secure, structured logging components to guarantee data persistence.[/indent]"
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1316242634]
