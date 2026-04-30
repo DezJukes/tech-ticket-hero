@@ -105,12 +105,12 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0.9372549, 0.26666668, 0.26666668, 1)
 theme_override_fonts/font = ExtResource("1_811oc")
 theme_override_font_sizes/font_size = 11
-text = "PROD-891"
+text = "TICKET - BANK246"
 
 [node name="ArchitectureName" type="Label" parent="TopBar/MarginContainer/HBoxContainer/HBoxContainer" unique_id=508847153]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Banking Traffic Bottleneck"
+text = "Banking System Architecture"
 horizontal_alignment = 1
 
 [node name="Control" type="Control" parent="TopBar/MarginContainer/HBoxContainer" unique_id=1091215544]
@@ -438,6 +438,7 @@ visible = false
 
 [node name="InformationModalBanking" parent="." unique_id=780280340 instance=ExtResource("30_4vens")]
 unique_name_in_owner = true
+visible = false
 
 [node name="SuccessModalBanking" parent="." unique_id=1807981407 instance=ExtResource("31_00t8t")]
 unique_name_in_owner = true
