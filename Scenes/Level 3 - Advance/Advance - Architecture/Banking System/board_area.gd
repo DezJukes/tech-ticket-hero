@@ -3,6 +3,7 @@ extends Control
 # Grab the TextureRect that holds all your game pieces
 @onready var canvas = $TextureRect
 
+
 # Set your zoom limits (0.5 is half size, 2.5 is huge)
 var min_zoom: float = 0.5
 var max_zoom: float = 2.5
@@ -11,26 +12,44 @@ var max_zoom: float = 2.5
 var is_panning: bool = false
 var active_touches: Dictionary = {}
 
+# --- NEW: PAN DEADZONE ---
+var pan_deadzone: float = 15.0 
+var current_pan_distance: float = 0.0
+
 func _ready() -> void:
 	clip_contents = true 
 
 func _gui_input(event: InputEvent) -> void:
 	
+	# If Godot detects the player is holding a game piece, freeze the board!
+	if get_viewport().gui_is_dragging():
+		active_touches.clear() 
+		is_panning = false
+		current_pan_distance = 0.0 # Reset the tracker
+		return 
+		
 	# ---------------------------------------------------
 	# MOBILE TOUCH LOGIC (ANDROID / iOS)
 	# ---------------------------------------------------
 	if event is InputEventScreenTouch:
 		if event.pressed:
 			active_touches[event.index] = event.position
+			# NEW: Reset the distance tracker when they first touch the screen
+			current_pan_distance = 0.0 
 		else:
 			active_touches.erase(event.index)
 
 	elif event is InputEventScreenDrag:
 		if active_touches.size() == 1:
 			# --- 1-FINGER PAN ---
-			# NEW: Wrap the movement in our clamp function!
-			var new_pos = canvas.position + event.relative
-			canvas.position = _clamp_position(new_pos)
+			# NEW: Add up how far the finger has moved
+			current_pan_distance += event.relative.length()
+			
+			# NEW: Only move the board if they have dragged past the deadzone limit!
+			if current_pan_distance > pan_deadzone:
+				var new_pos = canvas.position + event.relative
+				canvas.position = _clamp_position(new_pos)
+				
 			active_touches[event.index] = event.position
 
 		elif active_touches.size() == 2:
@@ -55,7 +74,6 @@ func _gui_input(event: InputEvent) -> void:
 			var old_center = (old_pos0 + old_pos1) / 2.0
 			var new_center = (pos0 + pos1) / 2.0
 
-			# NEW: Wrap the panning in our clamp function!
 			var new_pos = canvas.position + (new_center - old_center)
 			canvas.position = _clamp_position(new_pos)
 
@@ -84,7 +102,6 @@ func _gui_input(event: InputEvent) -> void:
 
 	elif event is InputEventMouseMotion and is_panning:
 		if active_touches.is_empty():
-			# NEW: Wrap the movement in our clamp function!
 			var new_pos = canvas.position + event.relative
 			canvas.position = _clamp_position(new_pos)
 
