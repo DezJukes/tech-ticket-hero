@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://dx2mmxxgipymf"]
 
-[ext_resource type="Script" uid="uid://bbd8peavqofqi" path="res://Scenes/Level 2 - Intermediate/Intermediate - Game Scene/erp_game_scene.gd" id="1_8ckjg"]
 [ext_resource type="Texture2D" uid="uid://bybimwxt7rr3i" path="res://Assets/Misc/Level 2 - Intermediate/Background_Office3.png" id="2_dvj81"]
-[ext_resource type="PackedScene" uid="uid://csntnedlflvm2" path="res://Scenes/filing_cabinet_1.tscn" id="3_8aicv"]
+[ext_resource type="PackedScene" path="res://Scenes/filing_cabinet_1.tscn" id="3_8aicv"]
 [ext_resource type="PackedScene" uid="uid://2u5klo3pwfkr" path="res://Scenes/Level 2 - Intermediate/Furnitures/office_partition.tscn" id="3_uiub8"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="4_8aicv"]
 [ext_resource type="PackedScene" uid="uid://1jcxvc1a8aey" path="res://Scenes/Level 2 - Intermediate/Furnitures/plant.tscn" id="4_xuab3"]
 [ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="5_xuab3"]
 [ext_resource type="PackedScene" uid="uid://gy3cgy47hv4o" path="res://Scenes/computer2.tscn" id="6_iqbku"]
+[ext_resource type="Script" uid="uid://n6ox7uoc3k1f" path="res://Scenes/Level 2 - Intermediate/Intermediate - Game Scene/e_commerce_game_scene.gd" id="6_xuab3"]
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="7_7k744"]
 [ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="8_iqbku"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="8_wut4y"]
@@ -18,7 +18,7 @@
 size = Vector2(3962, 17)
 
 [node name="LibraryGameScene" type="Node2D" unique_id=1174430263]
-script = ExtResource("1_8ckjg")
+script = ExtResource("6_xuab3")
 
 [node name="Office Background Layer" type="CanvasLayer" parent="." unique_id=362482962]
 layer = -1
@@ -197,13 +197,13 @@ scale = Vector2(8, 8)
 position = Vector2(424, 367)
 
 [node name="player" parent="." unique_id=482249979 instance=ExtResource("5_xuab3")]
-position = Vector2(870, 567)
-scale = Vector2(2, 2)
+position = Vector2(854, 554)
+scale = Vector2(1.88, 1.88)
 motion_mode = 1
 
 [node name="NpcMentor" parent="." unique_id=1679080789 instance=ExtResource("9_rtqcc")]
-position = Vector2(388, 440)
-scale = Vector2(1.8000001, 1.8000001)
+position = Vector2(392, 438)
+scale = Vector2(1.88, 1.88)
 
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]

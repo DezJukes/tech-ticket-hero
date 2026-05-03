@@ -12,11 +12,63 @@
 [ext_resource type="PackedScene" uid="uid://c8baucdkdr66u" path="res://Scenes/npc_worker.tscn" id="9_w2wjm"]
 [ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="10_vig53"]
 
+[sub_resource type="Animation" id="Animation_w2wjm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Intro/FadeRect:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_tv424"]
+resource_name = "fade_in"
+length = 1.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Intro/FadeRect:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b2nw7"]
+_data = {
+&"RESET": SubResource("Animation_w2wjm"),
+&"fade_in": SubResource("Animation_tv424")
+}
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0b4w"]
 size = Vector2(3962, 17)
 
 [node name="LibraryGameScene" type="Node2D" unique_id=1174430263]
 script = ExtResource("1_pammw")
+
+[node name="Intro" type="CanvasLayer" parent="." unique_id=289213804]
+layer = 2
+
+[node name="FadeRect" type="ColorRect" parent="Intro" unique_id=652820166]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.011764706, 0.011764706, 0.011764706, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Intro" unique_id=959114525]
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_b2nw7")
 
 [node name="Office Background Layer" type="CanvasLayer" parent="." unique_id=362482962]
 layer = -1
@@ -76,7 +128,7 @@ text = "Pause"
 metadata/_edit_use_anchors_ = true
 
 [node name="player" parent="." unique_id=482249979 instance=ExtResource("4_nqrrk")]
-position = Vector2(356, 512)
+position = Vector2(424, 523)
 scale = Vector2(2, 2)
 motion_mode = 1
 
@@ -164,8 +216,8 @@ theme_override_font_sizes/font_size = 20
 text = "Main Menu"
 
 [node name="NpcMentor" parent="." unique_id=1679080789 instance=ExtResource("9_w2wjm")]
-position = Vector2(841, 485)
-scale = Vector2(1.8000001, 1.8000001)
+position = Vector2(837, 478)
+scale = Vector2(1.9200001, 1.9200001)
 
 [node name="CollisionWall" type="StaticBody2D" parent="." unique_id=2047317507]
 
@@ -177,6 +229,22 @@ shape = SubResource("RectangleShape2D_k0b4w")
 position = Vector2(0, 497)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall2" unique_id=1232648420]
+position = Vector2(865, 168)
+shape = SubResource("RectangleShape2D_k0b4w")
+
+[node name="CollisionWall3" type="StaticBody2D" parent="." unique_id=1238106822]
+position = Vector2(153, 285.00006)
+rotation = 1.569737
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall3" unique_id=106484127]
+position = Vector2(865, 168)
+shape = SubResource("RectangleShape2D_k0b4w")
+
+[node name="CollisionWall4" type="StaticBody2D" parent="." unique_id=335584593]
+position = Vector2(1334, 293)
+rotation = 1.569737
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall4" unique_id=1880357989]
 position = Vector2(865, 168)
 shape = SubResource("RectangleShape2D_k0b4w")
 

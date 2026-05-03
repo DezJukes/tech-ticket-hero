@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bd1v2tooi3dx2" path="res://Scenes/System Components/ERP/General Ledger Service/general_ledger_comp.tscn" id="18_jvwnp"]
 [ext_resource type="PackedScene" uid="uid://bk4j3e5bdvoes" path="res://Scenes/System Components/ERP/General Ledger Service/general_ledger_dropped.tscn" id="19_jxyor"]
 [ext_resource type="PackedScene" uid="uid://gyw68370srqq" path="res://Scenes/System Components/Global Components/Relational Database/relational_database_dropped.tscn" id="23_doqf8"]
-[ext_resource type="PackedScene" uid="uid://c7ovts0hmikcu" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="23_jxyor"]
+[ext_resource type="PackedScene" uid="uid://c7ovts0hmikcu" path="res://Scenes/System Components/E Commerce/Redis Cache (State Management)/redis_cache_comp.tscn" id="23_jxyor"]
 [ext_resource type="PackedScene" uid="uid://050ivv4bbnw8" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="24_b1riw"]
 [ext_resource type="PackedScene" uid="uid://b2mdeck57e5cg" path="res://Scenes/System Components/ERP/Expense Management Server/expense_management_comp.tscn" id="25_v5ovn"]
 [ext_resource type="PackedScene" uid="uid://ea4t0x8ltvim" path="res://Scenes/Level 2 - Intermediate/Modals/ERP Modals/failed_modal_erp.tscn" id="28_jvwnp"]
