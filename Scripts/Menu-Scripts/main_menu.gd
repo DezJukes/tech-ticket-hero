@@ -10,6 +10,8 @@ var title_container: HBoxContainer
 var subtitle: Label
 var start_button: Button
 
+var open_level_select_on_start := false
+
 func _ready() -> void:
 	master_ui = Control.new()
 	master_ui.set_anchors_preset(Control.PRESET_FULL_RECT)
@@ -24,7 +26,11 @@ func _ready() -> void:
 	_build_main_menu()
 	_build_level_select()
 	
-	level_select_container.hide()
+	if open_level_select_on_start:
+		main_menu_container.hide()
+		level_select_container.show()
+	else:
+		level_select_container.hide()
 	
 	animate_pixel_float(title_container, 8.0, 1.0) 
 	play_intro_sequence()

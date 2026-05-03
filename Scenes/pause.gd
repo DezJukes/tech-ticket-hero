@@ -26,4 +26,8 @@ func _on_main_menu_pressed():
 # Button lead to Change Mode
 func _on_change_mode_pressed():
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Scenes/Menu/choose_mode.tscn")
+	var menu_scene = load("res://Scenes/Menu/main_menu.tscn").instantiate()
+	menu_scene.open_level_select_on_start = true
+	get_tree().root.add_child(menu_scene)
+	get_tree().current_scene.queue_free()
+	get_tree().current_scene = menu_scene
