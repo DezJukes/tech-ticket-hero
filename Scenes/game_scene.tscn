@@ -8,13 +8,16 @@
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="4_1ixah"]
 [ext_resource type="PackedScene" uid="uid://bqk4wwgbista1" path="res://Scenes/computer.tscn" id="4_rgj8m"]
 [ext_resource type="PackedScene" uid="uid://dbrw636buueuk" path="res://Scenes/board_frame.tscn" id="8_4xiap"]
-[ext_resource type="PackedScene" uid="uid://csntnedlflvm2" path="res://Scenes/filing_cabinet_1.tscn" id="9_4xiap"]
+[ext_resource type="PackedScene" path="res://Scenes/filing_cabinet_1.tscn" id="9_4xiap"]
 [ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="10_4xiap"]
 [ext_resource type="PackedScene" uid="uid://c1ddoutc25g2q" path="res://Scenes/printer_furniture.tscn" id="11_4xiap"]
 [ext_resource type="PackedScene" uid="uid://bw0kxc2vm7tw5" path="res://Scenes/water_dispenser.tscn" id="12_wywco"]
 [ext_resource type="PackedScene" uid="uid://dha4p2cqxmenv" path="res://Scenes/wall_note.tscn" id="13_wywco"]
 [ext_resource type="PackedScene" uid="uid://b358ho3xp71lw" path="res://Scenes/npc_mentor.tscn" id="14_w8jfd"]
 [ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="15_a7fet"]
+[ext_resource type="Script" uid="uid://b0u8ndilprrno" path="res://Scenes/game_intro.gd" id="16_a7fet"]
+[ext_resource type="Texture2D" uid="uid://bipwlfk3ddusr" path="res://Assets/Title Headers/LevelSign1.png" id="17_gtbs0"]
+[ext_resource type="Texture2D" uid="uid://buw4euaolc32" path="res://Assets/Title Headers/CMS.png" id="18_np3vi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4xiap"]
 size = Vector2(3962, 17)
@@ -188,6 +191,54 @@ position = Vector2(0, 497)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall2" unique_id=262771173]
 position = Vector2(865, 168)
 shape = SubResource("RectangleShape2D_4xiap")
+
+[node name="GameIntro" type="Node" parent="." unique_id=1983675591]
+script = ExtResource("16_a7fet")
+
+[node name="TITLE" type="CanvasLayer" parent="GameIntro" unique_id=241666947]
+layer = 2
+
+[node name="Control" type="Control" parent="GameIntro/TITLE" unique_id=608510625]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameIntro/TITLE/Control" unique_id=1042046242]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameIntro/TITLE/Control" unique_id=680065444]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -66.0
+offset_right = 125.0
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LEVEL1" type="TextureRect" parent="GameIntro/TITLE/Control/VBoxContainer" unique_id=1958643652]
+layout_mode = 2
+texture = ExtResource("17_gtbs0")
+stretch_mode = 3
+
+[node name="CMS" type="TextureRect" parent="GameIntro/TITLE/Control/VBoxContainer" unique_id=1660493155]
+layout_mode = 2
+texture = ExtResource("18_np3vi")
+stretch_mode = 3
 
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_button_pressed"]
