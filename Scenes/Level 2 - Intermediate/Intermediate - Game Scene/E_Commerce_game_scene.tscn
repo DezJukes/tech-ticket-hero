@@ -13,8 +13,15 @@
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="8_wut4y"]
 [ext_resource type="PackedScene" uid="uid://c8baucdkdr66u" path="res://Scenes/npc_worker.tscn" id="9_rtqcc"]
 [ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="10_rmicw"]
+[ext_resource type="Script" uid="uid://bf0ls4jkfgmue" path="res://Scenes/Level 2 - Intermediate/Intermediate - Game Scene/game_intro_level_4.gd" id="14_wut4y"]
+[ext_resource type="Texture2D" uid="uid://b0nylrg18f873" path="res://Assets/Title Headers/LevelSign4.png" id="15_rtqcc"]
+[ext_resource type="Texture2D" uid="uid://dfgy1idvbuf4t" path="res://Assets/Title Headers/ECOMMERCE.png" id="16_rmicw"]
+[ext_resource type="Texture2D" uid="uid://dmoffd0324nea" path="res://Assets/Title Headers/SYSTEM.png" id="17_y0x82"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0b4w"]
+size = Vector2(3962, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wut4y"]
 size = Vector2(3962, 17)
 
 [node name="LibraryGameScene" type="Node2D" unique_id=1174430263]
@@ -185,6 +192,22 @@ position = Vector2(0, 497)
 position = Vector2(865, 168)
 shape = SubResource("RectangleShape2D_k0b4w")
 
+[node name="CollisionWall3" type="StaticBody2D" parent="." unique_id=446370279]
+position = Vector2(153, 285.00006)
+rotation = 1.569737
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall3" unique_id=1992121347]
+position = Vector2(865, 168)
+shape = SubResource("RectangleShape2D_wut4y")
+
+[node name="CollisionWall4" type="StaticBody2D" parent="." unique_id=609089008]
+position = Vector2(1334, 293)
+rotation = 1.569737
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall4" unique_id=1026187322]
+position = Vector2(865, 168)
+shape = SubResource("RectangleShape2D_wut4y")
+
 [node name="OfficePartition" parent="." unique_id=771443171 instance=ExtResource("3_uiub8")]
 position = Vector2(984, 367)
 scale = Vector2(8, 8)
@@ -204,6 +227,62 @@ motion_mode = 1
 [node name="NpcMentor" parent="." unique_id=1679080789 instance=ExtResource("9_rtqcc")]
 position = Vector2(392, 438)
 scale = Vector2(1.88, 1.88)
+
+[node name="GameIntroLevel2" type="Node" parent="." unique_id=1017846516]
+script = ExtResource("14_wut4y")
+
+[node name="TITLE" type="CanvasLayer" parent="GameIntroLevel2" unique_id=1080493948]
+layer = 2
+
+[node name="Control" type="Control" parent="GameIntroLevel2/TITLE" unique_id=1482665383]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameIntroLevel2/TITLE/Control" unique_id=1762696037]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameIntroLevel2/TITLE/Control" unique_id=291776929]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -66.0
+offset_right = 125.0
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LEVEL2" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer" unique_id=110686829]
+layout_mode = 2
+texture = ExtResource("15_rtqcc")
+stretch_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameIntroLevel2/TITLE/Control/VBoxContainer" unique_id=1025980662]
+layout_mode = 2
+
+[node name="CMS" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer/HBoxContainer" unique_id=1414013414]
+layout_mode = 2
+texture = ExtResource("16_rmicw")
+stretch_mode = 3
+
+[node name="CMS2" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer/HBoxContainer" unique_id=693703566]
+layout_mode = 2
+texture = ExtResource("17_y0x82")
+stretch_mode = 3
 
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]

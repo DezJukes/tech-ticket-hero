@@ -11,6 +11,10 @@
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="7_aenwo"]
 [ext_resource type="PackedScene" uid="uid://c8baucdkdr66u" path="res://Scenes/npc_worker.tscn" id="9_w2wjm"]
 [ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="10_vig53"]
+[ext_resource type="Script" uid="uid://cdp7mf3ilf0w7" path="res://Scenes/Level 2 - Intermediate/Intermediate - Game Scene/game_intro_level_3.gd" id="12_17o4j"]
+[ext_resource type="Texture2D" uid="uid://cm3ge0ras1y7o" path="res://Assets/Title Headers/LevelSign3.png" id="13_w3dm8"]
+[ext_resource type="Texture2D" uid="uid://ci1j8qvtaelvg" path="res://Assets/Title Headers/ERP.png" id="14_ll3um"]
+[ext_resource type="Texture2D" uid="uid://dmoffd0324nea" path="res://Assets/Title Headers/SYSTEM.png" id="15_cmthp"]
 
 [sub_resource type="Animation" id="Animation_w2wjm"]
 length = 0.001
@@ -57,6 +61,7 @@ script = ExtResource("1_pammw")
 
 [node name="Intro" type="CanvasLayer" parent="." unique_id=289213804]
 layer = 2
+visible = false
 
 [node name="FadeRect" type="ColorRect" parent="Intro" unique_id=652820166]
 anchors_preset = 15
@@ -250,6 +255,62 @@ shape = SubResource("RectangleShape2D_k0b4w")
 
 [node name="TalkAlert" parent="." unique_id=200142115 instance=ExtResource("10_vig53")]
 position = Vector2(877, 402)
+
+[node name="GameIntroLevel2" type="Node" parent="." unique_id=354264543]
+script = ExtResource("12_17o4j")
+
+[node name="TITLE" type="CanvasLayer" parent="GameIntroLevel2" unique_id=1339125492]
+layer = 2
+
+[node name="Control" type="Control" parent="GameIntroLevel2/TITLE" unique_id=1891490064]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameIntroLevel2/TITLE/Control" unique_id=24070925]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameIntroLevel2/TITLE/Control" unique_id=1223651353]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -66.0
+offset_right = 125.0
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LEVEL2" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer" unique_id=1043304111]
+layout_mode = 2
+texture = ExtResource("13_w3dm8")
+stretch_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameIntroLevel2/TITLE/Control/VBoxContainer" unique_id=1571701966]
+layout_mode = 2
+
+[node name="CMS" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer/HBoxContainer" unique_id=403738]
+layout_mode = 2
+texture = ExtResource("14_ll3um")
+stretch_mode = 3
+
+[node name="CMS2" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer/HBoxContainer" unique_id=822330588]
+layout_mode = 2
+texture = ExtResource("15_cmthp")
+stretch_mode = 3
 
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]

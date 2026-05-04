@@ -20,11 +20,14 @@
 [ext_resource type="PackedScene" uid="uid://diam8evntxlff" path="res://Scenes/Level 1 - Beginner/Furnitures/big_sofa_side.tscn" id="17_na666"]
 [ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="18_ahbbh"]
 [ext_resource type="Texture2D" uid="uid://cgs3180xvaag2" path="res://Assets/Title Headers/LevelSign2.png" id="20_8fn0a"]
-[ext_resource type="Script" uid="uid://c7p0kmpmfmgxv" path="res://Scenes/Level 1 - Beginner/Beginner - Game Scene/game_intro_level_2.gd" id="20_lw8ux"]
+[ext_resource type="Script" path="res://Scenes/Level 1 - Beginner/Beginner - Game Scene/game_intro_level_2.gd" id="20_lw8ux"]
 [ext_resource type="Texture2D" uid="uid://b2w2gwlm3q5y5" path="res://Assets/Title Headers/LIBRARY.png" id="21_lw8ux"]
 [ext_resource type="Texture2D" uid="uid://dmoffd0324nea" path="res://Assets/Title Headers/SYSTEM.png" id="22_68ikh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0b4w"]
+size = Vector2(3962, 17)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lw8ux"]
 size = Vector2(3962, 17)
 
 [node name="LibraryGameScene" type="Node2D" unique_id=1174430263]
@@ -271,6 +274,22 @@ stretch_mode = 3
 layout_mode = 2
 texture = ExtResource("22_68ikh")
 stretch_mode = 3
+
+[node name="CollisionWall3" type="StaticBody2D" parent="." unique_id=1951992311]
+position = Vector2(153, 285.00006)
+rotation = 1.569737
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall3" unique_id=1695991950]
+position = Vector2(865, 168)
+shape = SubResource("RectangleShape2D_lw8ux")
+
+[node name="CollisionWall4" type="StaticBody2D" parent="." unique_id=1602535921]
+position = Vector2(1334, 293)
+rotation = 1.569737
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall4" unique_id=1631746502]
+position = Vector2(865, 168)
+shape = SubResource("RectangleShape2D_lw8ux")
 
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
