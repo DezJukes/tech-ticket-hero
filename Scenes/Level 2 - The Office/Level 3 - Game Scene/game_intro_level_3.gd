@@ -9,8 +9,47 @@ extends Node
 @onready var name_label = $TITLE/Control/Label2
 @onready var dialog_label = $TITLE/Control/Label3
 
+# --- NEW: Tap to continue system ---
+signal screen_tapped
+var waiting_for_tap: bool = false
+var continue_label: Label
+
 func _ready():
+	# 1. Create the "Press screen" label entirely through code!
+	continue_label = Label.new()
+	continue_label.text = "Press screen to next ▶"
+	continue_label.add_theme_font_size_override("font_size", 24)
+	continue_label.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
+	continue_label.offset_left = -300 # Push it safely inward from the right edge
+	continue_label.offset_top = -50   # Push it safely up from the bottom edge
+	continue_label.hide()
+	$TITLE/Control.add_child(continue_label)
+	
+	# 2. Add a simple looping pulse animation to the prompt
+	var pulse = create_tween().set_loops()
+	pulse.tween_property(continue_label, "modulate:a", 0.3, 0.6)
+	pulse.tween_property(continue_label, "modulate:a", 1.0, 0.6)
+
 	play_intro()
+
+# --- NEW: Global Input Detection ---
+func _input(event: InputEvent) -> void:
+	# Check for a Left Mouse Click OR a Mobile Screen Tap
+	if (event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed) or \
+	   (event is InputEventScreenTouch and event.pressed):
+		# If the game is currently paused waiting for the user, emit our signal to unpause it!
+		if waiting_for_tap:
+			screen_tapped.emit()
+
+# --- NEW: Helper function to pause the sequence ---
+func wait_for_user() -> void:
+	waiting_for_tap = true
+	continue_label.show() # Turn on the "Press screen" text
+	
+	await screen_tapped   # FREEZE the code here until the player taps
+	
+	continue_label.hide() # Hide it again when moving forward
+	waiting_for_tap = false
 
 
 func play_intro() -> void:
@@ -23,24 +62,31 @@ func play_intro() -> void:
 	dialog_label.modulate.a = 0.0
 	name_label.modulate.a = 0.0
 
-	var tween = create_tween()
-	
 	# --- FIRST TEXT ---
-	tween.tween_property(intro_info, "modulate:a", 1.0, 1.0)
-	tween.tween_interval(1.5)
-	tween.tween_property(intro_info, "modulate:a", 0.0, 0.8)
+	var t1 = create_tween()
+	t1.tween_property(intro_info, "modulate:a", 1.0, 1.0)
+	await t1.finished
 	
-	tween.tween_interval(0.3)
+	# Pause code until the player taps!
+	await wait_for_user() 
+	
+	var t2 = create_tween()
+	t2.tween_property(intro_info, "modulate:a", 0.0, 0.8)
+	await t2.finished
 	
 	# --- SECOND TEXT ---
-	tween.tween_property(intro_text, "modulate:a", 1.0, 1.0)
-	tween.tween_interval(1.5)
-	tween.tween_property(intro_text, "modulate:a", 0.0, 1.0)
+	var t3 = create_tween()
+	t3.tween_property(intro_text, "modulate:a", 1.0, 1.0)
+	await t3.finished
 	
-	# 🔥 IMPORTANT: fade to semi-transparent directly
-	tween.tween_property(black_screen, "modulate:a", 0.5, 1.0)
+	# Pause code until the player taps!
+	await wait_for_user()
 	
-	await tween.finished
+	var t4 = create_tween()
+	t4.tween_property(intro_text, "modulate:a", 0.0, 1.0)
+	# Fade to semi-transparent directly
+	t4.tween_property(black_screen, "modulate:a", 0.5, 1.0)
+	await t4.finished
 	
 	# =========================
 	# DIALOGUE PART
@@ -48,23 +94,24 @@ func play_intro() -> void:
 	
 	# Show dialog UI smoothly
 	var show_tween = create_tween()
+	show_tween.set_parallel(true) # Do all 3 fades at the exact same time
 	show_tween.tween_property(dialog_box, "modulate:a", 1.0, 0.5)
 	show_tween.tween_property(name_label, "modulate:a", 1.0, 0.5)
 	show_tween.tween_property(dialog_label, "modulate:a", 1.0, 0.5)
-	
 	await show_tween.finished
 	
 	name_label.text = "Juan"
 	
+	# Dialogue Line 1
 	await type_text(dialog_label, "Oh no! One of the computers is alerting.", 0.03)
-	await get_tree().create_timer(1.0).timeout
+	await wait_for_user() # REPLACED THE TIMER WITH A WAIT!
 	
+	# Dialogue Line 2
 	await type_text(dialog_label, "I should maybe check it out.", 0.03)
-	await get_tree().create_timer(1.0).timeout
+	await wait_for_user() # REPLACED THE TIMER WITH A WAIT!
 	
-	# End
+	# End sequence, destroy title
 	$TITLE.queue_free()
-
 
 # =========================
 # TYPEWRITER EFFECT

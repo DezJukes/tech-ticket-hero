@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bqk4wwgbista1" path="res://Scenes/computer.tscn" id="10_x43eb"]
 [ext_resource type="Script" uid="uid://cdp7mf3ilf0w7" path="res://Scenes/Level 2 - The Office/Level 3 - Game Scene/game_intro_level_3.gd" id="12_17o4j"]
 [ext_resource type="PackedScene" uid="uid://dbrw636buueuk" path="res://Scenes/board_frame.tscn" id="12_sjkvh"]
-[ext_resource type="PackedScene" path="res://Scenes/filing_cabinet_1.tscn" id="13_jxe06"]
+[ext_resource type="PackedScene" uid="uid://csntnedlflvm2" path="res://Scenes/filing_cabinet_1.tscn" id="13_jxe06"]
 [ext_resource type="Texture2D" uid="uid://cm3ge0ras1y7o" path="res://Assets/Title Headers/LevelSign3.png" id="13_w3dm8"]
 [ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="14_5drem"]
 [ext_resource type="Texture2D" uid="uid://ci1j8qvtaelvg" path="res://Assets/Title Headers/ERP.png" id="14_ll3um"]
