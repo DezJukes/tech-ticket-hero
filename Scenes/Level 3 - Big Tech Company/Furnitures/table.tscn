@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dq02vbjedg55p"]
+
+[ext_resource type="Texture2D" uid="uid://bk6af3xw7ayrg" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/Table2.png" id="1_md507"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjrjk"]
+size = Vector2(36, 64)
+
+[node name="Table" type="Node2D" unique_id=295558921]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1330009635]
+texture = ExtResource("1_md507")
+
+[node name="table" type="StaticBody2D" parent="." unique_id=1512091174]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table" unique_id=756158712]
+shape = SubResource("RectangleShape2D_xjrjk")

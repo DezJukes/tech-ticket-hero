@@ -219,6 +219,22 @@ position = Vector2(0, 497)
 position = Vector2(865, 168)
 shape = SubResource("RectangleShape2D_k0b4w")
 
+[node name="CollisionWall3" type="StaticBody2D" parent="." unique_id=1951992311]
+position = Vector2(153, 285.00006)
+rotation = 1.569737
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall3" unique_id=1695991950]
+position = Vector2(865, 168)
+shape = SubResource("RectangleShape2D_lw8ux")
+
+[node name="CollisionWall4" type="StaticBody2D" parent="." unique_id=1602535921]
+position = Vector2(1334, 293)
+rotation = 1.569737
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall4" unique_id=1631746502]
+position = Vector2(865, 168)
+shape = SubResource("RectangleShape2D_lw8ux")
+
 [node name="GameIntroLevel2" type="Node" parent="." unique_id=2099811828]
 script = ExtResource("20_lw8ux")
 
@@ -274,22 +290,6 @@ stretch_mode = 3
 layout_mode = 2
 texture = ExtResource("22_68ikh")
 stretch_mode = 3
-
-[node name="CollisionWall3" type="StaticBody2D" parent="." unique_id=1951992311]
-position = Vector2(153, 285.00006)
-rotation = 1.569737
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall3" unique_id=1695991950]
-position = Vector2(865, 168)
-shape = SubResource("RectangleShape2D_lw8ux")
-
-[node name="CollisionWall4" type="StaticBody2D" parent="." unique_id=1602535921]
-position = Vector2(1334, 293)
-rotation = 1.569737
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall4" unique_id=1631746502]
-position = Vector2(865, 168)
-shape = SubResource("RectangleShape2D_lw8ux")
 
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]

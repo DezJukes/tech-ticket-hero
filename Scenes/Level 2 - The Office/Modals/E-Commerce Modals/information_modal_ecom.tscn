@@ -1,0 +1,231 @@
+[gd_scene format=3 uid="uid://gka514s5d5ue"]
+
+[ext_resource type="Script" uid="uid://dujo24td56k84" path="res://Scenes/Level 2 - The Office/Modals/E-Commerce Modals/information_modal_ecom.gd" id="1_2tyis"]
+[ext_resource type="Texture2D" uid="uid://d2ewcrwblcyl5" path="res://Assets/icons/siren.png" id="1_sp8vr"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_2tyis"]
+[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="3_pd54y"]
+[ext_resource type="FontFile" uid="uid://cbfjc1kt4amaj" path="res://Assets/Font/Oxanium-Light.ttf" id="4_b0w0f"]
+[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_pd54y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b0w0f"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_color = Color(0, 0, 0, 0.078431375)
+shadow_size = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tg12r"]
+bg_color = Color(0.99607843, 0.9490196, 0.9490196, 1)
+border_width_left = 4
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.9882353, 0.64705884, 0.64705884, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhdts"]
+bg_color = Color(0.9411765, 0.99215686, 0.95686275, 1)
+border_width_left = 4
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.5254902, 0.9372549, 0.6745098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_orspc"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+bg_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="InformationModalEcom" type="CanvasLayer" unique_id=221360587]
+script = ExtResource("1_2tyis")
+
+[node name="BackgroundOverlay" type="ColorRect" parent="." unique_id=1551451879]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="Center" type="CenterContainer" parent="BackgroundOverlay" unique_id=1448221744]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainBox" type="PanelContainer" parent="BackgroundOverlay/Center" unique_id=1368077421]
+custom_minimum_size = Vector2(1080, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_b0w0f")
+
+[node name="Padding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox" unique_id=822253994]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 20
+
+[node name="VerticalFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding" unique_id=1061878128]
+layout_mode = 2
+
+[node name="HeaderBox" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=214944629]
+layout_mode = 2
+theme_override_constants/separation = 15
+
+[node name="SirenIcon" type="TextureRect" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1307927791]
+layout_mode = 2
+texture = ExtResource("1_sp8vr")
+expand_mode = 2
+
+[node name="HeaderText" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox" unique_id=1721907577]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=150123390]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_2tyis")
+theme_override_font_sizes/font_size = 24
+text = "Ticket Report"
+
+[node name="Ticket" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/HeaderBox/HeaderText" unique_id=413857090]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.9218303, 0, 0.11170312, 1)
+theme_override_fonts/font = ExtResource("4_pd54y")
+theme_override_font_sizes/font_size = 18
+text = "[CRITICAL ERROR] TICKET-ECOM124"
+
+[node name="Divider" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1916003206]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="SplitBody" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1089284868]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="ProblemCard" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=325977468]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_tg12r")
+
+[node name="ProblemPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard" unique_id=1208004953]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="ProblemTextFlow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding" unique_id=1150042839]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="ProblemTitle" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=938780358]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.17634794, 0.10418927, 1)
+theme_override_fonts/font = ExtResource("2_2tyis")
+theme_override_font_sizes/font_size = 30
+text = "The Problem"
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=135915552]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="ProblemBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=884070063]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+theme_override_constants/line_separation = 0
+theme_override_constants/paragraph_separation = 10
+theme_override_fonts/normal_font = ExtResource("3_pd54y")
+theme_override_fonts/bold_font = ExtResource("2_2tyis")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "[indent]🤖 [b]Infiltration Overflow:[/b] Automated attacks are locking out real shoppers.
+👤 [b]Session Authorization:[/b] No way to verify customer sessions.
+💳 [b]Gateway Failure:[/b] System cannot securely talk to external banks.
+📦 [b]Dispatch Blackout:[/b] No data is sent to downstream logistics systems.[/indent]"
+fit_content = true
+
+[node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=928281717]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_hhdts")
+
+[node name="MissionPadding" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd" unique_id=1032352923]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="MissionTextFLow" type="VBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding" unique_id=1731159214]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Mission Title" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=66469198]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.3598809, 0.6194927, 3.85046e-07, 1)
+theme_override_fonts/font = ExtResource("2_2tyis")
+theme_override_font_sizes/font_size = 30
+text = "Your Mission"
+
+[node name="MarginContainer" type="MarginContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=606624261]
+layout_mode = 2
+theme_override_constants/margin_top = 10
+
+[node name="ProblemBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=1491822507]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
+theme_override_constants/line_separation = 0
+theme_override_constants/paragraph_separation = 10
+theme_override_fonts/normal_font = ExtResource("3_pd54y")
+theme_override_fonts/bold_font = ExtResource("2_2tyis")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 22
+bbcode_enabled = true
+text = "[indent][b]→ Deploy Rate Limiter:[/b] Restrict high-frequency traffic to defend from exhaustion.
+→ [b]Activate Auth Service:[/b] Integrate identity verification for checkout.
+→ [b]Establish Payment Bridge:[/b] Restore secure external API links for finance.
+→ [b]Initialize Event Coordinator:[/b] Deploy event-driven components for the warehouse.[/indent]"
+fit_content = true
+
+[node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=968405077]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="Footer" type="HBoxContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1608384793]
+layout_mode = 2
+
+[node name="HintText" type="Label" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=1266607389]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_b0w0f")
+theme_override_font_sizes/font_size = 18
+text = "Drag and Drop to use a component.."
+
+[node name="AcceptButton" type="Button" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer" unique_id=2057567137]
+layout_mode = 2
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxFlat_orspc")
+text = "Accept Mission"
+
+[connection signal="pressed" from="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/Footer/AcceptButton" to="." method="_on_accept_button_pressed"]

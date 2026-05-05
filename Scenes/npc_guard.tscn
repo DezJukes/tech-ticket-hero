@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://1kwcpspij480"]
+
+[ext_resource type="Texture2D" uid="uid://jbe8f6rjb7k6" path="res://Assets/Character/Guard/IDLE_GUARD_TECHTICKETHERO.png" id="1_0ojgn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ldu3l"]
+atlas = ExtResource("1_0ojgn")
+region = Rect2(15, 6, 49, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ukrk"]
+atlas = ExtResource("1_0ojgn")
+region = Rect2(84, 6, 49, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_di3f1"]
+atlas = ExtResource("1_0ojgn")
+region = Rect2(153, 6, 49, 58)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_am3id"]
+atlas = ExtResource("1_0ojgn")
+region = Rect2(222, 6, 49, 58)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4wema"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ldu3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ukrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_di3f1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_am3id")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6yo7i"]
+radius = 47.5
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ja2dn"]
+radius = 22.0
+height = 62.0
+
+[node name="NpcMentor" type="Node2D" unique_id=1679080789]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=978884471]
+position = Vector2(8, 0)
+sprite_frames = SubResource("SpriteFrames_4wema")
+autoplay = "default"
+frame_progress = 0.4465987
+
+[node name="NPCMentorInteractionZone" type="Area2D" parent="." unique_id=888205647]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCMentorInteractionZone" unique_id=2096846226]
+position = Vector2(-0.5, -1)
+shape = SubResource("CircleShape2D_6yo7i")
+
+[node name="NPCMentorBody" type="StaticBody2D" parent="." unique_id=1205301485]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCMentorBody" unique_id=154302730]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_ja2dn")

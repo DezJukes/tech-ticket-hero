@@ -14,3 +14,6 @@ func _process(delta: float) -> void:
 func _on_pause_button_pressed():
 	get_tree().paused = true
 	pause_panel.show()
+
+func _on_interact_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 2 - Architecture/Library_Architecture.tscn")

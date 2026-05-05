@@ -1,0 +1,294 @@
+[gd_scene format=3 uid="uid://c4amp3tipybyy"]
+
+[ext_resource type="Script" uid="uid://dudbwe1fxtfrd" path="res://Scenes/Level 3 - Big Tech Company/Level 5 - Game Scene/baking_game_scene.gd" id="1_6dhhf"]
+[ext_resource type="Texture2D" uid="uid://cimh2yu1mbqnl" path="res://Assets/Misc/Level 3 - Big Tech Company/Background_Office3.1.png" id="2_khu3i"]
+[ext_resource type="Texture2D" uid="uid://bcptjswss5irm" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/Elevator2.png" id="3_6scms"]
+[ext_resource type="Texture2D" uid="uid://bhv0ed1ak82gw" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/Elevator.png" id="4_sagri"]
+[ext_resource type="PackedScene" uid="uid://dq02vbjedg55p" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/table.tscn" id="5_q2et0"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="6_8rbs4"]
+[ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="7_5gvr4"]
+[ext_resource type="PackedScene" uid="uid://gy3cgy47hv4o" path="res://Scenes/computer2.tscn" id="8_8oft1"]
+[ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="9_0jx5g"]
+[ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="10_cu1ks"]
+[ext_resource type="PackedScene" uid="uid://1kwcpspij480" path="res://Scenes/npc_guard.tscn" id="11_ouqni"]
+[ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="12_yjybh"]
+[ext_resource type="Script" uid="uid://bt1a71sj7u06u" path="res://Scenes/Level 3 - Big Tech Company/Level 5 - Game Scene/game_intro_level_5.gd" id="13_svwq2"]
+[ext_resource type="Texture2D" uid="uid://nywp880yfs16" path="res://Assets/Title Headers/LevelSign5.png" id="14_fyeeh"]
+[ext_resource type="Texture2D" uid="uid://4c8y7dnu2fg3" path="res://Assets/Title Headers/BANKING.png" id="15_f3vbv"]
+[ext_resource type="Texture2D" uid="uid://dmoffd0324nea" path="res://Assets/Title Headers/SYSTEM.png" id="16_mlfrv"]
+[ext_resource type="Texture2D" uid="uid://df76s6su55lpv" path="res://Assets/Dialog/level_5_dialog.png" id="17_khu3i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k0b4w"]
+size = Vector2(3962, 17)
+
+[node name="LibraryGameScene" type="Node2D" unique_id=1174430263]
+script = ExtResource("1_6dhhf")
+
+[node name="Office Background Layer" type="CanvasLayer" parent="." unique_id=362482962]
+layer = -1
+
+[node name="Background Office" type="TextureRect" parent="Office Background Layer" unique_id=463010723]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -102.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1557093, 1.1557093)
+texture = ExtResource("2_khu3i")
+metadata/_edit_use_anchors_ = true
+
+[node name="Elevator2" type="Sprite2D" parent="." unique_id=1356214863]
+position = Vector2(1055, 344.23438)
+scale = Vector2(3.8198242, 3.8198242)
+texture = ExtResource("3_6scms")
+
+[node name="Elevator" type="Sprite2D" parent="." unique_id=885429119]
+position = Vector2(769, 344.23438)
+scale = Vector2(3.8198242, 3.8198242)
+texture = ExtResource("4_sagri")
+
+[node name="Table" parent="." unique_id=295558921 instance=ExtResource("5_q2et0")]
+position = Vector2(323, 329)
+scale = Vector2(3.8128488, 3.8128488)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1120077270]
+
+[node name="Interact" type="Button" parent="CanvasLayer" unique_id=21427991]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -193.0
+offset_top = -199.0
+offset_right = -93.0
+offset_bottom = -99.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("6_8rbs4")
+theme_override_font_sizes/font_size = 60
+text = "E"
+metadata/_edit_use_anchors_ = true
+
+[node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=347590731]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_top = 14.0
+offset_right = -14.0
+offset_bottom = 43.0
+grow_horizontal = 0
+theme_override_fonts/font = ExtResource("6_8rbs4")
+theme_override_font_sizes/font_size = 20
+text = "Pause"
+metadata/_edit_use_anchors_ = true
+
+[node name="player" parent="." unique_id=482249979 instance=ExtResource("7_5gvr4")]
+position = Vector2(136, 319)
+scale = Vector2(2.4410927, 2.4410927)
+motion_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1580133326]
+position = Vector2(575, 323)
+
+[node name="Computer4" parent="." unique_id=1610868164 instance=ExtResource("8_8oft1")]
+position = Vector2(481, 223)
+scale = Vector2(2.7796469, 2.7796469)
+
+[node name="Control" type="Control" parent="." unique_id=117607346]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TouchControls" parent="Control" unique_id=26897351 instance=ExtResource("9_0jx5g")]
+
+[node name="Pause" type="Node" parent="." unique_id=743239756]
+script = ExtResource("10_cu1ks")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Pause" unique_id=1817357555]
+layer = 2
+
+[node name="PausePanel" type="Panel" parent="Pause/CanvasLayer" unique_id=1835834772]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause/CanvasLayer/PausePanel" unique_id=903981726]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="PAUSED" type="Label" parent="Pause/CanvasLayer/PausePanel/VBoxContainer" unique_id=1463826372]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("6_8rbs4")
+theme_override_font_sizes/font_size = 60
+text = "PAUSED"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause/CanvasLayer/PausePanel/VBoxContainer" unique_id=627116100]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Resume" type="Button" parent="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer" unique_id=1727727483]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Resume
+"
+
+[node name="ChangeMode" type="Button" parent="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer" unique_id=2018448261]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Change Mode"
+
+[node name="MainMenu" type="Button" parent="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer" unique_id=1017184070]
+process_mode = 3
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Main Menu"
+
+[node name="NpcMentor2" parent="." unique_id=537200204 instance=ExtResource("11_ouqni")]
+position = Vector2(322.99994, 550)
+scale = Vector2(2.343449, 2.343449)
+
+[node name="CollisionWall" type="StaticBody2D" parent="." unique_id=2047317507]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall" unique_id=1055150813]
+position = Vector2(872, 198)
+shape = SubResource("RectangleShape2D_k0b4w")
+
+[node name="CollisionWall2" type="StaticBody2D" parent="." unique_id=241475047]
+position = Vector2(0, 497)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall2" unique_id=1232648420]
+position = Vector2(865, 168)
+shape = SubResource("RectangleShape2D_k0b4w")
+
+[node name="CollisionWall3" type="StaticBody2D" parent="." unique_id=1238106822]
+position = Vector2(153, 285.00006)
+rotation = 1.569737
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall3" unique_id=106484127]
+position = Vector2(865, 168)
+shape = SubResource("RectangleShape2D_k0b4w")
+
+[node name="CollisionWall4" type="StaticBody2D" parent="." unique_id=335584593]
+position = Vector2(1334, 293)
+rotation = 1.569737
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionWall4" unique_id=1880357989]
+position = Vector2(865, 168)
+shape = SubResource("RectangleShape2D_k0b4w")
+
+[node name="TalkAlert" parent="." unique_id=200142115 instance=ExtResource("12_yjybh")]
+position = Vector2(380, 457)
+scale = Vector2(1.1605482, 1.1605482)
+
+[node name="GameIntroLevel2" type="Node" parent="." unique_id=354264543]
+script = ExtResource("13_svwq2")
+
+[node name="TITLE" type="CanvasLayer" parent="GameIntroLevel2" unique_id=1339125492]
+layer = 2
+
+[node name="Control" type="Control" parent="GameIntroLevel2/TITLE" unique_id=1891490064]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="GameIntroLevel2/TITLE/Control" unique_id=24070925]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GameIntroLevel2/TITLE/Control" unique_id=1223651353]
+custom_minimum_size = Vector2(400, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -66.0
+offset_right = 125.0
+offset_bottom = 123.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LEVEL2" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer" unique_id=1043304111]
+layout_mode = 2
+texture = ExtResource("14_fyeeh")
+stretch_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameIntroLevel2/TITLE/Control/VBoxContainer" unique_id=1571701966]
+layout_mode = 2
+
+[node name="CMS" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer/HBoxContainer" unique_id=403738]
+layout_mode = 2
+texture = ExtResource("15_f3vbv")
+stretch_mode = 3
+
+[node name="CMS2" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer/HBoxContainer" unique_id=822330588]
+layout_mode = 2
+texture = ExtResource("16_mlfrv")
+stretch_mode = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GameIntroLevel2/TITLE/Control" unique_id=302213243]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.6028029, 0.6028029)
+
+[node name="TextureRect" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer2" unique_id=1046334156]
+layout_mode = 2
+texture = ExtResource("17_khu3i")
+
+[node name="Label2" type="Label" parent="GameIntroLevel2/TITLE/Control" unique_id=1925927205]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 420.0
+offset_right = 312.0
+offset_bottom = 464.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+
+[node name="Label3" type="Label" parent="GameIntroLevel2/TITLE/Control" unique_id=129975430]
+layout_mode = 0
+offset_left = 242.0
+offset_top = 476.0
+offset_right = 924.0
+offset_bottom = 563.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+
+[connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
+[connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
+[connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/Resume" to="Pause" method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/ChangeMode" to="Pause" method="_on_change_mode_pressed"]
+[connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/MainMenu" to="Pause" method="_on_main_menu_pressed"]
