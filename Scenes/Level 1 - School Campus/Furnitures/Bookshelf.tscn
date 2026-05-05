@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://q1werfp1jy36"]
+
+[ext_resource type="Texture2D" uid="uid://c38x0gf0jl0os" path="res://Assets/Misc/Level 1 - School Campus/Furnitures - Library/Tall-Bookshelf.png" id="1_1pu86"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6nrjn"]
+size = Vector2(48, 2)
+
+[node name="Bookshelf" type="Node2D" unique_id=899739439]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=107006087]
+texture = ExtResource("1_1pu86")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1232734550]
+position = Vector2(12, 0)
+texture = ExtResource("1_1pu86")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=611662233]
+position = Vector2(24, 0)
+texture = ExtResource("1_1pu86")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=353081626]
+position = Vector2(36, 0)
+texture = ExtResource("1_1pu86")
+
+[node name="BookshelfBody" type="StaticBody2D" parent="." unique_id=1760731341]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BookshelfBody" unique_id=1505504406]
+position = Vector2(18, 4)
+shape = SubResource("RectangleShape2D_6nrjn")

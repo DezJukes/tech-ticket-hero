@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dq6wcogfjoteh"]
+
+[ext_resource type="Texture2D" uid="uid://br4nqvb0w4ku2" path="res://Assets/Misc/Level 1 - School Campus/Furnitures - CMS/Greenboard.png" id="1_h6dcd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5g53"]
+size = Vector2(60, 44)
+
+[node name="Greenboard" type="Node2D" unique_id=780638828]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1741929860]
+texture = ExtResource("1_h6dcd")
+
+[node name="GreenboardBody" type="StaticBody2D" parent="." unique_id=2124367515]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GreenboardBody" unique_id=222956484]
+position = Vector2(-2, 2)
+shape = SubResource("RectangleShape2D_m5g53")

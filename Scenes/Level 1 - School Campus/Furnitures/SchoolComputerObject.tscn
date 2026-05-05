@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dyp58jtyhwsgo"]
+
+[ext_resource type="Texture2D" uid="uid://duibkjn33mjl4" path="res://Assets/Misc/Level 1 - School Campus/Furnitures - CMS/ComputerSchool.png" id="1_gjhgy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgv3u"]
+size = Vector2(128, 5)
+
+[node name="SchoolComputerObject" type="Node2D" unique_id=925285969]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=286060367]
+texture = ExtResource("1_gjhgy")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=383454546]
+position = Vector2(64, 0)
+texture = ExtResource("1_gjhgy")
+
+[node name="SchoolComputerObjectBody" type="StaticBody2D" parent="." unique_id=1129115946]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SchoolComputerObjectBody" unique_id=180757284]
+position = Vector2(32, 4.5)
+shape = SubResource("RectangleShape2D_wgv3u")
