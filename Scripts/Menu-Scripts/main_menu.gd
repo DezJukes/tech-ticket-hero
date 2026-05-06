@@ -1,14 +1,14 @@
 extends Node
 
 # ==========================================
-# 1. VISUAL NODE REFERENCES (Updated Paths!)
+# 1. VISUAL NODE REFERENCES (Paths Fixed!)
 # ==========================================
 @onready var menu_wrapper = $MenuWrapper
 @onready var play_button = $MenuWrapper/RightPanel/VBoxContainer/PlayButton
 @onready var exit_button = $MenuWrapper/RightPanel/VBoxContainer/ExitButton
 @onready var logo = $MenuWrapper/RightPanel/Logo
 
-# Level Select (Still generated via code)
+# Level Select (Generated via code)
 var level_select_container: VBoxContainer
 
 func _ready() -> void:
@@ -36,7 +36,6 @@ func animate_pixel_float(node: CanvasItem, distance: float, duration: float) -> 
 	var original_y = node.position.y
 	var tween = create_tween().set_loops()
 	
-	# Make it perfectly snap up and down for retro pixel vibes
 	tween.tween_property(node, "position:y", original_y - distance, 0.0)
 	tween.tween_interval(duration / 2.0)
 	
@@ -51,32 +50,44 @@ func _on_play_pressed() -> void:
 	level_select_container.show()
 
 func _on_exit_pressed() -> void:
-	get_tree().quit() # Closes the game
+	get_tree().quit()
 
 func _on_back_pressed() -> void:
 	level_select_container.hide()
-	menu_wrapper.show() # Brings your visual menu back!
+	menu_wrapper.show()
 
 # ---------------------------------------------------
 # LEVEL SCENE TRANSITIONS
 # ---------------------------------------------------
-func _on_the_office_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/CMS_game_scene.tscn")
+# LEVEL 1: CAMPUS
+func _on_cms_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Level 1 - Beginner/Level 1 - School Campus/Level 1 - Game Scene/CMS_game_scene.tscn")
 
-func _on_big_tech_company_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level 2 - The Office/Level 4 - Game Scene/E_Commerce_game_scene.tscn")
+func _on_library_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Level 1 - Beginner/Level 1 - School Campus/Level 2 - Game Scene/LibrarySystem_game_scene.tscn")
 
+# LEVEL 2: OFFICE
+func _on_erp_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Level 2 - Intermediate/Level 2 - The Office/Level 3 - Game Scene/ERP_game_scene.tscn")
+
+func _on_ecommerce_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Level 2 - Intermediate/Level 2 - The Office/Level 4 - Game Scene/E_Commerce_game_scene.tscn")
+
+# LEVEL 3: BIG TECH
+func _on_banking_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Level 3 - Big Tech Company/Level 5 - Game Scene/Banking_game_scene.tscn")
 
 # ===================================================
-# PROCEDURAL LEVEL SELECT (Unchanged)
+# PROCEDURAL LEVEL SELECT (Horizontal Slider)
 # ===================================================
 func _build_level_select() -> void:
 	level_select_container = VBoxContainer.new()
-	level_select_container.set_anchors_preset(Control.PRESET_FULL_RECT) # Fills screen
+	level_select_container.set_anchors_preset(Control.PRESET_FULL_RECT)
 	level_select_container.alignment = BoxContainer.ALIGNMENT_CENTER
-	level_select_container.add_theme_constant_override("separation", 24)
+	level_select_container.add_theme_constant_override("separation", 20)
 	add_child(level_select_container)
 	
+	# --- MAIN TITLE ---
 	var level_lbl = Label.new()
 	level_lbl.text = "SELECT DIRECTORY"
 	level_lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
@@ -86,18 +97,80 @@ func _build_level_select() -> void:
 	level_lbl.add_theme_constant_override("outline_size", 10)
 	level_select_container.add_child(level_lbl)
 	
+	# --- HORIZONTAL SCROLL CONTAINER (The Slider) ---
+	var scroll_container = ScrollContainer.new()
+	# FIX 1: Reduced height from 350 to 280 to eliminate the huge empty gap!
+	scroll_container.custom_minimum_size = Vector2(1000, 280) 
+	scroll_container.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
+	scroll_container.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
+	scroll_container.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	
+	# FIX 2: Add a visible border and dark background to indicate a scrollable area
+	var scroll_style = StyleBoxFlat.new()
+	scroll_style.bg_color = Color(0, 0, 0, 0.4) # Semi-transparent dark background
+	scroll_style.border_color = Color(0, 0, 0, 1) # Solid black border
+	scroll_style.border_width_left = 6
+	scroll_style.border_width_top = 6
+	scroll_style.border_width_right = 6
+	scroll_style.border_width_bottom = 6
+	# Add padding inside the box so buttons don't hit the edges
+	scroll_style.content_margin_left = 30
+	scroll_style.content_margin_right = 30
+	scroll_style.content_margin_top = 20
+	scroll_style.content_margin_bottom = 20 
+	
+	scroll_container.add_theme_stylebox_override("panel", scroll_style)
+	level_select_container.add_child(scroll_container)
+	
+	# HBox to hold the level columns side-by-side
+	var level_row = HBoxContainer.new()
+	level_row.add_theme_constant_override("separation", 60) 
+	level_row.alignment = BoxContainer.ALIGNMENT_CENTER
+	level_row.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	scroll_container.add_child(level_row)
+	
+	# ==========================================
+	# COLUMN 1: LEVEL 1 (Beginner)
+	# ==========================================
+	var col1 = _create_category_column("LEVEL 1: CAMPUS")
+	level_row.add_child(col1)
+	
+	var btn_cms = _create_pixel_button("CMS Architecture", "folder")
+	btn_cms.pressed.connect(_on_cms_pressed)
+	col1.add_child(btn_cms)
+	
+	var btn_lib = _create_pixel_button("Library System", "folder")
+	btn_lib.pressed.connect(_on_library_pressed)
+	col1.add_child(btn_lib)
+	
+	# ==========================================
+	# COLUMN 2: LEVEL 2 (Intermediate)
+	# ==========================================
+	var col2 = _create_category_column("LEVEL 2: OFFICE")
+	level_row.add_child(col2)
+	
+	var btn_erp = _create_pixel_button("ERP Architecture", "folder")
+	btn_erp.pressed.connect(_on_erp_pressed)
+	col2.add_child(btn_erp)
+	
+	var btn_ecom = _create_pixel_button("E-Commerce System", "folder")
+	btn_ecom.pressed.connect(_on_ecommerce_pressed)
+	col2.add_child(btn_ecom)
+
+	# ==========================================
+	# COLUMN 3: LEVEL 3 (Advance)
+	# ==========================================
+	var col3 = _create_category_column("LEVEL 3: BIG TECH")
+	level_row.add_child(col3)
+	
+	var btn_bank = _create_pixel_button("Banking System", "folder")
+	btn_bank.pressed.connect(_on_banking_pressed)
+	col3.add_child(btn_bank)
+	
+	# --- RETURN BUTTON ---
 	var spacer = Control.new()
-	spacer.custom_minimum_size = Vector2(0, 20)
+	spacer.custom_minimum_size = Vector2(0, 10)
 	level_select_container.add_child(spacer)
-	
-	# --- MASSIVE PIXEL BUTTONS ---
-	var btn_office = _create_pixel_button("A:\\ THE_OFFICE", "folder")
-	btn_office.pressed.connect(_on_the_office_pressed)
-	level_select_container.add_child(btn_office)
-	
-	var btn_tech = _create_pixel_button("B:\\ BIG_TECH_CORP", "folder") 
-	btn_tech.pressed.connect(_on_big_tech_company_pressed)
-	level_select_container.add_child(btn_tech)
 	
 	var btn_back = _create_pixel_button("< RETURN", "back_arrow")
 	btn_back.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
@@ -105,10 +178,28 @@ func _build_level_select() -> void:
 	btn_back.pressed.connect(_on_back_pressed)
 	level_select_container.add_child(btn_back)
 
+# Helper function to create clean column titles
+func _create_category_column(title_text: String) -> VBoxContainer:
+	var col = VBoxContainer.new()
+	col.add_theme_constant_override("separation", 15)
+	# FIX: Changed ALIGNMENT_TOP to ALIGNMENT_BEGIN for Godot 4!
+	col.alignment = BoxContainer.ALIGNMENT_BEGIN 
+	
+	var lbl = Label.new()
+	lbl.text = title_text
+	lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	lbl.add_theme_font_size_override("font_size", 28)
+	lbl.add_theme_color_override("font_color", Color(1, 0.8, 0.2)) # Gold title
+	lbl.add_theme_color_override("font_outline_color", Color(0, 0, 0)) 
+	lbl.add_theme_constant_override("outline_size", 8)
+	col.add_child(lbl)
+	
+	return col
+
 func _create_pixel_button(btn_text: String, icon_type: String = "") -> Button:
 	var btn = Button.new()
 	btn.text = btn_text
-	btn.custom_minimum_size = Vector2(450, 80) 
+	btn.custom_minimum_size = Vector2(350, 80) 
 	btn.add_theme_font_size_override("font_size", 24)
 	
 	if icon_type != "":
