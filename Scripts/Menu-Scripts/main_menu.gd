@@ -61,17 +61,16 @@ func _on_back_pressed() -> void:
 # ---------------------------------------------------
 # LEVEL 1: CAMPUS
 func _on_cms_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level 1 - Beginner/Level 1 - School Campus/Level 1 - Game Scene/CMS_game_scene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/CMS_game_scene.tscn")
 
 func _on_library_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level 1 - Beginner/Level 1 - School Campus/Level 2 - Game Scene/LibrarySystem_game_scene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 2 - Game Scene/LibrarySystem_game_scene.tscn")
 
 # LEVEL 2: OFFICE
 func _on_erp_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level 2 - Intermediate/Level 2 - The Office/Level 3 - Game Scene/ERP_game_scene.tscn")
-
+	get_tree().change_scene_to_file("res://Scenes/Level 2 - The Office/Level 3 - Game Scene/ERP_game_scene.tscn")
 func _on_ecommerce_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level 2 - Intermediate/Level 2 - The Office/Level 4 - Game Scene/E_Commerce_game_scene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Level 2 - The Office/Level 4 - Game Scene/E_Commerce_game_scene.tscn")
 
 # LEVEL 3: BIG TECH
 func _on_banking_pressed() -> void:
