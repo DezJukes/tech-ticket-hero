@@ -72,7 +72,7 @@ func set_speaker(speaker_name: String) -> void:
 	# Move the arrow and change the name color based on who is talking!
 	# NOTE: You may need to tweak the "x" and "y" pixel numbers below to 
 	# make the arrow point exactly at their heads on your specific screen size!
-	if speaker_name == "Intern":
+	if speaker_name == "Student":
 		name_label.add_theme_color_override("font_color", Color(0.2, 0.6, 1.0)) # Blue text
 		speaker_arrow.position = Vector2(300, 150) # Left side of screen
 	elif speaker_name == "Professor":
@@ -121,7 +121,7 @@ func play_intro() -> void:
 	await type_text(dialog_label, "Excellent work on the CMS architecture! \nYou mapped those components perfectly.", 0.03)
 	await wait_for_user() 
 	
-	set_speaker("Intern")
+	set_speaker("Student")
 	await type_text(dialog_label, "Thank you, Professor. It took some trial and \nerror, but I got the data flowing.", 0.03)
 	await wait_for_user() 
 	
@@ -132,7 +132,7 @@ func play_intro() -> void:
 	await type_text(dialog_label, "Our digital library system is bottlenecking. \nI need you to restructure it.", 0.03)
 	await wait_for_user() 
 	
-	set_speaker("Intern")
+	set_speaker("Student")
 	await type_text(dialog_label, "Absolutely. Let me take a look at the \nblueprint right now.", 0.03)
 	await wait_for_user() 
 	

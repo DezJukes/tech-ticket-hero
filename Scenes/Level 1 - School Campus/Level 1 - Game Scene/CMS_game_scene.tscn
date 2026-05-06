@@ -293,19 +293,16 @@ texture = ExtResource("12_5b2g6")
 stretch_mode = 3
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="GameIntro/TITLE/Control" unique_id=594411547]
-visible = false
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(0.6028029, 0.6028029)
 
 [node name="TextureRect" type="TextureRect" parent="GameIntro/TITLE/Control/VBoxContainer2" unique_id=512483598]
-visible = false
 layout_mode = 2
 texture = ExtResource("14_5n5fx")
 
 [node name="Label2" type="Label" parent="GameIntro/TITLE/Control" unique_id=1210186631]
-visible = false
 layout_mode = 0
 offset_left = 208.0
 offset_top = 420.0
@@ -315,7 +312,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 37
 
 [node name="Label3" type="Label" parent="GameIntro/TITLE/Control" unique_id=1133464825]
-visible = false
 layout_mode = 0
 offset_left = 209.0
 offset_top = 475.0
