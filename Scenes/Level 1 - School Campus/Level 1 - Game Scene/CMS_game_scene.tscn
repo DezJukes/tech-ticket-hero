@@ -12,7 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://dq6wcogfjoteh" path="res://Scenes/Level 1 - School Campus/Furnitures/Greenboard.tscn" id="11_itgur"]
 [ext_resource type="PackedScene" uid="uid://dyp58jtyhwsgo" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputerObject.tscn" id="11_m8peq"]
 [ext_resource type="Texture2D" uid="uid://buw4euaolc32" path="res://Assets/Title Headers/CMS.png" id="12_5b2g6"]
-[ext_resource type="PackedScene" path="res://Scenes/npc_prof.tscn" id="13_itgur"]
+[ext_resource type="PackedScene" uid="uid://brbhbq3j6jk63" path="res://Scenes/npc_prof.tscn" id="13_itgur"]
+[ext_resource type="Texture2D" uid="uid://b2x7qwkyc4dj2" path="res://Assets/Dialog/level_2_dialog.png" id="14_5n5fx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ear8"]
 size = Vector2(3962, 17)
@@ -290,6 +291,38 @@ stretch_mode = 3
 layout_mode = 2
 texture = ExtResource("12_5b2g6")
 stretch_mode = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GameIntro/TITLE/Control" unique_id=594411547]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.6028029, 0.6028029)
+
+[node name="TextureRect" type="TextureRect" parent="GameIntro/TITLE/Control/VBoxContainer2" unique_id=512483598]
+visible = false
+layout_mode = 2
+texture = ExtResource("14_5n5fx")
+
+[node name="Label2" type="Label" parent="GameIntro/TITLE/Control" unique_id=1210186631]
+visible = false
+layout_mode = 0
+offset_left = 208.0
+offset_top = 420.0
+offset_right = 275.0
+offset_bottom = 471.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+
+[node name="Label3" type="Label" parent="GameIntro/TITLE/Control" unique_id=1133464825]
+visible = false
+layout_mode = 0
+offset_left = 209.0
+offset_top = 475.0
+offset_right = 891.0
+offset_bottom = 562.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
 
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]

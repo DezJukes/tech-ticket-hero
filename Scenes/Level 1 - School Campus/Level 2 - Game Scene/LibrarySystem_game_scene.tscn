@@ -8,11 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="5_dhupl"]
 [ext_resource type="PackedScene" uid="uid://diygapspgj4q6" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputer.tscn" id="7_l1prf"]
 [ext_resource type="PackedScene" uid="uid://q1werfp1jy36" path="res://Scenes/Level 1 - School Campus/Furnitures/Bookshelf.tscn" id="8_uhf84"]
-[ext_resource type="PackedScene" path="res://Scenes/npc_prof.tscn" id="9_8x35y"]
+[ext_resource type="PackedScene" uid="uid://brbhbq3j6jk63" path="res://Scenes/npc_prof.tscn" id="9_8x35y"]
 [ext_resource type="Script" uid="uid://dgeewgtqpldnt" path="res://Scenes/Level 1 - School Campus/Level 2 - Game Scene/game_intro_library.gd" id="9_gadji"]
 [ext_resource type="Texture2D" uid="uid://cgs3180xvaag2" path="res://Assets/Title Headers/LevelSign2.png" id="10_gadji"]
 [ext_resource type="Texture2D" uid="uid://b2w2gwlm3q5y5" path="res://Assets/Title Headers/LIBRARY.png" id="11_7kejv"]
 [ext_resource type="Texture2D" uid="uid://dmoffd0324nea" path="res://Assets/Title Headers/SYSTEM.png" id="12_1iltn"]
+[ext_resource type="Texture2D" uid="uid://b2x7qwkyc4dj2" path="res://Assets/Dialog/level_2_dialog.png" id="14_a50ps"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ear8"]
 size = Vector2(3962, 17)
@@ -290,6 +291,34 @@ stretch_mode = 3
 layout_mode = 2
 texture = ExtResource("12_1iltn")
 stretch_mode = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GameIntro/TITLE/Control" unique_id=1874082387]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.6028029, 0.6028029)
+
+[node name="TextureRect" type="TextureRect" parent="GameIntro/TITLE/Control/VBoxContainer2" unique_id=35816541]
+layout_mode = 2
+texture = ExtResource("14_a50ps")
+
+[node name="Label2" type="Label" parent="GameIntro/TITLE/Control" unique_id=1191418374]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 420.0
+offset_right = 275.0
+offset_bottom = 471.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 37
+
+[node name="Label3" type="Label" parent="GameIntro/TITLE/Control" unique_id=1133637700]
+layout_mode = 0
+offset_left = 209.0
+offset_top = 475.0
+offset_right = 891.0
+offset_bottom = 562.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
 
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
