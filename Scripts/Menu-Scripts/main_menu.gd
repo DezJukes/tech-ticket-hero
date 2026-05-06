@@ -1,101 +1,81 @@
 extends Node
 
-var master_ui: Control
-var center_anchor: CenterContainer
+# ==========================================
+# 1. VISUAL NODE REFERENCES (Updated Paths!)
+# ==========================================
+@onready var menu_wrapper = $MenuWrapper
+@onready var play_button = $MenuWrapper/RightPanel/VBoxContainer/PlayButton
+@onready var exit_button = $MenuWrapper/RightPanel/VBoxContainer/ExitButton
+@onready var logo = $MenuWrapper/RightPanel/Logo
 
-var main_menu_container: VBoxContainer
+# Level Select (Still generated via code)
 var level_select_container: VBoxContainer
 
-var title_container: HBoxContainer
-var subtitle: Label
-var start_button: Button
-
-var open_level_select_on_start := false
-
 func _ready() -> void:
-	master_ui = Control.new()
-	master_ui.set_anchors_preset(Control.PRESET_FULL_RECT)
-	# CRITICAL FOR PIXEL VIBES: Forces Godot to render fonts and UI with sharp edges
-	master_ui.texture_filter = CanvasItem.TEXTURE_FILTER_NEAREST 
-	add_child(master_ui)
+	# 1. Connect your visual buttons!
+	play_button.pressed.connect(_on_play_pressed)
+	exit_button.pressed.connect(_on_exit_pressed)
 	
-	center_anchor = CenterContainer.new()
-	center_anchor.set_anchors_preset(Control.PRESET_FULL_RECT)
-	master_ui.add_child(center_anchor)
-	
-	_build_main_menu()
+	# 2. Build the Level Select screen
 	_build_level_select()
+	level_select_container.hide() # Hide it at start
 	
-	if open_level_select_on_start:
-		main_menu_container.hide()
-		level_select_container.show()
-	else:
-		level_select_container.hide()
-	
-	animate_pixel_float(title_container, 8.0, 1.0) 
+	# 3. Add some juice! Float the logo and fade in the menu
+	animate_pixel_float(logo, 8.0, 1.0) 
 	play_intro_sequence()
 
 # ---------------------------------------------------
-# BUILD SCREEN 1: THE MAIN MENU
+# ANIMATIONS
 # ---------------------------------------------------
-func _build_main_menu() -> void:
-	main_menu_container = VBoxContainer.new()
-	main_menu_container.alignment = BoxContainer.ALIGNMENT_CENTER
-	main_menu_container.add_theme_constant_override("separation", 20)
-	center_anchor.add_child(main_menu_container)
+func play_intro_sequence() -> void:
+	menu_wrapper.modulate.a = 0.0
+	var tween = create_tween()
+	tween.tween_property(menu_wrapper, "modulate:a", 1.0, 0.6)
+
+func animate_pixel_float(node: CanvasItem, distance: float, duration: float) -> void:
+	var original_y = node.position.y
+	var tween = create_tween().set_loops()
 	
-	# --- PIXELATED TITLE ---
-	title_container = HBoxContainer.new()
-	title_container.alignment = BoxContainer.ALIGNMENT_CENTER
-	main_menu_container.add_child(title_container)
+	# Make it perfectly snap up and down for retro pixel vibes
+	tween.tween_property(node, "position:y", original_y - distance, 0.0)
+	tween.tween_interval(duration / 2.0)
 	
-	var title_left = Label.new()
-	title_left.text = "TECH TICKET "
-	title_left.add_theme_font_size_override("font_size", 64)
-	title_left.add_theme_color_override("font_color", Color(0.2, 0.6, 1.0)) # Pixel Blue
-	title_left.add_theme_color_override("font_outline_color", Color(0, 0, 0)) 
-	title_left.add_theme_constant_override("outline_size", 12)
-	title_left.add_theme_color_override("font_shadow_color", Color(0, 0, 0))
-	title_left.add_theme_constant_override("shadow_offset_x", 6)
-	title_left.add_theme_constant_override("shadow_offset_y", 6)
-	title_container.add_child(title_left)
-	
-	var title_right = Label.new()
-	title_right.text = "HERO"
-	title_right.add_theme_font_size_override("font_size", 64)
-	title_right.add_theme_color_override("font_color", Color(0.2, 0.9, 0.2)) # Pixel Green
-	title_right.add_theme_color_override("font_outline_color", Color(0, 0, 0))
-	title_right.add_theme_constant_override("outline_size", 12)
-	title_right.add_theme_color_override("font_shadow_color", Color(0, 0, 0))
-	title_right.add_theme_constant_override("shadow_offset_x", 6)
-	title_right.add_theme_constant_override("shadow_offset_y", 6)
-	title_container.add_child(title_right)
-	
-	# --- RETRO SUBTITLE ---
-	subtitle = Label.new()
-	subtitle.text = "SYSTEM_ARCHITECTURE"
-	subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
-	subtitle.add_theme_font_size_override("font_size", 24)
-	subtitle.add_theme_color_override("font_color", Color(0.2, 0.2, 0.2)) 
-	main_menu_container.add_child(subtitle)
-	
-	# --- CHUNKY START BUTTON ---
-	var btn_margin = MarginContainer.new()
-	btn_margin.add_theme_constant_override("margin_top", 40) 
-	main_menu_container.add_child(btn_margin)
-	
-	start_button = _create_pixel_button("INSERT DISK (START)", "disk")
-	start_button.pressed.connect(_on_start_game_pressed)
-	btn_margin.add_child(start_button)
+	tween.tween_property(node, "position:y", original_y, 0.0)
+	tween.tween_interval(duration / 2.0)
 
 # ---------------------------------------------------
-# BUILD SCREEN 2: LEVEL SELECTION
+# VISUAL MENU BUTTON LOGIC
 # ---------------------------------------------------
+func _on_play_pressed() -> void:
+	menu_wrapper.hide()
+	level_select_container.show()
+
+func _on_exit_pressed() -> void:
+	get_tree().quit() # Closes the game
+
+func _on_back_pressed() -> void:
+	level_select_container.hide()
+	menu_wrapper.show() # Brings your visual menu back!
+
+# ---------------------------------------------------
+# LEVEL SCENE TRANSITIONS
+# ---------------------------------------------------
+func _on_the_office_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/CMS_game_scene.tscn")
+
+func _on_big_tech_company_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Level 2 - The Office/Level 4 - Game Scene/E_Commerce_game_scene.tscn")
+
+
+# ===================================================
+# PROCEDURAL LEVEL SELECT (Unchanged)
+# ===================================================
 func _build_level_select() -> void:
 	level_select_container = VBoxContainer.new()
+	level_select_container.set_anchors_preset(Control.PRESET_FULL_RECT) # Fills screen
 	level_select_container.alignment = BoxContainer.ALIGNMENT_CENTER
 	level_select_container.add_theme_constant_override("separation", 24)
-	center_anchor.add_child(level_select_container)
+	add_child(level_select_container)
 	
 	var level_lbl = Label.new()
 	level_lbl.text = "SELECT DIRECTORY"
@@ -125,23 +105,17 @@ func _build_level_select() -> void:
 	btn_back.pressed.connect(_on_back_pressed)
 	level_select_container.add_child(btn_back)
 
-# ---------------------------------------------------
-# HELPER: CHUNKY PIXEL BUTTON GENERATOR
-# ---------------------------------------------------
 func _create_pixel_button(btn_text: String, icon_type: String = "") -> Button:
 	var btn = Button.new()
 	btn.text = btn_text
-	# Increased size for larger buttons!
 	btn.custom_minimum_size = Vector2(450, 80) 
 	btn.add_theme_font_size_override("font_size", 24)
 	
-	# --- HIGH-RES ICON LOGIC ---
 	if icon_type != "":
 		var generated_icon = _generate_retro_icon(icon_type)
 		if generated_icon != null:
 			btn.icon = generated_icon
 			btn.expand_icon = true
-			# Increased from 32 to 64 so the icons are MASSIVE and colorful
 			btn.add_theme_constant_override("icon_max_width", 64) 
 			btn.add_theme_constant_override("h_separation", 24)   
 			btn.alignment = HORIZONTAL_ALIGNMENT_CENTER           
@@ -177,15 +151,9 @@ func _create_pixel_button(btn_text: String, icon_type: String = "") -> Button:
 	
 	return btn
 
-# ---------------------------------------------------
-# CODE-GENERATED 16-BIT COLORFUL ICONS
-# ---------------------------------------------------
 func _generate_retro_icon(icon_type: String) -> ImageTexture:
 	var pixel_data = []
-	
-	# 16x16 Grids with a full color palette!
 	if icon_type == "disk":
-		# Vibrant Blue Floppy Disk with a red/yellow warning label
 		pixel_data = [
 			".XXXXXXXXXXXXXX.",
 			"XXLLLLLLLLLLLLXX",
@@ -205,7 +173,6 @@ func _generate_retro_icon(icon_type: String) -> ImageTexture:
 			".XXXXXXXXXXXXXX."
 		]
 	elif icon_type == "folder":
-		# Bright Yellow/Orange Manila Folder with white documents
 		pixel_data = [
 			"................",
 			"..XXXX..........",
@@ -225,7 +192,6 @@ func _generate_retro_icon(icon_type: String) -> ImageTexture:
 			"................"
 		]
 	elif icon_type == "back_arrow":
-		# Sharp, aggressive Red back arrow
 		pixel_data = [
 			"................",
 			".......XX.......",
@@ -247,19 +213,16 @@ func _generate_retro_icon(icon_type: String) -> ImageTexture:
 	else:
 		return null
 
-	# Upgraded to 16x16 image size!
 	var image = Image.create(16, 16, false, Image.FORMAT_RGBA8)
-	
-	# The Game Engine's Color Palette
 	var palette = {
-		".": Color(0, 0, 0, 0),       # Transparent
-		"X": Color(0.1, 0.1, 0.1, 1), # Black Outline
-		"W": Color(1.0, 1.0, 1.0, 1), # White
-		"L": Color(0.7, 0.7, 0.7, 1), # Light Metal Gray
-		"B": Color(0.2, 0.6, 1.0, 1), # Tech Blue
-		"R": Color(0.9, 0.2, 0.2, 1), # Danger Red
-		"Y": Color(1.0, 0.9, 0.2, 1), # Electric Yellow
-		"O": Color(1.0, 0.6, 0.0, 1)  # Warm Orange
+		".": Color(0, 0, 0, 0),
+		"X": Color(0.1, 0.1, 0.1, 1),
+		"W": Color(1.0, 1.0, 1.0, 1),
+		"L": Color(0.7, 0.7, 0.7, 1),
+		"B": Color(0.2, 0.6, 1.0, 1),
+		"R": Color(0.9, 0.2, 0.2, 1),
+		"Y": Color(1.0, 0.9, 0.2, 1),
+		"O": Color(1.0, 0.6, 0.0, 1) 
 	}
 	
 	for y in range(16):
@@ -269,52 +232,6 @@ func _generate_retro_icon(icon_type: String) -> ImageTexture:
 			if palette.has(char):
 				image.set_pixel(x, y, palette[char])
 			else:
-				image.set_pixel(x, y, Color(1, 0, 1, 1)) # Magenta (Error color if we type a wrong letter)
+				image.set_pixel(x, y, Color(1, 0, 1, 1))
 
 	return ImageTexture.create_from_image(image)
-
-# ---------------------------------------------------
-# ANIMATIONS
-# ---------------------------------------------------
-func play_intro_sequence() -> void:
-	title_container.modulate.a = 0
-	subtitle.modulate.a = 0
-	start_button.modulate.a = 0
-	
-	var t1 = create_tween()
-	t1.tween_property(title_container, "modulate:a", 1.0, 0.6)
-	await t1.finished
-	
-	var t2 = create_tween()
-	t2.tween_property(subtitle, "modulate:a", 1.0, 0.4)
-	await t2.finished
-	
-	var t3 = create_tween()
-	t3.tween_property(start_button, "modulate:a", 1.0, 0.2)
-
-func animate_pixel_float(node: CanvasItem, distance: float, duration: float) -> void:
-	var original_y = node.position.y
-	var tween = create_tween().set_loops()
-	
-	tween.tween_property(node, "position:y", original_y - distance, 0.0)
-	tween.tween_interval(duration / 2.0)
-	
-	tween.tween_property(node, "position:y", original_y, 0.0)
-	tween.tween_interval(duration / 2.0)
-
-# ---------------------------------------------------
-# BUTTON LOGIC
-# ---------------------------------------------------
-func _on_start_game_pressed() -> void:
-	main_menu_container.hide()
-	level_select_container.show()
-
-func _on_back_pressed() -> void:
-	level_select_container.hide()
-	main_menu_container.show()
-
-func _on_the_office_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/CMS_game_scene.tscn")
-
-func _on_big_tech_company_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level 2 - The Office/Level 4 - Game Scene/E_Commerce_game_scene.tscn")

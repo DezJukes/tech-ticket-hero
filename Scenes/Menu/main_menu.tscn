@@ -2,17 +2,71 @@
 
 [ext_resource type="Script" uid="uid://dcmk7gco78cym" path="res://Scripts/Menu-Scripts/main_menu.gd" id="1_48xlc"]
 [ext_resource type="Texture2D" uid="uid://clcpv2xavcwla" path="res://Assets/Menu/menu-bg.png" id="2_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://dg8445f24jheu" path="res://Assets/Menu/JUAN_RUNNING_Crop.png" id="3_1di0l"]
+[ext_resource type="Texture2D" uid="uid://5t4dmkxpqv5u" path="res://Assets/Menu/TechTicketHeroLogo.png" id="4_pn3xf"]
+[ext_resource type="Texture2D" uid="uid://c6irroiqbc8vi" path="res://Assets/Menu/PLAY.png" id="5_ab7fb"]
+[ext_resource type="Texture2D" uid="uid://dq7wgqrmurl8h" path="res://Assets/Menu/Buttons/Play-pressed.png" id="6_17gaq"]
+[ext_resource type="Texture2D" uid="uid://cjf3gr0deefxp" path="res://Assets/Menu/EXIT.png" id="6_gpijq"]
+[ext_resource type="Texture2D" uid="uid://bfgvuf00yn4o4" path="res://Assets/Menu/Buttons/Exit-pressed.png" id="8_1di0l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_opfnp"]
 texture = ExtResource("2_1ehe0")
 
-[node name="MainMenu" type="Node" unique_id=542096977]
+[node name="MainMenu" type="Node" unique_id=1143394298]
 script = ExtResource("1_48xlc")
 
-[node name="Panel" type="Panel" parent="." unique_id=1568240030]
+[node name="Background" type="Panel" parent="." unique_id=1867395852]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_opfnp")
+
+[node name="MenuWrapper" type="HBoxContainer" parent="." unique_id=277283414]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Character" type="TextureRect" parent="MenuWrapper" unique_id=302746339]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+texture = ExtResource("3_1di0l")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RightPanel" type="VBoxContainer" parent="MenuWrapper" unique_id=544194644]
+layout_mode = 2
+alignment = 1
+
+[node name="Logo" type="TextureRect" parent="MenuWrapper/RightPanel" unique_id=1691170960]
+custom_minimum_size = Vector2(340, 300)
+layout_mode = 2
+texture = ExtResource("4_pn3xf")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuWrapper/RightPanel" unique_id=886572352]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="PlayButton" type="TextureButton" parent="MenuWrapper/RightPanel/VBoxContainer" unique_id=655732848]
+texture_filter = 1
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("5_ab7fb")
+texture_pressed = ExtResource("6_17gaq")
+ignore_texture_size = true
+stretch_mode = 6
+
+[node name="ExitButton" type="TextureButton" parent="MenuWrapper/RightPanel/VBoxContainer" unique_id=85406258]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("6_gpijq")
+texture_pressed = ExtResource("8_1di0l")
+ignore_texture_size = true
+stretch_mode = 6
