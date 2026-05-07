@@ -110,7 +110,7 @@ func _play_placement_effects(badge: Control) -> void:
 	particles.amount = 25 # How many particles spawn
 	particles.one_shot = true # Only bursts once
 	particles.explosiveness = 0.95 # Spawns them all at the exact same time
-	particles.lifetime = 1 # How long they stay on screen
+	particles.lifetime = 3 # How long they stay on screen
 	
 	# Physics Settings
 	particles.spread = 180.0 # 360-degree circle
