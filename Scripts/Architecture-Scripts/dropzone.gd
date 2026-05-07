@@ -10,8 +10,19 @@ var normal_color = Color(1, 1, 1, 0.4)
 var active_color = Color(1, 1, 1, 1.0) 
 var has_component: bool = false 
 
+var drop_audio_player: AudioStreamPlayer # NEW: Audio Player Variable
+
 func _ready() -> void:
 	modulate = normal_color
+	
+	# --- NEW: SETUP DROP AUDIO PLAYER ---
+	drop_audio_player = AudioStreamPlayer.new()
+	drop_audio_player.stream = load("res://Assets/Audio/dropped-audio.mp3")
+	
+	# Since we are creating this node through code, we must add it as a child.
+	# However, we DO NOT want it to be accidentally deleted when we clear out
+	# the badge children in _drop_data. So we add it to the scene tree safely.
+	add_child(drop_audio_player)
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_DRAG_BEGIN:
@@ -28,7 +39,10 @@ func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	if has_component:
 		for child in get_children():
-			child.queue_free() 
+			# SAFEGUARD: Do not delete our audio player or particles!
+			if child is not AudioStreamPlayer and child is not CPUParticles2D:
+				child.queue_free() 
+				
 		if current_card_node != null:
 			current_card_node.show()
 
@@ -44,7 +58,8 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	current_card_node = data["original_card"]
 	current_badge_scene = data["badge_scene"]
 	
-	# --- TRIGGER THE VISUAL EFFECTS ---
+	# --- TRIGGER THE SOUND AND VISUAL EFFECTS ---
+	drop_audio_player.play() # PLAY THE DROP SOUND!
 	_play_placement_effects(new_badge)
 
 # ---------------------------------------------------
@@ -53,7 +68,7 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 func _play_placement_effects(badge: Control) -> void:
 	# --- 1. THE BADGE "SNAP" ANIMATION ---
 	badge.modulate.a = 0.0
-	badge.scale = Vector2(1.4, 1.4) # Starts even bigger for more impact
+	badge.scale = Vector2(1.4, 1.4) 
 	
 	await get_tree().process_frame
 	if not is_instance_valid(badge): 
@@ -67,17 +82,13 @@ func _play_placement_effects(badge: Control) -> void:
 	badge_tween.tween_property(badge, "modulate:a", 1.0, 0.15)
 	
 	# --- 2. THE HIGH-VISIBILITY "SHOCKWAVE" RIPPLE ---
-	# We use a Panel instead of a ColorRect so we can draw a hollow ring
 	var ripple = Panel.new()
 	ripple.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	ripple.set_anchors_preset(Control.PRESET_FULL_RECT)
-	
-	# CRITICAL: Force the ripple to draw ON TOP of all other UI elements!
 	ripple.z_index = 10 
 	
-	# Build the hollow ring visual
 	var ring_style = StyleBoxFlat.new()
-	ring_style.bg_color = Color(0, 0, 0, 0) # Completely transparent middle
+	ring_style.bg_color = Color(0, 0, 0, 0) 
 	ring_style.border_color = Color(0.2, 0.6, 1.0, 1.0)
 	ring_style.border_width_left = 6
 	ring_style.border_width_right = 6
@@ -88,18 +99,13 @@ func _play_placement_effects(badge: Control) -> void:
 	ring_style.corner_radius_bottom_left = 8
 	ring_style.corner_radius_bottom_right = 8
 	
-	# Apply the style to our panel
 	ripple.add_theme_stylebox_override("panel", ring_style)
-	
 	add_child(ripple)
 	
-	# Center the pivot so it perfectly expands outward
 	ripple.pivot_offset = size / 2
 	
 	var ripple_tween = create_tween()
 	ripple_tween.set_parallel(true)
-	
-	# Expand it MUCH larger (1.5x size) and fade out slightly slower
 	ripple_tween.tween_property(ripple, "scale", Vector2(1.5, 1.5), 0.4).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	ripple_tween.tween_property(ripple, "modulate:a", 0.0, 0.4).set_trans(Tween.TRANS_QUAD).set_ease(Tween.EASE_OUT)
 	ripple_tween.finished.connect(ripple.queue_free)
@@ -107,36 +113,30 @@ func _play_placement_effects(badge: Control) -> void:
 	# --- 3. THE HIGH-VISIBILITY PARTICLE BURST ---
 	var particles = CPUParticles2D.new()
 	particles.emitting = false
-	particles.amount = 25 # How many particles spawn
-	particles.one_shot = true # Only bursts once
-	particles.explosiveness = 0.95 # Spawns them all at the exact same time
-	particles.lifetime = 3 # How long they stay on screen
+	particles.amount = 25 
+	particles.one_shot = true 
+	particles.explosiveness = 0.95 
+	particles.lifetime = 3 
 	
-	# Physics Settings
-	particles.spread = 180.0 # 360-degree circle
-	particles.gravity = Vector2(0, 400) # Pulls them down fast after they burst out
-	particles.initial_velocity_min = 150.0 # Minimum speed
-	particles.initial_velocity_max = 300.0 # Maximum speed (creates a nice uneven starburst)
+	particles.spread = 180.0 
+	particles.gravity = Vector2(0, 400) 
+	particles.initial_velocity_min = 150.0 
+	particles.initial_velocity_max = 300.0 
 	
-	# Visual Settings (Big, chunky, bright particles)
 	particles.scale_amount_min = 6.0
 	particles.scale_amount_max = 12.0
 	particles.color = Color(0.2, 0.6, 1.0, 1.0)
 	
-	# Create a gradient so the particles fade out smoothly instead of popping out of existence
 	var fade_gradient = Gradient.new()
-	fade_gradient.add_point(0.0, Color(1, 1, 1, 1)) # Start fully solid
-	fade_gradient.add_point(1.0, Color(1, 1, 1, 0)) # End fully transparent
+	fade_gradient.add_point(0.0, Color(1, 1, 1, 1)) 
+	fade_gradient.add_point(1.0, Color(1, 1, 1, 0)) 
 	particles.color_ramp = fade_gradient
 	
-	# Position them exactly in the middle of the Dropzone
 	particles.position = size / 2
 	
-	# Add to the scene and fire!
 	add_child(particles)
 	particles.emitting = true
 	
-	# Automatically clean up the particle node when the animation finishes
 	particles.finished.connect(particles.queue_free)
 
 # ---------------------------------------------------
@@ -161,7 +161,9 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	
 	current_card_node.show()
 	for child in get_children():
-		child.queue_free()
+		# SAFEGUARD: Do not delete our audio player!
+		if child is not AudioStreamPlayer and child is not CPUParticles2D:
+			child.queue_free()
 		
 	has_component = false
 	current_component = ""
@@ -181,7 +183,9 @@ func _gui_input(event: InputEvent) -> void:
 			if current_card_node != null:
 				current_card_node.show()
 			for child in get_children():
-				child.queue_free()
+				# SAFEGUARD: Do not delete our audio player!
+				if child is not AudioStreamPlayer and child is not CPUParticles2D:
+					child.queue_free()
 				
 			has_component = false
 			current_component = ""
