@@ -1,17 +1,23 @@
 extends Node
 
 # ==========================================
-# 1. VISUAL NODE REFERENCES (Paths Fixed!)
+# 1. VISUAL NODE REFERENCES 
 # ==========================================
 @onready var menu_wrapper = $MenuWrapper
 @onready var play_button = $MenuWrapper/RightPanel/VBoxContainer/PlayButton
 @onready var exit_button = $MenuWrapper/RightPanel/VBoxContainer/ExitButton
 @onready var logo = $MenuWrapper/RightPanel/Logo
 
-# Level Select (Generated via code)
+# Level Select & Audio
 var level_select_container: VBoxContainer
+var click_audio_player: AudioStreamPlayer # NEW: Variable for our audio player!
 
 func _ready() -> void:
+	# --- NEW: SETUP AUDIO PLAYER ---
+	click_audio_player = AudioStreamPlayer.new()
+	click_audio_player.stream = load("res://Assets/Audio/pressed-audio.mp3")
+	add_child(click_audio_player)
+	
 	# 1. Connect your visual buttons!
 	play_button.pressed.connect(_on_play_pressed)
 	exit_button.pressed.connect(_on_exit_pressed)
@@ -46,13 +52,17 @@ func animate_pixel_float(node: CanvasItem, distance: float, duration: float) -> 
 # VISUAL MENU BUTTON LOGIC
 # ---------------------------------------------------
 func _on_play_pressed() -> void:
+	click_audio_player.play() # Play the sound!
 	menu_wrapper.hide()
 	level_select_container.show()
 
 func _on_exit_pressed() -> void:
+	click_audio_player.play() # Play the sound!
+	await get_tree().create_timer(0.15).timeout # Let it play before closing
 	get_tree().quit()
 
 func _on_back_pressed() -> void:
+	click_audio_player.play() # Play the sound!
 	level_select_container.hide()
 	menu_wrapper.show()
 
@@ -61,20 +71,32 @@ func _on_back_pressed() -> void:
 # ---------------------------------------------------
 # LEVEL 1: CAMPUS
 func _on_cms_pressed() -> void:
+	click_audio_player.play()
+	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/CMS_game_scene.tscn")
 
 func _on_library_pressed() -> void:
+	click_audio_player.play()
+	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 2 - Game Scene/LibrarySystem_game_scene.tscn")
 
 # LEVEL 2: OFFICE
 func _on_erp_pressed() -> void:
+	click_audio_player.play()
+	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://Scenes/Level 2 - The Office/Level 3 - Game Scene/ERP_game_scene.tscn")
+
 func _on_ecommerce_pressed() -> void:
+	click_audio_player.play()
+	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://Scenes/Level 2 - The Office/Level 4 - Game Scene/E_Commerce_game_scene.tscn")
 
 # LEVEL 3: BIG TECH
 func _on_banking_pressed() -> void:
+	click_audio_player.play()
+	await get_tree().create_timer(1).timeout
 	get_tree().change_scene_to_file("res://Scenes/Level 3 - Big Tech Company/Level 5 - Game Scene/Banking_game_scene.tscn")
+
 
 # ===================================================
 # PROCEDURAL LEVEL SELECT (Horizontal Slider)
@@ -98,21 +120,19 @@ func _build_level_select() -> void:
 	
 	# --- HORIZONTAL SCROLL CONTAINER (The Slider) ---
 	var scroll_container = ScrollContainer.new()
-	# FIX 1: Reduced height from 350 to 280 to eliminate the huge empty gap!
 	scroll_container.custom_minimum_size = Vector2(1000, 280) 
 	scroll_container.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
 	scroll_container.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_AUTO
 	scroll_container.vertical_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	
-	# FIX 2: Add a visible border and dark background to indicate a scrollable area
+	# Style for the scroll area
 	var scroll_style = StyleBoxFlat.new()
-	scroll_style.bg_color = Color(0, 0, 0, 0.4) # Semi-transparent dark background
-	scroll_style.border_color = Color(0, 0, 0, 1) # Solid black border
+	scroll_style.bg_color = Color(0, 0, 0, 0.4) 
+	scroll_style.border_color = Color(0, 0, 0, 1) 
 	scroll_style.border_width_left = 6
 	scroll_style.border_width_top = 6
 	scroll_style.border_width_right = 6
 	scroll_style.border_width_bottom = 6
-	# Add padding inside the box so buttons don't hit the edges
 	scroll_style.content_margin_left = 30
 	scroll_style.content_margin_right = 30
 	scroll_style.content_margin_top = 20
@@ -181,14 +201,13 @@ func _build_level_select() -> void:
 func _create_category_column(title_text: String) -> VBoxContainer:
 	var col = VBoxContainer.new()
 	col.add_theme_constant_override("separation", 15)
-	# FIX: Changed ALIGNMENT_TOP to ALIGNMENT_BEGIN for Godot 4!
 	col.alignment = BoxContainer.ALIGNMENT_BEGIN 
 	
 	var lbl = Label.new()
 	lbl.text = title_text
 	lbl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	lbl.add_theme_font_size_override("font_size", 28)
-	lbl.add_theme_color_override("font_color", Color(1, 0.8, 0.2)) # Gold title
+	lbl.add_theme_color_override("font_color", Color(1, 0.8, 0.2)) 
 	lbl.add_theme_color_override("font_outline_color", Color(0, 0, 0)) 
 	lbl.add_theme_constant_override("outline_size", 8)
 	col.add_child(lbl)
