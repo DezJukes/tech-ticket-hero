@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://ces4mio3wkfxw"]
+[gd_scene format=3]
 
-[ext_resource type="Texture2D" uid="uid://binxwpp3upcu3" path="res://Scenes/System Components/Library System/Kiosk/self service kiosk.png" id="1_snua6"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_cpkl0"]
-[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_qgt5t"]
-[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_yineh"]
+[ext_resource type="Texture2D" path="res://Scenes/System Components/Library System/Kiosk/self service kiosk.png" id="1_snua6"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_cpkl0"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_qgt5t"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_yineh"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_snua6"]
 bg_color = Color(1, 1, 1, 1)

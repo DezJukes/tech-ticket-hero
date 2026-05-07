@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://daa7nstgg0d76"]
+[gd_scene format=3]
 
-[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_6u2bv"]
-[ext_resource type="Texture2D" uid="uid://d0n2x4ks6a874" path="res://Scenes/System Components/Banking/Inter-Bank Clearing Gateway/Inter-Bank Clearing Gateway.png" id="2_n1whk"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_wgo1y"]
-[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_oqbny"]
-[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="5_2cpj6"]
+[ext_resource type="Script" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_6u2bv"]
+[ext_resource type="Texture2D" path="res://Scenes/System Components/Banking/Inter-Bank Clearing Gateway/Inter-Bank Clearing Gateway.png" id="2_n1whk"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_wgo1y"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_oqbny"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Regular.ttf" id="5_2cpj6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehknd"]
 bg_color = Color(1, 1, 1, 1)

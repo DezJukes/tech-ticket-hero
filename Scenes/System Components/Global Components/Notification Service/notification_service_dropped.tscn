@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://sm120wj3sv8c"]
+[gd_scene format=3]
 
-[ext_resource type="Texture2D" uid="uid://c7bcpovms5p3y" path="res://Scenes/System Components/Global Components/Notification Service/notification service.png" id="1_yuri6"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_l18wb"]
+[ext_resource type="Texture2D" path="res://Scenes/System Components/Global Components/Notification Service/notification service.png" id="1_yuri6"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_l18wb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_romf0"]
 bg_color = Color(1, 1, 1, 1)

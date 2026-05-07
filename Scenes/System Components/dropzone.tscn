@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cfs3mcjift23r"]
+[gd_scene format=3]
 
-[ext_resource type="Script" uid="uid://bhrkq7rltp1to" path="res://Scripts/Architecture-Scripts/dropzone.gd" id="1_83sfm"]
+[ext_resource type="Script" path="res://Scripts/Architecture-Scripts/dropzone.gd" id="1_83sfm"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vjvn5"]
 bg_color = Color(0.22052518, 0.6650747, 0.9999998, 0.09803922)

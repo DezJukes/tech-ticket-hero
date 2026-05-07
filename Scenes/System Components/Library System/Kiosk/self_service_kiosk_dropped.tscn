@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://djpsccii60f68"]
+[gd_scene format=3]
 
-[ext_resource type="Texture2D" uid="uid://binxwpp3upcu3" path="res://Scenes/System Components/Library System/Kiosk/self service kiosk.png" id="1_gm4l3"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_8l4ll"]
+[ext_resource type="Texture2D" path="res://Scenes/System Components/Library System/Kiosk/self service kiosk.png" id="1_gm4l3"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_8l4ll"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gm4l3"]
 bg_color = Color(1, 1, 1, 1)

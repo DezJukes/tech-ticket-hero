@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://tfvc2ieyc3ie"]
+[gd_scene format=3]
 
-[ext_resource type="Texture2D" uid="uid://djeepnwokjs43" path="res://Scenes/System Components/ERP/Employee Portal/employee portal.png" id="1_f6h0e"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_47mk8"]
+[ext_resource type="Texture2D" path="res://Scenes/System Components/ERP/Employee Portal/employee portal.png" id="1_f6h0e"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_47mk8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nl00f"]
 bg_color = Color(1, 1, 1, 1)

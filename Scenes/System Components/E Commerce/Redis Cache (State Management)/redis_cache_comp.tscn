@@ -1,10 +1,10 @@
 [gd_scene format=3]
 
-[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_js2wa"]
-[ext_resource type="Texture2D" uid="uid://c7y4ygkg0g0oj" path="res://Scenes/System Components/E Commerce/Redis Cache (State Management)/redis cache.png" id="2_js2wa"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_u3f5e"]
-[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_eukf7"]
-[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="5_h3in2"]
+[ext_resource type="Script" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_js2wa"]
+[ext_resource type="Texture2D" path="res://Scenes/System Components/E Commerce/Redis Cache (State Management)/redis cache.png" id="2_js2wa"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_u3f5e"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_eukf7"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Regular.ttf" id="5_h3in2"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehknd"]
 bg_color = Color(1, 1, 1, 1)

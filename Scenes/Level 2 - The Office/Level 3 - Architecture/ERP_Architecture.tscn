@@ -10,27 +10,27 @@
 [ext_resource type="Texture2D" uid="uid://lkh0k2su5n1y" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_hovered.png" id="7_jvwnp"]
 [ext_resource type="Texture2D" uid="uid://dhb5cchugfrxn" path="res://Assets/Misc/System Gameplay/background-board.png" id="8_jxyor"]
 [ext_resource type="Script" uid="uid://e0a8ccedn3c1" path="res://Scenes/Level 2 - The Office/Level 3 - Architecture/board_area.gd" id="9_16ama"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_dropped.tscn" id="9_v5ovn"]
-[ext_resource type="PackedScene" uid="uid://cfs3mcjift23r" path="res://Scenes/System Components/dropzone.tscn" id="10_16ama"]
-[ext_resource type="PackedScene" uid="uid://cybb78cd41kg5" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_dropped.tscn" id="12_naqba"]
-[ext_resource type="PackedScene" uid="uid://b88u7v7di2n77" path="res://Scenes/System Components/Global Components/Message Broker/message_broker_dropped.tscn" id="13_d03gi"]
-[ext_resource type="PackedScene" uid="uid://sm120wj3sv8c" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_dropped.tscn" id="13_m58n1"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/dropzone.tscn" id="10_16ama"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_dropped.tscn" id="12_naqba"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Message Broker/message_broker_dropped.tscn" id="13_d03gi"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_dropped.tscn" id="13_m58n1"]
 [ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="14_1gebq"]
-[ext_resource type="PackedScene" uid="uid://bva2cyyyv31gk" path="res://Scenes/System Components/Global Components/Load Balancer/load_balancer_dropped.tscn" id="15_ftn7r"]
-[ext_resource type="PackedScene" uid="uid://clcwqqssv5wj4" path="res://Scenes/System Components/ERP/Expense Management Server/expense_management_dropped.tscn" id="15_iujs3"]
-[ext_resource type="PackedScene" uid="uid://bqatkw2dvetnd" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="15_k7y40"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Load Balancer/load_balancer_dropped.tscn" id="15_ftn7r"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/ERP/Expense Management Server/expense_management_dropped.tscn" id="15_iujs3"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="15_k7y40"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="16_ft6pc"]
-[ext_resource type="PackedScene" uid="uid://tfvc2ieyc3ie" path="res://Scenes/System Components/ERP/Employee Portal/employee_portal_dropped.tscn" id="16_iujs3"]
-[ext_resource type="PackedScene" uid="uid://1ppqaf50aejo" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="17_6jc0e"]
-[ext_resource type="PackedScene" uid="uid://bd1v2tooi3dx2" path="res://Scenes/System Components/ERP/General Ledger Service/general_ledger_comp.tscn" id="18_jvwnp"]
-[ext_resource type="PackedScene" uid="uid://bk4j3e5bdvoes" path="res://Scenes/System Components/ERP/General Ledger Service/general_ledger_dropped.tscn" id="19_jxyor"]
-[ext_resource type="PackedScene" uid="uid://gyw68370srqq" path="res://Scenes/System Components/Global Components/Relational Database/relational_database_dropped.tscn" id="23_doqf8"]
-[ext_resource type="PackedScene" uid="uid://c7ovts0hmikcu" path="res://Scenes/System Components/E Commerce/Redis Cache (State Management)/redis_cache_comp.tscn" id="23_jxyor"]
-[ext_resource type="PackedScene" uid="uid://050ivv4bbnw8" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="24_b1riw"]
-[ext_resource type="PackedScene" uid="uid://b2mdeck57e5cg" path="res://Scenes/System Components/ERP/Expense Management Server/expense_management_comp.tscn" id="25_v5ovn"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/ERP/Employee Portal/employee_portal_dropped.tscn" id="16_iujs3"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="17_6jc0e"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/ERP/General Ledger Service/general_ledger_comp.tscn" id="18_jvwnp"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/ERP/General Ledger Service/general_ledger_dropped.tscn" id="19_jxyor"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Relational Database/relational_database_dropped.tscn" id="23_doqf8"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="24_b1riw"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="25_61lf4"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/ERP/Expense Management Server/expense_management_comp.tscn" id="25_v5ovn"]
+[ext_resource type="Texture2D" uid="uid://cr3tkwu7tx5bn" path="res://Scenes/System Components/Global Components/API Gateway/img_api_gateway.png" id="26_0itgk"]
 [ext_resource type="PackedScene" uid="uid://ea4t0x8ltvim" path="res://Scenes/Level 2 - The Office/Modals/ERP Modals/failed_modal_erp.tscn" id="28_jvwnp"]
 [ext_resource type="PackedScene" uid="uid://bg4qfrgji32f2" path="res://Scenes/Level 2 - The Office/Modals/ERP Modals/information_modal_erp.tscn" id="29_jxyor"]
-[ext_resource type="PackedScene" uid="uid://vq8bl13768x1" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_comp.tscn" id="29_naqba"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_comp.tscn" id="29_naqba"]
 [ext_resource type="PackedScene" uid="uid://dilkc248vnpk1" path="res://Scenes/Level 2 - The Office/Modals/ERP Modals/success_modal_erp.tscn" id="30_v5ovn"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ud6tn"]
@@ -56,6 +56,38 @@ bg_color = Color(0.9268064, 0.9268064, 0.92680633, 1)
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 2
 border_color = Color(0.8862745, 0.9098039, 0.9411765, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nl00f"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0, 0, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="PackedScene" id="PackedScene_33ff7"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"id_paths": [PackedInt32Array(), PackedInt32Array(), PackedInt32Array()],
+"names": PackedStringArray("DroppedBadge", "PanelContainer", "custom_minimum_size", "anchors_preset", "anchor_right", "anchor_bottom", "offset_right", "offset_bottom", "grow_horizontal", "grow_vertical", "mouse_filter", "theme_override_styles/panel", "VBoxContainer", "VBoxContainer", "layout_mode", "Icon", "TextureRect", "custom_minimum_size", "layout_mode", "size_flags_horizontal", "size_flags_vertical", "texture", "expand_mode", "NameLabel", "Label", "layout_mode", "theme_override_colors/font_color", "theme_override_fonts/font", "theme_override_font_sizes/font_size", "text", "horizontal_alignment"),
+"node_count": 4,
+"node_ids": PackedInt32Array(1014836096, 1344035497, 2087670836, 1241469442),
+"node_paths": [NodePath("."), NodePath("./VBoxContainer"), NodePath("./VBoxContainer")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 10, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 5, 8, 6, 9, 7, 10, 8, 11, 9, 0, 1073741824, 0, 13, 12, -1, 1, 14, 10, 0, 1073741825, 0, 16, 15, -1, 6, 17, 11, 18, 12, 19, 13, 20, 14, 21, 15, 22, 16, 0, 1073741826, 0, 24, 23, -1, 6, 25, 17, 26, 18, 27, 19, 28, 20, 29, 21, 30, 22, 0),
+"variants": [Vector2(80, 70), 15, 1.0, 1.0, -1079.0, -595.0, 2, 2, 2, SubResource("StyleBoxFlat_nl00f"), 2, Vector2(32, 32), 2, 4, 4, ExtResource("26_0itgk"), 1, 2, Color(0.05882353, 0.09019608, 0.16470589, 1), ExtResource("1_d03gi"), 12, "API 
+Gateway", 1],
+"version": 3
+}
 
 [node name="ErpArchitecture" type="VBoxContainer" unique_id=1754731262]
 process_mode = 3
@@ -409,6 +441,10 @@ layout_mode = 2
 script = ExtResource("16_ft6pc")
 dropped_badge_scene = ExtResource("13_m58n1")
 
+[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=693677099 instance=ExtResource("25_61lf4")]
+layout_mode = 2
+dropped_badge_scene = SubResource("PackedScene_33ff7")
+
 [node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1258337722 instance=ExtResource("15_k7y40")]
 layout_mode = 2
 script = ExtResource("16_ft6pc")
@@ -416,10 +452,6 @@ dropped_badge_scene = ExtResource("17_6jc0e")
 
 [node name="Search Engine" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1080177329 instance=ExtResource("24_b1riw")]
 layout_mode = 2
-
-[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=846877336 instance=ExtResource("23_jxyor")]
-layout_mode = 2
-dropped_badge_scene = ExtResource("9_v5ovn")
 
 [node name="FailedModalErp" parent="." unique_id=1634307023 instance=ExtResource("28_jvwnp")]
 unique_name_in_owner = true

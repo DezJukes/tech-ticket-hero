@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://becqxwom334x2"]
+[gd_scene format=3]
 
-[ext_resource type="Texture2D" uid="uid://di8k4h67xfcmx" path="res://Scenes/System Components/Banking/Transaction Orchestrator/Transaction Orchestrator.png" id="1_6kp4e"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_l18wb"]
+[ext_resource type="Texture2D" path="res://Scenes/System Components/Banking/Transaction Orchestrator/Transaction Orchestrator.png" id="1_6kp4e"]
+[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_l18wb"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nl00f"]
 bg_color = Color(1, 1, 1, 1)
