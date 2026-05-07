@@ -126,14 +126,14 @@ func play_intro() -> void:
 	await wait_for_user() 
 	
 	set_speaker("Professor")
-	await type_text(dialog_label, "The CMS has no Authentication and \nsearch engine we need those for content.", 0.03)
+	await type_text(dialog_label, "The CMS has no Authentication and search \nengine we need those for content.", 0.03)
 	await wait_for_user() 
 	
-	await type_text(dialog_label, "Implement this immediately. It will be a \ngreat test of your system design skills.", 0.03)
+	await type_text(dialog_label, "Implement this immediately. It will be a great \ntest of your system design skills.", 0.03)
 	await wait_for_user() 
 	
 	set_speaker("Student")
-	await type_text(dialog_label, "Understood! I'll map out the components \nand get the data flowing right away.", 0.03)
+	await type_text(dialog_label, "Understood! I'll map out the components and \nget the data flowing right away.", 0.03)
 	await wait_for_user() 
 	
 	# =========================

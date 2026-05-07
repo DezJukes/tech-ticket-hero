@@ -118,7 +118,7 @@ func play_intro() -> void:
 	# --- CONVERSATION START ---
 	
 	set_speaker("Professor")
-	await type_text(dialog_label, "Excellent work on the CMS architecture! \nYou mapped those components perfectly.", 0.03)
+	await type_text(dialog_label, "Excellent work on the CMS architecture! You \nmapped those components perfectly.", 0.03)
 	await wait_for_user() 
 	
 	set_speaker("Student")
@@ -126,14 +126,14 @@ func play_intro() -> void:
 	await wait_for_user() 
 	
 	set_speaker("Professor")
-	await type_text(dialog_label, "Since you handled that so well, I have a \nreal-world problem for you.", 0.03)
+	await type_text(dialog_label, "Since you handled that so well, I have a real \nworld problem for you.", 0.03)
 	await wait_for_user() 
 	
-	await type_text(dialog_label, "Our digital library system is bottlenecking. \nI need you to restructure it.", 0.03)
+	await type_text(dialog_label, "Our digital library system is bottlenecking. I \nneed you to restructure it.", 0.03)
 	await wait_for_user() 
 	
 	set_speaker("Student")
-	await type_text(dialog_label, "Absolutely. Let me take a look at the \nblueprint right now.", 0.03)
+	await type_text(dialog_label, "Absolutely. Let me take a look at the blueprint \nright now.", 0.03)
 	await wait_for_user() 
 	
 	# =========================
