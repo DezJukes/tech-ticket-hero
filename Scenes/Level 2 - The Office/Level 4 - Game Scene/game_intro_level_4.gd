@@ -12,7 +12,16 @@ signal screen_tapped
 var waiting_for_tap: bool = false
 var continue_label: Label
 
+# --- MUSIC PLAYER ---
+var level_music_player: AudioStreamPlayer
+
 func _ready():
+	# Setup music player
+	level_music_player = AudioStreamPlayer.new()
+	level_music_player.stream = load("res://Assets/Audio/office-music.mp3")
+	level_music_player.bus = "Master"
+	add_child(level_music_player)
+	
 	# 1. Create the "Press screen" label entirely through code!
 	continue_label = Label.new()
 	continue_label.text = "Press screen to next ▶"
@@ -111,6 +120,9 @@ func play_intro() -> void:
 	await wait_for_user() 
 	
 	# End sequence, destroy title
+	# Start level music after intro
+	level_music_player.play()
+	
 	$TITLE.queue_free()
 
 # =========================

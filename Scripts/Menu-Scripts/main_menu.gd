@@ -11,12 +11,20 @@ extends Node
 # Level Select & Audio
 var level_select_container: VBoxContainer
 var click_audio_player: AudioStreamPlayer # NEW: Variable for our audio player!
+var menu_music_player: AudioStreamPlayer # Menu background music
 
 func _ready() -> void:
-	# --- NEW: SETUP AUDIO PLAYER ---
+	# --- NEW: SETUP AUDIO PLAYERS ---
 	click_audio_player = AudioStreamPlayer.new()
 	click_audio_player.stream = load("res://Assets/Audio/pressed-audio.mp3")
 	add_child(click_audio_player)
+	
+	# Setup menu music player
+	menu_music_player = AudioStreamPlayer.new()
+	menu_music_player.stream = load("res://Assets/Audio/menu-music.mp3")
+	menu_music_player.bus = "Master"
+	add_child(menu_music_player)
+	menu_music_player.play()
 	
 	# 1. Connect your visual buttons!
 	play_button.pressed.connect(_on_play_pressed)

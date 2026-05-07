@@ -8,19 +8,49 @@ extends VBoxContainer
 # and set as a Unique Name (%) just like your failed_panel!
 @onready var success_panel = %SuccessModalCloud
 
+# --- AUDIO PLAYERS ---
+var click_audio: AudioStreamPlayer
+var success_audio: AudioStreamPlayer
+var failed_audio: AudioStreamPlayer
+var gameplay_music: AudioStreamPlayer
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+	# --- SETUP AUDIO PLAYERS ---
+	click_audio = AudioStreamPlayer.new()
+	click_audio.stream = load("res://Assets/Audio/pressed-audio.mp3")
+	click_audio.process_mode = Node.PROCESS_MODE_ALWAYS 
+	add_child(click_audio)
+	
+	success_audio = AudioStreamPlayer.new()
+	success_audio.stream = load("res://Assets/Audio/success-audio.mp3")
+	success_audio.process_mode = Node.PROCESS_MODE_ALWAYS
+	add_child(success_audio)
+	
+	failed_audio = AudioStreamPlayer.new()
+	failed_audio.stream = load("res://Assets/Audio/failed-audio.mp3")
+	failed_audio.process_mode = Node.PROCESS_MODE_ALWAYS
+	add_child(failed_audio)
+
+	# Setup gameplay music
+	gameplay_music = AudioStreamPlayer.new()
+	gameplay_music.stream = load("res://Assets/Audio/gameplay-music.mp3")
+	gameplay_music.bus = "Master"
+	add_child(gameplay_music)
+	gameplay_music.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
 
 func _on_ticket_details_pressed():
+	click_audio.play() # PLAY SOUND
 	# Make the modal visible again!
 	info_modal.show()
 
 func _on_deploy_button_pressed() -> void:
+	click_audio.play() # PLAY SOUND
+	
 	var all_correct = true
 	var all_filled = true
 	
@@ -48,11 +78,13 @@ func _on_deploy_button_pressed() -> void:
 	if all_correct == true:
 		print("Puzzle Passed!")
 		# Pause the game and show victory!
+		success_audio.play() # PLAY SUCCESS SOUND!
 		get_tree().paused = true
 		success_panel.show()
 	else:
 		print("Puzzle Failed!")
 		# Pause the game and show defeat
+		failed_audio.play() # PLAY FAILED SOUND!
 		get_tree().paused = true
 		failed_panel.show()
 

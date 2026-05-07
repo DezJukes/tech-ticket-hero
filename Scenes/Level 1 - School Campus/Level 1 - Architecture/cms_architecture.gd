@@ -9,6 +9,7 @@ extends VBoxContainer
 var click_audio: AudioStreamPlayer
 var success_audio: AudioStreamPlayer
 var failed_audio: AudioStreamPlayer
+var gameplay_music: AudioStreamPlayer
 
 # ---------------------------------------------------
 # RUNS ONCE WHEN THE INTERFACE LOADS
@@ -30,6 +31,13 @@ func _ready() -> void:
 	failed_audio.stream = load("res://Assets/Audio/failed-audio.mp3")
 	failed_audio.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(failed_audio)
+
+	# Setup gameplay music
+	gameplay_music = AudioStreamPlayer.new()
+	gameplay_music.stream = load("res://Assets/Audio/gameplay-music.mp3")
+	gameplay_music.bus = "Master"
+	add_child(gameplay_music)
+	gameplay_music.play()
 
 	# 1. Force the modal to hide instantly so it doesn't flash on the screen
 	info_modal.hide()
