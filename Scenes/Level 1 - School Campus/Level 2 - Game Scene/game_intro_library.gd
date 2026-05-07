@@ -124,6 +124,9 @@ func play_intro() -> void:
 	show_tween.tween_property(dialog_label, "modulate:a", 1.0, 0.5)
 	await show_tween.finished
 	
+	# Start level music as dialogue begins
+	level_music_player.play()
+	
 	# --- CONVERSATION START ---
 	
 	set_speaker("Professor")
@@ -159,9 +162,6 @@ func play_intro() -> void:
 	end_tween.tween_property(dialog_label, "modulate:a", 0.0, 0.5)
 	
 	await end_tween.finished
-	
-	# Start level music after fade out
-	level_music_player.play()
 	
 	$TITLE.queue_free()
 

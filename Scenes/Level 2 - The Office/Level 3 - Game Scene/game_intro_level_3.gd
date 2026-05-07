@@ -109,6 +109,9 @@ func play_intro() -> void:
 	show_tween.tween_property(dialog_label, "modulate:a", 1.0, 0.5)
 	await show_tween.finished
 	
+	# Start level music as dialogue begins
+	level_music_player.play()
+	
 	name_label.text = "Juan"
 	
 	# Dialogue Line 1
@@ -120,9 +123,6 @@ func play_intro() -> void:
 	await wait_for_user() # REPLACED THE TIMER WITH A WAIT!
 	
 	# End sequence, destroy title
-	# Start level music after intro
-	level_music_player.play()
-	
 	$TITLE.queue_free()
 
 # =========================

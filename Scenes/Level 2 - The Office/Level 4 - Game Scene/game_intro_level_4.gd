@@ -93,6 +93,9 @@ func play_intro() -> void:
 	
 	await show_tween.finished
 	
+	# Start level music as dialogue begins
+	level_music_player.play()
+	
 	# --- CONVERSATION START ---
 	
 	# Leader speaks
@@ -120,9 +123,6 @@ func play_intro() -> void:
 	await wait_for_user() 
 	
 	# End sequence, destroy title
-	# Start level music after intro
-	level_music_player.play()
-	
 	$TITLE.queue_free()
 
 # =========================

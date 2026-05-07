@@ -95,6 +95,9 @@ func play_intro() -> void:
 	
 	await show_tween.finished
 	
+	# Start level music as dialogue begins
+	level_music_player.play()
+	
 	name_label.text = "Guard"
 	
 	# Dialogue Line 1
@@ -126,9 +129,6 @@ func play_intro() -> void:
 	end_tween.tween_property(dialog_label, "modulate:a", 0.0, 0.5)
 	
 	await end_tween.finished
-	
-	# Start level music after fade out
-	level_music_player.play()
 	
 	# Remove intro UI completely
 	$TITLE.queue_free()
