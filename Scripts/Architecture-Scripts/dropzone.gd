@@ -10,19 +10,19 @@ var normal_color = Color(1, 1, 1, 0.4)
 var active_color = Color(1, 1, 1, 1.0) 
 var has_component: bool = false 
 
-var drop_audio_player: AudioStreamPlayer # NEW: Audio Player Variable
+var drop_audio_player: AudioStreamPlayer
+var remove_audio_player: AudioStreamPlayer
 
 func _ready() -> void:
 	modulate = normal_color
 	
-	# --- NEW: SETUP DROP AUDIO PLAYER ---
 	drop_audio_player = AudioStreamPlayer.new()
 	drop_audio_player.stream = load("res://Assets/Audio/dropped-audio.mp3")
-	
-	# Since we are creating this node through code, we must add it as a child.
-	# However, we DO NOT want it to be accidentally deleted when we clear out
-	# the badge children in _drop_data. So we add it to the scene tree safely.
 	add_child(drop_audio_player)
+
+	remove_audio_player = AudioStreamPlayer.new()
+	remove_audio_player.stream = load("res://Assets/Audio/remove-comp-audio.mp3")
+	add_child(remove_audio_player)
 
 func _notification(what: int) -> void:
 	if what == NOTIFICATION_DRAG_BEGIN:
@@ -159,6 +159,7 @@ func _get_drag_data(_at_position: Vector2) -> Variant:
 	preview.position = Vector2(-30, -30) 
 	set_drag_preview(preview_container)
 	
+	remove_audio_player.play()
 	current_card_node.show()
 	for child in get_children():
 		# SAFEGUARD: Do not delete our audio player!
@@ -180,10 +181,11 @@ func _gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_released():
 		
 		if has_component:
+			remove_audio_player.play()
 			if current_card_node != null:
 				current_card_node.show()
 			for child in get_children():
-				# SAFEGUARD: Do not delete our audio player!
+				# SAFEGUARD: Do not delete our audio players!
 				if child is not AudioStreamPlayer and child is not CPUParticles2D:
 					child.queue_free()
 				

@@ -4,8 +4,19 @@ extends PanelContainer
 
 @onready var name_label = $CardPadding/MainRow/TextColumn/VBoxContainer/Title
 @onready var icon_rect = $CardPadding/MainRow/IconFrame/IconPadding/IconImage
+var drag_audio: AudioStreamPlayer
+
+func _ready() -> void:
+	drag_audio = AudioStreamPlayer.new()
+	drag_audio.stream = load("res://Assets/Audio/dragged-audio.mp3")
+	drag_audio.process_mode = Node.PROCESS_MODE_ALWAYS
+	add_child(drag_audio)
 
 func _get_drag_data(at_position: Vector2) -> Variant:
+	if drag_audio:
+		drag_audio.stop()
+		drag_audio.play()
+
 	var drag_data = {
 		"name": name_label.text, 
 		"icon": icon_rect.texture,
