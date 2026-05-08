@@ -249,14 +249,15 @@ offset_bottom = 76.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 30
-text = "You are now in the library looking to learn
+text = "You are currently in the library to study and improve your knowledge.
 
 
-You noticed one of the counter computer 
-of the library is sira so you know
+While studying, you notice that one of the computers 
+at the library counter is malfunctioning. 
 
-
-Ayusin mo na"
+Since you have a background in Computer Science and 
+are learning System Design, you decide to take the initiative and 
+fix the issue."
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameIntro/TITLE/Control" unique_id=1297320051]
