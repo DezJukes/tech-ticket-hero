@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dhih87ivt13su"]
+
+[ext_resource type="Texture2D" uid="uid://dooobctvnhple" path="res://Assets/Misc/Level - Trophy Room/Throphy1.png" id="1_qvu45"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qvu45"]
+size = Vector2(34, 0)
+
+[node name="TrophyNormal" type="Node2D" unique_id=899739439]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=107006087]
+texture = ExtResource("1_qvu45")
+
+[node name="TrophyNormalBody" type="StaticBody2D" parent="." unique_id=1760731341]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TrophyNormalBody" unique_id=722777243]
+position = Vector2(0, 12)
+shape = SubResource("RectangleShape2D_qvu45")
