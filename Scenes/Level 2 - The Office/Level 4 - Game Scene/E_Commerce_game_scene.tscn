@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dx2mmxxgipymf"]
 
-[ext_resource type="PackedScene" uid="uid://csntnedlflvm2" path="res://Scenes/filing_cabinet_1.tscn" id="3_8aicv"]
+[ext_resource type="PackedScene" path="res://Scenes/filing_cabinet_1.tscn" id="3_8aicv"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="4_8aicv"]
 [ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="5_xuab3"]
 [ext_resource type="Texture2D" uid="uid://bdqgdssniatal" path="res://Assets/Dialog/level_4_dialog.png" id="6_hsixc"]
