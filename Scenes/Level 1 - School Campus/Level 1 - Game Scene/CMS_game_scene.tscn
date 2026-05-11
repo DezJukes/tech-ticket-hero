@@ -292,31 +292,55 @@ layout_mode = 2
 texture = ExtResource("12_5b2g6")
 stretch_mode = 3
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="GameIntro/TITLE/Control" unique_id=594411547]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="VBoxContainer2" type="Control" parent="GameIntro/TITLE/Control" unique_id=1880185772]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.6028029, 0.6028029)
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
 [node name="TextureRect" type="TextureRect" parent="GameIntro/TITLE/Control/VBoxContainer2" unique_id=512483598]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.81600004
+anchor_top = 0.85300004
+anchor_right = 0.81600004
+anchor_bottom = 0.85300004
+offset_left = -876.61053
+offset_top = -571.2085
+offset_right = 1043.3895
+offset_bottom = 508.79144
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("14_5n5fx")
 
 [node name="Label2" type="Label" parent="GameIntro/TITLE/Control" unique_id=1210186631]
 layout_mode = 0
-offset_left = 208.0
-offset_top = 420.0
-offset_right = 275.0
-offset_bottom = 471.0
+offset_left = 402.0
+offset_top = 421.00003
+offset_right = 469.00024
+offset_bottom = 472.00003
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 37
 
 [node name="Label3" type="Label" parent="GameIntro/TITLE/Control" unique_id=1133464825]
 layout_mode = 0
-offset_left = 209.0
-offset_top = 475.0
-offset_right = 891.0
-offset_bottom = 562.0
+offset_left = 402.0
+offset_top = 476.00003
+offset_right = 1084.002
+offset_bottom = 563.0
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 
