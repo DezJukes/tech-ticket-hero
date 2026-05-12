@@ -15,6 +15,69 @@
 [ext_resource type="PackedScene" uid="uid://brbhbq3j6jk63" path="res://Scenes/npc_prof.tscn" id="13_itgur"]
 [ext_resource type="Texture2D" uid="uid://b2x7qwkyc4dj2" path="res://Assets/Dialog/level_2_dialog.png" id="14_5n5fx"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rsa6"]
+bg_color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ys5lo"]
+bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yndnc"]
+bg_color = Color(0.8776157, 0.8776158, 0.87761563, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knqms"]
+bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5n5fx"]
+bg_color = Color(0.9254902, 0.9254902, 0.9254902, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enbsl"]
+bg_color = Color(0.6745098, 0.6745098, 0.6745098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bipf"]
+bg_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwda2"]
+bg_color = Color(0.6745098, 0.6745098, 0.6745098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5b2g6"]
+bg_color = Color(0.2627451, 0.2627451, 0.2627451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ear8"]
 size = Vector2(3962, 17)
 
@@ -51,7 +114,10 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_aurvk")
 theme_override_font_sizes/font_size = 60
-text = "E"
+theme_override_styles/normal = SubResource("StyleBoxFlat_7rsa6")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ys5lo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yndnc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_knqms")
 
 [node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=737865658]
 anchors_preset = 1
@@ -59,12 +125,46 @@ anchor_left = 1.0
 anchor_right = 1.0
 offset_left = -80.0
 offset_top = 14.0
-offset_right = -14.0
-offset_bottom = 43.0
+offset_right = -30.0
+offset_bottom = 64.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("2_aurvk")
 theme_override_font_sizes/font_size = 20
-text = "Pause"
+theme_override_styles/normal = SubResource("StyleBoxFlat_5n5fx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_enbsl")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3bipf")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mwda2")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PauseButton" unique_id=568495803]
+custom_minimum_size = Vector2(10, 5)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -15.0
+offset_top = -14.5
+offset_right = 15.0
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="Panel" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=674932496]
+custom_minimum_size = Vector2(10, 5)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5b2g6")
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=1648501543]
+custom_minimum_size = Vector2(10, 5)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5b2g6")
+
+[node name="Panel3" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=1872112153]
+custom_minimum_size = Vector2(10, 5)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_5b2g6")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=502771559]
 position = Vector2(575, 323)
