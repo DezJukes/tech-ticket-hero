@@ -78,6 +78,13 @@ corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vifjv"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ear8"]
 size = Vector2(3962, 17)
 
@@ -165,6 +172,38 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8bc6l")
 custom_minimum_size = Vector2(10, 5)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8bc6l")
+
+[node name="Objective" type="Panel" parent="CanvasLayer" unique_id=1399400572]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -449.0
+offset_top = 30.0
+offset_right = 449.0
+offset_bottom = 95.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_vifjv")
+
+[node name="Label" type="Label" parent="CanvasLayer/Objective" unique_id=572368346]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.5
+offset_top = -11.5
+offset_right = 125.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_7kejv")
+theme_override_font_sizes/font_size = 30
+text = "Objective: Investigate the Library's computer architechture"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=502771559]
 position = Vector2(575, 323)
@@ -280,7 +319,7 @@ y_sort_enabled = true
 
 [node name="player" parent="YSort" unique_id=482249979 instance=ExtResource("5_dhupl")]
 y_sort_enabled = true
-position = Vector2(351, 400)
+position = Vector2(206, 460)
 scale = Vector2(2, 2)
 motion_mode = 1
 

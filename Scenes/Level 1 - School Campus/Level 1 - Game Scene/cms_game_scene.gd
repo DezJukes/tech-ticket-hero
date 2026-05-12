@@ -1,5 +1,6 @@
 extends Node2D
 @onready var pause_panel = %PausePanel
+var player_near_computer := false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -8,12 +9,16 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
-
+	$CanvasLayer/Interact.disabled = not $YSort/SchoolComputer/SchoolComputerInteractionZone.player_near
 
 func _on_pause_button_pressed():
 	get_tree().paused = true
 	pause_panel.show()
 
 func _on_interact_pressed() -> void:
-	get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 1 - Architecture/CMS_Architecture.tscn")
+	if $YSort/SchoolComputer/SchoolComputerInteractionZone.player_near:
+		get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 1 - Architecture/CMS_Architecture.tscn")
+	else:
+		print("You are too far from the computer to interact.")
+		
+	

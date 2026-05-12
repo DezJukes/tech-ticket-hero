@@ -10,6 +10,10 @@ extends Node
 @onready var name_label = $TITLE/Control/Label2
 @onready var dialog_label = $TITLE/Control/Label3
 
+# Objective UI
+@onready var objective_banner = $"../CanvasLayer/Objective"
+var final_objective_y: float
+
 # --- Tap to continue system ---
 signal screen_tapped
 var waiting_for_tap: bool = false
@@ -22,6 +26,10 @@ var speaker_arrow: Label
 var level_music_player: AudioStreamPlayer
 
 func _ready():
+	if objective_banner != null:
+		final_objective_y = objective_banner.position.y
+		objective_banner.position.y = -150
+		
 	# Setup music player
 	level_music_player = AudioStreamPlayer.new()
 	level_music_player.stream = load("res://Assets/Audio/campus-music.mp3")
@@ -164,6 +172,14 @@ func play_intro() -> void:
 	await end_tween.finished
 	
 	$TITLE.queue_free()
+	
+	# Slide in objective banner
+	if objective_banner != null:
+		var objective_tween = create_tween()
+
+		objective_tween.set_trans(Tween.TRANS_QUART)
+		objective_tween.set_ease(Tween.EASE_OUT)
+		objective_tween.tween_property(objective_banner, "position:y", final_objective_y, 0.8)
 
 func type_text(label: Label, text: String, speed := 0.03) -> void:
 	if label == null:

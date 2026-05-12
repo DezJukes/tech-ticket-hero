@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 @export var movement_speed : float = 500
 var character_direction : Vector2
