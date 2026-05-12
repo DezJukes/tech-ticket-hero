@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="7_5gvr4"]
 [ext_resource type="PackedScene" uid="uid://gy3cgy47hv4o" path="res://Scenes/computer2.tscn" id="8_8oft1"]
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="9_0jx5g"]
+[ext_resource type="PackedScene" uid="uid://diygapspgj4q6" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputer.tscn" id="9_6scms"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="10_cu1ks"]
 [ext_resource type="PackedScene" uid="uid://1kwcpspij480" path="res://Scenes/npc_guard.tscn" id="11_ouqni"]
 [ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="12_yjybh"]
@@ -17,6 +18,13 @@
 [ext_resource type="Texture2D" uid="uid://4c8y7dnu2fg3" path="res://Assets/Title Headers/BANKING.png" id="15_f3vbv"]
 [ext_resource type="Texture2D" uid="uid://dmoffd0324nea" path="res://Assets/Title Headers/SYSTEM.png" id="16_mlfrv"]
 [ext_resource type="Texture2D" uid="uid://df76s6su55lpv" path="res://Assets/Dialog/level_5_dialog.png" id="17_khu3i"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_khu3i"]
+bg_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k0b4w"]
 size = Vector2(3962, 17)
@@ -69,7 +77,6 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("6_8rbs4")
 theme_override_font_sizes/font_size = 60
-text = "E"
 metadata/_edit_use_anchors_ = true
 
 [node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=347590731]
@@ -86,6 +93,38 @@ theme_override_font_sizes/font_size = 20
 text = "Pause"
 metadata/_edit_use_anchors_ = true
 
+[node name="Objective" type="Panel" parent="CanvasLayer" unique_id=235987612]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -449.0
+offset_top = 30.0
+offset_right = 449.0
+offset_bottom = 95.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_khu3i")
+
+[node name="Label" type="Label" parent="CanvasLayer/Objective" unique_id=1735640480]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.5
+offset_top = -11.5
+offset_right = 125.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("6_8rbs4")
+theme_override_font_sizes/font_size = 30
+text = "Objective: Show the guard what you can do. Fix the system"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="player" parent="." unique_id=482249979 instance=ExtResource("7_5gvr4")]
 position = Vector2(136, 319)
 scale = Vector2(2.4410927, 2.4410927)
@@ -95,8 +134,18 @@ motion_mode = 1
 position = Vector2(575, 323)
 
 [node name="Computer4" parent="." unique_id=1610868164 instance=ExtResource("8_8oft1")]
+visible = false
 position = Vector2(481, 223)
 scale = Vector2(2.7796469, 2.7796469)
+
+[node name="SchoolComputer" parent="." unique_id=925285969 instance=ExtResource("9_6scms")]
+position = Vector2(481, 220)
+scale = Vector2(2.75361, 2.75361)
+
+[node name="SchoolComputer2" parent="." unique_id=1225968985 instance=ExtResource("9_6scms")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(327, 551)
+scale = Vector2(2.350072, 2.350072)
 
 [node name="Control" type="Control" parent="." unique_id=117607346]
 layout_mode = 3
@@ -259,30 +308,47 @@ layout_mode = 2
 texture = ExtResource("16_mlfrv")
 stretch_mode = 3
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="GameIntroLevel2/TITLE/Control" unique_id=302213243]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Control" type="Control" parent="GameIntroLevel2/TITLE/Control" unique_id=1639392193]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="GameIntroLevel2/TITLE/Control/Control" unique_id=302213243]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -326.0
+offset_right = 1344.0
+offset_bottom = 754.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.6028029, 0.6028029)
 
-[node name="TextureRect" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer2" unique_id=1046334156]
+[node name="TextureRect" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/Control/VBoxContainer2" unique_id=1046334156]
 layout_mode = 2
 texture = ExtResource("17_khu3i")
 
-[node name="Label2" type="Label" parent="GameIntroLevel2/TITLE/Control" unique_id=1925927205]
+[node name="Label2" type="Label" parent="GameIntroLevel2/TITLE/Control/Control" unique_id=1925927205]
 layout_mode = 0
-offset_left = 245.0
+offset_left = 423.0
 offset_top = 420.0
-offset_right = 312.0
-offset_bottom = 464.0
+offset_right = 490.0
+offset_bottom = 471.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 37
 
-[node name="Label3" type="Label" parent="GameIntroLevel2/TITLE/Control" unique_id=129975430]
+[node name="Label3" type="Label" parent="GameIntroLevel2/TITLE/Control/Control" unique_id=129975430]
 layout_mode = 0
-offset_left = 242.0
+offset_left = 420.0
 offset_top = 476.0
-offset_right = 924.0
+offset_right = 1102.0
 offset_bottom = 563.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30

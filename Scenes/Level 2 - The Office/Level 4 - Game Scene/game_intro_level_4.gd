@@ -3,9 +3,13 @@ extends Node
 @onready var black_screen = $TITLE/Control/ColorRect
 @onready var intro_text = $TITLE/Control/VBoxContainer
 
-@onready var dialog_box = $TITLE/Control/VBoxContainer2
-@onready var name_label = $TITLE/Control/Label2
-@onready var dialog_label = $TITLE/Control/Label3
+@onready var dialog_box = $TITLE/Control/Control/VBoxContainer2
+@onready var name_label = $TITLE/Control/Control/Label2
+@onready var dialog_label = $TITLE/Control/Control/Label3
+
+# Objective UI
+@onready var objective_banner = $"../CanvasLayer/Objective"
+var final_objective_y: float
 
 # --- NEW: Tap to continue system ---
 signal screen_tapped
@@ -16,6 +20,15 @@ var continue_label: Label
 var level_music_player: AudioStreamPlayer
 
 func _ready():
+	# =========================
+	# OBJECTIVE BANNER SETUP
+	# =========================
+	if objective_banner != null:
+		final_objective_y = objective_banner.position.y
+		
+		# Hide above screen initially
+		objective_banner.position.y = -150
+		
 	# Setup music player
 	level_music_player = AudioStreamPlayer.new()
 	level_music_player.stream = load("res://Assets/Audio/office-music.mp3")
@@ -124,6 +137,22 @@ func play_intro() -> void:
 	
 	# End sequence, destroy title
 	$TITLE.queue_free()
+	
+	# =========================
+	# OBJECTIVE BANNER ANIMATION
+	# =========================
+	if objective_banner != null:
+		var objective_tween = create_tween()
+
+		objective_tween.set_trans(Tween.TRANS_QUART)
+		objective_tween.set_ease(Tween.EASE_OUT)
+
+		objective_tween.tween_property(
+			objective_banner,
+			"position:y",
+			final_objective_y,
+			0.8
+		)
 
 # =========================
 # TYPEWRITER EFFECT
