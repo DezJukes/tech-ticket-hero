@@ -44,7 +44,6 @@ script = ExtResource("12_17o4j")
 
 [node name="TITLE" type="CanvasLayer" parent="GameIntroLevel2" unique_id=1339125492]
 layer = 2
-visible = false
 
 [node name="Control" type="Control" parent="GameIntroLevel2/TITLE" unique_id=1891490064]
 layout_mode = 3

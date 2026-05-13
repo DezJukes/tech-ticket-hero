@@ -356,7 +356,6 @@ script = ExtResource("9_gadji")
 
 [node name="TITLE" type="CanvasLayer" parent="GameIntro" unique_id=1187209893]
 layer = 2
-visible = false
 
 [node name="Control" type="Control" parent="GameIntro/TITLE" unique_id=1277506582]
 layout_mode = 3
