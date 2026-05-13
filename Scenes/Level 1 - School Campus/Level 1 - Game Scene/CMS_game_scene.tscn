@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://diygapspgj4q6" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputer.tscn" id="4_aurvk"]
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="5_5n5fx"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="6_5b2g6"]
+[ext_resource type="Script" uid="uid://chxryeiqstytr" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/dashed_ring.gd" id="9_5b2g6"]
 [ext_resource type="Script" uid="uid://csr4vyl2n46ed" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/game_intro_cms.gd" id="10_m8peq"]
 [ext_resource type="Texture2D" uid="uid://bipwlfk3ddusr" path="res://Assets/Title Headers/LevelSign1.png" id="11_5n5fx"]
 [ext_resource type="PackedScene" uid="uid://dq6wcogfjoteh" path="res://Scenes/Level 1 - School Campus/Furnitures/Greenboard.tscn" id="11_itgur"]
@@ -113,8 +114,8 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -193.0
-offset_top = -199.0
+offset_left = -213.0
+offset_top = -219.0
 offset_right = -93.0
 offset_bottom = -99.0
 grow_horizontal = 0
@@ -130,10 +131,10 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_knqms")
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -80.0
-offset_top = 14.0
-offset_right = -30.0
-offset_bottom = 64.0
+offset_left = -122.0
+offset_top = 30.0
+offset_right = -47.0
+offset_bottom = 105.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("2_aurvk")
 theme_override_font_sizes/font_size = 20
@@ -150,27 +151,30 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -15.0
-offset_top = -14.5
-offset_right = 15.0
-offset_bottom = 14.5
+offset_left = -27.5
+offset_top = -22.5
+offset_right = 27.5
+offset_bottom = 31.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 6
+theme_override_constants/separation = 10
 
 [node name="Panel" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=674932496]
-custom_minimum_size = Vector2(10, 5)
+custom_minimum_size = Vector2(10, 8)
 layout_mode = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5b2g6")
 
 [node name="Panel2" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=1648501543]
-custom_minimum_size = Vector2(10, 5)
+custom_minimum_size = Vector2(10, 8)
 layout_mode = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5b2g6")
 
 [node name="Panel3" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=1872112153]
-custom_minimum_size = Vector2(10, 5)
+custom_minimum_size = Vector2(10, 8)
 layout_mode = 2
+mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_5b2g6")
 
 [node name="Objective" type="Panel" parent="CanvasLayer" unique_id=1291855779]
@@ -342,6 +346,9 @@ scale = Vector2(2.5, 2.5)
 [node name="SchoolComputer" parent="YSort" unique_id=925285969 instance=ExtResource("4_aurvk")]
 position = Vector2(582, 268)
 scale = Vector2(3, 3)
+
+[node name="DashedRing" type="Node2D" parent="YSort/SchoolComputer" unique_id=1798303055]
+script = ExtResource("9_5b2g6")
 
 [node name="Greenboard" parent="YSort" unique_id=780638828 instance=ExtResource("11_itgur")]
 position = Vector2(584, 151)

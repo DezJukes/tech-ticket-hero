@@ -19,6 +19,10 @@ signal screen_tapped
 var waiting_for_tap: bool = false
 var continue_label: Label
 
+# Typing state
+var is_typing: bool = false
+var skip_typing: bool = false
+
 # --- NEW: Bouncing Arrow Indicator ---
 var speaker_arrow: Label
 
@@ -71,7 +75,10 @@ func _ready():
 func _input(event: InputEvent) -> void:
 	if (event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed) or \
 	   (event is InputEventScreenTouch and event.pressed):
-		if waiting_for_tap:
+		if is_typing:
+			skip_typing = true
+		
+		elif waiting_for_tap:
 			screen_tapped.emit()
 
 func wait_for_user() -> void:
@@ -184,7 +191,15 @@ func play_intro() -> void:
 func type_text(label: Label, text: String, speed := 0.03) -> void:
 	if label == null:
 		return
+		
 	label.text = ""
+	is_typing = true
+	skip_typing = false
 	for i in text.length():
+		if skip_typing:
+			label.text = text
+			break
 		label.text += text[i]
 		await get_tree().create_timer(speed).timeout
+	
+	is_typing = false
