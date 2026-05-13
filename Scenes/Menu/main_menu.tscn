@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b8prqvjq48jae"]
 
 [ext_resource type="Script" uid="uid://dcmk7gco78cym" path="res://Scripts/Menu-Scripts/main_menu.gd" id="1_48xlc"]
+[ext_resource type="Texture2D" uid="uid://clcpv2xavcwla" path="res://Assets/Menu/menu-bg.png" id="2_17gaq"]
 [ext_resource type="Texture2D" uid="uid://dg8445f24jheu" path="res://Assets/Menu/JUAN_RUNNING_Crop.png" id="3_1di0l"]
 [ext_resource type="Texture2D" uid="uid://5t4dmkxpqv5u" path="res://Assets/Menu/TechTicketHeroLogo.png" id="4_pn3xf"]
 [ext_resource type="Texture2D" uid="uid://c6irroiqbc8vi" path="res://Assets/Menu/PLAY.png" id="5_ab7fb"]
@@ -8,19 +9,19 @@
 [ext_resource type="Texture2D" uid="uid://cjf3gr0deefxp" path="res://Assets/Menu/EXIT.png" id="6_gpijq"]
 [ext_resource type="Texture2D" uid="uid://bfgvuf00yn4o4" path="res://Assets/Menu/Buttons/Exit-pressed.png" id="8_1di0l"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pn3xf"]
-bg_color = Color(1, 1, 1, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1di0l"]
+texture = ExtResource("2_17gaq")
 
 [node name="MainMenu" type="Node" unique_id=1143394298]
 script = ExtResource("1_48xlc")
 
-[node name="Background" type="Panel" parent="." unique_id=1867395852]
+[node name="Background" type="Panel" parent="." unique_id=1444254141]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_pn3xf")
+theme_override_styles/panel = SubResource("StyleBoxTexture_1di0l")
 
 [node name="MenuWrapper" type="HBoxContainer" parent="." unique_id=277283414]
 anchors_preset = 15
