@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cq42uutvjicfi"]
+
+[ext_resource type="Texture2D" uid="uid://duibkjn33mjl4" path="res://Assets/Misc/Level 1 - School Campus/Furnitures - CMS/ComputerSchool.png" id="1_bcmtw"]
+[ext_resource type="Script" uid="uid://cm4v37evgkjow" path="res://Scenes/Level 1 - School Campus/Furnitures/school_computer_interaction_zone.gd" id="2_qbdf5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l64jm"]
+radius = 47.5
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgv3u"]
+size = Vector2(64, 38)
+
+[node name="SchoolComputer" type="Node2D" unique_id=925285969]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=286060367]
+visible = false
+texture = ExtResource("1_bcmtw")
+
+[node name="SchoolComputerInteractionZone" type="Area2D" parent="." unique_id=1688665778]
+script = ExtResource("2_qbdf5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SchoolComputerInteractionZone" unique_id=2027420761]
+position = Vector2(-0.5, -1)
+shape = SubResource("CircleShape2D_l64jm")
+
+[node name="SchoolComputerBody" type="StaticBody2D" parent="." unique_id=1129115946]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SchoolComputerBody" unique_id=180757284]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_wgv3u")
+
+[connection signal="body_entered" from="SchoolComputerInteractionZone" to="SchoolComputerInteractionZone" method="_on_body_entered"]
+[connection signal="body_exited" from="SchoolComputerInteractionZone" to="SchoolComputerInteractionZone" method="_on_body_exited"]

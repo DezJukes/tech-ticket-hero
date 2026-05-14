@@ -11,10 +11,21 @@ extends Node
 @onready var objective_banner = $"../CanvasLayer/Objective"
 var final_objective_y: float
 
-# --- NEW: Tap to continue system ---
+# --- Tap to continue system ---
 signal screen_tapped
 var waiting_for_tap: bool = false
 var continue_label: Label
+
+# =========================
+# NEW VARIABLES
+# =========================
+
+# Typing state
+var is_typing: bool = false
+var skip_typing: bool = false
+
+# Speaker arrow
+var speaker_arrow: Label
 
 # --- MUSIC PLAYER ---
 var level_music_player: AudioStreamPlayer
@@ -29,48 +40,151 @@ func _ready():
 		# Hide above screen initially
 		objective_banner.position.y = -150
 		
-	# Setup music player
+	# =========================
+	# MUSIC PLAYER
+	# =========================
 	level_music_player = AudioStreamPlayer.new()
 	level_music_player.stream = load("res://Assets/Audio/office-music.mp3")
 	level_music_player.bus = "Master"
 	add_child(level_music_player)
 	
-	# 1. Create the "Press screen" label entirely through code!
+	# =========================
+	# CONTINUE LABEL
+	# =========================
 	continue_label = Label.new()
 	continue_label.text = "Press screen to next ▶"
 	continue_label.add_theme_font_size_override("font_size", 24)
+	
 	continue_label.set_anchors_preset(Control.PRESET_BOTTOM_RIGHT)
-	continue_label.offset_left = -300 # Push it safely inward from the right edge
-	continue_label.offset_top = -50   # Push it safely up from the bottom edge
+	
+	continue_label.offset_left = -300
+	continue_label.offset_top = -50
+	
 	continue_label.hide()
+	
 	$TITLE/Control.add_child(continue_label)
 	
-	# 2. Add a simple looping pulse animation to the prompt
+	# Pulse animation
 	var pulse = create_tween().set_loops()
+	
 	pulse.tween_property(continue_label, "modulate:a", 0.3, 0.6)
 	pulse.tween_property(continue_label, "modulate:a", 1.0, 0.6)
 
+	# =========================
+	# SPEAKER ARROW
+	# =========================
+	speaker_arrow = Label.new()
+
+	speaker_arrow.text = "▼"
+
+	speaker_arrow.add_theme_font_size_override(
+		"font_size",
+		60
+	)
+
+	speaker_arrow.add_theme_color_override(
+		"font_color",
+		Color(1.0, 0.8, 0.0)
+	)
+
+	speaker_arrow.add_theme_color_override(
+		"font_outline_color",
+		Color.BLACK
+	)
+
+	speaker_arrow.add_theme_constant_override(
+		"outline_size",
+		8
+	)
+
+	speaker_arrow.hide()
+
+	$TITLE/Control.add_child(speaker_arrow)
+
+	# Bounce animation
+	var bounce = create_tween().set_loops()
+
+	bounce.tween_property(
+		speaker_arrow,
+		"position:y",
+		15.0,
+		0.4
+	).as_relative()
+
+	bounce.tween_property(
+		speaker_arrow,
+		"position:y",
+		-15.0,
+		0.4
+	).as_relative()
+
 	play_intro()
 
-# --- NEW: Global Input Detection ---
+
+# =========================
+# GLOBAL INPUT
+# =========================
 func _input(event: InputEvent) -> void:
-	# Check for a Left Mouse Click OR a Mobile Screen Tap
+	# Left click OR mobile tap
 	if (event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed) or \
 	   (event is InputEventScreenTouch and event.pressed):
-		# If the game is currently paused waiting for the user, emit our signal to unpause it!
-		if waiting_for_tap:
+
+		# Skip typewriter instantly
+		if is_typing:
+			skip_typing = true
+
+		# Continue dialogue
+		elif waiting_for_tap:
 			screen_tapped.emit()
 
-# --- NEW: Helper function to pause the sequence ---
+
+# =========================
+# WAIT FOR USER
+# =========================
 func wait_for_user() -> void:
 	waiting_for_tap = true
-	continue_label.show() # Turn on the "Press screen" text
 	
-	await screen_tapped   # FREEZE the code here until the player taps
+	continue_label.show()
 	
-	continue_label.hide() # Hide it again when moving forward
+	await screen_tapped
+	
+	continue_label.hide()
+	
 	waiting_for_tap = false
 
+
+# =========================
+# SPEAKER SETUP
+# =========================
+func set_speaker(speaker_name: String) -> void:
+	name_label.text = speaker_name
+
+	speaker_arrow.show()
+
+	# Leader
+	if speaker_name == "Leader":
+		name_label.add_theme_color_override(
+			"font_color",
+			Color(0.9, 0.3, 1.0)
+		)
+
+		# Right side
+		speaker_arrow.position = Vector2(850, 150)
+
+	# Intern
+	elif speaker_name == "Intern":
+		name_label.add_theme_color_override(
+			"font_color",
+			Color(0.2, 0.7, 1.0)
+		)
+
+		# Left side
+		speaker_arrow.position = Vector2(300, 150)
+
+
+# =========================
+# INTRO SEQUENCE
+# =========================
 func play_intro() -> void:
 	# Initial states
 	black_screen.modulate.a = 1.0
@@ -80,62 +194,174 @@ func play_intro() -> void:
 	dialog_label.modulate.a = 0.0
 	name_label.modulate.a = 0.0
 
-	# --- INTRO TEXT ---
+	# =========================
+	# INTRO TEXT
+	# =========================
 	var t1 = create_tween()
-	t1.tween_property(intro_text, "modulate:a", 1.0, 1.0)
+
+	t1.tween_property(
+		intro_text,
+		"modulate:a",
+		1.0,
+		1.0
+	)
+
 	await t1.finished
 	
-	# Pause code until the player taps!
 	await wait_for_user()
 	
 	var t2 = create_tween()
-	t2.tween_property(intro_text, "modulate:a", 0.0, 1.0)
-	t2.tween_property(black_screen, "modulate:a", 0.5, 1.0)
+
+	t2.set_parallel(true)
+
+	t2.tween_property(
+		intro_text,
+		"modulate:a",
+		0.0,
+		1.0
+	)
+
+	t2.tween_property(
+		black_screen,
+		"modulate:a",
+		0.5,
+		1.0
+	)
+
 	await t2.finished
 	
 	# =========================
 	# DIALOGUE PART
 	# =========================
-	
-	# Show dialog UI smoothly
 	var show_tween = create_tween()
-	show_tween.set_parallel(true) # Fade all 3 UI pieces in at the exact same time
-	show_tween.tween_property(dialog_box, "modulate:a", 1.0, 0.5)
-	show_tween.tween_property(name_label, "modulate:a", 1.0, 0.5)
-	show_tween.tween_property(dialog_label, "modulate:a", 1.0, 0.5)
+
+	show_tween.set_parallel(true)
+
+	show_tween.tween_property(
+		dialog_box,
+		"modulate:a",
+		1.0,
+		0.5
+	)
+
+	show_tween.tween_property(
+		name_label,
+		"modulate:a",
+		1.0,
+		0.5
+	)
+
+	show_tween.tween_property(
+		dialog_label,
+		"modulate:a",
+		1.0,
+		0.5
+	)
 	
 	await show_tween.finished
 	
-	# Start level music as dialogue begins
+	# Start level music
 	level_music_player.play()
 	
-	# --- CONVERSATION START ---
+	# =========================
+	# CONVERSATION START
+	# =========================
 	
 	# Leader speaks
-	name_label.text = "Leader"
-	await type_text(dialog_label, "Wow! Did you do that by yourself?", 0.03)
-	await wait_for_user() 
+	set_speaker("Leader")
+
+	await type_text(
+		dialog_label,
+		"Wow! Did you do that by yourself?",
+		0.03
+	)
+
+	await wait_for_user()
 	
 	# Intern replies
-	name_label.text = "Intern"
-	await type_text(dialog_label, "I did, sir.", 0.03)
-	await wait_for_user() 
+	set_speaker("Intern")
+
+	await type_text(
+		dialog_label,
+		"I did, sir.",
+		0.03
+	)
+
+	await wait_for_user()
 	
 	# Leader speaks again
-	name_label.text = "Leader"
-	await type_text(dialog_label, "You're good at this, go to my office later on.", 0.03)
-	await wait_for_user() 
+	set_speaker("Leader")
+
+	await type_text(
+		dialog_label,
+		"You're good at this, go to my office later on.",
+		0.03
+	)
+
+	await wait_for_user()
 	
 	# Leader continues
-	await type_text(dialog_label, "We have this E-Commerce System, do you \nmind fixing it?", 0.03)
-	await wait_for_user() 
+	set_speaker("Leader")
+
+	await type_text(
+		dialog_label,
+		"We have this E-Commerce System, do you \nmind fixing it?",
+		0.03
+	)
+
+	await wait_for_user()
 	
 	# Intern final reply
-	name_label.text = "Intern"
-	await type_text(dialog_label, "Yes, sir, I can.", 0.03)
-	await wait_for_user() 
+	set_speaker("Intern")
+
+	await type_text(
+		dialog_label,
+		"Yes, sir, I can.",
+		0.03
+	)
+
+	await wait_for_user()
+
+	# =========================
+	# CLEAN EXIT
+	# =========================
+	speaker_arrow.hide()
+
+	var end_tween = create_tween()
+
+	end_tween.set_parallel(true)
+
+	end_tween.tween_property(
+		black_screen,
+		"modulate:a",
+		0.0,
+		1.0
+	)
+
+	end_tween.tween_property(
+		dialog_box,
+		"modulate:a",
+		0.0,
+		0.5
+	)
+
+	end_tween.tween_property(
+		name_label,
+		"modulate:a",
+		0.0,
+		0.5
+	)
+
+	end_tween.tween_property(
+		dialog_label,
+		"modulate:a",
+		0.0,
+		0.5
+	)
+
+	await end_tween.finished
 	
-	# End sequence, destroy title
+	# Remove intro overlay
 	$TITLE.queue_free()
 	
 	# =========================
@@ -154,12 +380,26 @@ func play_intro() -> void:
 			0.8
 		)
 
+
 # =========================
 # TYPEWRITER EFFECT
 # =========================
 func type_text(label: Label, text: String, speed := 0.03) -> void:
+	if label == null:
+		return
+
 	label.text = ""
+
+	is_typing = true
+	skip_typing = false
 	
 	for i in text.length():
+		if skip_typing:
+			label.text = text
+			break
+
 		label.text += text[i]
+
 		await get_tree().create_timer(speed).timeout
+
+	is_typing = false

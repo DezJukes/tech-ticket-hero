@@ -1,26 +1,30 @@
-[gd_scene format=3 uid="uid://c4amp3tipybyy"]
+[gd_scene format=3 uid="uid://bkt3qhlvlcr73"]
 
-[ext_resource type="Script" uid="uid://dudbwe1fxtfrd" path="res://Scenes/Level 3 - Big Tech Company/Level 5 - Game Scene/baking_game_scene.gd" id="1_6dhhf"]
-[ext_resource type="Texture2D" uid="uid://cimh2yu1mbqnl" path="res://Assets/Misc/Level 3 - Big Tech Company/Background_Office3.1.png" id="2_khu3i"]
-[ext_resource type="Texture2D" uid="uid://bcptjswss5irm" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/Elevator2.png" id="3_6scms"]
-[ext_resource type="Texture2D" uid="uid://bhv0ed1ak82gw" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/Elevator.png" id="4_sagri"]
-[ext_resource type="PackedScene" uid="uid://dq02vbjedg55p" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/table.tscn" id="5_q2et0"]
-[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="6_8rbs4"]
-[ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="7_5gvr4"]
-[ext_resource type="Texture2D" uid="uid://fv84tbd3ceo5" path="res://Assets/Misc/interact.png" id="7_sagri"]
-[ext_resource type="PackedScene" uid="uid://gy3cgy47hv4o" path="res://Scenes/computer2.tscn" id="8_8oft1"]
-[ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="9_0jx5g"]
-[ext_resource type="PackedScene" uid="uid://diygapspgj4q6" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputer.tscn" id="9_6scms"]
-[ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="10_cu1ks"]
-[ext_resource type="PackedScene" uid="uid://1kwcpspij480" path="res://Scenes/npc_guard.tscn" id="11_ouqni"]
-[ext_resource type="PackedScene" uid="uid://cq42uutvjicfi" path="res://Scenes/Level 1 - School Campus/Furnitures/npc.tscn" id="11_q2et0"]
-[ext_resource type="Script" uid="uid://chxryeiqstytr" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/dashed_ring.gd" id="12_8rbs4"]
-[ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="12_yjybh"]
-[ext_resource type="Script" uid="uid://bt1a71sj7u06u" path="res://Scenes/Level 3 - Big Tech Company/Level 5 - Game Scene/game_intro_level_5.gd" id="13_svwq2"]
-[ext_resource type="Texture2D" uid="uid://nywp880yfs16" path="res://Assets/Title Headers/LevelSign5.png" id="14_fyeeh"]
-[ext_resource type="Texture2D" uid="uid://4c8y7dnu2fg3" path="res://Assets/Title Headers/BANKING.png" id="15_f3vbv"]
-[ext_resource type="Texture2D" uid="uid://dmoffd0324nea" path="res://Assets/Title Headers/SYSTEM.png" id="16_mlfrv"]
-[ext_resource type="Texture2D" uid="uid://df76s6su55lpv" path="res://Assets/Dialog/level_5_dialog.png" id="17_khu3i"]
+[ext_resource type="Script" uid="uid://cy7vuqhiri0dn" path="res://Scenes/Level 3 - Big Tech Company/Level Boss - Game Scene/boss_game_scene.gd" id="1_05g26"]
+[ext_resource type="Texture2D" uid="uid://bybimwxt7rr3i" path="res://Assets/Misc/Level 2 - Intermediate/Background_Office3.png" id="2_ksk68"]
+[ext_resource type="PackedScene" uid="uid://dq02vbjedg55p" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/table.tscn" id="5_d7g31"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="6_8y537"]
+[ext_resource type="Texture2D" uid="uid://fv84tbd3ceo5" path="res://Assets/Misc/interact.png" id="7_syfxc"]
+[ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="8_1qqrk"]
+[ext_resource type="PackedScene" uid="uid://gy3cgy47hv4o" path="res://Scenes/computer2.tscn" id="9_6e3b8"]
+[ext_resource type="PackedScene" uid="uid://btxptc32mnr8f" path="res://Scenes/npc_boss.tscn" id="9_clgsv"]
+[ext_resource type="PackedScene" uid="uid://cq42uutvjicfi" path="res://Scenes/Level 1 - School Campus/Furnitures/npc.tscn" id="11_tj12u"]
+[ext_resource type="Script" uid="uid://chxryeiqstytr" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/dashed_ring.gd" id="12_74nxi"]
+[ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="13_vsku3"]
+[ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="14_kh4em"]
+[ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="16_15pjp"]
+[ext_resource type="Script" uid="uid://birqyj7wt5vc2" path="res://Scenes/Level 3 - Big Tech Company/Level Boss - Game Scene/game_intro_level_6.gd" id="17_rsp0k"]
+[ext_resource type="Texture2D" uid="uid://nywp880yfs16" path="res://Assets/Title Headers/LevelSign5.png" id="18_luoqu"]
+[ext_resource type="Texture2D" uid="uid://4c8y7dnu2fg3" path="res://Assets/Title Headers/BANKING.png" id="19_xmrb3"]
+[ext_resource type="Texture2D" uid="uid://dpoy2ml3ml3u8" path="res://Assets/Misc/Level Boss/Sprite-0019.png" id="20_4n704"]
+[ext_resource type="Texture2D" uid="uid://dmoffd0324nea" path="res://Assets/Title Headers/SYSTEM.png" id="20_i6xaf"]
+[ext_resource type="PackedScene" uid="uid://b6cewecvx0fqn" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/boss_table.tscn" id="21_evd5e"]
+[ext_resource type="Texture2D" uid="uid://cbue4xjnm34lb" path="res://Assets/Dialog/level_6_dialog.png" id="21_r5jub"]
+[ext_resource type="Texture2D" uid="uid://fmqqqxum7lwe" path="res://Assets/Misc/Level Boss/Sprite-0026.png" id="22_vvgnp"]
+[ext_resource type="Texture2D" uid="uid://4vwx7syhpb73" path="res://Assets/Misc/Level Boss/Sprite-0027.png" id="23_ambeb"]
+[ext_resource type="Texture2D" uid="uid://casnf37exg346" path="res://Assets/Misc/Level Boss/Sprite-0032.png" id="24_2qxkm"]
+[ext_resource type="PackedScene" path="res://Scenes/filing_cabinet_1.tscn" id="24_evd5e"]
+[ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="25_vvgnp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8oft1"]
 bg_color = Color(0.8509804, 0.8509804, 0.8509804, 1)
@@ -96,7 +100,7 @@ corner_radius_bottom_left = 10
 size = Vector2(3962, 17)
 
 [node name="LibraryGameScene" type="Node2D" unique_id=1174430263]
-script = ExtResource("1_6dhhf")
+script = ExtResource("1_05g26")
 
 [node name="Office Background Layer" type="CanvasLayer" parent="." unique_id=362482962]
 layer = -1
@@ -105,26 +109,18 @@ layer = -1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -96.99999
 offset_top = -102.0
+offset_right = -97.0
 offset_bottom = -102.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.1557093, 1.1557093)
-texture = ExtResource("2_khu3i")
+texture = ExtResource("2_ksk68")
 metadata/_edit_use_anchors_ = true
 
-[node name="Elevator2" type="Sprite2D" parent="." unique_id=1356214863]
-position = Vector2(1055, 344.23438)
-scale = Vector2(3.8198242, 3.8198242)
-texture = ExtResource("3_6scms")
-
-[node name="Elevator" type="Sprite2D" parent="." unique_id=885429119]
-position = Vector2(769, 344.23438)
-scale = Vector2(3.8198242, 3.8198242)
-texture = ExtResource("4_sagri")
-
-[node name="Table" parent="." unique_id=295558921 instance=ExtResource("5_q2et0")]
-position = Vector2(323, 329)
+[node name="Table" parent="." unique_id=295558921 instance=ExtResource("5_d7g31")]
+position = Vector2(-175.99997, 349.00003)
 scale = Vector2(3.8128488, 3.8128488)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1120077270]
@@ -141,7 +137,7 @@ offset_right = -93.0
 offset_bottom = -99.0
 grow_horizontal = 0
 grow_vertical = 0
-theme_override_fonts/font = ExtResource("6_8rbs4")
+theme_override_fonts/font = ExtResource("6_8y537")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_8oft1")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0jx5g")
@@ -152,7 +148,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ouqni")
 modulate = Color(1, 1, 1, 0.57254905)
 position = Vector2(61, 59)
 scale = Vector2(0.38707885, 0.38707885)
-texture = ExtResource("7_sagri")
+texture = ExtResource("7_syfxc")
 
 [node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=151064480]
 anchors_preset = 1
@@ -163,7 +159,7 @@ offset_top = 30.0
 offset_right = -47.0
 offset_bottom = 105.0
 grow_horizontal = 0
-theme_override_fonts/font = ExtResource("6_8rbs4")
+theme_override_fonts/font = ExtResource("6_8y537")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_6scms")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sagri")
@@ -208,9 +204,9 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_5gvr4")
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -449.0
+offset_left = -246.16
 offset_top = 30.0
-offset_right = 449.0
+offset_right = 214.18506
 offset_bottom = 95.0
 grow_horizontal = 2
 size_flags_horizontal = 3
@@ -230,35 +226,27 @@ offset_right = 125.5
 offset_bottom = 11.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_fonts/font = ExtResource("6_8rbs4")
+theme_override_fonts/font = ExtResource("6_8y537")
 theme_override_font_sizes/font_size = 30
-text = "Objective: Show the guard what you can do. Fix the system"
+text = "Objective: Talk to the boss."
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="player" parent="." unique_id=482249979 instance=ExtResource("7_5gvr4")]
-position = Vector2(136, 319)
-scale = Vector2(2.4410927, 2.4410927)
-motion_mode = 1
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1580133326]
 position = Vector2(575, 323)
 
-[node name="Computer4" parent="." unique_id=1610868164 instance=ExtResource("8_8oft1")]
+[node name="Computer4" parent="." unique_id=1610868164 instance=ExtResource("9_6e3b8")]
 visible = false
 position = Vector2(481, 223)
 scale = Vector2(2.7796469, 2.7796469)
 
-[node name="SchoolComputer" parent="." unique_id=925285969 instance=ExtResource("9_6scms")]
-position = Vector2(481, 220)
-scale = Vector2(2.75361, 2.75361)
+[node name="NpcMentor" parent="." unique_id=1679080789 instance=ExtResource("9_clgsv")]
+position = Vector2(555.00006, 234.00009)
+scale = Vector2(2.4314773, 2.4314773)
 
-[node name="Guard" parent="." unique_id=1264611466 instance=ExtResource("11_q2et0")]
-position = Vector2(323.00006, 552.00006)
-scale = Vector2(2.0753877, 2.0753877)
-
-[node name="DashedRing" type="Node2D" parent="Guard" unique_id=1779071498]
-script = ExtResource("12_8rbs4")
+[node name="TalkAlert" parent="." unique_id=200142115 instance=ExtResource("16_15pjp")]
+position = Vector2(614.00006, 151)
+scale = Vector2(1.1605482, 1.1605482)
 
 [node name="Control" type="Control" parent="." unique_id=117607346]
 layout_mode = 3
@@ -267,10 +255,10 @@ offset_right = 40.0
 offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
-[node name="TouchControls" parent="Control" unique_id=26897351 instance=ExtResource("9_0jx5g")]
+[node name="TouchControls" parent="Control" unique_id=26897351 instance=ExtResource("13_vsku3")]
 
 [node name="Pause" type="Node" parent="." unique_id=743239756]
-script = ExtResource("10_cu1ks")
+script = ExtResource("14_kh4em")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Pause" unique_id=1817357555]
 layer = 2
@@ -301,7 +289,7 @@ theme_override_constants/separation = 30
 
 [node name="PAUSED" type="Label" parent="Pause/CanvasLayer/PausePanel/VBoxContainer" unique_id=1463826372]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("6_8rbs4")
+theme_override_fonts/font = ExtResource("6_8y537")
 theme_override_font_sizes/font_size = 60
 text = "PAUSED"
 
@@ -327,10 +315,6 @@ process_mode = 3
 layout_mode = 2
 theme_override_font_sizes/font_size = 20
 text = "Main Menu"
-
-[node name="NpcMentor2" parent="." unique_id=537200204 instance=ExtResource("11_ouqni")]
-position = Vector2(322.99994, 550)
-scale = Vector2(2.343449, 2.343449)
 
 [node name="CollisionWall" type="StaticBody2D" parent="." unique_id=2047317507]
 
@@ -361,12 +345,8 @@ rotation = 1.569737
 position = Vector2(865, 168)
 shape = SubResource("RectangleShape2D_k0b4w")
 
-[node name="TalkAlert" parent="." unique_id=200142115 instance=ExtResource("12_yjybh")]
-position = Vector2(380, 457)
-scale = Vector2(1.1605482, 1.1605482)
-
 [node name="GameIntroLevel2" type="Node" parent="." unique_id=354264543]
-script = ExtResource("13_svwq2")
+script = ExtResource("17_rsp0k")
 
 [node name="TITLE" type="CanvasLayer" parent="GameIntroLevel2" unique_id=1339125492]
 layer = 2
@@ -388,7 +368,30 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
+[node name="Label" type="Label" parent="GameIntroLevel2/TITLE/Control" unique_id=762131098]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.5
+offset_top = -201.0
+offset_right = 379.5
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "You have proven yourself and your skills.
+You have gotten this far.
+
+It's now time to meet....
+
+The Boss"
+horizontal_alignment = 1
+
 [node name="VBoxContainer" type="VBoxContainer" parent="GameIntroLevel2/TITLE/Control" unique_id=1223651353]
+visible = false
 custom_minimum_size = Vector2(400, 100)
 layout_mode = 1
 anchors_preset = 8
@@ -405,7 +408,7 @@ grow_vertical = 2
 
 [node name="LEVEL2" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer" unique_id=1043304111]
 layout_mode = 2
-texture = ExtResource("14_fyeeh")
+texture = ExtResource("18_luoqu")
 stretch_mode = 3
 
 [node name="HBoxContainer" type="HBoxContainer" parent="GameIntroLevel2/TITLE/Control/VBoxContainer" unique_id=1571701966]
@@ -413,12 +416,12 @@ layout_mode = 2
 
 [node name="CMS" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer/HBoxContainer" unique_id=403738]
 layout_mode = 2
-texture = ExtResource("15_f3vbv")
+texture = ExtResource("19_xmrb3")
 stretch_mode = 3
 
 [node name="CMS2" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/VBoxContainer/HBoxContainer" unique_id=822330588]
 layout_mode = 2
-texture = ExtResource("16_mlfrv")
+texture = ExtResource("20_i6xaf")
 stretch_mode = 3
 
 [node name="Control" type="Control" parent="GameIntroLevel2/TITLE/Control" unique_id=1639392193]
@@ -446,7 +449,7 @@ scale = Vector2(0.6028029, 0.6028029)
 
 [node name="TextureRect" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/Control/VBoxContainer2" unique_id=1046334156]
 layout_mode = 2
-texture = ExtResource("17_khu3i")
+texture = ExtResource("21_r5jub")
 
 [node name="Label2" type="Label" parent="GameIntroLevel2/TITLE/Control/Control" unique_id=1925927205]
 layout_mode = 0
@@ -465,6 +468,67 @@ offset_right = 1102.0
 offset_bottom = 563.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
+
+[node name="Sprite0019" type="Sprite2D" parent="." unique_id=496626733]
+position = Vector2(461, 243)
+rotation = 3.1415927
+scale = Vector2(3.4806294, -4.1493964)
+texture = ExtResource("20_4n704")
+
+[node name="Table2" parent="." unique_id=1118056813 instance=ExtResource("21_evd5e")]
+position = Vector2(555, 334)
+scale = Vector2(4.2000012, 4.2000012)
+
+[node name="player" parent="." unique_id=482249979 instance=ExtResource("8_1qqrk")]
+position = Vector2(563, 558)
+scale = Vector2(2.4410927, 2.4410927)
+motion_mode = 1
+
+[node name="Sprite0026" type="Sprite2D" parent="." unique_id=239209208]
+position = Vector2(799, 130)
+scale = Vector2(4.310274, 4.310274)
+texture = ExtResource("22_vvgnp")
+
+[node name="Sprite0027" type="Sprite2D" parent="." unique_id=501953394]
+position = Vector2(360, 112.00001)
+scale = Vector2(5.5846047, 5.5846047)
+texture = ExtResource("23_ambeb")
+
+[node name="Sprite0032" type="Sprite2D" parent="." unique_id=886593095]
+position = Vector2(672, 309)
+scale = Vector2(3.4687543, 3.4687543)
+texture = ExtResource("24_2qxkm")
+
+[node name="Boss" parent="." unique_id=1264611466 instance=ExtResource("11_tj12u")]
+position = Vector2(557.0001, 257)
+scale = Vector2(3.6511045, 3.6511045)
+
+[node name="DashedRing" type="Node2D" parent="Boss" unique_id=1779071498]
+script = ExtResource("12_74nxi")
+
+[node name="FilingCabinet1" parent="." unique_id=1959681443 instance=ExtResource("24_evd5e")]
+position = Vector2(203, 167.00002)
+scale = Vector2(6.610121, 6.610121)
+
+[node name="FilingCabinet3" parent="." unique_id=1452080145 instance=ExtResource("24_evd5e")]
+position = Vector2(-11, 167)
+scale = Vector2(6.610121, 6.610121)
+
+[node name="FilingCabinet2" parent="." unique_id=1180023425 instance=ExtResource("25_vvgnp")]
+position = Vector2(94, 167)
+scale = Vector2(6.610121, 6.610121)
+
+[node name="FilingCabinet4" parent="." unique_id=1822435295 instance=ExtResource("24_evd5e")]
+position = Vector2(1166, 167.00002)
+scale = Vector2(6.610121, 6.610121)
+
+[node name="FilingCabinet5" parent="." unique_id=1682514455 instance=ExtResource("24_evd5e")]
+position = Vector2(952, 167)
+scale = Vector2(6.610121, 6.610121)
+
+[node name="FilingCabinet6" parent="." unique_id=1861315135 instance=ExtResource("25_vvgnp")]
+position = Vector2(1057, 167)
+scale = Vector2(6.610121, 6.610121)
 
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]

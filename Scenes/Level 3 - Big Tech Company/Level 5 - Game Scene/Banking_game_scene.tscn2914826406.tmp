@@ -13,8 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://diygapspgj4q6" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputer.tscn" id="9_6scms"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="10_cu1ks"]
 [ext_resource type="PackedScene" uid="uid://1kwcpspij480" path="res://Scenes/npc_guard.tscn" id="11_ouqni"]
-[ext_resource type="PackedScene" uid="uid://cq42uutvjicfi" path="res://Scenes/Level 1 - School Campus/Furnitures/npc.tscn" id="11_q2et0"]
-[ext_resource type="Script" uid="uid://chxryeiqstytr" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/dashed_ring.gd" id="12_8rbs4"]
+[ext_resource type="Script" uid="uid://chxryeiqstytr" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/dashed_ring.gd" id="11_q2et0"]
 [ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="12_yjybh"]
 [ext_resource type="Script" uid="uid://bt1a71sj7u06u" path="res://Scenes/Level 3 - Big Tech Company/Level 5 - Game Scene/game_intro_level_5.gd" id="13_svwq2"]
 [ext_resource type="Texture2D" uid="uid://nywp880yfs16" path="res://Assets/Title Headers/LevelSign5.png" id="14_fyeeh"]
@@ -151,7 +150,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ouqni")
 [node name="Interact2" type="Sprite2D" parent="CanvasLayer/Interact" unique_id=1245183264]
 modulate = Color(1, 1, 1, 0.57254905)
 position = Vector2(61, 59)
-scale = Vector2(0.38707885, 0.38707885)
+scale = Vector2(0.5947932, 0.5947932)
 texture = ExtResource("7_sagri")
 
 [node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=151064480]
@@ -253,12 +252,15 @@ scale = Vector2(2.7796469, 2.7796469)
 position = Vector2(481, 220)
 scale = Vector2(2.75361, 2.75361)
 
-[node name="Guard" parent="." unique_id=1264611466 instance=ExtResource("11_q2et0")]
-position = Vector2(323.00006, 552.00006)
-scale = Vector2(2.0753877, 2.0753877)
+[node name="SchoolComputer2" parent="." unique_id=1225968985 instance=ExtResource("9_6scms")]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(327, 551)
+scale = Vector2(2.350072, 2.350072)
 
-[node name="DashedRing" type="Node2D" parent="Guard" unique_id=1779071498]
-script = ExtResource("12_8rbs4")
+[node name="DashedRing" type="Node2D" parent="SchoolComputer2" unique_id=1096932493]
+position = Vector2(65.52991, -140.84674)
+scale = Vector2(1.171713, 1.171713)
+script = ExtResource("11_q2et0")
 
 [node name="Control" type="Control" parent="." unique_id=117607346]
 layout_mode = 3
@@ -370,6 +372,7 @@ script = ExtResource("13_svwq2")
 
 [node name="TITLE" type="CanvasLayer" parent="GameIntroLevel2" unique_id=1339125492]
 layer = 2
+visible = false
 
 [node name="Control" type="Control" parent="GameIntroLevel2/TITLE" unique_id=1891490064]
 layout_mode = 3

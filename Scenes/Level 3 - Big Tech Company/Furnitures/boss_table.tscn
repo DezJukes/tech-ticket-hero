@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b6cewecvx0fqn"]
+
+[ext_resource type="Texture2D" uid="uid://bphe57ai5dmgn" path="res://Assets/Misc/Level Boss/Sprite-0006.png" id="1_7rp21"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xjrjk"]
+size = Vector2(35.54226, 15.526879)
+
+[node name="Table" type="Node2D" unique_id=295558921]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1330009635]
+texture = ExtResource("1_7rp21")
+
+[node name="table" type="StaticBody2D" parent="." unique_id=1512091174]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table" unique_id=756158712]
+position = Vector2(0.49999738, -6.4999995)
+scale = Vector2(2.222706, 1.3524932)
+shape = SubResource("RectangleShape2D_xjrjk")

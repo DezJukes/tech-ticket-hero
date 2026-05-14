@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dglqqy3bdyop1" path="res://Scenes/Level 1 - Beginner/Furnitures/wall_clock.tscn" id="13_187e2"]
 [ext_resource type="PackedScene" uid="uid://4n821ykno6xi" path="res://Scenes/Level 1 - Beginner/Furnitures/tall_bookshelf.tscn" id="14_187e2"]
 [ext_resource type="PackedScene" uid="uid://cg4i3yjj18scm" path="res://Scenes/Level 1 - Beginner/Furnitures/big_sofa.tscn" id="15_ahbbh"]
-[ext_resource type="PackedScene" uid="uid://dtn8arm3kjo3x" path="res://Scenes/Level 1 - Beginner/Furnitures/small_table.tscn" id="16_y7muq"]
+[ext_resource type="PackedScene" uid="uid://dtn8arm3kjo3x" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/small_table.tscn" id="16_y7muq"]
 [ext_resource type="PackedScene" uid="uid://diam8evntxlff" path="res://Scenes/Level 1 - Beginner/Furnitures/big_sofa_side.tscn" id="17_na666"]
 [ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="18_ahbbh"]
 [ext_resource type="Texture2D" uid="uid://cgs3180xvaag2" path="res://Assets/Title Headers/LevelSign2.png" id="20_8fn0a"]

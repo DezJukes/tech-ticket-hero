@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bfnb2hl7hafhb" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/cms_game_scene.gd" id="1_itgur"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_aurvk"]
 [ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="3_m8peq"]
+[ext_resource type="Texture2D" uid="uid://fv84tbd3ceo5" path="res://Assets/Misc/interact.png" id="4_7rsa6"]
 [ext_resource type="PackedScene" uid="uid://diygapspgj4q6" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputer.tscn" id="4_aurvk"]
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="5_5n5fx"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="6_5b2g6"]
@@ -126,6 +127,12 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_7rsa6")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ys5lo")
 theme_override_styles/hover = SubResource("StyleBoxFlat_yndnc")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_knqms")
+
+[node name="Interact2" type="Sprite2D" parent="CanvasLayer/Interact" unique_id=1159828992]
+modulate = Color(1, 1, 1, 0.57254905)
+position = Vector2(61, 59)
+scale = Vector2(0.3366317, 0.3366317)
+texture = ExtResource("4_7rsa6")
 
 [node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=737865658]
 anchors_preset = 1

@@ -7,12 +7,14 @@
 [ext_resource type="Texture2D" uid="uid://cupxe0plef48p" path="res://Assets/Dialog/level_3_dialog.png" id="6_g3vq8"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="7_aenwo"]
 [ext_resource type="Texture2D" uid="uid://lvpiaw27h2l4" path="res://Assets/Misc/Level 1 - Beginner/Office-bg.png" id="8_o52wa"]
+[ext_resource type="Texture2D" uid="uid://fv84tbd3ceo5" path="res://Assets/Misc/interact.png" id="10_ltkxt"]
 [ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="10_vig53"]
 [ext_resource type="PackedScene" uid="uid://bqk4wwgbista1" path="res://Scenes/computer.tscn" id="10_x43eb"]
 [ext_resource type="PackedScene" uid="uid://diygapspgj4q6" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputer.tscn" id="11_uw8n1"]
 [ext_resource type="Script" uid="uid://cdp7mf3ilf0w7" path="res://Scenes/Level 2 - The Office/Level 3 - Game Scene/game_intro_level_3.gd" id="12_17o4j"]
 [ext_resource type="PackedScene" uid="uid://dbrw636buueuk" path="res://Scenes/board_frame.tscn" id="12_sjkvh"]
 [ext_resource type="PackedScene" path="res://Scenes/filing_cabinet_1.tscn" id="13_jxe06"]
+[ext_resource type="Script" uid="uid://chxryeiqstytr" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/dashed_ring.gd" id="13_pkejs"]
 [ext_resource type="Texture2D" uid="uid://cm3ge0ras1y7o" path="res://Assets/Title Headers/LevelSign3.png" id="13_w3dm8"]
 [ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="14_5drem"]
 [ext_resource type="Texture2D" uid="uid://ci1j8qvtaelvg" path="res://Assets/Title Headers/ERP.png" id="14_ll3um"]
@@ -21,6 +23,69 @@
 [ext_resource type="PackedScene" uid="uid://bw0kxc2vm7tw5" path="res://Scenes/water_dispenser.tscn" id="16_rghtm"]
 [ext_resource type="PackedScene" uid="uid://dha4p2cqxmenv" path="res://Scenes/wall_note.tscn" id="17_41bcc"]
 [ext_resource type="PackedScene" uid="uid://b358ho3xp71lw" path="res://Scenes/npc_mentor.tscn" id="18_vbaqe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76mdf"]
+bg_color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bgjdm"]
+bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y0gs2"]
+bg_color = Color(0.8776157, 0.8776158, 0.87761563, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpj23"]
+bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uw8n1"]
+bg_color = Color(0.9254902, 0.9254902, 0.9254902, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ltkxt"]
+bg_color = Color(0.6745098, 0.6745098, 0.6745098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkejs"]
+bg_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rg7um"]
+bg_color = Color(0.6745098, 0.6745098, 0.6745098, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65ner"]
+bg_color = Color(0.2627451, 0.2627451, 0.2627451, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3vq8"]
 bg_color = Color(0, 0, 0, 1)
@@ -242,35 +307,80 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=129454791]
 
-[node name="Interact" type="Button" parent="CanvasLayer" unique_id=680907515]
+[node name="Interact" type="Button" parent="CanvasLayer" unique_id=204563004]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -192.0
-offset_top = -200.0
-offset_right = -92.0
-offset_bottom = -100.0
+offset_left = -213.0
+offset_top = -219.0
+offset_right = -93.0
+offset_bottom = -99.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("3_ealxg")
 theme_override_font_sizes/font_size = 60
-metadata/_edit_use_anchors_ = true
+theme_override_styles/normal = SubResource("StyleBoxFlat_76mdf")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bgjdm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_y0gs2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_lpj23")
 
-[node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=589227759]
+[node name="Interact2" type="Sprite2D" parent="CanvasLayer/Interact" unique_id=1808564497]
+modulate = Color(1, 1, 1, 0.57254905)
+position = Vector2(61, 59)
+scale = Vector2(0.36090982, 0.36090982)
+texture = ExtResource("10_ltkxt")
+
+[node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=1387454349]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -79.0
-offset_top = 13.0
-offset_right = -13.0
-offset_bottom = 42.0
+offset_left = -122.0
+offset_top = 30.0
+offset_right = -47.0
+offset_bottom = 105.0
 grow_horizontal = 0
 theme_override_fonts/font = ExtResource("3_ealxg")
 theme_override_font_sizes/font_size = 20
-text = "Pause"
-metadata/_edit_use_anchors_ = true
+theme_override_styles/normal = SubResource("StyleBoxFlat_uw8n1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ltkxt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pkejs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rg7um")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PauseButton" unique_id=343382592]
+custom_minimum_size = Vector2(10, 5)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.5
+offset_top = -22.5
+offset_right = 27.5
+offset_bottom = 31.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Panel" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=897900219]
+custom_minimum_size = Vector2(10, 8)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_65ner")
+
+[node name="Panel2" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=1920771066]
+custom_minimum_size = Vector2(10, 8)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_65ner")
+
+[node name="Panel3" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=835445368]
+custom_minimum_size = Vector2(10, 8)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_65ner")
 
 [node name="Objective" type="Panel" parent="CanvasLayer" unique_id=1757455898]
 anchors_preset = 5
@@ -315,6 +425,9 @@ position = Vector2(574, 320)
 [node name="SchoolComputer" parent="." unique_id=925285969 instance=ExtResource("11_uw8n1")]
 position = Vector2(570, 211.00002)
 scale = Vector2(3.1178484, 3.1178484)
+
+[node name="DashedRing" type="Node2D" parent="SchoolComputer" unique_id=1687042950]
+script = ExtResource("13_pkejs")
 
 [node name="Computer" parent="." unique_id=1632295490 instance=ExtResource("10_x43eb")]
 visible = false

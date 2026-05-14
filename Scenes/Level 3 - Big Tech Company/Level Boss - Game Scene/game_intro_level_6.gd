@@ -1,7 +1,7 @@
 extends Node
 
 @onready var black_screen = $TITLE/Control/ColorRect
-@onready var intro_text = $TITLE/Control/VBoxContainer
+@onready var intro_info = $TITLE/Control/Label
 
 @onready var dialog_box = $TITLE/Control/Control/VBoxContainer2
 @onready var name_label = $TITLE/Control/Control/Label2
@@ -31,6 +31,7 @@ var speaker_arrow: Label
 var level_music_player: AudioStreamPlayer
 
 func _ready():
+	
 	# =========================
 	# OBJECTIVE BANNER SETUP
 	# =========================
@@ -180,7 +181,7 @@ func set_speaker(speaker_name: String) -> void:
 	speaker_arrow.show()
 
 	# Guard
-	if speaker_name == "Guard":
+	if speaker_name == "Boss":
 		name_label.add_theme_color_override(
 			"font_color",
 			Color(1.0, 0.3, 0.3)
@@ -205,7 +206,7 @@ func play_intro() -> void:
 	# INITIAL STATES
 	# =========================
 	black_screen.modulate.a = 1.0
-	intro_text.modulate.a = 0.0
+	intro_info.modulate.a = 0.0
 	
 	dialog_box.modulate.a = 0.0
 	dialog_label.modulate.a = 0.0
@@ -216,12 +217,7 @@ func play_intro() -> void:
 	# =========================
 	var t1 = create_tween()
 
-	t1.tween_property(
-		intro_text,
-		"modulate:a",
-		1.0,
-		1.0
-	)
+	t1.tween_property(intro_info, "modulate:a", 1.0, 1.0)
 
 	await t1.finished
 	
@@ -231,19 +227,8 @@ func play_intro() -> void:
 
 	t2.set_parallel(true)
 
-	t2.tween_property(
-		intro_text,
-		"modulate:a",
-		0.0,
-		1.0
-	)
-
-	t2.tween_property(
-		black_screen,
-		"modulate:a",
-		0.5,
-		1.0
-	)
+	t2.tween_property(intro_info, "modulate:a", 0.0, 1.0)
+	t2.tween_property(black_screen, "modulate:a", 0.5, 1.0)
 
 	await t2.finished
 	
@@ -283,11 +268,11 @@ func play_intro() -> void:
 	# =========================
 	# DIALOGUE 1
 	# =========================
-	set_speaker("Guard")
+	set_speaker("Boss")
 
 	await type_text(
 		dialog_label,
-		"Bawal dito hindi marunong mag code!",
+		"Congratulations kid! You did well out there.",
 		0.03
 	)
 
@@ -296,11 +281,38 @@ func play_intro() -> void:
 	# =========================
 	# DIALOGUE 2
 	# =========================
-	set_speaker("Guard")
+	set_speaker("Boss")
 
 	await type_text(
 		dialog_label,
-		"Patunayan mo muna na kaya mo.",
+		"You've proven yourself, \nI see potential in you.",
+		0.03
+	)
+
+	await wait_for_user()
+	
+	
+	# =========================
+	# DIALOGUE 3
+	# =========================
+	set_speaker("Intern")
+
+	await type_text(
+		dialog_label,
+		"Thank you sir!",
+		0.03
+	)
+
+	await wait_for_user()
+	
+		# =========================
+	# DIALOGUE 4
+	# =========================
+	set_speaker("Boss")
+
+	await type_text(
+		dialog_label,
+		"I would like to hire you as a full time \ndeveloper in this company.",
 		0.03
 	)
 
@@ -309,24 +321,11 @@ func play_intro() -> void:
 	# =========================
 	# DIALOGUE 3
 	# =========================
-	set_speaker("Guard")
+	set_speaker("Developer")
 
 	await type_text(
 		dialog_label,
-		"Ayusin mo tong system namin!",
-		0.03
-	)
-
-	await wait_for_user()
-	
-	# =========================
-	# DIALOGUE 4
-	# =========================
-	set_speaker("Intern")
-
-	await type_text(
-		dialog_label,
-		"Oo, Sir. Kaya ko yan!",
+		"I would gladly accept that offer. \nThank you sir!",
 		0.03
 	)
 

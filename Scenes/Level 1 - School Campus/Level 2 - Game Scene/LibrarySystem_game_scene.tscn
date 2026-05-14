@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://jmh8jdprlt58" path="res://Assets/Misc/Level 1 - School Campus/BackgroundSchoolLib.png" id="1_uhf84"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_7kejv"]
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="3_1iltn"]
+[ext_resource type="Texture2D" uid="uid://fv84tbd3ceo5" path="res://Assets/Misc/interact.png" id="4_8bc6l"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="4_cuv6b"]
 [ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="5_dhupl"]
 [ext_resource type="PackedScene" uid="uid://diygapspgj4q6" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputer.tscn" id="7_l1prf"]
@@ -16,28 +17,28 @@
 [ext_resource type="Texture2D" uid="uid://dmoffd0324nea" path="res://Assets/Title Headers/SYSTEM.png" id="12_1iltn"]
 [ext_resource type="Texture2D" uid="uid://b2x7qwkyc4dj2" path="res://Assets/Dialog/level_2_dialog.png" id="14_a50ps"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a50ps"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8v45e"]
 bg_color = Color(0.8509804, 0.8509804, 0.8509804, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8v45e"]
-bg_color = Color(0.5689725, 0.5689729, 0.5689725, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqftt"]
-bg_color = Color(0.8784314, 0.8784314, 0.8784314, 1)
+bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yyvhi"]
+bg_color = Color(0.8776157, 0.8776158, 0.87761563, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5esx2"]
 bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
@@ -108,7 +109,7 @@ texture = ExtResource("1_uhf84")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1621635872]
 
-[node name="Interact" type="Button" parent="CanvasLayer" unique_id=792492859]
+[node name="Interact" type="Button" parent="CanvasLayer" unique_id=952475224]
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
@@ -122,10 +123,16 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_fonts/font = ExtResource("2_7kejv")
 theme_override_font_sizes/font_size = 60
-theme_override_styles/normal = SubResource("StyleBoxFlat_a50ps")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_8v45e")
-theme_override_styles/hover = SubResource("StyleBoxFlat_cqftt")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_yyvhi")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8v45e")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cqftt")
+theme_override_styles/hover = SubResource("StyleBoxFlat_yyvhi")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_5esx2")
+
+[node name="Interact2" type="Sprite2D" parent="CanvasLayer/Interact" unique_id=1078876976]
+modulate = Color(1, 1, 1, 0.57254905)
+position = Vector2(61, 59)
+scale = Vector2(0.36090982, 0.36090982)
+texture = ExtResource("4_8bc6l")
 
 [node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=737865658]
 anchors_preset = 1
