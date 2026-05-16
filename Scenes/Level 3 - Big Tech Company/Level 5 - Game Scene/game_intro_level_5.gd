@@ -14,6 +14,7 @@ var final_objective_y: float
 # --- Tap to continue system ---
 signal screen_tapped
 var waiting_for_tap: bool = false
+var tap_received: bool = false
 var continue_label: Label
 
 # =========================
@@ -150,10 +151,11 @@ func _input(event: InputEvent) -> void:
 		# Skip typewriter instantly
 		if is_typing:
 			skip_typing = true
+			return
 
 		# Continue dialogue
-		elif waiting_for_tap:
-			screen_tapped.emit()
+		if waiting_for_tap:
+			tap_received = true
 
 
 # =========================
@@ -161,14 +163,19 @@ func _input(event: InputEvent) -> void:
 # =========================
 func wait_for_user() -> void:
 	waiting_for_tap = true
+	
+	tap_received = false
 
 	continue_label.show()
 	
-	await screen_tapped
+	while not tap_received:
+		await get_tree().process_frame
 	
 	continue_label.hide()
 
 	waiting_for_tap = false
+	
+	tap_received = false
 
 
 # =========================
