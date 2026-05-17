@@ -17,6 +17,10 @@
 [ext_resource type="PackedScene" uid="uid://brbhbq3j6jk63" path="res://Scenes/npc_prof.tscn" id="13_itgur"]
 [ext_resource type="Texture2D" uid="uid://b2x7qwkyc4dj2" path="res://Assets/Dialog/level_2_dialog.png" id="14_5n5fx"]
 [ext_resource type="FontFile" uid="uid://dxaajcn2dpsf0" path="res://Assets/Font/ms-sans-serif-1.ttf" id="14_ys5lo"]
+[ext_resource type="Texture2D" uid="uid://c5bocuhnsj0h1" path="res://Assets/Dialog/Chat.png" id="18_yndnc"]
+[ext_resource type="Texture2D" uid="uid://clw4rsegs1fmg" path="res://Assets/Dialog/Arrow.png" id="19_3bipf"]
+[ext_resource type="Texture2D" uid="uid://dfb1i5drorqm0" path="res://Assets/Dialog/INTERN2_NOVEL.png" id="19_enbsl"]
+[ext_resource type="Texture2D" uid="uid://dc03uvyjofeqx" path="res://Assets/Dialog/PROF_NOVEL.png" id="20_enbsl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rsa6"]
 bg_color = Color(0.8509804, 0.8509804, 0.8509804, 1)
@@ -448,6 +452,7 @@ texture = ExtResource("12_5b2g6")
 stretch_mode = 3
 
 [node name="VBoxContainer2" type="Control" parent="GameIntro/TITLE/Control" unique_id=1880185772]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -479,25 +484,90 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("14_5n5fx")
 
-[node name="Label2" type="Label" parent="GameIntro/TITLE/Control" unique_id=1210186631]
-layout_mode = 0
-offset_left = 402.0
-offset_top = 421.00003
-offset_right = 469.00024
-offset_bottom = 472.00003
+[node name="DialogueBox" type="TextureRect" parent="GameIntro/TITLE/Control" unique_id=658819857]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -405.0
+offset_top = -270.0
+offset_right = 410.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("18_yndnc")
+
+[node name="SpeakerArrow" type="TextureRect" parent="GameIntro/TITLE/Control/DialogueBox" unique_id=2094214953]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 200.5
+offset_top = -376.0
+offset_right = 285.5
+offset_bottom = -291.5
+grow_horizontal = 2
+texture = ExtResource("19_3bipf")
+
+[node name="Label2" type="Label" parent="GameIntro/TITLE/Control/DialogueBox" unique_id=1210186631]
+layout_mode = 1
+offset_left = 66.5
+offset_top = 40.0
+offset_right = 133.50024
+offset_bottom = 91.0
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_ys5lo")
 theme_override_font_sizes/font_size = 37
 
-[node name="Label3" type="Label" parent="GameIntro/TITLE/Control" unique_id=1133464825]
-layout_mode = 0
-offset_left = 402.0
-offset_top = 476.00003
-offset_right = 1084.002
-offset_bottom = 563.0
+[node name="Label3" type="Label" parent="GameIntro/TITLE/Control/DialogueBox" unique_id=1133464825]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -341.001
+offset_top = -16.0
+offset_right = 341.00098
+offset_bottom = 70.99997
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("14_ys5lo")
 theme_override_font_sizes/font_size = 30
+
+[node name="StudentPortrait" type="TextureRect" parent="GameIntro/TITLE/Control/DialogueBox" unique_id=1965207433]
+show_behind_parent = true
+texture_filter = 1
+layout_mode = 1
+offset_left = -45.0
+offset_top = -337.0
+offset_right = 373.0
+offset_bottom = 81.0
+texture = ExtResource("19_enbsl")
+expand_mode = 1
+
+[node name="ProfPortrait" type="TextureRect" parent="GameIntro/TITLE/Control/DialogueBox" unique_id=2020505413]
+show_behind_parent = true
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -363.0
+offset_top = -343.0
+offset_right = 55.0
+offset_bottom = 75.0
+grow_horizontal = 0
+texture = ExtResource("20_enbsl")
+expand_mode = 1
+flip_h = true
 
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]

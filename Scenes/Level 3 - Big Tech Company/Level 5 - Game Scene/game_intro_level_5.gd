@@ -3,9 +3,9 @@ extends Node
 @onready var black_screen = $TITLE/Control/ColorRect
 @onready var intro_text = $TITLE/Control/VBoxContainer
 
-@onready var dialog_box = $TITLE/Control/Control/VBoxContainer2
-@onready var name_label = $TITLE/Control/Control/Label2
-@onready var dialog_label = $TITLE/Control/Control/Label3
+@onready var dialog_box = $TITLE/Control/Control/DialogueBox
+@onready var name_label = $TITLE/Control/Control/DialogueBox/Label2
+@onready var dialog_label = $TITLE/Control/Control/DialogueBox/Label3
 
 # Objective UI
 @onready var objective_banner = $"../CanvasLayer/Objective"
@@ -26,7 +26,7 @@ var is_typing: bool = false
 var skip_typing: bool = false
 
 # Speaker arrow
-var speaker_arrow: Label
+@onready var speaker_arrow = $TITLE/Control/Control/DialogueBox/SpeakerArrow
 
 # --- MUSIC PLAYER ---
 var level_music_player: AudioStreamPlayer
@@ -88,37 +88,6 @@ func _ready():
 		1.0,
 		0.6
 	)
-
-	# =========================
-	# SPEAKER ARROW
-	# =========================
-	speaker_arrow = Label.new()
-
-	speaker_arrow.text = "▼"
-
-	speaker_arrow.add_theme_font_size_override(
-		"font_size",
-		60
-	)
-
-	speaker_arrow.add_theme_color_override(
-		"font_color",
-		Color(1.0, 0.8, 0.0)
-	)
-
-	speaker_arrow.add_theme_color_override(
-		"font_outline_color",
-		Color.BLACK
-	)
-
-	speaker_arrow.add_theme_constant_override(
-		"outline_size",
-		8
-	)
-
-	speaker_arrow.hide()
-
-	$TITLE/Control.add_child(speaker_arrow)
 
 	# Bounce animation
 	var bounce = create_tween().set_loops()
@@ -194,7 +163,7 @@ func set_speaker(speaker_name: String) -> void:
 		)
 
 		# Right side
-		speaker_arrow.position = Vector2(850, 150)
+		speaker_arrow.position = Vector2(608.0, -376.0)
 
 	# Intern
 	elif speaker_name == "Intern":
@@ -204,7 +173,7 @@ func set_speaker(speaker_name: String) -> void:
 		)
 
 		# Left side
-		speaker_arrow.position = Vector2(300, 150)
+		speaker_arrow.position = Vector2(128.0, -376.0)
 
 
 func play_intro() -> void:

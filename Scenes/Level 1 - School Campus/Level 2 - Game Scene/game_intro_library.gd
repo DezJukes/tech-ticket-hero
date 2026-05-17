@@ -6,9 +6,9 @@ extends Node
 @onready var intro_info = $TITLE/Control/Label
 
 # Dialogue UI
-@onready var dialog_box = $TITLE/Control/VBoxContainer2
-@onready var name_label = $TITLE/Control/Label2
-@onready var dialog_label = $TITLE/Control/Label3
+@onready var dialog_box = $TITLE/Control/DialogueBox
+@onready var name_label = $TITLE/Control/DialogueBox/Label2
+@onready var dialog_label = $TITLE/Control/DialogueBox/Label3
 
 # Objective UI
 @onready var objective_banner = $"../CanvasLayer/Objective"
@@ -25,7 +25,7 @@ var is_typing: bool = false
 var skip_typing: bool = false
 
 # --- NEW: Bouncing Arrow Indicator ---
-var speaker_arrow: Label
+@onready var speaker_arrow = $TITLE/Control/DialogueBox/SpeakerArrow
 
 # --- MUSIC PLAYER ---
 var level_music_player: AudioStreamPlayer
@@ -54,16 +54,6 @@ func _ready():
 	var pulse = create_tween().set_loops()
 	pulse.tween_property(continue_label, "modulate:a", 0.3, 0.6)
 	pulse.tween_property(continue_label, "modulate:a", 1.0, 0.6)
-
-	# 2. Create the floating "Who is speaking" arrow!
-	speaker_arrow = Label.new()
-	speaker_arrow.text = "▼"
-	speaker_arrow.add_theme_font_size_override("font_size", 60)
-	speaker_arrow.add_theme_color_override("font_color", Color(1.0, 0.8, 0.0)) # Gold/Yellow
-	speaker_arrow.add_theme_color_override("font_outline_color", Color(0,0,0))
-	speaker_arrow.add_theme_constant_override("outline_size", 8)
-	speaker_arrow.hide()
-	$TITLE/Control.add_child(speaker_arrow)
 	
 	# Make the arrow bounce up and down forever
 	var bounce = create_tween().set_loops()
@@ -103,10 +93,10 @@ func set_speaker(speaker_name: String) -> void:
 	# make the arrow point exactly at their heads on your specific screen size!
 	if speaker_name == "Student":
 		name_label.add_theme_color_override("font_color", Color(0.2, 0.6, 1.0)) # Blue text
-		speaker_arrow.position = Vector2(300, 150) # Left side of screen
+		speaker_arrow.position = Vector2(128.0, -376.0) # Left side of screen
 	elif speaker_name == "Professor":
 		name_label.add_theme_color_override("font_color", Color(0.7, 0.3, 1.0)) # Purple text
-		speaker_arrow.position = Vector2(800, 150) # Right side of screen
+		speaker_arrow.position = Vector2(608.0, -376.0) # Right side of screen
 
 func play_intro() -> void:
 	black_screen.modulate.a = 1.0

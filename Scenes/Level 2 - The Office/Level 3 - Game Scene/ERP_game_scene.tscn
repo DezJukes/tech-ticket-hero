@@ -7,7 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="6_60s8w"]
 [ext_resource type="Texture2D" uid="uid://cupxe0plef48p" path="res://Assets/Dialog/level_3_dialog.png" id="6_g3vq8"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="7_aenwo"]
+[ext_resource type="Texture2D" uid="uid://c5bocuhnsj0h1" path="res://Assets/Dialog/Chat.png" id="8_76mdf"]
 [ext_resource type="Texture2D" uid="uid://lvpiaw27h2l4" path="res://Assets/Misc/Level 1 - Beginner/Office-bg.png" id="8_o52wa"]
+[ext_resource type="Texture2D" uid="uid://cnnie7w14o3d1" path="res://Assets/Dialog/INTERN_NOVEL.png" id="9_bgjdm"]
+[ext_resource type="Texture2D" uid="uid://clw4rsegs1fmg" path="res://Assets/Dialog/Arrow.png" id="9_y0gs2"]
 [ext_resource type="Texture2D" uid="uid://fv84tbd3ceo5" path="res://Assets/Misc/interact.png" id="10_ltkxt"]
 [ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="10_vig53"]
 [ext_resource type="PackedScene" uid="uid://bqk4wwgbista1" path="res://Scenes/computer.tscn" id="10_x43eb"]
@@ -196,6 +199,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="GameIntroLevel2/TITLE/Control/Control" unique_id=316187717]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -215,6 +219,7 @@ layout_mode = 2
 texture = ExtResource("6_g3vq8")
 
 [node name="Label2" type="Label" parent="GameIntroLevel2/TITLE/Control/Control" unique_id=1967307601]
+visible = false
 layout_mode = 0
 offset_left = 417.0
 offset_top = 413.0
@@ -224,6 +229,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 37
 
 [node name="Label3" type="Label" parent="GameIntroLevel2/TITLE/Control/Control" unique_id=586217277]
+visible = false
 layout_mode = 0
 offset_left = 419.0
 offset_top = 470.0
@@ -231,6 +237,75 @@ offset_right = 1101.0
 offset_bottom = 557.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
+
+[node name="DialogueBox" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/Control" unique_id=2131691031]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -405.0
+offset_top = -270.0
+offset_right = 410.0
+offset_bottom = -42.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("8_76mdf")
+
+[node name="SpeakerArrow" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/Control/DialogueBox" unique_id=1817740209]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -279.5
+offset_top = -376.0
+offset_right = -194.5
+offset_bottom = -291.5
+grow_horizontal = 2
+texture = ExtResource("9_y0gs2")
+
+[node name="Label2" type="Label" parent="GameIntroLevel2/TITLE/Control/Control/DialogueBox" unique_id=1034099862]
+layout_mode = 1
+offset_left = 66.5
+offset_top = 40.0
+offset_right = 133.50024
+offset_bottom = 91.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rg7um")
+theme_override_font_sizes/font_size = 37
+
+[node name="Label3" type="Label" parent="GameIntroLevel2/TITLE/Control/Control/DialogueBox" unique_id=19186452]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -341.001
+offset_top = -16.0
+offset_right = 341.00098
+offset_bottom = 70.99997
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_rg7um")
+theme_override_font_sizes/font_size = 30
+
+[node name="InternPortrait" type="TextureRect" parent="GameIntroLevel2/TITLE/Control/Control/DialogueBox" unique_id=680162032]
+show_behind_parent = true
+texture_filter = 1
+layout_mode = 1
+offset_left = -45.0
+offset_top = -337.0
+offset_right = 373.0
+offset_bottom = 81.0
+texture = ExtResource("9_bgjdm")
+expand_mode = 1
 
 [node name="Pause" type="Node" parent="." unique_id=743239756]
 script = ExtResource("7_aenwo")
