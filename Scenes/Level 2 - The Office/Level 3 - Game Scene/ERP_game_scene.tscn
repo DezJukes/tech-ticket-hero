@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bbd8peavqofqi" path="res://Scenes/Level 2 - The Office/Level 3 - Game Scene/erp_game_scene.gd" id="1_pammw"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_ealxg"]
+[ext_resource type="FontFile" uid="uid://dxaajcn2dpsf0" path="res://Assets/Font/ms-sans-serif-1.ttf" id="3_rg7um"]
 [ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="4_nqrrk"]
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="6_60s8w"]
 [ext_resource type="Texture2D" uid="uid://cupxe0plef48p" path="res://Assets/Dialog/level_3_dialog.png" id="6_g3vq8"]
@@ -140,6 +141,7 @@ offset_right = 379.5
 offset_bottom = 178.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("3_rg7um")
 theme_override_font_sizes/font_size = 30
 text = "You’re a now an intern in a tech company
 

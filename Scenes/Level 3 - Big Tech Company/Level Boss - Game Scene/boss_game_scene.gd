@@ -11,7 +11,6 @@ extends Node2D
 var player_near_computer := false
 var was_player_near := false
 
-
 func _process(delta: float) -> void:
 	player_near_computer = interaction_zone.player_near
 
@@ -21,16 +20,12 @@ func _process(delta: float) -> void:
 		dashed_ring.set_active(player_near_computer)
 		was_player_near = player_near_computer
 
-
 func _on_interact_pressed() -> void:
 	if interaction_zone.player_near:
-		dialog_box.modulate.a = 1.0
-
-		# 👉 trigger intro dialogue
-		intro_scene.start_dialogue_requested.emit()
+		# Player pressed interact! Go straight to the Game Complete screen.
+		get_tree().change_scene_to_file("res://Scenes/Menu/Complete.tscn")
 	else:
 		print("You are too far from the computer to interact.")
-
 
 func _on_pause_button_pressed() -> void:
 	get_tree().paused = true

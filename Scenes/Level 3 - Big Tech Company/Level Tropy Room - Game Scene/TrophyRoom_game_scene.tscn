@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dhih87ivt13su" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/TrophyNormal.tscn" id="7_no6jt"]
 [ext_resource type="PackedScene" uid="uid://dfy7mbwhtcpuk" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/TrophyStar.tscn" id="8_lado5"]
 [ext_resource type="PackedScene" uid="uid://cokag5fnr7qdl" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/TrophyCircle.tscn" id="9_oxj3k"]
+[ext_resource type="FontFile" uid="uid://dxaajcn2dpsf0" path="res://Assets/Font/ms-sans-serif-1.ttf" id="11_oxj3k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a50ps"]
 bg_color = Color(0.8509804, 0.8509804, 0.8509804, 1)
@@ -79,6 +80,11 @@ size = Vector2(3962, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7cgxb"]
 size = Vector2(3962, 17)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lado5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lado5"]
+bg_color = Color(0, 0, 0, 0.54901963)
 
 [node name="TrophyRoomGameScene" type="Node2D" unique_id=801555766]
 script = ExtResource("1_lado5")
@@ -265,11 +271,11 @@ rotation = 1.569737
 position = Vector2(624.8227, 167.66193)
 shape = SubResource("RectangleShape2D_7cgxb")
 
-[node name="CollisionWall4" type="StaticBody2D" parent="." unique_id=1654276844]
+[node name="ExitZone" type="Area2D" parent="." unique_id=687583997]
 position = Vector2(1334, 293)
 rotation = 1.569737
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="CollisionWall4" unique_id=1195925434]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="ExitZone" unique_id=1195925434]
 position = Vector2(480.00012, 167.5918)
 shape = SubResource("RectangleShape2D_7cgxb")
 
@@ -286,16 +292,58 @@ motion_mode = 1
 position = Vector2(115, 289)
 scale = Vector2(4, 4)
 
+[node name="Trophy" type="Area2D" parent="YSort/TrophyNormal" unique_id=1769999791]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/TrophyNormal/Trophy" unique_id=972654692]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_lado5")
+
 [node name="TrophyStar" parent="YSort" unique_id=768770576 instance=ExtResource("8_lado5")]
 position = Vector2(578, 289)
 scale = Vector2(4, 4)
 
+[node name="Star" type="Area2D" parent="YSort/TrophyStar" unique_id=636149072]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/TrophyStar/Star" unique_id=611160136]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_lado5")
+
 [node name="TrophyCircle" parent="YSort" unique_id=369093658 instance=ExtResource("9_oxj3k")]
 position = Vector2(988.29, 289)
 scale = Vector2(4, 4)
+
+[node name="Circle" type="Area2D" parent="YSort/TrophyCircle" unique_id=721685049]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/TrophyCircle/Circle" unique_id=776762711]
+scale = Vector2(2.8, 2.8)
+shape = SubResource("CircleShape2D_lado5")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=1261529859]
+
+[node name="AchievementBanner" type="PanelContainer" parent="CanvasLayer2" unique_id=1523048434]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lado5")
+
+[node name="Label" type="Label" parent="CanvasLayer2/AchievementBanner" unique_id=490825821]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("11_oxj3k")
+theme_override_font_sizes/font_size = 50
 
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/Resume" to="Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/ChangeMode" to="Pause" method="_on_change_mode_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/MainMenu" to="Pause" method="_on_main_menu_pressed"]
+[connection signal="body_entered" from="ExitZone" to="." method="_on_exit_zone_body_entered"]
+[connection signal="body_entered" from="YSort/TrophyNormal/Trophy" to="." method="_on_trophy_body_entered"]
+[connection signal="body_exited" from="YSort/TrophyNormal/Trophy" to="." method="_on_trophy_body_exited"]
+[connection signal="body_entered" from="YSort/TrophyStar/Star" to="." method="_on_star_body_entered"]
+[connection signal="body_exited" from="YSort/TrophyStar/Star" to="." method="_on_star_body_exited"]
+[connection signal="body_entered" from="YSort/TrophyCircle/Circle" to="." method="_on_circle_body_entered"]
+[connection signal="body_exited" from="YSort/TrophyCircle/Circle" to="." method="_on_circle_body_exited"]

@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://btxptc32mnr8f" path="res://Scenes/npc_boss.tscn" id="9_clgsv"]
 [ext_resource type="PackedScene" uid="uid://cq42uutvjicfi" path="res://Scenes/Level 1 - School Campus/Furnitures/npc.tscn" id="11_tj12u"]
 [ext_resource type="Script" uid="uid://chxryeiqstytr" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/dashed_ring.gd" id="12_74nxi"]
+[ext_resource type="FontFile" uid="uid://dxaajcn2dpsf0" path="res://Assets/Font/ms-sans-serif-1.ttf" id="12_vvgnp"]
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="13_vsku3"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="14_kh4em"]
 [ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="16_15pjp"]
@@ -381,14 +382,17 @@ offset_right = 379.5
 offset_bottom = 201.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("12_vvgnp")
 theme_override_font_sizes/font_size = 30
-text = "You have proven yourself and your skills.
-You have gotten this far.
+text = "All architectures deployed. System mastery: 100%.
 
-It's now time to meet....
+You've made it to the top floor.
 
-The Boss"
+It's time for your final review with... 
+
+The Boss."
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="GameIntroLevel2/TITLE/Control" unique_id=1223651353]
 visible = false
@@ -480,7 +484,7 @@ position = Vector2(555, 334)
 scale = Vector2(4.2000012, 4.2000012)
 
 [node name="player" parent="." unique_id=482249979 instance=ExtResource("8_1qqrk")]
-position = Vector2(563, 558)
+position = Vector2(67.99999, 486.00003)
 scale = Vector2(2.4410927, 2.4410927)
 motion_mode = 1
 

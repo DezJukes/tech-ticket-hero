@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://cgs3180xvaag2" path="res://Assets/Title Headers/LevelSign2.png" id="10_gadji"]
 [ext_resource type="Texture2D" uid="uid://b2w2gwlm3q5y5" path="res://Assets/Title Headers/LIBRARY.png" id="11_7kejv"]
 [ext_resource type="Texture2D" uid="uid://dmoffd0324nea" path="res://Assets/Title Headers/SYSTEM.png" id="12_1iltn"]
+[ext_resource type="FontFile" uid="uid://dxaajcn2dpsf0" path="res://Assets/Font/ms-sans-serif-1.ttf" id="13_8v45e"]
 [ext_resource type="Texture2D" uid="uid://b2x7qwkyc4dj2" path="res://Assets/Dialog/level_2_dialog.png" id="14_a50ps"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8v45e"]
@@ -401,6 +402,7 @@ offset_right = 202.5
 offset_bottom = 76.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("13_8v45e")
 theme_override_font_sizes/font_size = 30
 text = "You are currently in the library to study and improve your knowledge.
 

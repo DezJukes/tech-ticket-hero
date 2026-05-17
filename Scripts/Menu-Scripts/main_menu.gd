@@ -81,7 +81,7 @@ func _on_back_pressed() -> void:
 func _on_cms_pressed() -> void:
 	click_audio_player.play()
 	await get_tree().create_timer(1).timeout
-	get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/CMS_game_scene.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Level 3 - Big Tech Company/Level Tropy Room - Game Scene/TrophyRoom_game_scene.tscn")
 
 func _on_library_pressed() -> void:
 	click_audio_player.play()
