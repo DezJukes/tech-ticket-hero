@@ -5,6 +5,11 @@
 [ext_resource type="Texture2D" uid="uid://clcpv2xavcwla" path="res://Assets/Menu/menu-bg.png" id="1_apdxc"]
 [ext_resource type="FontFile" uid="uid://dxaajcn2dpsf0" path="res://Assets/Font/ms-sans-serif-1.ttf" id="2_apdxc"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8lm5o"]
+bg_color = Color(0, 0, 0, 0.78431374)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
+
 [node name="Loading" type="Control" unique_id=1424923977]
 layout_mode = 3
 anchors_preset = 15
@@ -27,20 +32,34 @@ expand_mode = 2
 [node name="Logo" type="TextureRect" parent="." unique_id=177342918]
 custom_minimum_size = Vector2(340, 300)
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 5
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
 offset_left = -170.0
-offset_top = -150.0
 offset_right = 170.0
-offset_bottom = 150.0
+offset_bottom = 300.0
 grow_horizontal = 2
-grow_vertical = 2
 texture = ExtResource("1_70mhs")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Knowledge" type="Label" parent="." unique_id=1135878115]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 6.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_apdxc")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_8lm5o")
+text = "Loading"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="CreditLabel" type="Label" parent="." unique_id=284855570]
 layout_mode = 1
