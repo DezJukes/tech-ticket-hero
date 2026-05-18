@@ -157,10 +157,10 @@ theme_override_fonts/bold_font = ExtResource("2_h7kxe")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[indent]🛑 [b]Traffic Controller Offline:[/b] Requests are hitting a dead-end landing page.
-📉 [b]Business Logic Collapse:[/b] System cannot process receipts or validate claims.
-⛓️ [b]Finance Book Disconnect:[/b] Bridge to primary records is broken, stalling reimbursements.
-🔕 [b]Alert Failure:[/b] Approval workflows are unaware of pending claims.[/indent]"
+text = "[bgcolor=#fef2f2][indent][color=#991b1b][b][NET][/b][/color] [b]Traffic Controller Offline:[/b] Requests are hitting a dead-end landing page.
+[color=#c2410c][b][SYS][/b][/color] [b]Business Logic Collapse:[/b] System cannot process receipts or validate claims.
+[color=#991b1b][b][ DB ][/b][/color] [b]Finance Book Disconnect:[/b] Bridge to primary records is broken, stalling reimbursements.
+[color=#c2410c][b][MSG][/b][/color] [b]Alert Failure:[/b] Approval workflows are unaware of pending claims.[/indent][/bgcolor]"
 fit_content = true
 
 [node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=857859378]
@@ -200,10 +200,10 @@ theme_override_fonts/bold_font = ExtResource("2_h7kxe")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[indent][b]Rebuild Routing Gateway:[/b] Restore the API Gateway to manage traffic flow.
-[b]Reactivate Core Engine:[/b] Re-inject the Business Rule Engine for policy checks.
-[b]Sync Ledgers:[/b] Repair database links to ensure transactions are recorded.
-[b]Initialize Notification:[/b] Deploy automated messaging for stakeholders.[/indent]"
+text = "[bgcolor=#f0fdf4][indent][color=#16a34a][b][ + ][/b][/color] [b]Rebuild Routing Gateway:[/b] Restore the API Gateway to manage traffic flow.
+[color=#16a34a][b][ + ][/b][/color] [b]Reactivate Core Engine:[/b] Re-inject the Business Rule Engine for policy checks.
+[color=#16a34a][b][ + ][/b][/color] [b]Sync Ledgers:[/b] Repair database links to ensure transactions are recorded.
+[color=#16a34a][b][ + ][/b][/color] [b]Initialize Notification:[/b] Deploy automated messaging for stakeholders.[/indent][/bgcolor]"
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1037196900]

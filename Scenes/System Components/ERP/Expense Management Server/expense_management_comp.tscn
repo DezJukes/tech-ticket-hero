@@ -1,10 +1,10 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://dyuujeh0ff6gg"]
 
-[ext_resource type="Script" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_2b4he"]
-[ext_resource type="Texture2D" path="res://Scenes/System Components/ERP/Expense Management Server/expense management server.png" id="2_vkxki"]
-[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_c5hb3"]
-[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_2qefk"]
-[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Regular.ttf" id="5_sw55e"]
+[ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="1_2b4he"]
+[ext_resource type="Texture2D" uid="uid://cer05biqeqb5c" path="res://Scenes/System Components/ERP/Expense Management Server/expense management server.png" id="2_vkxki"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="3_c5hb3"]
+[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="4_2qefk"]
+[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="5_sw55e"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehknd"]
 bg_color = Color(1, 1, 1, 1)
@@ -71,7 +71,7 @@ theme_override_constants/margin_right = 6
 theme_override_constants/margin_bottom = 6
 
 [node name="IconImage" type="TextureRect" parent="CardPadding/MainRow/IconFrame/IconPadding" unique_id=65608909]
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture = ExtResource("2_vkxki")
 expand_mode = 1
@@ -98,7 +98,7 @@ autowrap_mode = 3
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
 theme_override_fonts/font = ExtResource("4_2qefk")
-theme_override_font_sizes/font_size = 11
+theme_override_font_sizes/font_size = 14
 text = "DATA PROCESSING "
 
 [node name="Description" type="Label" parent="CardPadding/MainRow/TextColumn" unique_id=555238219]
@@ -106,6 +106,6 @@ custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_fonts/font = ExtResource("5_sw55e")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 16
 text = "Processes the data, runs OCR on receipts, and checks if the claim follows company policy."
 autowrap_mode = 3
