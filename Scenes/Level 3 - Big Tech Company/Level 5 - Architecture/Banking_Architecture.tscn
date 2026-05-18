@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Banking/Inter-Bank Clearing Gateway/inter_bank_clearing_dropped.tscn" id="17_kaotx"]
 [ext_resource type="PackedScene" uid="uid://c7c2dw4u50wat" path="res://Scenes/System Components/Banking/Immutable Audit Vault/immutable_audit_vault_comp.tscn" id="21_811oc"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="21_sxltx"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/Banking/Transaction Orchestrator/transaction_orchestrator_comp.tscn" id="22_4siyh"]
+[ext_resource type="PackedScene" uid="uid://bl3jdnbfysgbi" path="res://Scenes/System Components/Banking/Transaction Orchestrator/transaction_orchestrator_comp.tscn" id="22_4siyh"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Banking/Real Time Analytics/real_time_analytics_dropped.tscn" id="22_b0im3"]
 [ext_resource type="PackedScene" uid="uid://11rh8hh77hav" path="res://Scenes/System Components/Banking/Message Broker/message_broker_comp.tscn" id="23_jb3db"]
 [ext_resource type="PackedScene" uid="uid://b23aa7cpl3pwn" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="23_tgs88"]
@@ -406,7 +406,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 horizontal_scroll_mode = 3
-vertical_scroll_mode = 3
+vertical_scroll_mode = 2
 scroll_deadzone = 32
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer" unique_id=1563589620]
@@ -414,14 +414,14 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 12
 
+[node name="ComponentCard3" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=2034798442 instance=ExtResource("22_4siyh")]
+layout_mode = 2
+dropped_badge_scene = ExtResource("26_00t8t")
+
 [node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1698274523 instance=ExtResource("23_tgs88")]
 layout_mode = 2
 script = ExtResource("21_sxltx")
 dropped_badge_scene = ExtResource("24_yasod")
-
-[node name="ComponentCard5" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=922560786 instance=ExtResource("24_pw3v0")]
-layout_mode = 2
-dropped_badge_scene = ExtResource("22_b0im3")
 
 [node name="ComponentCard4" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1295454566 instance=ExtResource("23_jb3db")]
 layout_mode = 2
@@ -431,9 +431,9 @@ dropped_badge_scene = ExtResource("28_r8gqy")
 layout_mode = 2
 dropped_badge_scene = ExtResource("24_4vens")
 
-[node name="ComponentCard3" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=2034798442 instance=ExtResource("22_4siyh")]
+[node name="ComponentCard5" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=922560786 instance=ExtResource("24_pw3v0")]
 layout_mode = 2
-dropped_badge_scene = ExtResource("26_00t8t")
+dropped_badge_scene = ExtResource("22_b0im3")
 
 [node name="FailedModalBanking" parent="." unique_id=1309422593 instance=ExtResource("29_b0im3")]
 unique_name_in_owner = true
