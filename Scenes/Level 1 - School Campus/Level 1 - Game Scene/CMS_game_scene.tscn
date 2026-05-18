@@ -4,10 +4,13 @@
 [ext_resource type="Script" uid="uid://bfnb2hl7hafhb" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/cms_game_scene.gd" id="1_itgur"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_aurvk"]
 [ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="3_m8peq"]
-[ext_resource type="Texture2D" uid="uid://fv84tbd3ceo5" path="res://Assets/Misc/interact.png" id="4_7rsa6"]
 [ext_resource type="PackedScene" uid="uid://diygapspgj4q6" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputer.tscn" id="4_aurvk"]
+[ext_resource type="Texture2D" uid="uid://d158iokk86xij" path="res://Assets/Menu/Buttons/TouchButton.png" id="4_f0piv"]
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="5_5n5fx"]
+[ext_resource type="Texture2D" uid="uid://3kor4wh6p2ep" path="res://Assets/Menu/Buttons/PauseButton.png" id="5_mwda2"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="6_5b2g6"]
+[ext_resource type="Texture2D" uid="uid://ciafhtwhuhgt7" path="res://Assets/Menu/Buttons/ControlsButton1.png" id="7_f0piv"]
+[ext_resource type="Texture2D" uid="uid://cbd0cvv5wbfu8" path="res://Assets/Menu/Buttons/ControlsButton2.png" id="8_bjyg6"]
 [ext_resource type="Script" uid="uid://chxryeiqstytr" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/dashed_ring.gd" id="9_5b2g6"]
 [ext_resource type="Script" uid="uid://csr4vyl2n46ed" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/game_intro_cms.gd" id="10_m8peq"]
 [ext_resource type="Texture2D" uid="uid://bipwlfk3ddusr" path="res://Assets/Title Headers/LevelSign1.png" id="11_5n5fx"]
@@ -23,63 +26,60 @@
 [ext_resource type="Texture2D" uid="uid://dc03uvyjofeqx" path="res://Assets/Dialog/PROF_NOVEL.png" id="20_enbsl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rsa6"]
-bg_color = Color(0.8509804, 0.8509804, 0.8509804, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+bg_color = Color(1.0533911, 1.0533911, 1.0533911, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ys5lo"]
 bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yndnc"]
 bg_color = Color(0.8776157, 0.8776158, 0.87761563, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knqms"]
-bg_color = Color(0.5686275, 0.5686275, 0.5686275, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
+bg_color = Color(0.5686275, 0.5686275, 0.5686275, 0)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+corner_detail = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5n5fx"]
-bg_color = Color(0.9254902, 0.9254902, 0.9254902, 1)
+bg_color = Color(0.9254902, 0.9254902, 0.9254902, 0)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_enbsl"]
-bg_color = Color(0.6745098, 0.6745098, 0.6745098, 1)
+bg_color = Color(0.6745098, 0.6745098, 0.6745098, 0)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3bipf"]
-bg_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+bg_color = Color(0.95686275, 0.95686275, 0.95686275, 0)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwda2"]
-bg_color = Color(0.6745098, 0.6745098, 0.6745098, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5b2g6"]
-bg_color = Color(0.2627451, 0.2627451, 0.2627451, 1)
+bg_color = Color(0.6745098, 0.6745098, 0.6745098, 0)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -134,10 +134,10 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_yndnc")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_knqms")
 
 [node name="Interact2" type="Sprite2D" parent="CanvasLayer/Interact" unique_id=1159828992]
-modulate = Color(1, 1, 1, 0.57254905)
+modulate = Color(1, 1, 1, 0.5372549)
 position = Vector2(61, 59)
-scale = Vector2(0.3366317, 0.3366317)
-texture = ExtResource("4_7rsa6")
+scale = Vector2(2, 2)
+texture = ExtResource("4_f0piv")
 
 [node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=737865658]
 anchors_preset = 1
@@ -154,40 +154,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_5n5fx")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_enbsl")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3bipf")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_mwda2")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PauseButton" unique_id=568495803]
-custom_minimum_size = Vector2(10, 5)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -27.5
-offset_top = -22.5
-offset_right = 27.5
-offset_bottom = 31.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 10
-
-[node name="Panel" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=674932496]
-custom_minimum_size = Vector2(10, 8)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5b2g6")
-
-[node name="Panel2" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=1648501543]
-custom_minimum_size = Vector2(10, 8)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5b2g6")
-
-[node name="Panel3" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=1872112153]
-custom_minimum_size = Vector2(10, 8)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5b2g6")
+icon = ExtResource("5_mwda2")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Objective" type="Panel" parent="CanvasLayer" unique_id=1291855779]
 anchors_preset = 5
@@ -231,6 +200,12 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="TouchControls" parent="Control" unique_id=26897351 instance=ExtResource("5_5n5fx")]
+
+[node name="Base" parent="Control/TouchControls/Virtual Joystick" parent_id_path=PackedInt32Array(26897351, 1874519678) index="0"]
+texture = ExtResource("7_f0piv")
+
+[node name="Tip" parent="Control/TouchControls/Virtual Joystick/Base" index="0"]
+texture = ExtResource("8_bjyg6")
 
 [node name="Pause" type="Node" parent="." unique_id=179267919]
 script = ExtResource("6_5b2g6")
@@ -574,3 +549,6 @@ flip_h = true
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/Resume" to="Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/ChangeMode" to="Pause" method="_on_change_mode_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/MainMenu" to="Pause" method="_on_main_menu_pressed"]
+
+[editable path="Control/TouchControls"]
+[editable path="Control/TouchControls/Virtual Joystick"]

@@ -13,14 +13,15 @@
 [ext_resource type="Texture2D" uid="uid://clw4rsegs1fmg" path="res://Assets/Dialog/Arrow.png" id="8_tgdsw"]
 [ext_resource type="FontFile" uid="uid://dxaajcn2dpsf0" path="res://Assets/Font/ms-sans-serif-1.ttf" id="8_wfhin"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="8_wut4y"]
-[ext_resource type="Texture2D" uid="uid://fv84tbd3ceo5" path="res://Assets/Misc/interact.png" id="9_pb723"]
 [ext_resource type="Texture2D" uid="uid://cnnie7w14o3d1" path="res://Assets/Dialog/INTERN_NOVEL.png" id="9_tgdsw"]
 [ext_resource type="Texture2D" uid="uid://bj0n0te37ompl" path="res://Assets/Dialog/LEADER_NOVEL.png" id="10_br88h"]
 [ext_resource type="PackedScene" uid="uid://diygapspgj4q6" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputer.tscn" id="10_kg6s4"]
 [ext_resource type="Script" uid="uid://chxryeiqstytr" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/dashed_ring.gd" id="12_necro"]
 [ext_resource type="PackedScene" uid="uid://cejup6u07ah47" path="res://Scenes/Level 1 - Beginner/Furnitures/boss_chair.tscn" id="13_hsixc"]
 [ext_resource type="PackedScene" uid="uid://bloebju38v4mc" path="res://Scenes/Level 1 - Beginner/Furnitures/filing_cabinet_open.tscn" id="14_kg6s4"]
+[ext_resource type="Texture2D" uid="uid://d158iokk86xij" path="res://Assets/Menu/Buttons/TouchButton.png" id="14_vbsyd"]
 [ext_resource type="Script" uid="uid://bf0ls4jkfgmue" path="res://Scenes/Level 2 - The Office/Level 4 - Game Scene/game_intro_level_4.gd" id="14_wut4y"]
+[ext_resource type="Texture2D" uid="uid://3kor4wh6p2ep" path="res://Assets/Menu/Buttons/PauseButton.png" id="15_l5qqy"]
 [ext_resource type="PackedScene" uid="uid://b358ho3xp71lw" path="res://Scenes/npc_mentor.tscn" id="15_pb723"]
 [ext_resource type="Texture2D" uid="uid://b0nylrg18f873" path="res://Assets/Title Headers/LevelSign4.png" id="15_rtqcc"]
 [ext_resource type="PackedScene" uid="uid://cm6ihly1ndvxt" path="res://Scenes/Level 1 - Beginner/Furnitures/boss_desk.tscn" id="16_necro"]
@@ -30,7 +31,9 @@
 [ext_resource type="PackedScene" uid="uid://dglqqy3bdyop1" path="res://Scenes/Level 1 - Beginner/Furnitures/wall_clock.tscn" id="18_uixep"]
 [ext_resource type="PackedScene" uid="uid://4n821ykno6xi" path="res://Scenes/Level 1 - Beginner/Furnitures/tall_bookshelf.tscn" id="19_u6dgn"]
 [ext_resource type="PackedScene" uid="uid://cg4i3yjj18scm" path="res://Scenes/Level 1 - Beginner/Furnitures/big_sofa.tscn" id="20_ieph6"]
+[ext_resource type="Texture2D" uid="uid://ciafhtwhuhgt7" path="res://Assets/Menu/Buttons/ControlsButton1.png" id="21_5qux5"]
 [ext_resource type="PackedScene" uid="uid://dtn8arm3kjo3x" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/small_table.tscn" id="21_wfhin"]
+[ext_resource type="Texture2D" uid="uid://cbd0cvv5wbfu8" path="res://Assets/Menu/Buttons/ControlsButton2.png" id="22_iq61j"]
 [ext_resource type="PackedScene" uid="uid://diam8evntxlff" path="res://Scenes/Level 1 - Beginner/Furnitures/big_sofa_side.tscn" id="22_tgdsw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u6dgn"]
@@ -62,7 +65,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kg6s4"]
-bg_color = Color(0.9254902, 0.9254902, 0.9254902, 1)
+bg_color = Color(0.9254902, 0.9254902, 0.9254902, 0)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -76,7 +79,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_necro"]
-bg_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+bg_color = Color(0.95686275, 0.95686275, 0.95686275, 0)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -84,13 +87,6 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_60h4e"]
 bg_color = Color(0.6745098, 0.6745098, 0.6745098, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uixep"]
-bg_color = Color(0.2627451, 0.2627451, 0.2627451, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -337,8 +333,8 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_tgdsw")
 [node name="Interact2" type="Sprite2D" parent="CanvasLayer/Interact" unique_id=496582997]
 modulate = Color(1, 1, 1, 0.57254905)
 position = Vector2(61, 59)
-scale = Vector2(0.35607046, 0.35607046)
-texture = ExtResource("9_pb723")
+scale = Vector2(2, 2)
+texture = ExtResource("14_vbsyd")
 
 [node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=880027351]
 anchors_preset = 1
@@ -355,40 +351,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_kg6s4")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pb723")
 theme_override_styles/hover = SubResource("StyleBoxFlat_necro")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_60h4e")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PauseButton" unique_id=697359614]
-custom_minimum_size = Vector2(10, 5)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -27.5
-offset_top = -22.5
-offset_right = 27.5
-offset_bottom = 31.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 10
-
-[node name="Panel" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=1385526865]
-custom_minimum_size = Vector2(10, 8)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_uixep")
-
-[node name="Panel2" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=1593960365]
-custom_minimum_size = Vector2(10, 8)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_uixep")
-
-[node name="Panel3" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=152543990]
-custom_minimum_size = Vector2(10, 8)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_uixep")
+icon = ExtResource("15_l5qqy")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Objective" type="Panel" parent="CanvasLayer" unique_id=1628105762]
 anchors_preset = 5
@@ -450,6 +415,12 @@ offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchControls" parent="Control" unique_id=26897351 instance=ExtResource("7_7k744")]
+
+[node name="Base" parent="Control/TouchControls/Virtual Joystick" parent_id_path=PackedInt32Array(26897351, 1874519678) index="0"]
+texture = ExtResource("21_5qux5")
+
+[node name="Tip" parent="Control/TouchControls/Virtual Joystick/Base" index="0"]
+texture = ExtResource("22_iq61j")
 
 [node name="Pause" type="Node" parent="." unique_id=431193024]
 script = ExtResource("8_wut4y")
@@ -592,3 +563,6 @@ shape = SubResource("RectangleShape2D_vbsyd")
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/Resume" to="Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/ChangeMode" to="Pause" method="_on_change_mode_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/MainMenu" to="Pause" method="_on_main_menu_pressed"]
+
+[editable path="Control/TouchControls"]
+[editable path="Control/TouchControls/Virtual Joystick"]

@@ -7,8 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://dq02vbjedg55p" path="res://Scenes/Level 3 - Big Tech Company/Furnitures/table.tscn" id="5_q2et0"]
 [ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="6_8rbs4"]
 [ext_resource type="PackedScene" uid="uid://cybk28env1uh8" path="res://Scenes/player.tscn" id="7_5gvr4"]
-[ext_resource type="Texture2D" uid="uid://fv84tbd3ceo5" path="res://Assets/Misc/interact.png" id="7_sagri"]
+[ext_resource type="Texture2D" uid="uid://d158iokk86xij" path="res://Assets/Menu/Buttons/TouchButton.png" id="7_yjybh"]
 [ext_resource type="PackedScene" uid="uid://gy3cgy47hv4o" path="res://Scenes/computer2.tscn" id="8_8oft1"]
+[ext_resource type="Texture2D" uid="uid://3kor4wh6p2ep" path="res://Assets/Menu/Buttons/PauseButton.png" id="8_svwq2"]
 [ext_resource type="PackedScene" uid="uid://dj6bi3rs4lct7" path="res://Scenes/touch_controls.tscn" id="9_0jx5g"]
 [ext_resource type="PackedScene" uid="uid://diygapspgj4q6" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputer.tscn" id="9_6scms"]
 [ext_resource type="Script" uid="uid://ev83luu2pw8p" path="res://Scenes/pause.gd" id="10_cu1ks"]
@@ -56,7 +57,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6scms"]
-bg_color = Color(0.9254902, 0.9254902, 0.9254902, 1)
+bg_color = Color(0.9254902, 0.9254902, 0.9254902, 0)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -70,7 +71,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q2et0"]
-bg_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+bg_color = Color(0.95686275, 0.95686275, 0.95686275, 0)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -78,13 +79,6 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8rbs4"]
 bg_color = Color(0.6745098, 0.6745098, 0.6745098, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5gvr4"]
-bg_color = Color(0.2627451, 0.2627451, 0.2627451, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -156,8 +150,8 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_ouqni")
 [node name="Interact2" type="Sprite2D" parent="CanvasLayer/Interact" unique_id=1245183264]
 modulate = Color(1, 1, 1, 0.57254905)
 position = Vector2(61, 59)
-scale = Vector2(0.38707885, 0.38707885)
-texture = ExtResource("7_sagri")
+scale = Vector2(2, 2)
+texture = ExtResource("7_yjybh")
 
 [node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=151064480]
 anchors_preset = 1
@@ -174,40 +168,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_6scms")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_sagri")
 theme_override_styles/hover = SubResource("StyleBoxFlat_q2et0")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_8rbs4")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PauseButton" unique_id=428905885]
-custom_minimum_size = Vector2(10, 5)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -27.5
-offset_top = -22.5
-offset_right = 27.5
-offset_bottom = 31.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 10
-
-[node name="Panel" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=1220713588]
-custom_minimum_size = Vector2(10, 8)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5gvr4")
-
-[node name="Panel2" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=356740057]
-custom_minimum_size = Vector2(10, 8)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5gvr4")
-
-[node name="Panel3" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=609495523]
-custom_minimum_size = Vector2(10, 8)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_5gvr4")
+icon = ExtResource("8_svwq2")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Objective" type="Panel" parent="CanvasLayer" unique_id=235987612]
 anchors_preset = 5
