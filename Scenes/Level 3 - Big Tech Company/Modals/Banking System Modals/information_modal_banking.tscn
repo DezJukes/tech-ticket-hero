@@ -158,10 +158,10 @@ theme_override_fonts/bold_font = ExtResource("2_6pojx")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[indent]💸 [b]Integrity Risk:[/b] Distributed transfers may fail midway, causing money to vanish without a rollback.
-📋 [b]Compliance Gap:[/b] No permanent, uneditable legal record exists for regulatory financial audits.
-🔔 [b]Communication Lag:[/b] The system crashes or stalls while waiting for slow, synchronous SMS notifications.
-📈 [b]Visibility Blackout:[/b] Executives cannot track total cash flow or bank liquidity in real-time.[/indent]"
+text = "[bgcolor=#fef2f2][indent][color=#991b1b][b][TXN][/b][/color] [b]Integrity Risk:[/b] Distributed transfers may fail midway, causing money to vanish without a rollback.
+[color=#c2410c][b][AUD][/b][/color] [b]Compliance Gap:[/b] No permanent, uneditable legal record exists for regulatory financial audits.
+[color=#991b1b][b][MSG][/b][/color] [b]Communication Lag:[/b] The system crashes or stalls while waiting for slow, synchronous SMS notifications.
+[color=#c2410c][b][OPS][/b][/color] [b]Visibility Blackout:[/b] Executives cannot track total cash flow or bank liquidity in real-time.[/indent][/bgcolor]"
 fit_content = true
 
 [node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=2012989174]
@@ -193,17 +193,17 @@ theme_override_constants/margin_top = 10
 [node name="ProblemBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=396983588]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
-theme_override_constants/line_separation = 0
+theme_override_constants/line_separation = 1
 theme_override_constants/paragraph_separation = 10
 theme_override_fonts/normal_font = ExtResource("3_wrwu4")
 theme_override_fonts/bold_font = ExtResource("2_6pojx")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[indent]→ [b]Enforce Atomic Sync:[/b] Deploy a Transaction Orchestrator to ensure \"all-or-nothing\" transfers.
-→ [b]Activate Audit Vault:[/b] Create a \"Write-Once\" storage system for permanent regulatory compliance.
-→ [b]Decouple Alerts:[/b] Use an async Message Broker to handle notifications without slowing the core.
-→ [b]Enable Live Reporting:[/b] Stream transaction data into a real-time dashboard for financial oversight.[/indent]"
+text = "[bgcolor=#f0fdf4][indent][color=#16a34a][b][ + ][/b][/color] [b]Enforce Atomic Sync:[/b] Deploy a Transaction Orchestrator to ensure \"all-or-nothing\" transfers.
+[color=#16a34a][b][ + ][/b][/color] [b]Activate Audit Vault:[/b] Create a \"Write-Once\" storage system for permanent regulatory compliance.
+[color=#16a34a][b][ + ][/b][/color] [b]Decouple Alerts:[/b] Use an async Message Broker to handle notifications without slowing the core.
+[color=#16a34a][b][ + ][/b][/color] [b]Enable Live Reporting:[/b] Stream transaction data into a real-time dashboard for financial oversight.[/indent][/bgcolor]"
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1797669290]

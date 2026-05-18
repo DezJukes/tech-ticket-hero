@@ -151,7 +151,7 @@ theme_override_constants/margin_top = 10
 [node name="ProblemBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=2026663529]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
-theme_override_constants/line_separation = 0
+theme_override_constants/line_separation = 3
 theme_override_constants/paragraph_separation = 10
 theme_override_fonts/normal_font = ExtResource("3_3ir1j")
 theme_override_fonts/bold_font = ExtResource("2_lmxqs")
@@ -191,7 +191,7 @@ theme_override_constants/margin_top = 10
 [node name="ProblemBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=1570256494]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
-theme_override_constants/line_separation = 0
+theme_override_constants/line_separation = 3
 theme_override_constants/paragraph_separation = 10
 theme_override_fonts/normal_font = ExtResource("3_3ir1j")
 theme_override_fonts/bold_font = ExtResource("2_lmxqs")
