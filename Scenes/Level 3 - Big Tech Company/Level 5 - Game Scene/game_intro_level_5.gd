@@ -257,15 +257,14 @@ func play_intro() -> void:
 	
 	# Start level music
 	level_music_player.play()
-	
-	# =========================
+# =========================
 	# DIALOGUE 1
 	# =========================
 	set_speaker("Guard")
 
 	await type_text(
 		dialog_label,
-		"Bawal dito hindi marunong mag code!",
+		"Good morning! \nID please. Where are you heading?",
 		0.03
 	)
 
@@ -274,11 +273,11 @@ func play_intro() -> void:
 	# =========================
 	# DIALOGUE 2
 	# =========================
-	set_speaker("Guard")
+	set_speaker("Intern")
 
 	await type_text(
 		dialog_label,
-		"Patunayan mo muna na kaya mo.",
+		"Morning, Sir. I have an appointment. \nI'm the new dev for the Banking System.",
 		0.03
 	)
 
@@ -291,7 +290,7 @@ func play_intro() -> void:
 
 	await type_text(
 		dialog_label,
-		"Ayusin mo tong system namin!",
+		"Ah, the new hire! \nThe Boss is expecting you. Head straight to the \nTrophy Room to wait.",
 		0.03
 	)
 
@@ -304,7 +303,7 @@ func play_intro() -> void:
 
 	await type_text(
 		dialog_label,
-		"Oo, Sir. Kaya ko yan!",
+		"Got it. \nThanks, Sir!",
 		0.03
 	)
 

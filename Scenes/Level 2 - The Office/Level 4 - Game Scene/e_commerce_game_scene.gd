@@ -23,12 +23,14 @@ func _process(delta: float) -> void:
 
 # Process interact
 func _on_interact_pressed() -> void:
-	if $SchoolComputer/SchoolComputerInteractionZone.player_near:
-		get_tree().change_scene_to_file("res://Scenes/Level 2 - The Office/Level 4 - Architecture/E_Commerce_Architecture.tscn")
-	else:
-		print("You are too far from the computer to interact.")
+	# Checks for proximity to able to use the interact button
+	if interaction_zone.player_near:
 		
-	
+		# 1. Tell the Global script where the loading screen should take us
+		Global.target_scene = "res://Scenes/Level 2 - The Office/Level 4 - Architecture/E_Commerce_Architecture.tscn"
+		
+		# 2. Go to the Loading Screen!
+		get_tree().change_scene_to_file("res://Scenes/Menu/Loading.tscn")
 
 func _on_pause_button_pressed() -> void:
 	get_tree().paused = true
