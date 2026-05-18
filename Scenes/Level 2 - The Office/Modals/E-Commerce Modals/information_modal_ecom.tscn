@@ -151,17 +151,17 @@ theme_override_constants/margin_top = 10
 [node name="ProblemBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/ProblemCard/ProblemPadding/ProblemTextFlow" unique_id=884070063]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
-theme_override_constants/line_separation = 0
+theme_override_constants/line_separation = 3
 theme_override_constants/paragraph_separation = 10
 theme_override_fonts/normal_font = ExtResource("3_pd54y")
 theme_override_fonts/bold_font = ExtResource("2_2tyis")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[indent]🤖 [b]Infiltration Overflow:[/b] Automated attacks are locking out real shoppers.
-👤 [b]Session Authorization:[/b] No way to verify customer sessions.
-💳 [b]Gateway Failure:[/b] System cannot securely talk to external banks.
-📦 [b]Dispatch Blackout:[/b] No data is sent to downstream logistics systems.[/indent]"
+text = "[bgcolor=#fef2f2][indent][color=#991b1b][b][BOT][/b][/color] [b]Infiltration Overflow:[/b] Automated attacks are locking out real shoppers.
+[color=#c2410c][b][ ID ][/b][/color] [b]Session Authorization:[/b] No way to verify customer sessions.
+[color=#991b1b][b][PAY][/b][/color] [b]Gateway Failure:[/b] System cannot securely talk to external banks.
+[color=#c2410c][b][NET][/b][/color] [b]Dispatch Blackout:[/b] No data is sent to downstream logistics systems.[/indent][/bgcolor]"
 fit_content = true
 
 [node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=928281717]
@@ -194,17 +194,17 @@ theme_override_constants/margin_top = 10
 [node name="ProblemBody" type="RichTextLabel" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody/MissionCArd/MissionPadding/MissionTextFLow" unique_id=1491822507]
 layout_mode = 2
 theme_override_colors/default_color = Color(0.1728327, 0.17283267, 0.17283267, 1)
-theme_override_constants/line_separation = 0
+theme_override_constants/line_separation = 3
 theme_override_constants/paragraph_separation = 10
 theme_override_fonts/normal_font = ExtResource("3_pd54y")
 theme_override_fonts/bold_font = ExtResource("2_2tyis")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[indent][b]→ Deploy Rate Limiter:[/b] Restrict high-frequency traffic to defend from exhaustion.
-→ [b]Activate Auth Service:[/b] Integrate identity verification for checkout.
-→ [b]Establish Payment Bridge:[/b] Restore secure external API links for finance.
-→ [b]Initialize Event Coordinator:[/b] Deploy event-driven components for the warehouse.[/indent]"
+text = "[bgcolor=#f0fdf4][indent][color=#16a34a][b][ + ][/b][/color] [b]Deploy Rate Limiter:[/b] Restrict high-frequency traffic to defend from exhaustion.
+[color=#16a34a][b][ + ][/b][/color] [b]Activate Auth Service:[/b] Integrate identity verification for checkout.
+[color=#16a34a][b][ + ][/b][/color] [b]Establish Payment Bridge:[/b] Restore secure external API links for finance.
+[color=#16a34a][b][ + ][/b][/color] [b]Initialize Event Coordinator:[/b] Deploy event-driven components for the warehouse.[/indent][/bgcolor]"
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=968405077]

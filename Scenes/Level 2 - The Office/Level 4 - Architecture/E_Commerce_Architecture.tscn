@@ -10,24 +10,24 @@
 [ext_resource type="Texture2D" uid="uid://lkh0k2su5n1y" path="res://Assets/Misc/System Gameplay/Deploy Button/deploy_button_hovered.png" id="7_jp656"]
 [ext_resource type="Texture2D" uid="uid://dhb5cchugfrxn" path="res://Assets/Misc/System Gameplay/background-board.png" id="8_jqlci"]
 [ext_resource type="Script" uid="uid://b0vrrvp20cxa2" path="res://Scenes/Level 2 - The Office/Level 4 - Architecture/board_area.gd" id="9_4knhs"]
-[ext_resource type="PackedScene" uid="uid://cfs3mcjift23r" path="res://Scenes/System Components/dropzone.tscn" id="9_km3af"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/dropzone.tscn" id="9_km3af"]
 [ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="11_s5nju"]
-[ext_resource type="PackedScene" uid="uid://b88u7v7di2n77" path="res://Scenes/System Components/Global Components/Message Broker/message_broker_dropped.tscn" id="13_pac71"]
-[ext_resource type="PackedScene" uid="uid://dc0t487pjksuy" path="res://Scenes/System Components/E Commerce/Inventory Reservation Service/inventory_reservation_dropped.tscn" id="15_tqhaw"]
-[ext_resource type="PackedScene" uid="uid://deluno8547qvi" path="res://Scenes/System Components/E Commerce/Order & Transaction Database/order_transaction_database_dropped.tscn" id="16_h6id0"]
-[ext_resource type="PackedScene" uid="uid://pqycllo8quww" path="res://Scenes/System Components/E Commerce/Redis Cache (State Management)/redis_cache_dropped.tscn" id="17_fhg1f"]
-[ext_resource type="PackedScene" uid="uid://bt2tkhk2oxcso" path="res://Scenes/System Components/E Commerce/Store Front/store_front_dropped.tscn" id="18_en3iw"]
-[ext_resource type="PackedScene" uid="uid://b1b5polpiodoj" path="res://Scenes/System Components/E Commerce/Rate Limiter/rate_limiter_comp.tscn" id="21_fhg1f"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Message Broker/message_broker_dropped.tscn" id="13_pac71"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/E Commerce/Inventory Reservation Service/inventory_reservation_dropped.tscn" id="15_tqhaw"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/E Commerce/Order & Transaction Database/order_transaction_database_dropped.tscn" id="16_h6id0"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/E Commerce/Redis Cache (State Management)/redis_cache_dropped.tscn" id="17_fhg1f"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/E Commerce/Store Front/store_front_dropped.tscn" id="18_en3iw"]
+[ext_resource type="PackedScene" uid="uid://bxw7ip1l7o2p5" path="res://Scenes/System Components/E Commerce/Rate Limiter/rate_limiter_comp.tscn" id="21_fhg1f"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="21_o323x"]
-[ext_resource type="PackedScene" uid="uid://jjx843jd2sav" path="res://Scenes/System Components/E Commerce/Payment Gateway/payment_gateway_comp.tscn" id="21_yrgdy"]
-[ext_resource type="PackedScene" uid="uid://i34utumvpipe" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_comp.tscn" id="22_045pn"]
-[ext_resource type="PackedScene" uid="uid://cgdnq1nagxn65" path="res://Scenes/System Components/E Commerce/Rate Limiter/rate_limiter_dropped.tscn" id="22_en3iw"]
-[ext_resource type="PackedScene" uid="uid://dnkg1anexleog" path="res://Scenes/System Components/E Commerce/Payment Gateway/payment_gateway_dropped.tscn" id="22_fhg1f"]
-[ext_resource type="PackedScene" uid="uid://bqatkw2dvetnd" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="23_cwowf"]
-[ext_resource type="PackedScene" uid="uid://1ppqaf50aejo" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="24_rlw70"]
+[ext_resource type="PackedScene" uid="uid://ddn0xbhjtqv52" path="res://Scenes/System Components/E Commerce/Payment Gateway/payment_gateway_comp.tscn" id="21_yrgdy"]
+[ext_resource type="PackedScene" uid="uid://cppau1t70jrpu" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_comp.tscn" id="22_045pn"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/E Commerce/Rate Limiter/rate_limiter_dropped.tscn" id="22_en3iw"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/E Commerce/Payment Gateway/payment_gateway_dropped.tscn" id="22_fhg1f"]
+[ext_resource type="PackedScene" uid="uid://b23aa7cpl3pwn" path="res://Scenes/System Components/CMS/Object Storage/object_storage_comp.tscn" id="23_cwowf"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="24_rlw70"]
 [ext_resource type="PackedScene" uid="uid://dpsyhsbuwihsw" path="res://Scenes/Level 2 - The Office/Modals/E-Commerce Modals/failed_modal_ecom.tscn" id="25_fhg1f"]
 [ext_resource type="PackedScene" uid="uid://gka514s5d5ue" path="res://Scenes/Level 2 - The Office/Modals/E-Commerce Modals/information_modal_ecom.tscn" id="26_en3iw"]
-[ext_resource type="PackedScene" uid="uid://dlf2h7xkugp4m" path="res://Scenes/System Components/Global Components/Message Broker/message_broker_comp.tscn" id="26_wborn"]
+[ext_resource type="PackedScene" uid="uid://cij0xfe78801r" path="res://Scenes/System Components/Global Components/Message Broker/message_broker_comp.tscn" id="26_wborn"]
 [ext_resource type="PackedScene" uid="uid://bxnvimdj8mi1r" path="res://Scenes/Level 2 - The Office/Modals/E-Commerce Modals/success_modal_ecom.tscn" id="27_045pn"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_dropped.tscn" id="27_ieouf"]
 
@@ -394,25 +394,25 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/separation = 12
 
+[node name="ComponentCard5" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=588316869 instance=ExtResource("22_045pn")]
+layout_mode = 2
+
 [node name="ComponentCard3" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=462797310 instance=ExtResource("21_fhg1f")]
 layout_mode = 2
 dropped_badge_scene = ExtResource("22_en3iw")
-
-[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1839300330 instance=ExtResource("21_yrgdy")]
-layout_mode = 2
-dropped_badge_scene = ExtResource("22_fhg1f")
 
 [node name="ComponentCard2" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1800537309 instance=ExtResource("23_cwowf")]
 layout_mode = 2
 script = ExtResource("21_o323x")
 dropped_badge_scene = ExtResource("24_rlw70")
 
+[node name="ComponentCard" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1839300330 instance=ExtResource("21_yrgdy")]
+layout_mode = 2
+dropped_badge_scene = ExtResource("22_fhg1f")
+
 [node name="ComponentCard4" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=2081116289 instance=ExtResource("26_wborn")]
 layout_mode = 2
 dropped_badge_scene = ExtResource("13_pac71")
-
-[node name="ComponentCard5" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=588316869 instance=ExtResource("22_045pn")]
-layout_mode = 2
 
 [node name="FailedModalEcom" parent="." unique_id=1094853614 instance=ExtResource("25_fhg1f")]
 unique_name_in_owner = true
