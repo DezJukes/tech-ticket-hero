@@ -32,7 +32,10 @@ func _on_pause_button_pressed():
 # Player's interact button
 func _on_interact_pressed() -> void:
 	# Checks for proximity to able to use the interact button
-	if $YSort/SchoolComputer/SchoolComputerInteractionZone.player_near:
-		get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 1 - Architecture/CMS_Architecture.tscn")
-	else:
-		print("You are too far from the computer to interact.")
+	if interaction_zone.player_near:
+		
+		# 1. Tell the Global script where the loading screen should take us
+		Global.target_scene = "res://Scenes/Level 1 - School Campus/Level 1 - Architecture/CMS_Architecture.tscn"
+		
+		# 2. Go to the Loading Screen!
+		get_tree().change_scene_to_file("res://Scenes/Menu/Loading.tscn")

@@ -216,7 +216,7 @@ anchor_right = 0.5
 offset_left = -449.0
 offset_top = 30.0
 offset_right = 449.0
-offset_bottom = 95.0
+offset_bottom = 151.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -237,7 +237,9 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("6_8rbs4")
 theme_override_font_sizes/font_size = 30
-text = "Objective: Show the guard what you can do. Fix the system"
+text = "Objective: Tap the Guard to enter the building.
+
+Head to the Trophy Room before seeing the Boss."
 horizontal_alignment = 1
 vertical_alignment = 1
 

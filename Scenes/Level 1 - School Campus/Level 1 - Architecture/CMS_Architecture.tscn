@@ -20,12 +20,13 @@
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Relational Database/relational_database_dropped.tscn" id="14_nc1fv"]
 [ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="16_nprbw"]
 [ext_resource type="PackedScene" uid="uid://c48w6pwhlo6tm" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="18_nprbw"]
+[ext_resource type="FontFile" uid="uid://dxaajcn2dpsf0" path="res://Assets/Font/ms-sans-serif-1.ttf" id="19_fydd5"]
 [ext_resource type="PackedScene" uid="uid://foe8dvl7nnl0" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="19_npkbj"]
 [ext_resource type="PackedScene" uid="uid://b4s76c7k43xvu" path="res://Scenes/Modals/information_modal.tscn" id="21_7faf7"]
 [ext_resource type="PackedScene" uid="uid://53u6ktkbkigp" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_comp.tscn" id="21_epmnl"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="22_c54h5"]
 [ext_resource type="PackedScene" uid="uid://ciytdshnq3qxu" path="res://Scenes/Modals/failed_modal.tscn" id="22_d7rpw"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/E Commerce/Rate Limiter/rate_limiter_comp.tscn" id="22_if40d"]
+[ext_resource type="PackedScene" uid="uid://bxw7ip1l7o2p5" path="res://Scenes/System Components/E Commerce/Rate Limiter/rate_limiter_comp.tscn" id="22_if40d"]
 [ext_resource type="PackedScene" uid="uid://eg6ub8hn8rtc" path="res://Scenes/Modals/success_modal.tscn" id="23_epmnl"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/E Commerce/Rate Limiter/rate_limiter_dropped.tscn" id="23_fydd5"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_dropped.tscn" id="23_kmyfs"]
@@ -165,22 +166,10 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 49.0
-offset_top = 55.0
-offset_right = 149.0
-offset_bottom = 125.0
-grow_horizontal = 1
-grow_vertical = 1
-
-[node name="Content Creator2" parent="Workspace/BoardArea/TextureRect" unique_id=845336346 instance=ExtResource("9_okh1a")]
-layout_mode = 0
-anchors_preset = 0
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 449.0
-offset_top = 406.0
-offset_right = 549.0
-offset_bottom = 476.0
+offset_left = 160.0
+offset_top = 76.0
+offset_right = 260.0
+offset_bottom = 146.0
 grow_horizontal = 1
 grow_vertical = 1
 
@@ -189,10 +178,10 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 46.0
-offset_top = 246.0
-offset_right = 146.0
-offset_bottom = 316.0
+offset_left = 157.0
+offset_top = 267.0
+offset_right = 257.0
+offset_bottom = 337.0
 grow_horizontal = 1
 grow_vertical = 1
 
@@ -201,10 +190,10 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 661.0
-offset_top = 180.0
-offset_right = 761.0
-offset_bottom = 250.0
+offset_left = 592.0
+offset_top = 29.0
+offset_right = 692.0
+offset_bottom = 99.0
 grow_horizontal = 1
 grow_vertical = 1
 expected_component = "Search Engine"
@@ -214,10 +203,10 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 252.0
-offset_top = 243.0
-offset_right = 352.0
-offset_bottom = 313.0
+offset_left = 375.0
+offset_top = 442.0
+offset_right = 475.0
+offset_bottom = 512.0
 grow_horizontal = 1
 grow_vertical = 1
 
@@ -226,10 +215,10 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 461.0
-offset_top = 99.0
-offset_right = 561.0
-offset_bottom = 169.0
+offset_left = 376.0
+offset_top = 213.0
+offset_right = 476.0
+offset_bottom = 283.0
 grow_horizontal = 1
 grow_vertical = 1
 
@@ -238,10 +227,10 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 459.0
-offset_top = 249.0
-offset_right = 559.0
-offset_bottom = 319.0
+offset_left = 381.0
+offset_top = 32.0
+offset_right = 481.0
+offset_bottom = 102.0
 grow_horizontal = 1
 grow_vertical = 1
 
@@ -250,10 +239,10 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 253.0
-offset_top = 55.0
-offset_right = 353.0
-offset_bottom = 125.0
+offset_left = 158.0
+offset_top = 441.0
+offset_right = 258.0
+offset_bottom = 511.0
 grow_horizontal = 1
 grow_vertical = 1
 expected_component = "Auth Service"
@@ -263,117 +252,126 @@ layout_mode = 0
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
-offset_left = 663.0
-offset_top = 406.0
-offset_right = 763.0
-offset_bottom = 476.0
+offset_left = 594.0
+offset_top = 217.0
+offset_right = 694.0
+offset_bottom = 287.0
 grow_horizontal = 1
 grow_vertical = 1
 
 [node name="Arrow" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=385947068]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 63.0
-offset_top = 127.0
-offset_right = 123.0
-offset_bottom = 247.0
+offset_left = 174.0
+offset_top = 148.0
+offset_right = 234.0
+offset_bottom = 268.0
 texture = ExtResource("16_nprbw")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Arrow3" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=574719024]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 271.0
-offset_top = 125.0
-offset_right = 331.0
-offset_bottom = 245.0
-texture = ExtResource("16_nprbw")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Arrow8" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1677231637]
-custom_minimum_size = Vector2(32, 32)
-layout_mode = 0
-offset_left = 671.0
-offset_top = 245.0
-offset_right = 758.0
-offset_bottom = 419.0
+offset_left = 176.0
+offset_top = 335.0
+offset_right = 236.0
+offset_bottom = 455.0
 texture = ExtResource("16_nprbw")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Arrow2" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=461042442]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 187.00003
-offset_top = 276.0
-offset_right = 268.35608
-offset_bottom = 438.71216
-rotation = -2.443461
+offset_left = 463.0
+offset_top = 441.0
+offset_right = 544.3561
+offset_bottom = 603.71216
+rotation = -3.1415927
 texture = ExtResource("16_nprbw")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Arrow4" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1514114387]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 377.0
-offset_top = 267.0
-offset_right = 437.0
-offset_bottom = 387.0
-rotation = -2.1816616
+offset_left = 458.0
+offset_top = 213.0
+offset_right = 518.0
+offset_bottom = 333.0
+rotation = -3.1415927
 texture = ExtResource("16_nprbw")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="Arrow5" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=814866794]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 348.0
-offset_top = 310.0
-offset_right = 408.0
-offset_bottom = 430.0
+offset_left = 264.0
+offset_top = 505.0
+offset_right = 324.0
+offset_bottom = 625.0
 rotation = -1.5707964
 texture = ExtResource("16_nprbw")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Arrow9" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1623910063]
+[node name="Arrow10" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=804843564]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 664.0
-offset_top = 410.0
-offset_right = 724.0
-offset_bottom = 530.0
-rotation = 1.5707964
+offset_left = 480.0
+offset_top = 92.0
+offset_right = 540.0
+offset_bottom = 212.0
+rotation = -1.5707964
 texture = ExtResource("16_nprbw")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Arrow6" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=460403451]
+[node name="Arrow6" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=444501676]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_left = 547.0
-offset_top = 157.00003
-offset_right = 607.0
-offset_bottom = 277.00003
-rotation = -1.0576695
+offset_left = 612.0
+offset_top = 101.0
+offset_right = 672.0
+offset_bottom = 221.0
 texture = ExtResource("16_nprbw")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Arrow7" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1206525686]
-custom_minimum_size = Vector2(32, 32)
+[node name="Label" type="Label" parent="Workspace/BoardArea/TextureRect" unique_id=832733001]
 layout_mode = 0
-offset_left = 574.00006
-offset_top = 321.99994
-offset_right = 634.00006
-offset_bottom = 441.99994
-rotation = -2.083923
-texture = ExtResource("16_nprbw")
-expand_mode = 1
-stretch_mode = 5
+offset_left = 164.0
+offset_top = 24.0
+offset_right = 262.0
+offset_bottom = 58.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_fydd5")
+theme_override_font_sizes/font_size = 30
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Workspace/BoardArea/TextureRect" unique_id=394607597]
+layout_mode = 0
+offset_left = 614.0
+offset_top = 306.0
+offset_right = 677.0
+offset_bottom = 340.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_fydd5")
+theme_override_font_sizes/font_size = 30
+text = "END"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ToolkitSidebar" type="PanelContainer" parent="Workspace" unique_id=79764630]
 custom_minimum_size = Vector2(350, 0)
@@ -447,6 +445,7 @@ dropped_badge_scene = ExtResource("23_kmyfs")
 
 [node name="InformationModal" parent="." unique_id=1895424386 instance=ExtResource("21_7faf7")]
 unique_name_in_owner = true
+visible = false
 
 [node name="FailedModal" parent="." unique_id=1453858144 instance=ExtResource("22_d7rpw")]
 unique_name_in_owner = true

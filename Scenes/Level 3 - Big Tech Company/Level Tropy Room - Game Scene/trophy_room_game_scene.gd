@@ -49,8 +49,11 @@ func hide_achievement() -> void:
 # ---------------------------------------------------
 func _on_exit_zone_body_entered(body: Node2D) -> void:
 	if body.name == "player":
-		print("Player reached the exit! Loading Boss scene...")
-		get_tree().change_scene_to_file("res://Scenes/Level 3 - Big Tech Company/Level Boss - Game Scene/Boss_game_scene.tscn")
+		# 1. Tell the Global script where the loading screen should take us
+		Global.target_scene = "res://Scenes/Level 3 - Big Tech Company/Level Boss - Game Scene/Boss_game_scene.tscn"
+		
+		# 2. Go to the Loading Screen!
+		get_tree().change_scene_to_file("res://Scenes/Menu/Loading.tscn")
 
 # ---------------------------------------------------
 # 1. NORMAL TROPHY (Left)

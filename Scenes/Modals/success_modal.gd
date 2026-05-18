@@ -20,4 +20,8 @@ func _on_mission_complete_pressed():
 	click_audio.play()
 	await get_tree().create_timer(0.15).timeout
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://Scenes/Level 1 - School Campus/Level 2 - Game Scene/LibrarySystem_game_scene.tscn")
+	# 1. Tell the Global script where the loading screen should take us
+	Global.target_scene = "res://Scenes/Level 1 - School Campus/Level 2 - Game Scene/LibrarySystem_game_scene.tscn"
+		
+	# 2. Go to the Loading Screen!
+	get_tree().change_scene_to_file("res://Scenes/Menu/Loading.tscn")
