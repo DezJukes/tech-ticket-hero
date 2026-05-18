@@ -158,8 +158,8 @@ theme_override_fonts/bold_font = ExtResource("2_lmxqs")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[indent]📵 [b]Touchpoint Severed:[/b] No interface for physical ID or barcode scanning.
-📉 [b]Transaction Volatility:[/b] Borrow logs are non-permanent.[/indent]"
+text = "[bgcolor=#fef2f2][indent][color=#991b1b][b][I/O][/b][/color] [b]Touchpoint Severed:[/b] No interface for physical ID or barcode scanning.
+[color=#c2410c][b][LOG][/b][/color] [b]Transaction Volatility:[/b] Borrow logs are non-permanent.[/indent][/bgcolor]"
 fit_content = true
 
 [node name="MissionCArd" type="PanelContainer" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow/SplitBody" unique_id=128836069]
@@ -198,8 +198,8 @@ theme_override_fonts/bold_font = ExtResource("2_lmxqs")
 theme_override_font_sizes/normal_font_size = 20
 theme_override_font_sizes/bold_font_size = 22
 bbcode_enabled = true
-text = "[indent]→ [b]Hardware Integration:[/b] Bridge the cloud gap by deploying scanners and physical interaction components.
-→ [b]Immutable Record-Keeping:[/b] Implement secure, structured logging components to guarantee data persistence.[/indent]"
+text = "[bgcolor=#f0fdf4][indent][color=#16a34a][b][ + ][/b][/color] [b]Hardware Integration:[/b] Bridge the cloud gap by deploying scanners and physical interaction components.
+[color=#16a34a][b][ + ][/b][/color] [b]Immutable Record-Keeping:[/b] Implement secure, structured logging components to guarantee data persistence.[/indent][/bgcolor]"
 fit_content = true
 
 [node name="Divider2" type="HSeparator" parent="BackgroundOverlay/Center/MainBox/Padding/VerticalFlow" unique_id=1316242634]
