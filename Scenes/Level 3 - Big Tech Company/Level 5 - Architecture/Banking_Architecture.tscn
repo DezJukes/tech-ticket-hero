@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Banking/Real Time Fraud Engine/real_time_fraud_dropped.tscn" id="15_wukgb"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Banking/Core Ledger Service/core_leadger_servicedropped.tscn" id="17_gwtct"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Banking/Inter-Bank Clearing Gateway/inter_bank_clearing_dropped.tscn" id="17_kaotx"]
+[ext_resource type="FontFile" uid="uid://dxaajcn2dpsf0" path="res://Assets/Font/ms-sans-serif-1.ttf" id="19_oowk1"]
 [ext_resource type="PackedScene" uid="uid://c7c2dw4u50wat" path="res://Scenes/System Components/Banking/Immutable Audit Vault/immutable_audit_vault_comp.tscn" id="21_811oc"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="21_sxltx"]
 [ext_resource type="PackedScene" uid="uid://bl3jdnbfysgbi" path="res://Scenes/System Components/Banking/Transaction Orchestrator/transaction_orchestrator_comp.tscn" id="22_4siyh"]
@@ -190,6 +191,7 @@ grow_vertical = 1
 expected_component = "Transaction Orchestrator"
 
 [node name="Arrow8" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1573757498]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 680.0
@@ -201,6 +203,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Arrow5" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=52816250]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 120.0
@@ -213,6 +216,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Arrow9" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1351796236]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 442.0
@@ -225,6 +229,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Arrow10" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=687755377]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 330.0
@@ -237,6 +242,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="Arrow11" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1005398389]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 655.0
@@ -269,6 +275,7 @@ offset_right = -675.0
 offset_bottom = -420.0
 
 [node name="Arrow6" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1387969423]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 330.0
@@ -288,6 +295,7 @@ offset_right = -470.0
 offset_bottom = -417.0
 
 [node name="Arrow7" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=1896297668]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 539.0
@@ -328,6 +336,7 @@ offset_right = -469.0
 offset_bottom = -74.0
 
 [node name="Arrow12" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=129486177]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 255.0
@@ -352,6 +361,7 @@ grow_vertical = 1
 expected_component = "Real-Time Analytics"
 
 [node name="Arrow13" type="TextureRect" parent="Workspace/BoardArea/TextureRect" unique_id=576750581]
+modulate = Color(0, 0, 0, 1)
 custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
 offset_left = 544.0
@@ -362,6 +372,32 @@ rotation = -1.5707964
 texture = ExtResource("11_asev0")
 expand_mode = 1
 stretch_mode = 5
+
+[node name="Label" type="Label" parent="Workspace/BoardArea/TextureRect" unique_id=951441391]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 15.0
+offset_right = 127.0
+offset_bottom = 49.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_oowk1")
+theme_override_font_sizes/font_size = 30
+text = "START"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="Workspace/BoardArea/TextureRect" unique_id=631331987]
+layout_mode = 0
+offset_left = 659.0
+offset_top = 502.0
+offset_right = 757.0
+offset_bottom = 536.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("19_oowk1")
+theme_override_font_sizes/font_size = 30
+text = "END"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="ToolkitSidebar" type="PanelContainer" parent="Workspace" unique_id=815552265]
 custom_minimum_size = Vector2(350, 0)
