@@ -25,7 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://53u6ktkbkigp" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_comp.tscn" id="21_epmnl"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="22_c54h5"]
 [ext_resource type="PackedScene" uid="uid://ciytdshnq3qxu" path="res://Scenes/Modals/failed_modal.tscn" id="22_d7rpw"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/E Commerce/Rate Limiter/rate_limiter_comp.tscn" id="22_if40d"]
 [ext_resource type="PackedScene" uid="uid://eg6ub8hn8rtc" path="res://Scenes/Modals/success_modal.tscn" id="23_epmnl"]
+[ext_resource type="PackedScene" path="res://Scenes/System Components/E Commerce/Rate Limiter/rate_limiter_dropped.tscn" id="23_fydd5"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_dropped.tscn" id="23_kmyfs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vo8ic"]
@@ -430,6 +432,10 @@ dropped_badge_scene = ExtResource("11_nc1fv")
 
 [node name="Auth Service" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=224748546 instance=ExtResource("12_vo8ic")]
 layout_mode = 2
+
+[node name="ComponentCard3" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=521077844 instance=ExtResource("22_if40d")]
+layout_mode = 2
+dropped_badge_scene = ExtResource("23_fydd5")
 
 [node name="Search Engine" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer/VBoxContainer" unique_id=1657130036 instance=ExtResource("18_nprbw")]
 layout_mode = 2
