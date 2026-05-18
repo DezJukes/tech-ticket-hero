@@ -13,6 +13,9 @@ var level_select_container: VBoxContainer
 var click_audio_player: AudioStreamPlayer # NEW: Variable for our audio player!
 var menu_music_player: AudioStreamPlayer # Menu background music
 
+# From a level scene to this menu
+var open_level_select_on_start: bool = false
+
 func _ready() -> void:
 	# --- NEW: SETUP AUDIO PLAYERS ---
 	click_audio_player = AudioStreamPlayer.new()
@@ -37,6 +40,11 @@ func _ready() -> void:
 	# 3. Add some juice! Float the logo and fade in the menu
 	animate_pixel_float(logo, 8.0, 1.0) 
 	play_intro_sequence()
+	
+	# Check if we should open level select immediately
+	if open_level_select_on_start:
+		menu_wrapper.hide()
+		level_select_container.show()
 
 # ---------------------------------------------------
 # ANIMATIONS
