@@ -14,15 +14,15 @@
 [ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Content Creator/content_creator_dropped.tscn" id="9_okh1a"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Content Delivery/content_delivery_dropped.tscn" id="11_6hfb2"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_dropped.tscn" id="11_nc1fv"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_comp.tscn" id="12_vo8ic"]
+[ext_resource type="PackedScene" uid="uid://cppau1t70jrpu" path="res://Scenes/System Components/Global Components/Auth Service/auth_service_comp.tscn" id="12_vo8ic"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Application Server/application_server_dropped.tscn" id="13_ce666"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Object Storage/object_storage_dropped.tscn" id="13_nprbw"]
 [ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Relational Database/relational_database_dropped.tscn" id="14_nc1fv"]
 [ext_resource type="Texture2D" uid="uid://clq3y8f2f7f8l" path="res://Assets/Misc/Arrow_Down.png" id="16_nprbw"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="18_nprbw"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="19_npkbj"]
+[ext_resource type="PackedScene" uid="uid://c48w6pwhlo6tm" path="res://Scenes/System Components/CMS/Search Engine/search_engine_comp.tscn" id="18_nprbw"]
+[ext_resource type="PackedScene" uid="uid://foe8dvl7nnl0" path="res://Scenes/System Components/Global Components/API Gateway/api_gateway_comp.tscn" id="19_npkbj"]
 [ext_resource type="PackedScene" uid="uid://b4s76c7k43xvu" path="res://Scenes/Modals/information_modal.tscn" id="21_7faf7"]
-[ext_resource type="PackedScene" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_comp.tscn" id="21_epmnl"]
+[ext_resource type="PackedScene" uid="uid://53u6ktkbkigp" path="res://Scenes/System Components/Global Components/Notification Service/notification_service_comp.tscn" id="21_epmnl"]
 [ext_resource type="Script" uid="uid://c1n7aedbdsfgb" path="res://Scripts/Architecture-Scripts/draggable_card.gd" id="22_c54h5"]
 [ext_resource type="PackedScene" uid="uid://ciytdshnq3qxu" path="res://Scenes/Modals/failed_modal.tscn" id="22_d7rpw"]
 [ext_resource type="PackedScene" uid="uid://eg6ub8hn8rtc" path="res://Scenes/Modals/success_modal.tscn" id="23_epmnl"]
@@ -416,7 +416,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 horizontal_scroll_mode = 3
-vertical_scroll_mode = 3
+vertical_scroll_mode = 2
 scroll_deadzone = 32
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Workspace/ToolkitSidebar/MarginContainer/VBoxContainer/ScrollContainer" unique_id=903903165]
