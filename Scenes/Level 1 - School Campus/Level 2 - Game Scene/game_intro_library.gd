@@ -64,33 +64,37 @@ func _ready():
 
 # --- Global Input Detection ---
 func _input(event: InputEvent) -> void:
+	# Check for screen touch
 	if (event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed) or \
 	   (event is InputEventScreenTouch and event.pressed):
+		
+		# If text is currently typing, tapping skips the animation
 		if is_typing:
 			skip_typing = true
 			return
 		
+		# If text is done and waiting for input, tapping registers the continuation
 		if waiting_for_tap:
 			tap_received = true
 
+# Pause execution until user taps the screen
 func wait_for_user() -> void:
 	waiting_for_tap = true
 	tap_received = false
 	continue_label.show() 
+	
 	while not tap_received:
 		await get_tree().process_frame
+
 	continue_label.hide() 
 	waiting_for_tap = false
 	tap_received = false
 
-# --- NEW: Helper function to switch speakers ---
+# Updates the UI to reflect who is currently speaking
 func set_speaker(speaker_name: String) -> void:
 	name_label.text = speaker_name
 	speaker_arrow.show()
 	
-	# Move the arrow and change the name color based on who is talking!
-	# NOTE: You may need to tweak the "x" and "y" pixel numbers below to 
-	# make the arrow point exactly at their heads on your specific screen size!
 	if speaker_name == "Student":
 		name_label.add_theme_color_override("font_color", Color(0.2, 0.6, 1.0)) # Blue text
 		speaker_arrow.position = Vector2(128.0, -376.0) # Left side of screen
@@ -183,16 +187,20 @@ func play_intro() -> void:
 		objective_tween.set_ease(Tween.EASE_OUT)
 		objective_tween.tween_property(objective_banner, "position:y", final_objective_y, 0.8)
 
+# Animates text character by character onto a label.
 func type_text(label: Label, text: String, speed := 0.03) -> void:
 	if label == null:
 		return
+
 	label.text = ""
 	is_typing = true
 	skip_typing = false
+
 	for i in text.length():
 		if skip_typing:
 			label.text = text
 			break
+
 		label.text += text[i]
 		await get_tree().create_timer(speed).timeout
 	
