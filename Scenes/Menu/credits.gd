@@ -57,7 +57,7 @@ func _show_next_credit() -> void:
 	# Animate the new text
 	active_tween = create_tween()
 	active_tween.tween_property(credit_label, "modulate:a", 1.0, 0.8)  # Fade in
-	active_tween.tween_interval(2.5)                                   # Hold on screen longer to read!
+	active_tween.tween_interval(1.5)                                   # Hold on screen longer to read!
 	active_tween.tween_property(credit_label, "modulate:a", 0.0, 0.8)  # Fade out
 	
 	# When this specific text finishes fading out, loop back to this same function
