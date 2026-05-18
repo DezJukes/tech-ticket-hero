@@ -20,6 +20,8 @@
 [ext_resource type="Script" uid="uid://bt1a71sj7u06u" path="res://Scenes/Level 3 - Big Tech Company/Level 5 - Game Scene/game_intro_level_5.gd" id="13_svwq2"]
 [ext_resource type="Texture2D" uid="uid://nywp880yfs16" path="res://Assets/Title Headers/LevelSign5.png" id="14_fyeeh"]
 [ext_resource type="Texture2D" uid="uid://4c8y7dnu2fg3" path="res://Assets/Title Headers/BANKING.png" id="15_f3vbv"]
+[ext_resource type="Texture2D" uid="uid://ciafhtwhuhgt7" path="res://Assets/Menu/Buttons/ControlsButton1.png" id="15_fyeeh"]
+[ext_resource type="Texture2D" uid="uid://cbd0cvv5wbfu8" path="res://Assets/Menu/Buttons/ControlsButton2.png" id="16_f3vbv"]
 [ext_resource type="Texture2D" uid="uid://dmoffd0324nea" path="res://Assets/Title Headers/SYSTEM.png" id="16_mlfrv"]
 [ext_resource type="Texture2D" uid="uid://df76s6su55lpv" path="res://Assets/Dialog/level_5_dialog.png" id="17_khu3i"]
 [ext_resource type="Texture2D" uid="uid://c5bocuhnsj0h1" path="res://Assets/Dialog/Chat.png" id="22_cu1ks"]
@@ -238,6 +240,12 @@ offset_bottom = 40.0
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchControls" parent="Control" unique_id=26897351 instance=ExtResource("9_0jx5g")]
+
+[node name="Base" parent="Control/TouchControls/Virtual Joystick" parent_id_path=PackedInt32Array(26897351, 1874519678) index="0"]
+texture = ExtResource("15_fyeeh")
+
+[node name="Tip" parent="Control/TouchControls/Virtual Joystick/Base" index="0"]
+texture = ExtResource("16_f3vbv")
 
 [node name="Pause" type="Node" parent="." unique_id=743239756]
 script = ExtResource("10_cu1ks")
@@ -529,3 +537,6 @@ flip_h = true
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/Resume" to="Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/ChangeMode" to="Pause" method="_on_change_mode_pressed"]
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/MainMenu" to="Pause" method="_on_main_menu_pressed"]
+
+[editable path="Control/TouchControls"]
+[editable path="Control/TouchControls/Virtual Joystick"]
