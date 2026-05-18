@@ -1,5 +1,6 @@
 extends Node
 
+# Intro Text UI
 @onready var black_screen = $TITLE/Control/ColorRect
 @onready var intro_text = $TITLE/Control/VBoxContainer
 @onready var intro_info = $TITLE/Control/Label
@@ -133,7 +134,7 @@ func wait_for_user() -> void:
 
 
 # =========================
-# SPEAKER FUNCTION
+# SPEAKER ARROW FUNCTION
 # =========================
 func set_speaker(speaker_name: String) -> void:
 	name_label.text = speaker_name

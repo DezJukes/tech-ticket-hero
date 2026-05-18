@@ -1,8 +1,10 @@
 extends Node
 
+# Intro Text UI
 @onready var black_screen = $TITLE/Control/ColorRect
 @onready var intro_text = $TITLE/Control/VBoxContainer
 
+# Dialog UI
 @onready var dialog_box = $TITLE/Control/Control/DialogueBox
 @onready var name_label = $TITLE/Control/Control/DialogueBox/Label2
 @onready var dialog_label = $TITLE/Control/Control/DialogueBox/Label3
