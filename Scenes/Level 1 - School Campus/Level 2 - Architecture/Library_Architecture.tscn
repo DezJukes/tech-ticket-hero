@@ -363,7 +363,6 @@ visible = false
 
 [node name="InformationModalLibrary" parent="." unique_id=51135178 instance=ExtResource("27_g46ws")]
 unique_name_in_owner = true
-visible = false
 
 [node name="FailedModalLibrary" parent="." unique_id=937512206 instance=ExtResource("28_lr13n")]
 unique_name_in_owner = true
