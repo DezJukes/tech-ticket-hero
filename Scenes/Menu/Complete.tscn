@@ -1,7 +1,16 @@
 [gd_scene format=3 uid="uid://oif0gmt1vxp2"]
 
 [ext_resource type="Script" uid="uid://dbu47gjy7ei4w" path="res://Scenes/Menu/complete.gd" id="1_l1u6a"]
+[ext_resource type="Texture2D" uid="uid://clcpv2xavcwla" path="res://Assets/Menu/menu-bg.png" id="2_7env5"]
 [ext_resource type="FontFile" uid="uid://dxaajcn2dpsf0" path="res://Assets/Font/ms-sans-serif-1.ttf" id="2_l1u6a"]
+[ext_resource type="Texture2D" uid="uid://cnnie7w14o3d1" path="res://Assets/Dialog/INTERN_NOVEL.png" id="3_nqjyq"]
+[ext_resource type="Texture2D" uid="uid://ndpx5wip63hk" path="res://Assets/Dialog/BOSS_NOVEL.png" id="3_twf1m"]
+[ext_resource type="Texture2D" uid="uid://bj0n0te37ompl" path="res://Assets/Dialog/LEADER_NOVEL.png" id="4_uvfir"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqjyq"]
+bg_color = Color(0, 0, 0, 0.78431374)
+expand_margin_top = 5.0
+expand_margin_bottom = 5.0
 
 [node name="Complete" type="Control" unique_id=499081644]
 layout_mode = 3
@@ -12,28 +21,96 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_l1u6a")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=183378926]
+[node name="ColorRect" type="TextureRect" parent="." unique_id=1000114290]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+texture = ExtResource("2_7env5")
+expand_mode = 2
 
-[node name="CreditLabel" type="Label" parent="." unique_id=1479413043]
+[node name="Character2" type="TextureRect" parent="." unique_id=410195398]
+modulate = Color(0.23392546, 0.23392546, 0.23392543, 0.99215686)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -111.265
+offset_top = -332.0
+offset_right = 552.735
+offset_bottom = 332.0
+grow_vertical = 2
+texture = ExtResource("3_twf1m")
+expand_mode = 1
+
+[node name="Character3" type="TextureRect" parent="." unique_id=1246890871]
+modulate = Color(0.23392546, 0.23392546, 0.23392543, 0.99215686)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -578.0
+offset_top = -332.0
+offset_right = 86.0
+offset_bottom = 332.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("4_uvfir")
+expand_mode = 1
+
+[node name="Character" type="TextureRect" parent="." unique_id=998328940]
+modulate = Color(1, 1, 1, 0.99215686)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
+offset_left = -332.0
+offset_top = -332.0
+offset_right = 332.0
+offset_bottom = 332.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nqjyq")
+expand_mode = 1
+
+[node name="Dialogue" type="Label" parent="." unique_id=897146004]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = 6.0
+offset_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_fonts/font = ExtResource("2_l1u6a")
-theme_override_font_sizes/font_size = 80
-text = "Game Complete"
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_nqjyq")
+text = "GAME COMPLETE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="TapIndicator" type="Label" parent="." unique_id=1588923280]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 865.0
+offset_top = -48.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_l1u6a")
+theme_override_font_sizes/font_size = 30
+text = "Tap to continue ►"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
