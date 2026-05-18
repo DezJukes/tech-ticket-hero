@@ -24,7 +24,7 @@ func _process(delta: float) -> void:
 func _on_interact_pressed() -> void:
 	if interaction_zone.player_near:
 		# Player pressed interact! Go straight to the Game Complete screen.
-		get_tree().change_scene_to_file("res://Scenes/Menu/Complete.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Level 3 - Big Tech Company/Level 5 - Architecture/Banking_Architecture.tscn")
 	else:
 		print("You are too far from the computer to interact.")
 

@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 # Process interact
 func _on_interact_pressed() -> void:
 	if $Guard/SchoolComputerInteractionZone.player_near:
-		get_tree().change_scene_to_file("res://Scenes/Level 3 - Big Tech Company/Level 5 - Architecture/Banking_Architecture.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Level 3 - Big Tech Company/Level Tropy Room - Game Scene/TrophyRoom_game_scene.tscn")
 	else:
 		print("You are too far from the computer to interact.")
 		

@@ -241,14 +241,14 @@ func play_intro() -> void:
 	# Start level music
 	level_music_player.play()
 	
-	# =========================
+# =========================
 	# DIALOGUE 1
 	# =========================
 	set_speaker("Boss")
 
 	await type_text(
 		dialog_label,
-		"Congratulations kid! You did well out there.",
+		"Congratulations, kid! You did well \nhandling that server issue downstairs.",
 		0.03
 	)
 
@@ -261,47 +261,46 @@ func play_intro() -> void:
 
 	await type_text(
 		dialog_label,
-		"You've proven yourself, \nI see potential in you.",
+		"You've proven yourself under pressure. \nBut now, it's time for the real test.",
 		0.03
 	)
 
 	await wait_for_user()
-	
 	
 	# =========================
 	# DIALOGUE 3
-	# =========================
-	set_speaker("Intern")
-
-	await type_text(
-		dialog_label,
-		"Thank you sir!",
-		0.03
-	)
-
-	await wait_for_user()
-	
-		# =========================
-	# DIALOGUE 4
 	# =========================
 	set_speaker("Boss")
 
 	await type_text(
 		dialog_label,
-		"I would like to hire you as a full time \ndeveloper in this company.",
+		"Our new Banking Architecture is a mess. \nTransactions are failing, and the \nledgers aren't syncing.",
 		0.03
 	)
 
 	await wait_for_user()
 	
 	# =========================
-	# DIALOGUE 3
+	# DIALOGUE 4
 	# =========================
-	set_speaker("Developer")
+	set_speaker("Intern")
 
 	await type_text(
 		dialog_label,
-		"I would gladly accept that offer. \nThank you sir!",
+		"I can handle it, Sir! \nPoint me to the terminal.",
+		0.03
+	)
+
+	await wait_for_user()
+
+	# =========================
+	# DIALOGUE 5
+	# =========================
+	set_speaker("Boss")
+
+	await type_text(
+		dialog_label,
+		"That's what I like to hear. \nFix this banking system, and that \nfull-time developer position is yours.",
 		0.03
 	)
 
