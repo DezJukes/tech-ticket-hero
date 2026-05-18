@@ -12,6 +12,7 @@ var player_near_computer := false
 var was_player_near := false
 
 func _process(delta: float) -> void:
+	# Validate if player is near the boss
 	player_near_computer = interaction_zone.player_near
 
 	$CanvasLayer/Interact.disabled = not player_near_computer
