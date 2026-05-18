@@ -170,11 +170,13 @@ func _build_level_select() -> void:
 	var col1 = _create_category_column("LEVEL 1: CAMPUS")
 	level_row.add_child(col1)
 	
-	var btn_cms = _create_pixel_button("CMS Architecture", "folder")
+	# Pass ID "1" to CMS
+	var btn_cms = _create_pixel_button("CMS Architecture", "folder", 1)
 	btn_cms.pressed.connect(_on_cms_pressed)
 	col1.add_child(btn_cms)
 	
-	var btn_lib = _create_pixel_button("Library System", "folder")
+	# Pass ID "2" to Library
+	var btn_lib = _create_pixel_button("Library System", "folder", 2)
 	btn_lib.pressed.connect(_on_library_pressed)
 	col1.add_child(btn_lib)
 	
@@ -184,11 +186,13 @@ func _build_level_select() -> void:
 	var col2 = _create_category_column("LEVEL 2: OFFICE")
 	level_row.add_child(col2)
 	
-	var btn_erp = _create_pixel_button("ERP Architecture", "folder")
+	# Pass ID "3" to ERP
+	var btn_erp = _create_pixel_button("ERP Architecture", "folder", 3)
 	btn_erp.pressed.connect(_on_erp_pressed)
 	col2.add_child(btn_erp)
 	
-	var btn_ecom = _create_pixel_button("E-Commerce System", "folder")
+	# Pass ID "4" to E-Commerce
+	var btn_ecom = _create_pixel_button("E-Commerce System", "folder", 4)
 	btn_ecom.pressed.connect(_on_ecommerce_pressed)
 	col2.add_child(btn_ecom)
 
@@ -198,7 +202,8 @@ func _build_level_select() -> void:
 	var col3 = _create_category_column("LEVEL 3: BIG TECH")
 	level_row.add_child(col3)
 	
-	var btn_bank = _create_pixel_button("Banking System", "folder")
+	# Pass ID "5" to Banking
+	var btn_bank = _create_pixel_button("Banking System", "folder", 5)
 	btn_bank.pressed.connect(_on_banking_pressed)
 	col3.add_child(btn_bank)
 	
@@ -230,20 +235,33 @@ func _create_category_column(title_text: String) -> VBoxContainer:
 	
 	return col
 
-func _create_pixel_button(btn_text: String, icon_type: String = "") -> Button:
+# Added "level_id" parameter to handle the locking!
+func _create_pixel_button(btn_text: String, icon_type: String = "", level_id: int = 0) -> Button:
 	var btn = Button.new()
-	btn.text = btn_text
+	var is_locked: bool = false
+	
+	# If this is a level button, check if its ID is greater than the player's progress
+	if level_id > 0 and Global2.highest_unlocked_level < level_id:
+		is_locked = true
+	
+	if is_locked:
+		btn.text = "LOCKED"
+		btn.disabled = true # This automatically blocks the player from clicking it
+	else:
+		btn.text = btn_text
+		
 	btn.custom_minimum_size = Vector2(350, 80) 
 	btn.add_theme_font_size_override("font_size", 24)
 	
-	if icon_type != "":
+	# Only show the folder icon if the level is actually unlocked
+	if icon_type != "" and not is_locked:
 		var generated_icon = _generate_retro_icon(icon_type)
 		if generated_icon != null:
 			btn.icon = generated_icon
 			btn.expand_icon = true
 			btn.add_theme_constant_override("icon_max_width", 64) 
-			btn.add_theme_constant_override("h_separation", 24)   
-			btn.alignment = HORIZONTAL_ALIGNMENT_CENTER           
+			btn.add_theme_constant_override("h_separation", 24)    
+			btn.alignment = HORIZONTAL_ALIGNMENT_CENTER            
 	
 	var black = Color(0, 0, 0)
 	var white = Color(1, 1, 1)
@@ -251,6 +269,9 @@ func _create_pixel_button(btn_text: String, icon_type: String = "") -> Button:
 	btn.add_theme_color_override("font_color", black)
 	btn.add_theme_color_override("font_hover_color", white)
 	btn.add_theme_color_override("font_pressed_color", white)
+	
+	# Apply disabled font color so the locked text looks grayed out
+	btn.add_theme_color_override("font_disabled_color", Color(0.6, 0.6, 0.6))
 	
 	var normal_style = StyleBoxFlat.new()
 	normal_style.bg_color = white
@@ -270,9 +291,15 @@ func _create_pixel_button(btn_text: String, icon_type: String = "") -> Button:
 	pressed_style.border_width_right = 4 
 	pressed_style.border_width_bottom = 4 
 	
+	# Create a gray, flat style for locked buttons
+	var disabled_style = normal_style.duplicate()
+	disabled_style.bg_color = Color(0.3, 0.3, 0.3)
+	disabled_style.border_color = Color(0.15, 0.15, 0.15)
+	
 	btn.add_theme_stylebox_override("normal", normal_style)
 	btn.add_theme_stylebox_override("hover", hover_style)
 	btn.add_theme_stylebox_override("pressed", pressed_style)
+	btn.add_theme_stylebox_override("disabled", disabled_style) # Apply the locked style
 	
 	return btn
 

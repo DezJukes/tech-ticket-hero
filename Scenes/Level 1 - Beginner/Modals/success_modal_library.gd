@@ -20,6 +20,12 @@ func _on_mission_complete_pressed() -> void:
 	click_audio.play()
 	await get_tree().create_timer(0.15).timeout
 	get_tree().paused = false
+	
+	# --- NEW: UNLOCK THE NEXT LEVEL ---
+	# Since this goes to Level 3, we unlock Level 3!
+	if Global2.highest_unlocked_level < 3:
+		Global2.highest_unlocked_level = 3
+	
 	# 1. Tell the Global script where the loading screen should take us
 	Global.target_scene = "res://Scenes/Level 2 - The Office/Level 3 - Game Scene/ERP_game_scene.tscn"
 		
