@@ -420,6 +420,7 @@ visible = false
 
 [node name="InformationModalEcom" parent="." unique_id=221360587 instance=ExtResource("26_en3iw")]
 unique_name_in_owner = true
+visible = false
 
 [node name="SuccessModalEcom" parent="." unique_id=1539659176 instance=ExtResource("27_045pn")]
 unique_name_in_owner = true
