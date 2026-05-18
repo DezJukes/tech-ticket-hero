@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dcmk7gco78cym" path="res://Scripts/Menu-Scripts/main_menu.gd" id="1_48xlc"]
 [ext_resource type="Texture2D" uid="uid://clcpv2xavcwla" path="res://Assets/Menu/menu-bg.png" id="2_17gaq"]
-[ext_resource type="Texture2D" uid="uid://dg8445f24jheu" path="res://Assets/Menu/JUAN_RUNNING_Crop.png" id="3_1di0l"]
+[ext_resource type="Texture2D" uid="uid://ce5dlcibo7dro" path="res://Assets/Menu/JUAN_RUNNING.png" id="3_17gaq"]
 [ext_resource type="Texture2D" uid="uid://5t4dmkxpqv5u" path="res://Assets/Menu/TechTicketHeroLogo.png" id="4_pn3xf"]
 [ext_resource type="Texture2D" uid="uid://c6irroiqbc8vi" path="res://Assets/Menu/PLAY.png" id="5_ab7fb"]
 [ext_resource type="Texture2D" uid="uid://dq7wgqrmurl8h" path="res://Assets/Menu/Buttons/Play-pressed.png" id="6_17gaq"]
@@ -35,7 +35,7 @@ alignment = 1
 [node name="Character" type="TextureRect" parent="MenuWrapper" unique_id=302746339]
 custom_minimum_size = Vector2(400, 0)
 layout_mode = 2
-texture = ExtResource("3_1di0l")
+texture = ExtResource("3_17gaq")
 expand_mode = 1
 stretch_mode = 5
 

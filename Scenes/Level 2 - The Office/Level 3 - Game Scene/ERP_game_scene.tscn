@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://lvpiaw27h2l4" path="res://Assets/Misc/Level 1 - Beginner/Office-bg.png" id="8_o52wa"]
 [ext_resource type="Texture2D" uid="uid://cnnie7w14o3d1" path="res://Assets/Dialog/INTERN_NOVEL.png" id="9_bgjdm"]
 [ext_resource type="Texture2D" uid="uid://clw4rsegs1fmg" path="res://Assets/Dialog/Arrow.png" id="9_y0gs2"]
-[ext_resource type="Texture2D" uid="uid://fv84tbd3ceo5" path="res://Assets/Misc/interact.png" id="10_ltkxt"]
 [ext_resource type="PackedScene" uid="uid://dct7hk3lm0o7x" path="res://Scenes/talk_alert.tscn" id="10_vig53"]
 [ext_resource type="PackedScene" uid="uid://bqk4wwgbista1" path="res://Scenes/computer.tscn" id="10_x43eb"]
 [ext_resource type="PackedScene" uid="uid://diygapspgj4q6" path="res://Scenes/Level 1 - School Campus/Furnitures/SchoolComputer.tscn" id="11_uw8n1"]
@@ -21,12 +20,16 @@
 [ext_resource type="Script" uid="uid://chxryeiqstytr" path="res://Scenes/Level 1 - School Campus/Level 1 - Game Scene/dashed_ring.gd" id="13_pkejs"]
 [ext_resource type="Texture2D" uid="uid://cm3ge0ras1y7o" path="res://Assets/Title Headers/LevelSign3.png" id="13_w3dm8"]
 [ext_resource type="PackedScene" uid="uid://dongnad5rxfxy" path="res://Scenes/filing_cabinet_2.tscn" id="14_5drem"]
+[ext_resource type="Texture2D" uid="uid://d158iokk86xij" path="res://Assets/Menu/Buttons/TouchButton.png" id="14_565qs"]
 [ext_resource type="Texture2D" uid="uid://ci1j8qvtaelvg" path="res://Assets/Title Headers/ERP.png" id="14_ll3um"]
 [ext_resource type="Texture2D" uid="uid://dmoffd0324nea" path="res://Assets/Title Headers/SYSTEM.png" id="15_cmthp"]
+[ext_resource type="Texture2D" uid="uid://3kor4wh6p2ep" path="res://Assets/Menu/Buttons/PauseButton.png" id="15_o6nbg"]
 [ext_resource type="PackedScene" uid="uid://c1ddoutc25g2q" path="res://Scenes/printer_furniture.tscn" id="15_ooj06"]
 [ext_resource type="PackedScene" uid="uid://bw0kxc2vm7tw5" path="res://Scenes/water_dispenser.tscn" id="16_rghtm"]
 [ext_resource type="PackedScene" uid="uid://dha4p2cqxmenv" path="res://Scenes/wall_note.tscn" id="17_41bcc"]
 [ext_resource type="PackedScene" uid="uid://b358ho3xp71lw" path="res://Scenes/npc_mentor.tscn" id="18_vbaqe"]
+[ext_resource type="Texture2D" uid="uid://ciafhtwhuhgt7" path="res://Assets/Menu/Buttons/ControlsButton1.png" id="20_lpj23"]
+[ext_resource type="Texture2D" uid="uid://cbd0cvv5wbfu8" path="res://Assets/Menu/Buttons/ControlsButton2.png" id="21_565qs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76mdf"]
 bg_color = Color(0.8509804, 0.8509804, 0.8509804, 1)
@@ -57,7 +60,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uw8n1"]
-bg_color = Color(0.9254902, 0.9254902, 0.9254902, 1)
+bg_color = Color(0.9254902, 0.9254902, 0.9254902, 0)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -71,7 +74,7 @@ corner_radius_bottom_right = 10
 corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pkejs"]
-bg_color = Color(0.95686275, 0.95686275, 0.95686275, 1)
+bg_color = Color(0.95686275, 0.95686275, 0.95686275, 0)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -79,13 +82,6 @@ corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rg7um"]
 bg_color = Color(0.6745098, 0.6745098, 0.6745098, 1)
-corner_radius_top_left = 10
-corner_radius_top_right = 10
-corner_radius_bottom_right = 10
-corner_radius_bottom_left = 10
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_65ner"]
-bg_color = Color(0.2627451, 0.2627451, 0.2627451, 1)
 corner_radius_top_left = 10
 corner_radius_top_right = 10
 corner_radius_bottom_right = 10
@@ -406,8 +402,8 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_lpj23")
 [node name="Interact2" type="Sprite2D" parent="CanvasLayer/Interact" unique_id=1808564497]
 modulate = Color(1, 1, 1, 0.57254905)
 position = Vector2(61, 59)
-scale = Vector2(0.36090982, 0.36090982)
-texture = ExtResource("10_ltkxt")
+scale = Vector2(2, 2)
+texture = ExtResource("14_565qs")
 
 [node name="PauseButton" type="Button" parent="CanvasLayer" unique_id=1387454349]
 anchors_preset = 1
@@ -424,40 +420,9 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_uw8n1")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_ltkxt")
 theme_override_styles/hover = SubResource("StyleBoxFlat_pkejs")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_rg7um")
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/PauseButton" unique_id=343382592]
-custom_minimum_size = Vector2(10, 5)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -27.5
-offset_top = -22.5
-offset_right = 27.5
-offset_bottom = 31.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/separation = 10
-
-[node name="Panel" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=897900219]
-custom_minimum_size = Vector2(10, 8)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_65ner")
-
-[node name="Panel2" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=1920771066]
-custom_minimum_size = Vector2(10, 8)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_65ner")
-
-[node name="Panel3" type="Panel" parent="CanvasLayer/PauseButton/VBoxContainer" unique_id=835445368]
-custom_minimum_size = Vector2(10, 8)
-layout_mode = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_65ner")
+icon = ExtResource("15_o6nbg")
+icon_alignment = 1
+expand_icon = true
 
 [node name="Objective" type="Panel" parent="CanvasLayer" unique_id=1757455898]
 anchors_preset = 5
@@ -521,6 +486,12 @@ offset_bottom = 37.0
 metadata/_edit_use_anchors_ = true
 
 [node name="TouchControls" parent="Control" unique_id=26897351 instance=ExtResource("6_60s8w")]
+
+[node name="Base" parent="Control/TouchControls/Virtual Joystick" parent_id_path=PackedInt32Array(26897351, 1874519678) index="0"]
+texture = ExtResource("20_lpj23")
+
+[node name="Tip" parent="Control/TouchControls/Virtual Joystick/Base" index="0"]
+texture = ExtResource("21_565qs")
 
 [node name="BoardFrame" parent="." unique_id=1631846516 instance=ExtResource("12_sjkvh")]
 position = Vector2(251, 118)
@@ -589,3 +560,6 @@ shape = SubResource("RectangleShape2D_g3vq8")
 [connection signal="pressed" from="Pause/CanvasLayer/PausePanel/VBoxContainer/VBoxContainer/MainMenu" to="Pause" method="_on_main_menu_pressed"]
 [connection signal="pressed" from="CanvasLayer/Interact" to="." method="_on_interact_pressed"]
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
+
+[editable path="Control/TouchControls"]
+[editable path="Control/TouchControls/Virtual Joystick"]
