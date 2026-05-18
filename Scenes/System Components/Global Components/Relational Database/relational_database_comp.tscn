@@ -1,9 +1,9 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://jnngirbvruc4"]
 
-[ext_resource type="Texture2D" path="res://Scenes/System Components/Global Components/Relational Database/img_relational_database.png" id="1_ok2y3"]
-[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_y41ex"]
-[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_gshss"]
-[ext_resource type="FontFile" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_2ydtx"]
+[ext_resource type="Texture2D" uid="uid://wixwn4cfwsq6" path="res://Scenes/System Components/Global Components/Relational Database/img_relational_database.png" id="1_ok2y3"]
+[ext_resource type="FontFile" uid="uid://c5rykut8ifhd8" path="res://Assets/Font/Oxanium-Bold.ttf" id="2_y41ex"]
+[ext_resource type="FontFile" uid="uid://dewebhcgjyrna" path="res://Assets/Font/Oxanium-SemiBold.ttf" id="3_gshss"]
+[ext_resource type="FontFile" uid="uid://barb88fv45i1j" path="res://Assets/Font/Oxanium-Regular.ttf" id="4_2ydtx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehknd"]
 bg_color = Color(1, 1, 1, 1)
@@ -69,7 +69,7 @@ theme_override_constants/margin_right = 6
 theme_override_constants/margin_bottom = 6
 
 [node name="IconImage" type="TextureRect" parent="CardPadding/MainRow/IconFrame/IconPadding" unique_id=65608909]
-custom_minimum_size = Vector2(32, 32)
+custom_minimum_size = Vector2(50, 50)
 layout_mode = 2
 texture = ExtResource("1_ok2y3")
 expand_mode = 1
@@ -95,7 +95,7 @@ text = "Relational Database"
 layout_mode = 2
 theme_override_colors/font_color = Color(0.14509805, 0.3882353, 0.92156863, 1)
 theme_override_fonts/font = ExtResource("3_gshss")
-theme_override_font_sizes/font_size = 11
+theme_override_font_sizes/font_size = 14
 text = "DATABASE"
 
 [node name="Description" type="Label" parent="CardPadding/MainRow/TextColumn" unique_id=555238219]
@@ -103,6 +103,6 @@ custom_minimum_size = Vector2(1, 1)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.2784314, 0.33333334, 0.4117647, 1)
 theme_override_fonts/font = ExtResource("4_2ydtx")
-theme_override_font_sizes/font_size = 12
+theme_override_font_sizes/font_size = 16
 text = "Saves the article text, author ID, and the image URLs generated."
 autowrap_mode = 2
