@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bnqciyd2xi1aj"]
+
+[ext_resource type="Script" uid="uid://c85pxa5ysovyj" path="res://Scenes/Menu/loading.gd" id="1_8lm5o"]
+[ext_resource type="Texture2D" uid="uid://5t4dmkxpqv5u" path="res://Assets/Menu/TechTicketHeroLogo.png" id="1_70mhs"]
+[ext_resource type="Texture2D" uid="uid://clcpv2xavcwla" path="res://Assets/Menu/menu-bg.png" id="1_apdxc"]
+[ext_resource type="FontFile" uid="uid://dxaajcn2dpsf0" path="res://Assets/Font/ms-sans-serif-1.ttf" id="2_apdxc"]
+
+[node name="Loading" type="Control" unique_id=1424923977]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8lm5o")
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=657481824]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_apdxc")
+expand_mode = 2
+
+[node name="Logo" type="TextureRect" parent="." unique_id=177342918]
+custom_minimum_size = Vector2(340, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -150.0
+offset_right = 170.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_70mhs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CreditLabel" type="Label" parent="." unique_id=284855570]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -53.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_apdxc")
+theme_override_font_sizes/font_size = 60
+text = "Loading"
