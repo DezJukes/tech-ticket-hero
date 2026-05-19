@@ -121,6 +121,7 @@ texture = ExtResource("2_ksk68")
 metadata/_edit_use_anchors_ = true
 
 [node name="Table" parent="." unique_id=295558921 instance=ExtResource("5_d7g31")]
+y_sort_enabled = true
 position = Vector2(-175.99997, 349.00003)
 scale = Vector2(3.8128488, 3.8128488)
 
@@ -208,6 +209,7 @@ position = Vector2(575, 323)
 
 [node name="Computer4" parent="." unique_id=1610868164 instance=ExtResource("9_6e3b8")]
 visible = false
+y_sort_enabled = true
 position = Vector2(481, 223)
 scale = Vector2(2.7796469, 2.7796469)
 
@@ -216,8 +218,8 @@ position = Vector2(555.00006, 234.00009)
 scale = Vector2(2.4314773, 2.4314773)
 
 [node name="TalkAlert" parent="." unique_id=200142115 instance=ExtResource("16_15pjp")]
-position = Vector2(614.00006, 151)
-scale = Vector2(1.1605482, 1.1605482)
+position = Vector2(550, 110)
+scale = Vector2(2, 2)
 
 [node name="Control" type="Control" parent="." unique_id=117607346]
 layout_mode = 3

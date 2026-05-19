@@ -124,10 +124,6 @@ position = Vector2(769, 344.23438)
 scale = Vector2(3.8198242, 3.8198242)
 texture = ExtResource("4_sagri")
 
-[node name="Table" parent="." unique_id=295558921 instance=ExtResource("5_q2et0")]
-position = Vector2(323, 329)
-scale = Vector2(3.8128488, 3.8128488)
-
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1120077270]
 
 [node name="Interact" type="Button" parent="CanvasLayer" unique_id=2139443000]
@@ -218,12 +214,19 @@ position = Vector2(575, 323)
 
 [node name="Computer4" parent="." unique_id=1610868164 instance=ExtResource("8_8oft1")]
 visible = false
+y_sort_enabled = true
 position = Vector2(481, 223)
 scale = Vector2(2.7796469, 2.7796469)
 
 [node name="SchoolComputer" parent="." unique_id=925285969 instance=ExtResource("9_6scms")]
+y_sort_enabled = true
 position = Vector2(481, 220)
 scale = Vector2(2.75361, 2.75361)
+
+[node name="Table" parent="." unique_id=295558921 instance=ExtResource("5_q2et0")]
+y_sort_enabled = true
+position = Vector2(335, 318)
+scale = Vector2(3.5, 3.5)
 
 [node name="Guard" parent="." unique_id=1264611466 instance=ExtResource("11_q2et0")]
 position = Vector2(323.00006, 552.00006)
@@ -340,8 +343,8 @@ position = Vector2(865, 168)
 shape = SubResource("RectangleShape2D_k0b4w")
 
 [node name="TalkAlert" parent="." unique_id=200142115 instance=ExtResource("12_yjybh")]
-position = Vector2(380, 457)
-scale = Vector2(1.1605482, 1.1605482)
+position = Vector2(320, 420)
+scale = Vector2(2, 2)
 
 [node name="GameIntroLevel2" type="Node" parent="." unique_id=354264543]
 script = ExtResource("13_svwq2")
